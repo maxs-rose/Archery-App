@@ -1,28 +1,29 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json.Linq;
+using TheScoreBook.models.enums;
 
-namespace TheScoreBook.models
+namespace TheScoreBook.models.round
 {
-    public record End
+    public class End : IToJson
     {
         private List<EScore> scores = new();
-        public int MaxEndScores { get; }
+        public int ArrowsPerEnd { get; }
 
-        public End(int maxEndScores)
+        public End(int arrowsPerEnd)
         {
-            MaxEndScores = maxEndScores;
+            ArrowsPerEnd = arrowsPerEnd;
         }
 
         public End(JObject json)
         {
             scores = json["scores"].Value<JArray>()!.Select(s => s.Value<EScore>()).ToList();
-            MaxEndScores = json["scoresPerEnd"].Value<int>();
+            ArrowsPerEnd = json["scoresPerEnd"].Value<int>();
         }
 
         public bool AddScore(EScore score)
         {
-            if (scores.Count >= MaxEndScores) return false;
+            if (scores.Count >= ArrowsPerEnd) return false;
             
             scores.Add(score);
             return true;
@@ -45,7 +46,7 @@ namespace TheScoreBook.models
         }
 
         public bool EndComplete()
-            => scores.Count() == MaxEndScores;
+            => scores.Count() == ArrowsPerEnd;
         
         public int Hits()
             => scores.Count(s => s != EScore.M);
@@ -63,7 +64,7 @@ namespace TheScoreBook.models
             => $"[{string.Join(",", scores)}]";
         
         public override string ToString()
-            => $"max: {MaxEndScores}, complete: {EndComplete()}, scores: {EndString()}, endScore: {EndScore()}]";
+            => $"max: {ArrowsPerEnd}, complete: {EndComplete()}, scores: {EndString()}, endScore: {EndScore()}]";
 
         public JObject ToJson()
         {
@@ -76,7 +77,7 @@ namespace TheScoreBook.models
                 {"x's", CountScore(EScore.X)},
                 {"10's", CountScore(EScore.TEN)},
                 {"9's", CountScore(EScore.NINE)},
-                {"scoresPerEnd", MaxEndScores},
+                {"scoresPerEnd", ArrowsPerEnd},
                 {"endComplete", EndComplete()}
             };
 

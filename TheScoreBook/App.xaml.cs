@@ -1,5 +1,7 @@
 ﻿using System;
+using TheScoreBook.acessors;
 using TheScoreBook.models;
+using TheScoreBook.models.round;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,6 +16,8 @@ namespace TheScoreBook
             InitializeComponent();
 
             MainPage = new MainPage();
+
+            var r = new Round("portsmouth");
         }
 
         protected override void OnStart()

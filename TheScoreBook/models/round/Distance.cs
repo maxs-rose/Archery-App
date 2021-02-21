@@ -1,15 +1,15 @@
 ﻿using System.Linq;
 using Newtonsoft.Json.Linq;
+using TheScoreBook.models.enums;
 
-namespace TheScoreBook.models
+namespace TheScoreBook.models.round
 {
-    public record Distance
+    public class Distance : IToJson
     {
         public int DistanceLength { get; }
         public EDistanceUnit DistanceUnit { get; }
         public End[] Ends { get; }
         public int MaxEnds { get; }
-        public int ArrowsPerEnd { get; }
 
         public Distance(int distanceLength, EDistanceUnit distanceUnit, int ends, int arrowsPerEnd)
         {
@@ -17,7 +17,6 @@ namespace TheScoreBook.models
             DistanceUnit = distanceUnit;
             Ends = new End[ends];
             MaxEnds = ends;
-            ArrowsPerEnd = arrowsPerEnd;
 
             for (var i = 0; i < ends; i++)
                 Ends[i] = new End(arrowsPerEnd);
@@ -29,7 +28,6 @@ namespace TheScoreBook.models
             DistanceUnit = (EDistanceUnit)json["unit"].Value<int>();
             MaxEnds = json["maxEnds"].Value<int>();
             Ends = new End[MaxEnds];
-            ArrowsPerEnd = json["arrowsPerEnd"].Value<int>();
 
             var ends = json["scores"].AsJEnumerable();
             for (var i = 0; i < MaxEnds; i++)
@@ -88,7 +86,7 @@ namespace TheScoreBook.models
             => $"[{string.Join(",", Ends.Select(e => e.EndString()))}]";
         
         public override string ToString()
-            => $"ape: {ArrowsPerEnd}, ends: {MaxEnds}, scores: {DistanceEndString()}, endScore: {DistanceScore()}]";
+            => $"ends: {MaxEnds}, scores: {DistanceEndString()}, endScore: {DistanceScore()}]";
 
         public JObject ToJson()
         {
@@ -101,7 +99,6 @@ namespace TheScoreBook.models
                 {"x's", CountScore(EScore.X)},
                 {"10's", CountScore(EScore.TEN)},
                 {"9's", CountScore(EScore.NINE)},
-                {"arrowsPerEnd", ArrowsPerEnd},
                 {"maxEnds", MaxEnds},
                 {"endComplete", AllEndsComplete()},
                 {"distance", DistanceLength},

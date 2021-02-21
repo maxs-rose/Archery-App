@@ -1,0 +1,11 @@
+﻿{
+  "portsmouth":
+  [
+    {
+      "distance": 18,
+      "unit": "m",
+      "arrowsPerEnd": 3,
+      "ends": 20
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-﻿namespace TheScoreBook.models
+﻿namespace TheScoreBook.models.enums
 {
     public enum EScore
     { 
