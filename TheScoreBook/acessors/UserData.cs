@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models;
 using TheScoreBook.models.round;
@@ -15,22 +16,25 @@ namespace TheScoreBook.acessors
     
     public sealed class UserData
     {
-        // Object getter
-        private static Lazy<UserData> instance = new(() => new UserData());
-        public static UserData Instance => instance.Value;
-
         private readonly JObject userData;
-
+        private static Mutex mut;
+        
+        // Object getter
+        private static readonly Lazy<UserData> instance = new(() => new UserData());
+        public static UserData Instance => instance.Value;
+        
         // Sight mark getter
-        private static Lazy<List<SightMark>> sightMarks = new (() => Instance.GetSightMarks());
+        private static readonly Lazy<List<SightMark>> sightMarks = new (() => Instance.GetSightMarks());
         public static ReadOnlyCollection<SightMark> SightMarks => sightMarks.Value.AsReadOnly();
 
         // Past round getter
-        private static Lazy<List<Round>> rounds = new(() => Instance.GetRounds());
+        private static readonly Lazy<List<Round>> rounds = new(() => Instance.GetRounds());
         public static ReadOnlyCollection<Round> Rounds => rounds.Value.AsReadOnly();
 
         private UserData()
         {
+            mut = new Mutex();
+            
             // this needs to be done synchronously unlike saving as we need to the data to continue
             // another good reason for this to be a singelton
             var dataFile = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal),
@@ -68,10 +72,26 @@ namespace TheScoreBook.acessors
         }
 
         private List<SightMark> GetSightMarks()
-            => userData["sightMarks"]!.Value<JArray>()!.Select(sm => new SightMark(sm.Value<JObject>())).ToList();
+        {
+            var result = new List<SightMark>();
+            
+            mut.WaitOne();
+            result = userData["sightMarks"]!.Value<JArray>()!.Select(sm => new SightMark(sm.Value<JObject>())).ToList();
+            mut.ReleaseMutex();
+
+            return result;
+        }
 
         private List<Round> GetRounds()
-            => userData["pastRounds"]!.Value<JArray>()!.Select(r => new Round(r.Value<JObject>())).ToList();
+        {
+            var result = new List<Round>();
+            
+            mut.WaitOne();
+            result = userData["sightMarks"]!.Value<JArray>()!.Select(r => new Round(r.Value<JObject>())).ToList();
+            mut.ReleaseMutex();
+
+            return result;
+        }
 
         public void AddSightMark(SightMark mark)
         {
@@ -79,13 +99,21 @@ namespace TheScoreBook.acessors
                 return; // dont duplicate
             
             sightMarks.Value.Add(mark);
+
+            mut.WaitOne();
             userData["sightMarks"]!.Value<JArray>()!.Add(mark.ToJson());
+            mut.ReleaseMutex();
+            
             SaveData(userData);
         }
 
         public void SaveRound(Round round)
         {
+            rounds.Value.Add(round);
+            
+            mut.WaitOne();
             userData["pastRounds"]!.Value<JArray>()!.Add(round.ToJson());
+            mut.ReleaseMutex();
             
             // we dont want to await this since we want the app to continue whilst this is saving
             SaveData(userData);
