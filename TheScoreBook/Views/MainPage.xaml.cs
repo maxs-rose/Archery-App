@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TheScoreBook.models;
+using TheScoreBook.Views;
 using Xamarin.Forms;
 
 namespace TheScoreBook
@@ -13,6 +9,11 @@ namespace TheScoreBook
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        async void Lang_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ChangeLanguagePage());
         }
     }
 }

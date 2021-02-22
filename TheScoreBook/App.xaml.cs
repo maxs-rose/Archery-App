@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Threading;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -9,9 +10,9 @@ namespace TheScoreBook
     {
         public App()
         {
-            InitializeComponent();
+            InitializeComponent(); 
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
