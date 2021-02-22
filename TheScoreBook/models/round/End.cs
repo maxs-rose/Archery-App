@@ -26,6 +26,7 @@ namespace TheScoreBook.models.round
             if (scores.Count >= ArrowsPerEnd) return false;
             
             scores.Add(score);
+            SortList();
             return true;
         }
         
@@ -34,6 +35,7 @@ namespace TheScoreBook.models.round
             if (index < 0 || index >= scores.Count) return false;
             
             scores.RemoveAt(index);
+            SortList();
             return true;
         }
 
@@ -42,7 +44,13 @@ namespace TheScoreBook.models.round
             if (index < 0 || index >= scores.Count) return false;
 
             scores[index] = score;
+            SortList();
             return true;
+        }
+        
+        private void SortList()
+        {
+            scores.Sort((v1, v2) => v1.CompareTo(v2) * -1);
         }
 
         public bool EndComplete()
@@ -57,21 +65,21 @@ namespace TheScoreBook.models.round
         public int Golds()
             => CountScore(EScore.X) + CountScore(EScore.TEN) + CountScore(EScore.NINE);
         
-        public int EndScore()
+        public int Score()
             => scores.Sum(e => e.GetRealValue());
 
         public string EndString()
             => $"[{string.Join(",", scores)}]";
         
         public override string ToString()
-            => $"max: {ArrowsPerEnd}, complete: {EndComplete()}, scores: {EndString()}, endScore: {EndScore()}]";
+            => $"max: {ArrowsPerEnd}, complete: {EndComplete()}, scores: {EndString()}, endScore: {Score()}]";
 
         public JObject ToJson()
         {
             var json = new JObject
             {
                 {"scores", new JArray(scores)},
-                {"score", EndScore()},
+                {"score", Score()},
                 {"hits", Hits()},
                 {"golds", Golds()},
                 {"x's", CountScore(EScore.X)},

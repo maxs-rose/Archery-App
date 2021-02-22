@@ -1,6 +1,7 @@
 ﻿using System;
 using TheScoreBook.acessors;
 using TheScoreBook.models;
+using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -18,6 +19,9 @@ namespace TheScoreBook
             MainPage = new MainPage();
 
             var r = new Round("portsmouth");
+            r.AddScore(0, 0, EScore.SIX);
+            r.AddScore(0, 0, EScore.TEN);
+            r.AddScore(0, 0, EScore.ONE);
         }
 
         protected override void OnStart()

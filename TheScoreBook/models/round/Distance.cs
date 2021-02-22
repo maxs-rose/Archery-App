@@ -37,6 +37,8 @@ namespace TheScoreBook.models.round
         public bool AddScore(int endIndex, EScore score)
         {
             if (endIndex < 0 || endIndex >= MaxEnds) return false;
+            if (endIndex > 0 && !Ends[endIndex - 1].EndComplete()) return false;
+            
             return Ends[endIndex].AddScore(score);
         }
         
@@ -52,6 +54,15 @@ namespace TheScoreBook.models.round
             return Ends[endIndex].ChangeScore(scoreIndex, score);
         }
 
+        public int NextEndIndex()
+        {
+            for (var i = 0; i < MaxEnds; i++)
+                if (!EndComplete(i))
+                    return i;
+
+            return -1;
+        }
+        
         public bool AllEndsComplete()
             => Ends.All(e => e.EndComplete());
         
@@ -61,39 +72,39 @@ namespace TheScoreBook.models.round
         public int Hits()
             => Ends.Sum(e => e.Hits());
 
-        public int EndHits(int endIndex)
+        public int Hits(int endIndex)
             => Ends[endIndex].Hits();
 
         public int CountScore(EScore score)
             => Ends.Sum(e => e.CountScore(score));
 
-        public int CountEndScore(int index, EScore score)
+        public int CountScore(int index, EScore score)
             => Ends[index].CountScore(score);
 
         public int Golds()
             => CountScore(EScore.X) + CountScore(EScore.TEN) + CountScore(EScore.NINE);
         
-        public int EndGolds(int endIndex)
-            => CountEndScore(endIndex, EScore.X) + CountEndScore(endIndex, EScore.TEN) + CountEndScore(endIndex, EScore.NINE);
+        public int Golds(int endIndex)
+            => CountScore(endIndex, EScore.X) + CountScore(endIndex, EScore.TEN) + CountScore(endIndex, EScore.NINE);
 
-        public int DistanceScore()
-            => Ends.Sum(e => e.EndScore());
-        
-        public int EndScore(int endIndex)
-            => Ends[endIndex].EndScore();
+        public int Score()
+            => Ends.Sum(e => e.Score());
+
+        public int Score(int index)
+            => Ends[index].Score();
 
         public string DistanceEndString()
             => $"[{string.Join(",", Ends.Select(e => e.EndString()))}]";
         
         public override string ToString()
-            => $"ends: {MaxEnds}, scores: {DistanceEndString()}, endScore: {DistanceScore()}]";
+            => $"ends: {MaxEnds}, scores: {DistanceEndString()}, endScore: {Score()}]";
 
         public JObject ToJson()
         {
             var json = new JObject
             {
                 {"scores", new JArray(Ends.Select(e => e.ToJson()))},
-                {"score", DistanceScore()},
+                {"score", Score()},
                 {"hits", Hits()},
                 {"golds", Golds()},
                 {"x's", CountScore(EScore.X)},
