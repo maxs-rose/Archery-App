@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net.Sockets;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.acessors;
@@ -11,6 +12,8 @@ namespace TheScoreBook.models.round
     {
         public Distance[] Distances { get; }
         public int DistanceCount { get; }
+        public DateTime Date { get; }
+        public string RoundName { get; }
 
         public Round(string round)
         {
@@ -26,6 +29,9 @@ namespace TheScoreBook.models.round
                 var dist = roundConstructor[i]!.Value<JObject>();
                 Distances[i] = new Distance(dist!["distance"]!.Value<int>(), dist["unit"]!.Value<string>().ToEDistanceUnit(), dist["ends"]!.Value<int>(), dist["arrowsPerEnd"]!.Value<int>());
             }
+
+            Date = DateTime.Now;
+            RoundName = round;
         }
 
         public Round(JObject roundData)
@@ -33,6 +39,9 @@ namespace TheScoreBook.models.round
             DistanceCount = roundData["nDistances"].Value<int>();
             Distances = new Distance[DistanceCount];
 
+            Date = DateTime.FromBinary(roundData["date"].Value<long>());
+            RoundName = roundData["rName"].Value<string>();
+            
             var dist = roundData["distances"]!.Value<JArray>();
 
             for (var i = 0; i < DistanceCount; i++)
@@ -123,7 +132,9 @@ namespace TheScoreBook.models.round
             var json = new JObject()
             {
                 {"distances", new JArray(Distances.Select(d => d.ToJson()))},
-                {"nDistances", DistanceCount}
+                {"nDistances", DistanceCount},
+                {"date", Date.ToBinary()},
+                {"rName", RoundName}
             };           
             
             return json;

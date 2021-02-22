@@ -8,10 +8,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TheScoreBook.iOS")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("CompanyName")]
+[assembly: AssemblyCompany("Max Rose")]
 [assembly: AssemblyProduct("TheScoreBook.iOS")]
-[assembly: AssemblyCopyright("Copyright © CompanyName Year")]
-[assembly: AssemblyTrademark("CompanyTrademark")]
+[assembly: AssemblyCopyright("Copyright © Max Rose 2020")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 
