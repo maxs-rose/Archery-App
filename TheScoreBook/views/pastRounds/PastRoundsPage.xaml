@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TheScoreBook"
              xmlns:helpers="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
-             x:Class="TheScoreBook.views.pastRounds.PastRoundsPage">
-    
-    
-    <StackLayout>
+             x:Class="TheScoreBook.views.pastRounds.PastRoundsPage"
+             Padding="0"
+             Margin="0">
+    <StackLayout 
+        Padding="0"
+        Margin="0">
             <Label Text="{helpers:Translate Scores}"
                    HorizontalOptions="Center"
                    VerticalOptions="Start"
@@ -54,4 +56,4 @@
             <ScrollView x:Name="scoreView" HorizontalOptions="Fill" VerticalOptions="Fill"></ScrollView>
         </StackLayout>
         <!--<Button Clicked="Lang_Clicked" Text="Langs"></Button>-->
-</ContentPage>
+</Frame>

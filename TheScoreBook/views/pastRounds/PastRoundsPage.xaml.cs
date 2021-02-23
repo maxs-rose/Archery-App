@@ -3,20 +3,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using TheScoreBook.acessors;
 using TheScoreBook.Views;
-using TheScoreBook.views.home;
 using Xamarin.Forms;
 
 namespace TheScoreBook.views.pastRounds
 {
-    public partial class PastRoundsPage : ContentPage
+    public partial class PastRoundsPage : Frame
     {
         private bool showingAll;
 
         public PastRoundsPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
-            
             Device.BeginInvokeOnMainThread(async () => scoreView.Content = await LoadRounds());
         }
 

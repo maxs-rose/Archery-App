@@ -1,10 +1,9 @@
 ﻿using TheScoreBook.acessors;
 using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
-using TheScoreBook.views.home;
+using TheScoreBook.views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using PastRoundsPage = TheScoreBook.views.pastRounds.PastRoundsPage;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
@@ -15,6 +14,8 @@ namespace TheScoreBook
         public App()
         {
             InitializeComponent();
+            // ExperimentalFeatures.Enable("Shapes_Experimental");
+            Device.SetFlags(new[] {"Shapes_Experimental"});
 
             // var r = new Round("bray 1");
             // r.AddScore(0, 0, EScore.SIX);
@@ -22,8 +23,8 @@ namespace TheScoreBook
             // r.AddScore(0, 0, EScore.X);
             //
             // UserData.Instance.SaveRound(r);
-            
-            MainPage = new NavigationPage(new PastRoundsPage());
+
+            MainPage = new NavigationPage(new GeneralContainer());
         }
 
         protected override void OnStart()
