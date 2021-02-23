@@ -4,6 +4,7 @@ using TheScoreBook.models.round;
 using TheScoreBook.views.home;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using PastRoundsPage = TheScoreBook.views.pastRounds.PastRoundsPage;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 

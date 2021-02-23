@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TheScoreBook.localisation;
+﻿using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-namespace TheScoreBook.views.home
+namespace TheScoreBook.views.pastRounds
 {
     public partial class RoundCard : Frame
     {

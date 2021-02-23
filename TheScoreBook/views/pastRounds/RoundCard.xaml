@@ -3,7 +3,7 @@
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
-             x:Class="TheScoreBook.views.home.RoundCard"
+             x:Class="TheScoreBook.views.pastRounds.RoundCard"
              Margin="0">
     
     <Grid Margin="0">

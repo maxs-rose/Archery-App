@@ -3,9 +3,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using TheScoreBook.acessors;
 using TheScoreBook.Views;
+using TheScoreBook.views.home;
 using Xamarin.Forms;
 
-namespace TheScoreBook.views.home
+namespace TheScoreBook.views.pastRounds
 {
     public partial class PastRoundsPage : ContentPage
     {
