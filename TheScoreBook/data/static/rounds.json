@@ -7,5 +7,14 @@
       "arrowsPerEnd": 3,
       "ends": 20
     }
+  ],
+  "bray 1":
+  [
+    {
+      "distance": 18,
+      "unit": "m",
+      "arrowsPerEnd": 3,
+      "ends": 10
+    }
   ]
 }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
 using System.Resources;
@@ -43,12 +44,12 @@ namespace TheScoreBook.localisation
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null));
         }
 
-        public string this[string text]
-        {
-            get
-            {
-                return AppResources.ResourceManager.GetString(text, AppResources.Culture);
-            }
-        }
+        public static string ToTitleCase(string input)
+            => Instance.CurrentCulture.TextInfo.ToTitleCase(input);
+
+        public static string LocalisedShortDate(DateTime date)
+            => date.ToString("dd/MM/yyyy");
+
+        public string this[string text] => AppResources.ResourceManager.GetString(text, AppResources.Culture);
     }
 }

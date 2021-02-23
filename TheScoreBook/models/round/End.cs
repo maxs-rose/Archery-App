@@ -17,7 +17,7 @@ namespace TheScoreBook.models.round
 
         public End(JObject json)
         {
-            scores = json["scores"].Value<JArray>()!.Select(s => s.Value<EScore>()).ToList();
+            scores = json["scores"].Value<JArray>()!.Select(s => (EScore)s.Value<int>()).ToList();
             ArrowsPerEnd = json["scoresPerEnd"].Value<int>();
         }
 

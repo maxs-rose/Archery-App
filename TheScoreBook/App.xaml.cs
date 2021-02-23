@@ -1,4 +1,7 @@
-﻿using System.Threading;
+﻿using TheScoreBook.acessors;
+using TheScoreBook.models.enums;
+using TheScoreBook.models.round;
+using TheScoreBook.views.home;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,9 +13,16 @@ namespace TheScoreBook
     {
         public App()
         {
-            InitializeComponent(); 
+            InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            // var r = new Round("bray 1");
+            // r.AddScore(0, 0, EScore.SIX);
+            // r.AddScore(0, 0, EScore.TEN);
+            // r.AddScore(0, 0, EScore.X);
+            //
+            // UserData.Instance.SaveRound(r);
+            
+            MainPage = new NavigationPage(new PastRoundsPage());
         }
 
         protected override void OnStart()

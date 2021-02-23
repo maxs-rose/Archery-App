@@ -37,7 +37,7 @@ namespace TheScoreBook.localisation
                 {new Language("English", "en") },
                 {new Language("French", "fr") }
             };
-            SelectedLanguage = Languages.FirstOrDefault(pro => pro.CI == LocalisationManager.Instance.CurrentCulture.TwoLetterISOLanguageName);
+            SelectedLanguage = Languages.FirstOrDefault(pro => pro.CI == LocalisationManager.Instance.CurrentCulture.ThreeLetterISOLanguageName);
         }
     }
 }

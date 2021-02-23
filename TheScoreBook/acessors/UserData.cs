@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models;
 using TheScoreBook.models.round;
@@ -87,10 +88,22 @@ namespace TheScoreBook.acessors
             var result = new List<Round>();
             
             mut.WaitOne();
-            result = userData["sightMarks"]!.Value<JArray>()!.Select(r => new Round(r.Value<JObject>())).ToList();
+            result = userData["pastRounds"]!.Value<JArray>()!.Select(r => new Round(r.Value<JObject>())).ToList();
             mut.ReleaseMutex();
 
             return result;
+        }
+
+        public List<Round> GetPB()
+        {
+            mut.WaitOne();
+
+            var result = Rounds.GroupBy(r => r.RoundName)
+                .Select(g => g.OrderByDescending(g => g.Score()).First());
+            
+            mut.ReleaseMutex();
+
+            return result.ToList();
         }
 
         public void AddSightMark(SightMark mark)
@@ -104,7 +117,7 @@ namespace TheScoreBook.acessors
             userData["sightMarks"]!.Value<JArray>()!.Add(mark.ToJson());
             mut.ReleaseMutex();
             
-            SaveData(userData);
+            Task.Run(() => SaveData(userData));
         }
 
         public void SaveRound(Round round)
@@ -116,7 +129,7 @@ namespace TheScoreBook.acessors
             mut.ReleaseMutex();
             
             // we dont want to await this since we want the app to continue whilst this is saving
-            SaveData(userData);
+            Task.Run(() => SaveData(userData));
         }
     }
 }

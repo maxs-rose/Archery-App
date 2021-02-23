@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TheScoreBook"
+             xmlns:helpers="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+             x:Class="TheScoreBook.views.home.PastRoundsPage">
+    
+    
+    <StackLayout>
+            <Label Text="{helpers:Translate Scores}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   FontSize="Header"></Label>
+            <Grid HorizontalOptions="Center" 
+                VerticalOptions="Start"
+                Margin="40,0"
+                Padding="0"
+                BackgroundColor="Transparent">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="34"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Margin="0"
+                        Padding="0"
+                        BorderWidth="2"
+                        CornerRadius="100"
+                        BorderColor="Black"
+                        IsEnabled="False"
+                        BackgroundColor="Transparent"></Button>
+                <Button x:Name="ShowAllPast" Clicked="ShowAllPast_OnClicked" BackgroundColor="Transparent" Grid.Column="0" Text="{helpers:Translate All}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       FontSize="Subtitle"
+                       Margin="0, 2"
+                       Padding="0"
+                       BorderColor="Black"
+                       BorderWidth="2"
+                       CornerRadius="100"></Button>
+                <Button x:Name="ShowPBs" Clicked="ShowPBs_OnClicked" BackgroundColor="Transparent" Grid.Column="1" Text="{helpers:Translate PB}"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        FontSize="Subtitle"
+                        Margin="0, 2"
+                        Padding="0"
+                        BorderColor="Black"
+                        BorderWidth="2"
+                        CornerRadius="100"></Button>
+            </Grid>
+            <ScrollView x:Name="scoreView" HorizontalOptions="Fill" VerticalOptions="Fill"></ScrollView>
+        </StackLayout>
+        <!--<Button Clicked="Lang_Clicked" Text="Langs"></Button>-->
+</ContentPage>
