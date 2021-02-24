@@ -23,7 +23,7 @@ namespace TheScoreBook.views.pastRounds
             
             var pbStack = new StackLayout();
             
-            foreach (var r in UserData.Instance.GetPB())
+            foreach (var r in UserData.Instance.GetPB().OrderByDescending(r => r.Date))
                 pbStack.Children.Add(new RoundCard(r));
 
             pbStack.Spacing = 0;
@@ -38,8 +38,11 @@ namespace TheScoreBook.views.pastRounds
         async Task<StackLayout> LoadRounds()
         {
             var roundStack = new StackLayout();
-            var rounds = UserData.Rounds.GroupBy(r => new {r.Date.Month, r.Date.Year})
-                .Select(g => g.OrderBy(r => r.Date));
+            var rounds = UserData.Rounds
+                .OrderByDescending(r => r.Date)
+                .GroupBy(r => new {r.Date.Month, r.Date.Year})
+                .Select(g => 
+                    g.OrderByDescending(r => r.Date));
 
             foreach (var gRound in rounds)
             {

@@ -25,14 +25,33 @@
                 Stroke="Gray"
                 StrokeThickness="4"
                 Fill="Pink"/>
-            <Label
-                Text="{localisation:Translate SightMarks}"
-                Margin="0"
-                Padding="0"
-                HorizontalTextAlignment="Start"
-                VerticalTextAlignment="Center"
-                FontSize="Title"
-                BackgroundColor="Gray"/>
+            <Grid
+                BackgroundColor="Gray"
+                Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Text="{localisation:Translate SightMarks}"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Center"
+                    FontSize="Title"/>
+                <Label
+                    Grid.Column="1"
+                    x:Name="OpenAddNewSightMark"
+                    Text="+"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Center"
+                    FontSize="Title"/>
+            </Grid>
+            <StackLayout x:Name="SightMarks"
+                         Margin="0"
+                         Padding="0"/>
             <Label
                 Text="{localisation:Translate PreferedRounds}"
                 Margin="0"

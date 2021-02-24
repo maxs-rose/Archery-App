@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Foundation;
 using UIKit;
+using Rg.Plugins.Popup;
 
 namespace TheScoreBook.iOS
 {
@@ -21,6 +22,8 @@ namespace TheScoreBook.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Popup.Init();
+            
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

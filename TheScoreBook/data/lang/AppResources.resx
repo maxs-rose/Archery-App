@@ -189,4 +189,13 @@
   <data name="Outdoor" xml:space="preserve">
     <value>Outdoor</value>
   </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Notch" xml:space="preserve">
+    <value>Notch</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
 </root>

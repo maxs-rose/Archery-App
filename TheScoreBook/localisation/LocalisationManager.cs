@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Reflection;
 using System.Resources;
 using System.Threading;
+using TheScoreBook.Annotations;
 using TheScoreBook.data.lang;
 using Xamarin.Essentials;
 
@@ -15,7 +16,8 @@ namespace TheScoreBook.localisation
         
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public static LocalisationManager Instance { get; } = new ();
+        private static readonly Lazy<LocalisationManager> instance = new (() => new LocalisationManager());
+        public static LocalisationManager Instance => instance.Value;
 
         public CultureInfo CurrentCulture => AppResources.Culture ?? Thread.CurrentThread.CurrentUICulture;
         

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models;
 using TheScoreBook.models.round;
+using Xamarin.Forms;
 using static TheScoreBook.serialisation.SaveUserData;
 
 namespace TheScoreBook.acessors
@@ -24,11 +25,14 @@ namespace TheScoreBook.acessors
         private static readonly Lazy<UserData> instance = new(() => new UserData());
         public static UserData Instance => instance.Value;
         
-        // Sight mark getter
+        // Sight mark stuff
         private static readonly Lazy<List<SightMark>> sightMarks = new (() => Instance.GetSightMarks());
         public static ReadOnlyCollection<SightMark> SightMarks => sightMarks.Value.AsReadOnly();
 
-        // Past round getter
+        public delegate void SightMarksUpdated();
+        public static SightMarksUpdated SightMarksUpdatedEvent;
+
+        // Round stuff
         private static readonly Lazy<List<Round>> rounds = new(() => Instance.GetRounds());
         public static ReadOnlyCollection<Round> Rounds => rounds.Value.AsReadOnly();
 
@@ -117,10 +121,11 @@ namespace TheScoreBook.acessors
             userData["sightMarks"]!.Value<JArray>()!.Add(mark.ToJson());
             mut.ReleaseMutex();
             
+            Device.BeginInvokeOnMainThread(() => SightMarksUpdatedEvent?.Invoke());
             Task.Run(() => SaveData(userData));
         }
 
-        public void SaveRound(Round round)
+        public async void SaveRound(Round round)
         {
             rounds.Value.Add(round);
             
