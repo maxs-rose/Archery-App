@@ -7,7 +7,7 @@
              Padding="0">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout x:Name="Layout" VerticalOptions="FillAndExpand"/>
+            <Grid x:Name="Layout" VerticalOptions="FillAndExpand"/>
             <StackLayout
                 Margin="0"
                 Padding="0"
@@ -27,7 +27,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Button Grid.Column="0" Text="{localisation:Translate Scores}" Clicked="ScoreButtonOnClicked" />
-                    <Button Grid.Column="1" Text="{localisation:Translate Shoot}"/>
+                    <Button Grid.Column="1" Text="{localisation:Translate Shoot}" Clicked="ShootButtonOnClicked" />
                     <Button Grid.Column="2" Text="{localisation:Translate Profile}" Clicked="ProfileButtonOnClicked" />
                 </Grid>
             </StackLayout>

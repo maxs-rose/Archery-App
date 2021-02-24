@@ -1,6 +1,4 @@
-﻿using TheScoreBook.acessors;
-using TheScoreBook.models.enums;
-using TheScoreBook.models.round;
+﻿using FormsControls.Base;
 using TheScoreBook.views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -24,7 +22,7 @@ namespace TheScoreBook
             //
             // UserData.Instance.SaveRound(r);
 
-            MainPage = new NavigationPage(new GeneralContainer());
+            MainPage = new AnimationNavigationPage(new GeneralContainer());
         }
 
         protected override void OnStart()

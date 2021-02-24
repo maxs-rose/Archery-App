@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<base:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+             xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+             x:Class="TheScoreBook.views.shoot.RoundSelectionPage"
+             BackgroundColor="Chartreuse">
+    <base:AnimationPage.PageAnimation>
+        <base:PageAnimation Duration="Short" Subtype="FromBottom"></base:PageAnimation>
+    </base:AnimationPage.PageAnimation>
+    <ContentPage.Content>
+        <StackLayout
+            Margin="0"
+            Padding="0"
+            VerticalOptions="Start">
+            <Grid 
+                x:Name="BottomBar"
+                VerticalOptions="Start"
+                Margin="0"
+                Padding="0"
+                BackgroundColor="Gray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="{localisation:Translate Scores}" Clicked="OnScoresButtonOnClicked" />
+                <Button Grid.Column="1" Text="{localisation:Translate Shoot}" />
+                <Button Grid.Column="2" Text="{localisation:Translate Profile}" Clicked="OnProfileButtonOnClicked" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</base:AnimationPage>

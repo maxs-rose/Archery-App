@@ -25,6 +25,3129 @@ namespace TheScoreBook.Android
 		
 		public static void UpdateIdValues()
 		{
+			global::FormsControls.Droid.Resource.Animation.abc_fade_in = global::TheScoreBook.Android.Resource.Animation.abc_fade_in;
+			global::FormsControls.Droid.Resource.Animation.abc_fade_out = global::TheScoreBook.Android.Resource.Animation.abc_fade_out;
+			global::FormsControls.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::TheScoreBook.Android.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::FormsControls.Droid.Resource.Animation.abc_popup_enter = global::TheScoreBook.Android.Resource.Animation.abc_popup_enter;
+			global::FormsControls.Droid.Resource.Animation.abc_popup_exit = global::TheScoreBook.Android.Resource.Animation.abc_popup_exit;
+			global::FormsControls.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::TheScoreBook.Android.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::FormsControls.Droid.Resource.Animation.abc_slide_in_bottom = global::TheScoreBook.Android.Resource.Animation.abc_slide_in_bottom;
+			global::FormsControls.Droid.Resource.Animation.abc_slide_in_top = global::TheScoreBook.Android.Resource.Animation.abc_slide_in_top;
+			global::FormsControls.Droid.Resource.Animation.abc_slide_out_bottom = global::TheScoreBook.Android.Resource.Animation.abc_slide_out_bottom;
+			global::FormsControls.Droid.Resource.Animation.abc_slide_out_top = global::TheScoreBook.Android.Resource.Animation.abc_slide_out_top;
+			global::FormsControls.Droid.Resource.Animation.abc_tooltip_enter = global::TheScoreBook.Android.Resource.Animation.abc_tooltip_enter;
+			global::FormsControls.Droid.Resource.Animation.abc_tooltip_exit = global::TheScoreBook.Android.Resource.Animation.abc_tooltip_exit;
+			global::FormsControls.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::TheScoreBook.Android.Resource.Animation.design_bottom_sheet_slide_in;
+			global::FormsControls.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::TheScoreBook.Android.Resource.Animation.design_bottom_sheet_slide_out;
+			global::FormsControls.Droid.Resource.Animation.design_snackbar_in = global::TheScoreBook.Android.Resource.Animation.design_snackbar_in;
+			global::FormsControls.Droid.Resource.Animation.design_snackbar_out = global::TheScoreBook.Android.Resource.Animation.design_snackbar_out;
+			global::FormsControls.Droid.Resource.Animation.EnterFromLeft = global::TheScoreBook.Android.Resource.Animation.EnterFromLeft;
+			global::FormsControls.Droid.Resource.Animation.EnterFromRight = global::TheScoreBook.Android.Resource.Animation.EnterFromRight;
+			global::FormsControls.Droid.Resource.Animation.ExitToLeft = global::TheScoreBook.Android.Resource.Animation.ExitToLeft;
+			global::FormsControls.Droid.Resource.Animation.ExitToRight = global::TheScoreBook.Android.Resource.Animation.ExitToRight;
+			global::FormsControls.Droid.Resource.Animator.design_appbar_state_list_animator = global::TheScoreBook.Android.Resource.Animator.design_appbar_state_list_animator;
+			global::FormsControls.Droid.Resource.Animator.design_fab_hide_motion_spec = global::TheScoreBook.Android.Resource.Animator.design_fab_hide_motion_spec;
+			global::FormsControls.Droid.Resource.Animator.design_fab_show_motion_spec = global::TheScoreBook.Android.Resource.Animator.design_fab_show_motion_spec;
+			global::FormsControls.Droid.Resource.Animator.empty_Animation = global::TheScoreBook.Android.Resource.Animator.empty_Animation;
+			global::FormsControls.Droid.Resource.Animator.empty_Animation_long = global::TheScoreBook.Android.Resource.Animator.empty_Animation_long;
+			global::FormsControls.Droid.Resource.Animator.empty_Animation_short = global::TheScoreBook.Android.Resource.Animator.empty_Animation_short;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom = global::TheScoreBook.Android.Resource.Animator.enter_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom_long = global::TheScoreBook.Android.Resource.Animator.enter_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom_short = global::TheScoreBook.Android.Resource.Animator.enter_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left = global::TheScoreBook.Android.Resource.Animator.enter_from_left;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left_long = global::TheScoreBook.Android.Resource.Animator.enter_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left_short = global::TheScoreBook.Android.Resource.Animator.enter_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right = global::TheScoreBook.Android.Resource.Animator.enter_from_right;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right_long = global::TheScoreBook.Android.Resource.Animator.enter_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right_short = global::TheScoreBook.Android.Resource.Animator.enter_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top = global::TheScoreBook.Android.Resource.Animator.enter_from_top;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top_long = global::TheScoreBook.Android.Resource.Animator.enter_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top_short = global::TheScoreBook.Android.Resource.Animator.enter_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_from_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing = global::TheScoreBook.Android.Resource.Animator.enter_landing;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom_long = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom_short = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_left;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left_long = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left_short = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_right;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right_long = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right_short = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_top;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top_long = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top_short = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_from_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_long = global::TheScoreBook.Android.Resource.Animator.enter_landing_long;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_short = global::TheScoreBook.Android.Resource.Animator.enter_landing_short;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_landing_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom_long = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom_short = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_left;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left_long = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left_short = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_right;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right_long = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right_short = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_top;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top_long = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top_short = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_roll_from_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate = global::TheScoreBook.Android.Resource.Animator.enter_rotate;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom_long = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom_short = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_left;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left_long = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left_short = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_right;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right_long = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right_short = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_top;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top_long = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top_short = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_from_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_long = global::TheScoreBook.Android.Resource.Animator.enter_rotate_long;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_short = global::TheScoreBook.Android.Resource.Animator.enter_rotate_short;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_rotate_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale = global::TheScoreBook.Android.Resource.Animator.enter_scale;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom_long = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom_short = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_left;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left_long = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left_short = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_right;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right_long = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right_short = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_top;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top_long = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top_short = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_from_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_long = global::TheScoreBook.Android.Resource.Animator.enter_scale_long;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_long_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_short = global::TheScoreBook.Android.Resource.Animator.enter_scale_short;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_short_bounce = global::TheScoreBook.Android.Resource.Animator.enter_scale_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_landing = global::TheScoreBook.Android.Resource.Animator.exit_landing;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_bottom = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_bottom_long = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_bottom_short = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_left = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_left;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_left_long = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_left_short = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_right = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_right;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_right_long = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_right_short = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_top = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_top;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_top_long = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_top_short = global::TheScoreBook.Android.Resource.Animator.exit_landing_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_long = global::TheScoreBook.Android.Resource.Animator.exit_landing_long;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_short = global::TheScoreBook.Android.Resource.Animator.exit_landing_short;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_bottom = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_bottom;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_bottom_long = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_bottom_short = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_left = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_left;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_left_long = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_left_long;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_left_short = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_left_short;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_right = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_right;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_right_long = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_right_long;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_right_short = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_right_short;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_top = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_top;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_top_long = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_top_long;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_top_short = global::TheScoreBook.Android.Resource.Animator.exit_roll_to_top_short;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate = global::TheScoreBook.Android.Resource.Animator.exit_rotate;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_long = global::TheScoreBook.Android.Resource.Animator.exit_rotate_long;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_short = global::TheScoreBook.Android.Resource.Animator.exit_rotate_short;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_bottom = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_bottom;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_bottom_long = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_bottom_short = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_left = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_left;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_left_long = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_left_long;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_left_short = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_left_short;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_right = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_right;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_right_long = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_right_long;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_right_short = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_right_short;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_top = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_top;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_top_long = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_top_long;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_top_short = global::TheScoreBook.Android.Resource.Animator.exit_rotate_to_top_short;
+			global::FormsControls.Droid.Resource.Animator.exit_scale = global::TheScoreBook.Android.Resource.Animator.exit_scale;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_bottom = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_bottom_long = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_bottom_short = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_left = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_left;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_left_long = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_left_short = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_right = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_right;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_right_long = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_right_short = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_top = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_top;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_top_long = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_top_short = global::TheScoreBook.Android.Resource.Animator.exit_scale_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_long = global::TheScoreBook.Android.Resource.Animator.exit_scale_long;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_short = global::TheScoreBook.Android.Resource.Animator.exit_scale_short;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom = global::TheScoreBook.Android.Resource.Animator.exit_to_bottom;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom_long = global::TheScoreBook.Android.Resource.Animator.exit_to_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom_long_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom_short = global::TheScoreBook.Android.Resource.Animator.exit_to_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom_short_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left = global::TheScoreBook.Android.Resource.Animator.exit_to_left;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left_long = global::TheScoreBook.Android.Resource.Animator.exit_to_left_long;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left_long_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left_short = global::TheScoreBook.Android.Resource.Animator.exit_to_left_short;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left_short_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right = global::TheScoreBook.Android.Resource.Animator.exit_to_right;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right_long = global::TheScoreBook.Android.Resource.Animator.exit_to_right_long;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right_long_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right_short = global::TheScoreBook.Android.Resource.Animator.exit_to_right_short;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right_short_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top = global::TheScoreBook.Android.Resource.Animator.exit_to_top;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top_long = global::TheScoreBook.Android.Resource.Animator.exit_to_top_long;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top_long_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top_short = global::TheScoreBook.Android.Resource.Animator.exit_to_top_short;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top_short_bounce = global::TheScoreBook.Android.Resource.Animator.exit_to_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.mtrl_btn_state_list_anim = global::TheScoreBook.Android.Resource.Animator.mtrl_btn_state_list_anim;
+			global::FormsControls.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::TheScoreBook.Android.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::FormsControls.Droid.Resource.Animator.mtrl_chip_state_list_anim = global::TheScoreBook.Android.Resource.Animator.mtrl_chip_state_list_anim;
+			global::FormsControls.Droid.Resource.Animator.mtrl_fab_hide_motion_spec = global::TheScoreBook.Android.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::FormsControls.Droid.Resource.Animator.mtrl_fab_show_motion_spec = global::TheScoreBook.Android.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::FormsControls.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::TheScoreBook.Android.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::FormsControls.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::TheScoreBook.Android.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::FormsControls.Droid.Resource.Attribute.actionBarDivider = global::TheScoreBook.Android.Resource.Attribute.actionBarDivider;
+			global::FormsControls.Droid.Resource.Attribute.actionBarItemBackground = global::TheScoreBook.Android.Resource.Attribute.actionBarItemBackground;
+			global::FormsControls.Droid.Resource.Attribute.actionBarPopupTheme = global::TheScoreBook.Android.Resource.Attribute.actionBarPopupTheme;
+			global::FormsControls.Droid.Resource.Attribute.actionBarSize = global::TheScoreBook.Android.Resource.Attribute.actionBarSize;
+			global::FormsControls.Droid.Resource.Attribute.actionBarSplitStyle = global::TheScoreBook.Android.Resource.Attribute.actionBarSplitStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionBarStyle = global::TheScoreBook.Android.Resource.Attribute.actionBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionBarTabBarStyle = global::TheScoreBook.Android.Resource.Attribute.actionBarTabBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionBarTabStyle = global::TheScoreBook.Android.Resource.Attribute.actionBarTabStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionBarTabTextStyle = global::TheScoreBook.Android.Resource.Attribute.actionBarTabTextStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionBarTheme = global::TheScoreBook.Android.Resource.Attribute.actionBarTheme;
+			global::FormsControls.Droid.Resource.Attribute.actionBarWidgetTheme = global::TheScoreBook.Android.Resource.Attribute.actionBarWidgetTheme;
+			global::FormsControls.Droid.Resource.Attribute.actionButtonStyle = global::TheScoreBook.Android.Resource.Attribute.actionButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionDropDownStyle = global::TheScoreBook.Android.Resource.Attribute.actionDropDownStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionLayout = global::TheScoreBook.Android.Resource.Attribute.actionLayout;
+			global::FormsControls.Droid.Resource.Attribute.actionMenuTextAppearance = global::TheScoreBook.Android.Resource.Attribute.actionMenuTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.actionMenuTextColor = global::TheScoreBook.Android.Resource.Attribute.actionMenuTextColor;
+			global::FormsControls.Droid.Resource.Attribute.actionModeBackground = global::TheScoreBook.Android.Resource.Attribute.actionModeBackground;
+			global::FormsControls.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::TheScoreBook.Android.Resource.Attribute.actionModeCloseButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionModeCloseDrawable = global::TheScoreBook.Android.Resource.Attribute.actionModeCloseDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModeCopyDrawable = global::TheScoreBook.Android.Resource.Attribute.actionModeCopyDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModeCutDrawable = global::TheScoreBook.Android.Resource.Attribute.actionModeCutDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModeFindDrawable = global::TheScoreBook.Android.Resource.Attribute.actionModeFindDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModePasteDrawable = global::TheScoreBook.Android.Resource.Attribute.actionModePasteDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModePopupWindowStyle = global::TheScoreBook.Android.Resource.Attribute.actionModePopupWindowStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::TheScoreBook.Android.Resource.Attribute.actionModeSelectAllDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModeShareDrawable = global::TheScoreBook.Android.Resource.Attribute.actionModeShareDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModeSplitBackground = global::TheScoreBook.Android.Resource.Attribute.actionModeSplitBackground;
+			global::FormsControls.Droid.Resource.Attribute.actionModeStyle = global::TheScoreBook.Android.Resource.Attribute.actionModeStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::TheScoreBook.Android.Resource.Attribute.actionModeWebSearchDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionOverflowButtonStyle = global::TheScoreBook.Android.Resource.Attribute.actionOverflowButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionOverflowMenuStyle = global::TheScoreBook.Android.Resource.Attribute.actionOverflowMenuStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionProviderClass = global::TheScoreBook.Android.Resource.Attribute.actionProviderClass;
+			global::FormsControls.Droid.Resource.Attribute.actionViewClass = global::TheScoreBook.Android.Resource.Attribute.actionViewClass;
+			global::FormsControls.Droid.Resource.Attribute.activityChooserViewStyle = global::TheScoreBook.Android.Resource.Attribute.activityChooserViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::TheScoreBook.Android.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::FormsControls.Droid.Resource.Attribute.alertDialogCenterButtons = global::TheScoreBook.Android.Resource.Attribute.alertDialogCenterButtons;
+			global::FormsControls.Droid.Resource.Attribute.alertDialogStyle = global::TheScoreBook.Android.Resource.Attribute.alertDialogStyle;
+			global::FormsControls.Droid.Resource.Attribute.alertDialogTheme = global::TheScoreBook.Android.Resource.Attribute.alertDialogTheme;
+			global::FormsControls.Droid.Resource.Attribute.allowStacking = global::TheScoreBook.Android.Resource.Attribute.allowStacking;
+			global::FormsControls.Droid.Resource.Attribute.alpha = global::TheScoreBook.Android.Resource.Attribute.alpha;
+			global::FormsControls.Droid.Resource.Attribute.alphabeticModifiers = global::TheScoreBook.Android.Resource.Attribute.alphabeticModifiers;
+			global::FormsControls.Droid.Resource.Attribute.arrowHeadLength = global::TheScoreBook.Android.Resource.Attribute.arrowHeadLength;
+			global::FormsControls.Droid.Resource.Attribute.arrowShaftLength = global::TheScoreBook.Android.Resource.Attribute.arrowShaftLength;
+			global::FormsControls.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::TheScoreBook.Android.Resource.Attribute.autoCompleteTextViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.autoSizeMaxTextSize = global::TheScoreBook.Android.Resource.Attribute.autoSizeMaxTextSize;
+			global::FormsControls.Droid.Resource.Attribute.autoSizeMinTextSize = global::TheScoreBook.Android.Resource.Attribute.autoSizeMinTextSize;
+			global::FormsControls.Droid.Resource.Attribute.autoSizePresetSizes = global::TheScoreBook.Android.Resource.Attribute.autoSizePresetSizes;
+			global::FormsControls.Droid.Resource.Attribute.autoSizeStepGranularity = global::TheScoreBook.Android.Resource.Attribute.autoSizeStepGranularity;
+			global::FormsControls.Droid.Resource.Attribute.autoSizeTextType = global::TheScoreBook.Android.Resource.Attribute.autoSizeTextType;
+			global::FormsControls.Droid.Resource.Attribute.background = global::TheScoreBook.Android.Resource.Attribute.background;
+			global::FormsControls.Droid.Resource.Attribute.backgroundSplit = global::TheScoreBook.Android.Resource.Attribute.backgroundSplit;
+			global::FormsControls.Droid.Resource.Attribute.backgroundStacked = global::TheScoreBook.Android.Resource.Attribute.backgroundStacked;
+			global::FormsControls.Droid.Resource.Attribute.backgroundTint = global::TheScoreBook.Android.Resource.Attribute.backgroundTint;
+			global::FormsControls.Droid.Resource.Attribute.backgroundTintMode = global::TheScoreBook.Android.Resource.Attribute.backgroundTintMode;
+			global::FormsControls.Droid.Resource.Attribute.barLength = global::TheScoreBook.Android.Resource.Attribute.barLength;
+			global::FormsControls.Droid.Resource.Attribute.behavior_autoHide = global::TheScoreBook.Android.Resource.Attribute.behavior_autoHide;
+			global::FormsControls.Droid.Resource.Attribute.behavior_fitToContents = global::TheScoreBook.Android.Resource.Attribute.behavior_fitToContents;
+			global::FormsControls.Droid.Resource.Attribute.behavior_hideable = global::TheScoreBook.Android.Resource.Attribute.behavior_hideable;
+			global::FormsControls.Droid.Resource.Attribute.behavior_overlapTop = global::TheScoreBook.Android.Resource.Attribute.behavior_overlapTop;
+			global::FormsControls.Droid.Resource.Attribute.behavior_peekHeight = global::TheScoreBook.Android.Resource.Attribute.behavior_peekHeight;
+			global::FormsControls.Droid.Resource.Attribute.behavior_skipCollapsed = global::TheScoreBook.Android.Resource.Attribute.behavior_skipCollapsed;
+			global::FormsControls.Droid.Resource.Attribute.borderlessButtonStyle = global::TheScoreBook.Android.Resource.Attribute.borderlessButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.borderWidth = global::TheScoreBook.Android.Resource.Attribute.borderWidth;
+			global::FormsControls.Droid.Resource.Attribute.bottomAppBarStyle = global::TheScoreBook.Android.Resource.Attribute.bottomAppBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.bottomNavigationStyle = global::TheScoreBook.Android.Resource.Attribute.bottomNavigationStyle;
+			global::FormsControls.Droid.Resource.Attribute.bottomSheetDialogTheme = global::TheScoreBook.Android.Resource.Attribute.bottomSheetDialogTheme;
+			global::FormsControls.Droid.Resource.Attribute.bottomSheetStyle = global::TheScoreBook.Android.Resource.Attribute.bottomSheetStyle;
+			global::FormsControls.Droid.Resource.Attribute.boxBackgroundColor = global::TheScoreBook.Android.Resource.Attribute.boxBackgroundColor;
+			global::FormsControls.Droid.Resource.Attribute.boxBackgroundMode = global::TheScoreBook.Android.Resource.Attribute.boxBackgroundMode;
+			global::FormsControls.Droid.Resource.Attribute.boxCollapsedPaddingTop = global::TheScoreBook.Android.Resource.Attribute.boxCollapsedPaddingTop;
+			global::FormsControls.Droid.Resource.Attribute.boxCornerRadiusBottomEnd = global::TheScoreBook.Android.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::FormsControls.Droid.Resource.Attribute.boxCornerRadiusBottomStart = global::TheScoreBook.Android.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::FormsControls.Droid.Resource.Attribute.boxCornerRadiusTopEnd = global::TheScoreBook.Android.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::FormsControls.Droid.Resource.Attribute.boxCornerRadiusTopStart = global::TheScoreBook.Android.Resource.Attribute.boxCornerRadiusTopStart;
+			global::FormsControls.Droid.Resource.Attribute.boxStrokeColor = global::TheScoreBook.Android.Resource.Attribute.boxStrokeColor;
+			global::FormsControls.Droid.Resource.Attribute.boxStrokeWidth = global::TheScoreBook.Android.Resource.Attribute.boxStrokeWidth;
+			global::FormsControls.Droid.Resource.Attribute.buttonBarButtonStyle = global::TheScoreBook.Android.Resource.Attribute.buttonBarButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::TheScoreBook.Android.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::TheScoreBook.Android.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::TheScoreBook.Android.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonBarStyle = global::TheScoreBook.Android.Resource.Attribute.buttonBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonGravity = global::TheScoreBook.Android.Resource.Attribute.buttonGravity;
+			global::FormsControls.Droid.Resource.Attribute.buttonIconDimen = global::TheScoreBook.Android.Resource.Attribute.buttonIconDimen;
+			global::FormsControls.Droid.Resource.Attribute.buttonPanelSideLayout = global::TheScoreBook.Android.Resource.Attribute.buttonPanelSideLayout;
+			global::FormsControls.Droid.Resource.Attribute.buttonStyle = global::TheScoreBook.Android.Resource.Attribute.buttonStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonStyleSmall = global::TheScoreBook.Android.Resource.Attribute.buttonStyleSmall;
+			global::FormsControls.Droid.Resource.Attribute.buttonTint = global::TheScoreBook.Android.Resource.Attribute.buttonTint;
+			global::FormsControls.Droid.Resource.Attribute.buttonTintMode = global::TheScoreBook.Android.Resource.Attribute.buttonTintMode;
+			global::FormsControls.Droid.Resource.Attribute.cardBackgroundColor = global::TheScoreBook.Android.Resource.Attribute.cardBackgroundColor;
+			global::FormsControls.Droid.Resource.Attribute.cardCornerRadius = global::TheScoreBook.Android.Resource.Attribute.cardCornerRadius;
+			global::FormsControls.Droid.Resource.Attribute.cardElevation = global::TheScoreBook.Android.Resource.Attribute.cardElevation;
+			global::FormsControls.Droid.Resource.Attribute.cardMaxElevation = global::TheScoreBook.Android.Resource.Attribute.cardMaxElevation;
+			global::FormsControls.Droid.Resource.Attribute.cardPreventCornerOverlap = global::TheScoreBook.Android.Resource.Attribute.cardPreventCornerOverlap;
+			global::FormsControls.Droid.Resource.Attribute.cardUseCompatPadding = global::TheScoreBook.Android.Resource.Attribute.cardUseCompatPadding;
+			global::FormsControls.Droid.Resource.Attribute.cardViewStyle = global::TheScoreBook.Android.Resource.Attribute.cardViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.checkboxStyle = global::TheScoreBook.Android.Resource.Attribute.checkboxStyle;
+			global::FormsControls.Droid.Resource.Attribute.checkedChip = global::TheScoreBook.Android.Resource.Attribute.checkedChip;
+			global::FormsControls.Droid.Resource.Attribute.checkedIcon = global::TheScoreBook.Android.Resource.Attribute.checkedIcon;
+			global::FormsControls.Droid.Resource.Attribute.checkedIconEnabled = global::TheScoreBook.Android.Resource.Attribute.checkedIconEnabled;
+			global::FormsControls.Droid.Resource.Attribute.checkedIconVisible = global::TheScoreBook.Android.Resource.Attribute.checkedIconVisible;
+			global::FormsControls.Droid.Resource.Attribute.checkedTextViewStyle = global::TheScoreBook.Android.Resource.Attribute.checkedTextViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.chipBackgroundColor = global::TheScoreBook.Android.Resource.Attribute.chipBackgroundColor;
+			global::FormsControls.Droid.Resource.Attribute.chipCornerRadius = global::TheScoreBook.Android.Resource.Attribute.chipCornerRadius;
+			global::FormsControls.Droid.Resource.Attribute.chipEndPadding = global::TheScoreBook.Android.Resource.Attribute.chipEndPadding;
+			global::FormsControls.Droid.Resource.Attribute.chipGroupStyle = global::TheScoreBook.Android.Resource.Attribute.chipGroupStyle;
+			global::FormsControls.Droid.Resource.Attribute.chipIcon = global::TheScoreBook.Android.Resource.Attribute.chipIcon;
+			global::FormsControls.Droid.Resource.Attribute.chipIconEnabled = global::TheScoreBook.Android.Resource.Attribute.chipIconEnabled;
+			global::FormsControls.Droid.Resource.Attribute.chipIconSize = global::TheScoreBook.Android.Resource.Attribute.chipIconSize;
+			global::FormsControls.Droid.Resource.Attribute.chipIconTint = global::TheScoreBook.Android.Resource.Attribute.chipIconTint;
+			global::FormsControls.Droid.Resource.Attribute.chipIconVisible = global::TheScoreBook.Android.Resource.Attribute.chipIconVisible;
+			global::FormsControls.Droid.Resource.Attribute.chipMinHeight = global::TheScoreBook.Android.Resource.Attribute.chipMinHeight;
+			global::FormsControls.Droid.Resource.Attribute.chipSpacing = global::TheScoreBook.Android.Resource.Attribute.chipSpacing;
+			global::FormsControls.Droid.Resource.Attribute.chipSpacingHorizontal = global::TheScoreBook.Android.Resource.Attribute.chipSpacingHorizontal;
+			global::FormsControls.Droid.Resource.Attribute.chipSpacingVertical = global::TheScoreBook.Android.Resource.Attribute.chipSpacingVertical;
+			global::FormsControls.Droid.Resource.Attribute.chipStandaloneStyle = global::TheScoreBook.Android.Resource.Attribute.chipStandaloneStyle;
+			global::FormsControls.Droid.Resource.Attribute.chipStartPadding = global::TheScoreBook.Android.Resource.Attribute.chipStartPadding;
+			global::FormsControls.Droid.Resource.Attribute.chipStrokeColor = global::TheScoreBook.Android.Resource.Attribute.chipStrokeColor;
+			global::FormsControls.Droid.Resource.Attribute.chipStrokeWidth = global::TheScoreBook.Android.Resource.Attribute.chipStrokeWidth;
+			global::FormsControls.Droid.Resource.Attribute.chipStyle = global::TheScoreBook.Android.Resource.Attribute.chipStyle;
+			global::FormsControls.Droid.Resource.Attribute.closeIcon = global::TheScoreBook.Android.Resource.Attribute.closeIcon;
+			global::FormsControls.Droid.Resource.Attribute.closeIconEnabled = global::TheScoreBook.Android.Resource.Attribute.closeIconEnabled;
+			global::FormsControls.Droid.Resource.Attribute.closeIconEndPadding = global::TheScoreBook.Android.Resource.Attribute.closeIconEndPadding;
+			global::FormsControls.Droid.Resource.Attribute.closeIconSize = global::TheScoreBook.Android.Resource.Attribute.closeIconSize;
+			global::FormsControls.Droid.Resource.Attribute.closeIconStartPadding = global::TheScoreBook.Android.Resource.Attribute.closeIconStartPadding;
+			global::FormsControls.Droid.Resource.Attribute.closeIconTint = global::TheScoreBook.Android.Resource.Attribute.closeIconTint;
+			global::FormsControls.Droid.Resource.Attribute.closeIconVisible = global::TheScoreBook.Android.Resource.Attribute.closeIconVisible;
+			global::FormsControls.Droid.Resource.Attribute.closeItemLayout = global::TheScoreBook.Android.Resource.Attribute.closeItemLayout;
+			global::FormsControls.Droid.Resource.Attribute.collapseContentDescription = global::TheScoreBook.Android.Resource.Attribute.collapseContentDescription;
+			global::FormsControls.Droid.Resource.Attribute.collapsedTitleGravity = global::TheScoreBook.Android.Resource.Attribute.collapsedTitleGravity;
+			global::FormsControls.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::TheScoreBook.Android.Resource.Attribute.collapsedTitleTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.collapseIcon = global::TheScoreBook.Android.Resource.Attribute.collapseIcon;
+			global::FormsControls.Droid.Resource.Attribute.color = global::TheScoreBook.Android.Resource.Attribute.color;
+			global::FormsControls.Droid.Resource.Attribute.colorAccent = global::TheScoreBook.Android.Resource.Attribute.colorAccent;
+			global::FormsControls.Droid.Resource.Attribute.colorBackgroundFloating = global::TheScoreBook.Android.Resource.Attribute.colorBackgroundFloating;
+			global::FormsControls.Droid.Resource.Attribute.colorButtonNormal = global::TheScoreBook.Android.Resource.Attribute.colorButtonNormal;
+			global::FormsControls.Droid.Resource.Attribute.colorControlActivated = global::TheScoreBook.Android.Resource.Attribute.colorControlActivated;
+			global::FormsControls.Droid.Resource.Attribute.colorControlHighlight = global::TheScoreBook.Android.Resource.Attribute.colorControlHighlight;
+			global::FormsControls.Droid.Resource.Attribute.colorControlNormal = global::TheScoreBook.Android.Resource.Attribute.colorControlNormal;
+			global::FormsControls.Droid.Resource.Attribute.colorError = global::TheScoreBook.Android.Resource.Attribute.colorError;
+			global::FormsControls.Droid.Resource.Attribute.colorPrimary = global::TheScoreBook.Android.Resource.Attribute.colorPrimary;
+			global::FormsControls.Droid.Resource.Attribute.colorPrimaryDark = global::TheScoreBook.Android.Resource.Attribute.colorPrimaryDark;
+			global::FormsControls.Droid.Resource.Attribute.colorSecondary = global::TheScoreBook.Android.Resource.Attribute.colorSecondary;
+			global::FormsControls.Droid.Resource.Attribute.colorSwitchThumbNormal = global::TheScoreBook.Android.Resource.Attribute.colorSwitchThumbNormal;
+			global::FormsControls.Droid.Resource.Attribute.commitIcon = global::TheScoreBook.Android.Resource.Attribute.commitIcon;
+			global::FormsControls.Droid.Resource.Attribute.contentDescription = global::TheScoreBook.Android.Resource.Attribute.contentDescription;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetEnd = global::TheScoreBook.Android.Resource.Attribute.contentInsetEnd;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetEndWithActions = global::TheScoreBook.Android.Resource.Attribute.contentInsetEndWithActions;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetLeft = global::TheScoreBook.Android.Resource.Attribute.contentInsetLeft;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetRight = global::TheScoreBook.Android.Resource.Attribute.contentInsetRight;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetStart = global::TheScoreBook.Android.Resource.Attribute.contentInsetStart;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::TheScoreBook.Android.Resource.Attribute.contentInsetStartWithNavigation;
+			global::FormsControls.Droid.Resource.Attribute.contentPadding = global::TheScoreBook.Android.Resource.Attribute.contentPadding;
+			global::FormsControls.Droid.Resource.Attribute.contentPaddingBottom = global::TheScoreBook.Android.Resource.Attribute.contentPaddingBottom;
+			global::FormsControls.Droid.Resource.Attribute.contentPaddingLeft = global::TheScoreBook.Android.Resource.Attribute.contentPaddingLeft;
+			global::FormsControls.Droid.Resource.Attribute.contentPaddingRight = global::TheScoreBook.Android.Resource.Attribute.contentPaddingRight;
+			global::FormsControls.Droid.Resource.Attribute.contentPaddingTop = global::TheScoreBook.Android.Resource.Attribute.contentPaddingTop;
+			global::FormsControls.Droid.Resource.Attribute.contentScrim = global::TheScoreBook.Android.Resource.Attribute.contentScrim;
+			global::FormsControls.Droid.Resource.Attribute.controlBackground = global::TheScoreBook.Android.Resource.Attribute.controlBackground;
+			global::FormsControls.Droid.Resource.Attribute.coordinatorLayoutStyle = global::TheScoreBook.Android.Resource.Attribute.coordinatorLayoutStyle;
+			global::FormsControls.Droid.Resource.Attribute.cornerRadius = global::TheScoreBook.Android.Resource.Attribute.cornerRadius;
+			global::FormsControls.Droid.Resource.Attribute.counterEnabled = global::TheScoreBook.Android.Resource.Attribute.counterEnabled;
+			global::FormsControls.Droid.Resource.Attribute.counterMaxLength = global::TheScoreBook.Android.Resource.Attribute.counterMaxLength;
+			global::FormsControls.Droid.Resource.Attribute.counterOverflowTextAppearance = global::TheScoreBook.Android.Resource.Attribute.counterOverflowTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.counterTextAppearance = global::TheScoreBook.Android.Resource.Attribute.counterTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.customNavigationLayout = global::TheScoreBook.Android.Resource.Attribute.customNavigationLayout;
+			global::FormsControls.Droid.Resource.Attribute.defaultQueryHint = global::TheScoreBook.Android.Resource.Attribute.defaultQueryHint;
+			global::FormsControls.Droid.Resource.Attribute.dialogCornerRadius = global::TheScoreBook.Android.Resource.Attribute.dialogCornerRadius;
+			global::FormsControls.Droid.Resource.Attribute.dialogPreferredPadding = global::TheScoreBook.Android.Resource.Attribute.dialogPreferredPadding;
+			global::FormsControls.Droid.Resource.Attribute.dialogTheme = global::TheScoreBook.Android.Resource.Attribute.dialogTheme;
+			global::FormsControls.Droid.Resource.Attribute.displayOptions = global::TheScoreBook.Android.Resource.Attribute.displayOptions;
+			global::FormsControls.Droid.Resource.Attribute.divider = global::TheScoreBook.Android.Resource.Attribute.divider;
+			global::FormsControls.Droid.Resource.Attribute.dividerHorizontal = global::TheScoreBook.Android.Resource.Attribute.dividerHorizontal;
+			global::FormsControls.Droid.Resource.Attribute.dividerPadding = global::TheScoreBook.Android.Resource.Attribute.dividerPadding;
+			global::FormsControls.Droid.Resource.Attribute.dividerVertical = global::TheScoreBook.Android.Resource.Attribute.dividerVertical;
+			global::FormsControls.Droid.Resource.Attribute.drawableSize = global::TheScoreBook.Android.Resource.Attribute.drawableSize;
+			global::FormsControls.Droid.Resource.Attribute.drawerArrowStyle = global::TheScoreBook.Android.Resource.Attribute.drawerArrowStyle;
+			global::FormsControls.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::TheScoreBook.Android.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::FormsControls.Droid.Resource.Attribute.dropDownListViewStyle = global::TheScoreBook.Android.Resource.Attribute.dropDownListViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.editTextBackground = global::TheScoreBook.Android.Resource.Attribute.editTextBackground;
+			global::FormsControls.Droid.Resource.Attribute.editTextColor = global::TheScoreBook.Android.Resource.Attribute.editTextColor;
+			global::FormsControls.Droid.Resource.Attribute.editTextStyle = global::TheScoreBook.Android.Resource.Attribute.editTextStyle;
+			global::FormsControls.Droid.Resource.Attribute.elevation = global::TheScoreBook.Android.Resource.Attribute.elevation;
+			global::FormsControls.Droid.Resource.Attribute.enforceMaterialTheme = global::TheScoreBook.Android.Resource.Attribute.enforceMaterialTheme;
+			global::FormsControls.Droid.Resource.Attribute.enforceTextAppearance = global::TheScoreBook.Android.Resource.Attribute.enforceTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.errorEnabled = global::TheScoreBook.Android.Resource.Attribute.errorEnabled;
+			global::FormsControls.Droid.Resource.Attribute.errorTextAppearance = global::TheScoreBook.Android.Resource.Attribute.errorTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::TheScoreBook.Android.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::FormsControls.Droid.Resource.Attribute.expanded = global::TheScoreBook.Android.Resource.Attribute.expanded;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleGravity = global::TheScoreBook.Android.Resource.Attribute.expandedTitleGravity;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleMargin = global::TheScoreBook.Android.Resource.Attribute.expandedTitleMargin;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleMarginBottom = global::TheScoreBook.Android.Resource.Attribute.expandedTitleMarginBottom;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleMarginEnd = global::TheScoreBook.Android.Resource.Attribute.expandedTitleMarginEnd;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleMarginStart = global::TheScoreBook.Android.Resource.Attribute.expandedTitleMarginStart;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleMarginTop = global::TheScoreBook.Android.Resource.Attribute.expandedTitleMarginTop;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleTextAppearance = global::TheScoreBook.Android.Resource.Attribute.expandedTitleTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.externalRouteEnabledDrawable = global::TheScoreBook.Android.Resource.Attribute.externalRouteEnabledDrawable;
+			global::FormsControls.Droid.Resource.Attribute.fabAlignmentMode = global::TheScoreBook.Android.Resource.Attribute.fabAlignmentMode;
+			global::FormsControls.Droid.Resource.Attribute.fabCradleMargin = global::TheScoreBook.Android.Resource.Attribute.fabCradleMargin;
+			global::FormsControls.Droid.Resource.Attribute.fabCradleRoundedCornerRadius = global::TheScoreBook.Android.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::FormsControls.Droid.Resource.Attribute.fabCradleVerticalOffset = global::TheScoreBook.Android.Resource.Attribute.fabCradleVerticalOffset;
+			global::FormsControls.Droid.Resource.Attribute.fabCustomSize = global::TheScoreBook.Android.Resource.Attribute.fabCustomSize;
+			global::FormsControls.Droid.Resource.Attribute.fabSize = global::TheScoreBook.Android.Resource.Attribute.fabSize;
+			global::FormsControls.Droid.Resource.Attribute.fastScrollEnabled = global::TheScoreBook.Android.Resource.Attribute.fastScrollEnabled;
+			global::FormsControls.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::TheScoreBook.Android.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::FormsControls.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::TheScoreBook.Android.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::FormsControls.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable = global::TheScoreBook.Android.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::FormsControls.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable = global::TheScoreBook.Android.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::FormsControls.Droid.Resource.Attribute.firstBaselineToTopHeight = global::TheScoreBook.Android.Resource.Attribute.firstBaselineToTopHeight;
+			global::FormsControls.Droid.Resource.Attribute.floatingActionButtonStyle = global::TheScoreBook.Android.Resource.Attribute.floatingActionButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.font = global::TheScoreBook.Android.Resource.Attribute.font;
+			global::FormsControls.Droid.Resource.Attribute.fontFamily = global::TheScoreBook.Android.Resource.Attribute.fontFamily;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderAuthority = global::TheScoreBook.Android.Resource.Attribute.fontProviderAuthority;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderCerts = global::TheScoreBook.Android.Resource.Attribute.fontProviderCerts;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderFetchStrategy = global::TheScoreBook.Android.Resource.Attribute.fontProviderFetchStrategy;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderFetchTimeout = global::TheScoreBook.Android.Resource.Attribute.fontProviderFetchTimeout;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderPackage = global::TheScoreBook.Android.Resource.Attribute.fontProviderPackage;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderQuery = global::TheScoreBook.Android.Resource.Attribute.fontProviderQuery;
+			global::FormsControls.Droid.Resource.Attribute.fontStyle = global::TheScoreBook.Android.Resource.Attribute.fontStyle;
+			global::FormsControls.Droid.Resource.Attribute.fontVariationSettings = global::TheScoreBook.Android.Resource.Attribute.fontVariationSettings;
+			global::FormsControls.Droid.Resource.Attribute.fontWeight = global::TheScoreBook.Android.Resource.Attribute.fontWeight;
+			global::FormsControls.Droid.Resource.Attribute.foregroundInsidePadding = global::TheScoreBook.Android.Resource.Attribute.foregroundInsidePadding;
+			global::FormsControls.Droid.Resource.Attribute.gapBetweenBars = global::TheScoreBook.Android.Resource.Attribute.gapBetweenBars;
+			global::FormsControls.Droid.Resource.Attribute.goIcon = global::TheScoreBook.Android.Resource.Attribute.goIcon;
+			global::FormsControls.Droid.Resource.Attribute.headerLayout = global::TheScoreBook.Android.Resource.Attribute.headerLayout;
+			global::FormsControls.Droid.Resource.Attribute.height = global::TheScoreBook.Android.Resource.Attribute.height;
+			global::FormsControls.Droid.Resource.Attribute.helperText = global::TheScoreBook.Android.Resource.Attribute.helperText;
+			global::FormsControls.Droid.Resource.Attribute.helperTextEnabled = global::TheScoreBook.Android.Resource.Attribute.helperTextEnabled;
+			global::FormsControls.Droid.Resource.Attribute.helperTextTextAppearance = global::TheScoreBook.Android.Resource.Attribute.helperTextTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.hideMotionSpec = global::TheScoreBook.Android.Resource.Attribute.hideMotionSpec;
+			global::FormsControls.Droid.Resource.Attribute.hideOnContentScroll = global::TheScoreBook.Android.Resource.Attribute.hideOnContentScroll;
+			global::FormsControls.Droid.Resource.Attribute.hideOnScroll = global::TheScoreBook.Android.Resource.Attribute.hideOnScroll;
+			global::FormsControls.Droid.Resource.Attribute.hintAnimationEnabled = global::TheScoreBook.Android.Resource.Attribute.hintAnimationEnabled;
+			global::FormsControls.Droid.Resource.Attribute.hintEnabled = global::TheScoreBook.Android.Resource.Attribute.hintEnabled;
+			global::FormsControls.Droid.Resource.Attribute.hintTextAppearance = global::TheScoreBook.Android.Resource.Attribute.hintTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.homeAsUpIndicator = global::TheScoreBook.Android.Resource.Attribute.homeAsUpIndicator;
+			global::FormsControls.Droid.Resource.Attribute.homeLayout = global::TheScoreBook.Android.Resource.Attribute.homeLayout;
+			global::FormsControls.Droid.Resource.Attribute.hoveredFocusedTranslationZ = global::TheScoreBook.Android.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::FormsControls.Droid.Resource.Attribute.icon = global::TheScoreBook.Android.Resource.Attribute.icon;
+			global::FormsControls.Droid.Resource.Attribute.iconEndPadding = global::TheScoreBook.Android.Resource.Attribute.iconEndPadding;
+			global::FormsControls.Droid.Resource.Attribute.iconGravity = global::TheScoreBook.Android.Resource.Attribute.iconGravity;
+			global::FormsControls.Droid.Resource.Attribute.iconifiedByDefault = global::TheScoreBook.Android.Resource.Attribute.iconifiedByDefault;
+			global::FormsControls.Droid.Resource.Attribute.iconPadding = global::TheScoreBook.Android.Resource.Attribute.iconPadding;
+			global::FormsControls.Droid.Resource.Attribute.iconSize = global::TheScoreBook.Android.Resource.Attribute.iconSize;
+			global::FormsControls.Droid.Resource.Attribute.iconStartPadding = global::TheScoreBook.Android.Resource.Attribute.iconStartPadding;
+			global::FormsControls.Droid.Resource.Attribute.iconTint = global::TheScoreBook.Android.Resource.Attribute.iconTint;
+			global::FormsControls.Droid.Resource.Attribute.iconTintMode = global::TheScoreBook.Android.Resource.Attribute.iconTintMode;
+			global::FormsControls.Droid.Resource.Attribute.imageButtonStyle = global::TheScoreBook.Android.Resource.Attribute.imageButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.indeterminateProgressStyle = global::TheScoreBook.Android.Resource.Attribute.indeterminateProgressStyle;
+			global::FormsControls.Droid.Resource.Attribute.initialActivityCount = global::TheScoreBook.Android.Resource.Attribute.initialActivityCount;
+			global::FormsControls.Droid.Resource.Attribute.insetForeground = global::TheScoreBook.Android.Resource.Attribute.insetForeground;
+			global::FormsControls.Droid.Resource.Attribute.isLightTheme = global::TheScoreBook.Android.Resource.Attribute.isLightTheme;
+			global::FormsControls.Droid.Resource.Attribute.itemBackground = global::TheScoreBook.Android.Resource.Attribute.itemBackground;
+			global::FormsControls.Droid.Resource.Attribute.itemHorizontalPadding = global::TheScoreBook.Android.Resource.Attribute.itemHorizontalPadding;
+			global::FormsControls.Droid.Resource.Attribute.itemHorizontalTranslationEnabled = global::TheScoreBook.Android.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::FormsControls.Droid.Resource.Attribute.itemIconPadding = global::TheScoreBook.Android.Resource.Attribute.itemIconPadding;
+			global::FormsControls.Droid.Resource.Attribute.itemIconSize = global::TheScoreBook.Android.Resource.Attribute.itemIconSize;
+			global::FormsControls.Droid.Resource.Attribute.itemIconTint = global::TheScoreBook.Android.Resource.Attribute.itemIconTint;
+			global::FormsControls.Droid.Resource.Attribute.itemPadding = global::TheScoreBook.Android.Resource.Attribute.itemPadding;
+			global::FormsControls.Droid.Resource.Attribute.itemSpacing = global::TheScoreBook.Android.Resource.Attribute.itemSpacing;
+			global::FormsControls.Droid.Resource.Attribute.itemTextAppearance = global::TheScoreBook.Android.Resource.Attribute.itemTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.itemTextAppearanceActive = global::TheScoreBook.Android.Resource.Attribute.itemTextAppearanceActive;
+			global::FormsControls.Droid.Resource.Attribute.itemTextAppearanceInactive = global::TheScoreBook.Android.Resource.Attribute.itemTextAppearanceInactive;
+			global::FormsControls.Droid.Resource.Attribute.itemTextColor = global::TheScoreBook.Android.Resource.Attribute.itemTextColor;
+			global::FormsControls.Droid.Resource.Attribute.keylines = global::TheScoreBook.Android.Resource.Attribute.keylines;
+			global::FormsControls.Droid.Resource.Attribute.labelVisibilityMode = global::TheScoreBook.Android.Resource.Attribute.labelVisibilityMode;
+			global::FormsControls.Droid.Resource.Attribute.lastBaselineToBottomHeight = global::TheScoreBook.Android.Resource.Attribute.lastBaselineToBottomHeight;
+			global::FormsControls.Droid.Resource.Attribute.layout = global::TheScoreBook.Android.Resource.Attribute.layout;
+			global::FormsControls.Droid.Resource.Attribute.layoutManager = global::TheScoreBook.Android.Resource.Attribute.layoutManager;
+			global::FormsControls.Droid.Resource.Attribute.layout_anchor = global::TheScoreBook.Android.Resource.Attribute.layout_anchor;
+			global::FormsControls.Droid.Resource.Attribute.layout_anchorGravity = global::TheScoreBook.Android.Resource.Attribute.layout_anchorGravity;
+			global::FormsControls.Droid.Resource.Attribute.layout_behavior = global::TheScoreBook.Android.Resource.Attribute.layout_behavior;
+			global::FormsControls.Droid.Resource.Attribute.layout_collapseMode = global::TheScoreBook.Android.Resource.Attribute.layout_collapseMode;
+			global::FormsControls.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::TheScoreBook.Android.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::FormsControls.Droid.Resource.Attribute.layout_dodgeInsetEdges = global::TheScoreBook.Android.Resource.Attribute.layout_dodgeInsetEdges;
+			global::FormsControls.Droid.Resource.Attribute.layout_insetEdge = global::TheScoreBook.Android.Resource.Attribute.layout_insetEdge;
+			global::FormsControls.Droid.Resource.Attribute.layout_keyline = global::TheScoreBook.Android.Resource.Attribute.layout_keyline;
+			global::FormsControls.Droid.Resource.Attribute.layout_scrollFlags = global::TheScoreBook.Android.Resource.Attribute.layout_scrollFlags;
+			global::FormsControls.Droid.Resource.Attribute.layout_scrollInterpolator = global::TheScoreBook.Android.Resource.Attribute.layout_scrollInterpolator;
+			global::FormsControls.Droid.Resource.Attribute.liftOnScroll = global::TheScoreBook.Android.Resource.Attribute.liftOnScroll;
+			global::FormsControls.Droid.Resource.Attribute.lineHeight = global::TheScoreBook.Android.Resource.Attribute.lineHeight;
+			global::FormsControls.Droid.Resource.Attribute.lineSpacing = global::TheScoreBook.Android.Resource.Attribute.lineSpacing;
+			global::FormsControls.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::TheScoreBook.Android.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::FormsControls.Droid.Resource.Attribute.listDividerAlertDialog = global::TheScoreBook.Android.Resource.Attribute.listDividerAlertDialog;
+			global::FormsControls.Droid.Resource.Attribute.listItemLayout = global::TheScoreBook.Android.Resource.Attribute.listItemLayout;
+			global::FormsControls.Droid.Resource.Attribute.listLayout = global::TheScoreBook.Android.Resource.Attribute.listLayout;
+			global::FormsControls.Droid.Resource.Attribute.listMenuViewStyle = global::TheScoreBook.Android.Resource.Attribute.listMenuViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.listPopupWindowStyle = global::TheScoreBook.Android.Resource.Attribute.listPopupWindowStyle;
+			global::FormsControls.Droid.Resource.Attribute.listPreferredItemHeight = global::TheScoreBook.Android.Resource.Attribute.listPreferredItemHeight;
+			global::FormsControls.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::TheScoreBook.Android.Resource.Attribute.listPreferredItemHeightLarge;
+			global::FormsControls.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::TheScoreBook.Android.Resource.Attribute.listPreferredItemHeightSmall;
+			global::FormsControls.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::TheScoreBook.Android.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::FormsControls.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::TheScoreBook.Android.Resource.Attribute.listPreferredItemPaddingRight;
+			global::FormsControls.Droid.Resource.Attribute.logo = global::TheScoreBook.Android.Resource.Attribute.logo;
+			global::FormsControls.Droid.Resource.Attribute.logoDescription = global::TheScoreBook.Android.Resource.Attribute.logoDescription;
+			global::FormsControls.Droid.Resource.Attribute.materialButtonStyle = global::TheScoreBook.Android.Resource.Attribute.materialButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.materialCardViewStyle = global::TheScoreBook.Android.Resource.Attribute.materialCardViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.maxActionInlineWidth = global::TheScoreBook.Android.Resource.Attribute.maxActionInlineWidth;
+			global::FormsControls.Droid.Resource.Attribute.maxButtonHeight = global::TheScoreBook.Android.Resource.Attribute.maxButtonHeight;
+			global::FormsControls.Droid.Resource.Attribute.maxImageSize = global::TheScoreBook.Android.Resource.Attribute.maxImageSize;
+			global::FormsControls.Droid.Resource.Attribute.measureWithLargestChild = global::TheScoreBook.Android.Resource.Attribute.measureWithLargestChild;
+			global::FormsControls.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable = global::TheScoreBook.Android.Resource.Attribute.mediaRouteAudioTrackDrawable;
+			global::FormsControls.Droid.Resource.Attribute.mediaRouteButtonStyle = global::TheScoreBook.Android.Resource.Attribute.mediaRouteButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.mediaRouteButtonTint = global::TheScoreBook.Android.Resource.Attribute.mediaRouteButtonTint;
+			global::FormsControls.Droid.Resource.Attribute.mediaRouteCloseDrawable = global::TheScoreBook.Android.Resource.Attribute.mediaRouteCloseDrawable;
+			global::FormsControls.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::TheScoreBook.Android.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
+			global::FormsControls.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable = global::TheScoreBook.Android.Resource.Attribute.mediaRouteDefaultIconDrawable;
+			global::FormsControls.Droid.Resource.Attribute.mediaRoutePauseDrawable = global::TheScoreBook.Android.Resource.Attribute.mediaRoutePauseDrawable;
+			global::FormsControls.Droid.Resource.Attribute.mediaRoutePlayDrawable = global::TheScoreBook.Android.Resource.Attribute.mediaRoutePlayDrawable;
+			global::FormsControls.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::TheScoreBook.Android.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
+			global::FormsControls.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::TheScoreBook.Android.Resource.Attribute.mediaRouteSpeakerIconDrawable;
+			global::FormsControls.Droid.Resource.Attribute.mediaRouteStopDrawable = global::TheScoreBook.Android.Resource.Attribute.mediaRouteStopDrawable;
+			global::FormsControls.Droid.Resource.Attribute.mediaRouteTheme = global::TheScoreBook.Android.Resource.Attribute.mediaRouteTheme;
+			global::FormsControls.Droid.Resource.Attribute.mediaRouteTvIconDrawable = global::TheScoreBook.Android.Resource.Attribute.mediaRouteTvIconDrawable;
+			global::FormsControls.Droid.Resource.Attribute.menu = global::TheScoreBook.Android.Resource.Attribute.menu;
+			global::FormsControls.Droid.Resource.Attribute.multiChoiceItemLayout = global::TheScoreBook.Android.Resource.Attribute.multiChoiceItemLayout;
+			global::FormsControls.Droid.Resource.Attribute.navigationContentDescription = global::TheScoreBook.Android.Resource.Attribute.navigationContentDescription;
+			global::FormsControls.Droid.Resource.Attribute.navigationIcon = global::TheScoreBook.Android.Resource.Attribute.navigationIcon;
+			global::FormsControls.Droid.Resource.Attribute.navigationMode = global::TheScoreBook.Android.Resource.Attribute.navigationMode;
+			global::FormsControls.Droid.Resource.Attribute.navigationViewStyle = global::TheScoreBook.Android.Resource.Attribute.navigationViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.numericModifiers = global::TheScoreBook.Android.Resource.Attribute.numericModifiers;
+			global::FormsControls.Droid.Resource.Attribute.overlapAnchor = global::TheScoreBook.Android.Resource.Attribute.overlapAnchor;
+			global::FormsControls.Droid.Resource.Attribute.paddingBottomNoButtons = global::TheScoreBook.Android.Resource.Attribute.paddingBottomNoButtons;
+			global::FormsControls.Droid.Resource.Attribute.paddingEnd = global::TheScoreBook.Android.Resource.Attribute.paddingEnd;
+			global::FormsControls.Droid.Resource.Attribute.paddingStart = global::TheScoreBook.Android.Resource.Attribute.paddingStart;
+			global::FormsControls.Droid.Resource.Attribute.paddingTopNoTitle = global::TheScoreBook.Android.Resource.Attribute.paddingTopNoTitle;
+			global::FormsControls.Droid.Resource.Attribute.panelBackground = global::TheScoreBook.Android.Resource.Attribute.panelBackground;
+			global::FormsControls.Droid.Resource.Attribute.panelMenuListTheme = global::TheScoreBook.Android.Resource.Attribute.panelMenuListTheme;
+			global::FormsControls.Droid.Resource.Attribute.panelMenuListWidth = global::TheScoreBook.Android.Resource.Attribute.panelMenuListWidth;
+			global::FormsControls.Droid.Resource.Attribute.passwordToggleContentDescription = global::TheScoreBook.Android.Resource.Attribute.passwordToggleContentDescription;
+			global::FormsControls.Droid.Resource.Attribute.passwordToggleDrawable = global::TheScoreBook.Android.Resource.Attribute.passwordToggleDrawable;
+			global::FormsControls.Droid.Resource.Attribute.passwordToggleEnabled = global::TheScoreBook.Android.Resource.Attribute.passwordToggleEnabled;
+			global::FormsControls.Droid.Resource.Attribute.passwordToggleTint = global::TheScoreBook.Android.Resource.Attribute.passwordToggleTint;
+			global::FormsControls.Droid.Resource.Attribute.passwordToggleTintMode = global::TheScoreBook.Android.Resource.Attribute.passwordToggleTintMode;
+			global::FormsControls.Droid.Resource.Attribute.popupMenuStyle = global::TheScoreBook.Android.Resource.Attribute.popupMenuStyle;
+			global::FormsControls.Droid.Resource.Attribute.popupTheme = global::TheScoreBook.Android.Resource.Attribute.popupTheme;
+			global::FormsControls.Droid.Resource.Attribute.popupWindowStyle = global::TheScoreBook.Android.Resource.Attribute.popupWindowStyle;
+			global::FormsControls.Droid.Resource.Attribute.preserveIconSpacing = global::TheScoreBook.Android.Resource.Attribute.preserveIconSpacing;
+			global::FormsControls.Droid.Resource.Attribute.pressedTranslationZ = global::TheScoreBook.Android.Resource.Attribute.pressedTranslationZ;
+			global::FormsControls.Droid.Resource.Attribute.progressBarPadding = global::TheScoreBook.Android.Resource.Attribute.progressBarPadding;
+			global::FormsControls.Droid.Resource.Attribute.progressBarStyle = global::TheScoreBook.Android.Resource.Attribute.progressBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.queryBackground = global::TheScoreBook.Android.Resource.Attribute.queryBackground;
+			global::FormsControls.Droid.Resource.Attribute.queryHint = global::TheScoreBook.Android.Resource.Attribute.queryHint;
+			global::FormsControls.Droid.Resource.Attribute.radioButtonStyle = global::TheScoreBook.Android.Resource.Attribute.radioButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.ratingBarStyle = global::TheScoreBook.Android.Resource.Attribute.ratingBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.ratingBarStyleIndicator = global::TheScoreBook.Android.Resource.Attribute.ratingBarStyleIndicator;
+			global::FormsControls.Droid.Resource.Attribute.ratingBarStyleSmall = global::TheScoreBook.Android.Resource.Attribute.ratingBarStyleSmall;
+			global::FormsControls.Droid.Resource.Attribute.reverseLayout = global::TheScoreBook.Android.Resource.Attribute.reverseLayout;
+			global::FormsControls.Droid.Resource.Attribute.rippleColor = global::TheScoreBook.Android.Resource.Attribute.rippleColor;
+			global::FormsControls.Droid.Resource.Attribute.scrimAnimationDuration = global::TheScoreBook.Android.Resource.Attribute.scrimAnimationDuration;
+			global::FormsControls.Droid.Resource.Attribute.scrimBackground = global::TheScoreBook.Android.Resource.Attribute.scrimBackground;
+			global::FormsControls.Droid.Resource.Attribute.scrimVisibleHeightTrigger = global::TheScoreBook.Android.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::FormsControls.Droid.Resource.Attribute.searchHintIcon = global::TheScoreBook.Android.Resource.Attribute.searchHintIcon;
+			global::FormsControls.Droid.Resource.Attribute.searchIcon = global::TheScoreBook.Android.Resource.Attribute.searchIcon;
+			global::FormsControls.Droid.Resource.Attribute.searchViewStyle = global::TheScoreBook.Android.Resource.Attribute.searchViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.seekBarStyle = global::TheScoreBook.Android.Resource.Attribute.seekBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.selectableItemBackground = global::TheScoreBook.Android.Resource.Attribute.selectableItemBackground;
+			global::FormsControls.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::TheScoreBook.Android.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::FormsControls.Droid.Resource.Attribute.showAsAction = global::TheScoreBook.Android.Resource.Attribute.showAsAction;
+			global::FormsControls.Droid.Resource.Attribute.showDividers = global::TheScoreBook.Android.Resource.Attribute.showDividers;
+			global::FormsControls.Droid.Resource.Attribute.showMotionSpec = global::TheScoreBook.Android.Resource.Attribute.showMotionSpec;
+			global::FormsControls.Droid.Resource.Attribute.showText = global::TheScoreBook.Android.Resource.Attribute.showText;
+			global::FormsControls.Droid.Resource.Attribute.showTitle = global::TheScoreBook.Android.Resource.Attribute.showTitle;
+			global::FormsControls.Droid.Resource.Attribute.singleChoiceItemLayout = global::TheScoreBook.Android.Resource.Attribute.singleChoiceItemLayout;
+			global::FormsControls.Droid.Resource.Attribute.singleLine = global::TheScoreBook.Android.Resource.Attribute.singleLine;
+			global::FormsControls.Droid.Resource.Attribute.singleSelection = global::TheScoreBook.Android.Resource.Attribute.singleSelection;
+			global::FormsControls.Droid.Resource.Attribute.snackbarButtonStyle = global::TheScoreBook.Android.Resource.Attribute.snackbarButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.snackbarStyle = global::TheScoreBook.Android.Resource.Attribute.snackbarStyle;
+			global::FormsControls.Droid.Resource.Attribute.spanCount = global::TheScoreBook.Android.Resource.Attribute.spanCount;
+			global::FormsControls.Droid.Resource.Attribute.spinBars = global::TheScoreBook.Android.Resource.Attribute.spinBars;
+			global::FormsControls.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::TheScoreBook.Android.Resource.Attribute.spinnerDropDownItemStyle;
+			global::FormsControls.Droid.Resource.Attribute.spinnerStyle = global::TheScoreBook.Android.Resource.Attribute.spinnerStyle;
+			global::FormsControls.Droid.Resource.Attribute.splitTrack = global::TheScoreBook.Android.Resource.Attribute.splitTrack;
+			global::FormsControls.Droid.Resource.Attribute.srcCompat = global::TheScoreBook.Android.Resource.Attribute.srcCompat;
+			global::FormsControls.Droid.Resource.Attribute.stackFromEnd = global::TheScoreBook.Android.Resource.Attribute.stackFromEnd;
+			global::FormsControls.Droid.Resource.Attribute.state_above_anchor = global::TheScoreBook.Android.Resource.Attribute.state_above_anchor;
+			global::FormsControls.Droid.Resource.Attribute.state_collapsed = global::TheScoreBook.Android.Resource.Attribute.state_collapsed;
+			global::FormsControls.Droid.Resource.Attribute.state_collapsible = global::TheScoreBook.Android.Resource.Attribute.state_collapsible;
+			global::FormsControls.Droid.Resource.Attribute.state_liftable = global::TheScoreBook.Android.Resource.Attribute.state_liftable;
+			global::FormsControls.Droid.Resource.Attribute.state_lifted = global::TheScoreBook.Android.Resource.Attribute.state_lifted;
+			global::FormsControls.Droid.Resource.Attribute.statusBarBackground = global::TheScoreBook.Android.Resource.Attribute.statusBarBackground;
+			global::FormsControls.Droid.Resource.Attribute.statusBarScrim = global::TheScoreBook.Android.Resource.Attribute.statusBarScrim;
+			global::FormsControls.Droid.Resource.Attribute.strokeColor = global::TheScoreBook.Android.Resource.Attribute.strokeColor;
+			global::FormsControls.Droid.Resource.Attribute.strokeWidth = global::TheScoreBook.Android.Resource.Attribute.strokeWidth;
+			global::FormsControls.Droid.Resource.Attribute.subMenuArrow = global::TheScoreBook.Android.Resource.Attribute.subMenuArrow;
+			global::FormsControls.Droid.Resource.Attribute.submitBackground = global::TheScoreBook.Android.Resource.Attribute.submitBackground;
+			global::FormsControls.Droid.Resource.Attribute.subtitle = global::TheScoreBook.Android.Resource.Attribute.subtitle;
+			global::FormsControls.Droid.Resource.Attribute.subtitleTextAppearance = global::TheScoreBook.Android.Resource.Attribute.subtitleTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.subtitleTextColor = global::TheScoreBook.Android.Resource.Attribute.subtitleTextColor;
+			global::FormsControls.Droid.Resource.Attribute.subtitleTextStyle = global::TheScoreBook.Android.Resource.Attribute.subtitleTextStyle;
+			global::FormsControls.Droid.Resource.Attribute.suggestionRowLayout = global::TheScoreBook.Android.Resource.Attribute.suggestionRowLayout;
+			global::FormsControls.Droid.Resource.Attribute.switchMinWidth = global::TheScoreBook.Android.Resource.Attribute.switchMinWidth;
+			global::FormsControls.Droid.Resource.Attribute.switchPadding = global::TheScoreBook.Android.Resource.Attribute.switchPadding;
+			global::FormsControls.Droid.Resource.Attribute.switchStyle = global::TheScoreBook.Android.Resource.Attribute.switchStyle;
+			global::FormsControls.Droid.Resource.Attribute.switchTextAppearance = global::TheScoreBook.Android.Resource.Attribute.switchTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.tabBackground = global::TheScoreBook.Android.Resource.Attribute.tabBackground;
+			global::FormsControls.Droid.Resource.Attribute.tabContentStart = global::TheScoreBook.Android.Resource.Attribute.tabContentStart;
+			global::FormsControls.Droid.Resource.Attribute.tabGravity = global::TheScoreBook.Android.Resource.Attribute.tabGravity;
+			global::FormsControls.Droid.Resource.Attribute.tabIconTint = global::TheScoreBook.Android.Resource.Attribute.tabIconTint;
+			global::FormsControls.Droid.Resource.Attribute.tabIconTintMode = global::TheScoreBook.Android.Resource.Attribute.tabIconTintMode;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicator = global::TheScoreBook.Android.Resource.Attribute.tabIndicator;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicatorAnimationDuration = global::TheScoreBook.Android.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicatorColor = global::TheScoreBook.Android.Resource.Attribute.tabIndicatorColor;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicatorFullWidth = global::TheScoreBook.Android.Resource.Attribute.tabIndicatorFullWidth;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicatorGravity = global::TheScoreBook.Android.Resource.Attribute.tabIndicatorGravity;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicatorHeight = global::TheScoreBook.Android.Resource.Attribute.tabIndicatorHeight;
+			global::FormsControls.Droid.Resource.Attribute.tabInlineLabel = global::TheScoreBook.Android.Resource.Attribute.tabInlineLabel;
+			global::FormsControls.Droid.Resource.Attribute.tabMaxWidth = global::TheScoreBook.Android.Resource.Attribute.tabMaxWidth;
+			global::FormsControls.Droid.Resource.Attribute.tabMinWidth = global::TheScoreBook.Android.Resource.Attribute.tabMinWidth;
+			global::FormsControls.Droid.Resource.Attribute.tabMode = global::TheScoreBook.Android.Resource.Attribute.tabMode;
+			global::FormsControls.Droid.Resource.Attribute.tabPadding = global::TheScoreBook.Android.Resource.Attribute.tabPadding;
+			global::FormsControls.Droid.Resource.Attribute.tabPaddingBottom = global::TheScoreBook.Android.Resource.Attribute.tabPaddingBottom;
+			global::FormsControls.Droid.Resource.Attribute.tabPaddingEnd = global::TheScoreBook.Android.Resource.Attribute.tabPaddingEnd;
+			global::FormsControls.Droid.Resource.Attribute.tabPaddingStart = global::TheScoreBook.Android.Resource.Attribute.tabPaddingStart;
+			global::FormsControls.Droid.Resource.Attribute.tabPaddingTop = global::TheScoreBook.Android.Resource.Attribute.tabPaddingTop;
+			global::FormsControls.Droid.Resource.Attribute.tabRippleColor = global::TheScoreBook.Android.Resource.Attribute.tabRippleColor;
+			global::FormsControls.Droid.Resource.Attribute.tabSelectedTextColor = global::TheScoreBook.Android.Resource.Attribute.tabSelectedTextColor;
+			global::FormsControls.Droid.Resource.Attribute.tabStyle = global::TheScoreBook.Android.Resource.Attribute.tabStyle;
+			global::FormsControls.Droid.Resource.Attribute.tabTextAppearance = global::TheScoreBook.Android.Resource.Attribute.tabTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.tabTextColor = global::TheScoreBook.Android.Resource.Attribute.tabTextColor;
+			global::FormsControls.Droid.Resource.Attribute.tabUnboundedRipple = global::TheScoreBook.Android.Resource.Attribute.tabUnboundedRipple;
+			global::FormsControls.Droid.Resource.Attribute.textAllCaps = global::TheScoreBook.Android.Resource.Attribute.textAllCaps;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceBody1 = global::TheScoreBook.Android.Resource.Attribute.textAppearanceBody1;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceBody2 = global::TheScoreBook.Android.Resource.Attribute.textAppearanceBody2;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceButton = global::TheScoreBook.Android.Resource.Attribute.textAppearanceButton;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceCaption = global::TheScoreBook.Android.Resource.Attribute.textAppearanceCaption;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline1 = global::TheScoreBook.Android.Resource.Attribute.textAppearanceHeadline1;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline2 = global::TheScoreBook.Android.Resource.Attribute.textAppearanceHeadline2;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline3 = global::TheScoreBook.Android.Resource.Attribute.textAppearanceHeadline3;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline4 = global::TheScoreBook.Android.Resource.Attribute.textAppearanceHeadline4;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline5 = global::TheScoreBook.Android.Resource.Attribute.textAppearanceHeadline5;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline6 = global::TheScoreBook.Android.Resource.Attribute.textAppearanceHeadline6;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::TheScoreBook.Android.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceListItem = global::TheScoreBook.Android.Resource.Attribute.textAppearanceListItem;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::TheScoreBook.Android.Resource.Attribute.textAppearanceListItemSecondary;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceListItemSmall = global::TheScoreBook.Android.Resource.Attribute.textAppearanceListItemSmall;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceOverline = global::TheScoreBook.Android.Resource.Attribute.textAppearanceOverline;
+			global::FormsControls.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::TheScoreBook.Android.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::TheScoreBook.Android.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::TheScoreBook.Android.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::TheScoreBook.Android.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceSubtitle1 = global::TheScoreBook.Android.Resource.Attribute.textAppearanceSubtitle1;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceSubtitle2 = global::TheScoreBook.Android.Resource.Attribute.textAppearanceSubtitle2;
+			global::FormsControls.Droid.Resource.Attribute.textColorAlertDialogListItem = global::TheScoreBook.Android.Resource.Attribute.textColorAlertDialogListItem;
+			global::FormsControls.Droid.Resource.Attribute.textColorSearchUrl = global::TheScoreBook.Android.Resource.Attribute.textColorSearchUrl;
+			global::FormsControls.Droid.Resource.Attribute.textEndPadding = global::TheScoreBook.Android.Resource.Attribute.textEndPadding;
+			global::FormsControls.Droid.Resource.Attribute.textInputStyle = global::TheScoreBook.Android.Resource.Attribute.textInputStyle;
+			global::FormsControls.Droid.Resource.Attribute.textStartPadding = global::TheScoreBook.Android.Resource.Attribute.textStartPadding;
+			global::FormsControls.Droid.Resource.Attribute.theme = global::TheScoreBook.Android.Resource.Attribute.theme;
+			global::FormsControls.Droid.Resource.Attribute.thickness = global::TheScoreBook.Android.Resource.Attribute.thickness;
+			global::FormsControls.Droid.Resource.Attribute.thumbTextPadding = global::TheScoreBook.Android.Resource.Attribute.thumbTextPadding;
+			global::FormsControls.Droid.Resource.Attribute.thumbTint = global::TheScoreBook.Android.Resource.Attribute.thumbTint;
+			global::FormsControls.Droid.Resource.Attribute.thumbTintMode = global::TheScoreBook.Android.Resource.Attribute.thumbTintMode;
+			global::FormsControls.Droid.Resource.Attribute.tickMark = global::TheScoreBook.Android.Resource.Attribute.tickMark;
+			global::FormsControls.Droid.Resource.Attribute.tickMarkTint = global::TheScoreBook.Android.Resource.Attribute.tickMarkTint;
+			global::FormsControls.Droid.Resource.Attribute.tickMarkTintMode = global::TheScoreBook.Android.Resource.Attribute.tickMarkTintMode;
+			global::FormsControls.Droid.Resource.Attribute.tint = global::TheScoreBook.Android.Resource.Attribute.tint;
+			global::FormsControls.Droid.Resource.Attribute.tintMode = global::TheScoreBook.Android.Resource.Attribute.tintMode;
+			global::FormsControls.Droid.Resource.Attribute.title = global::TheScoreBook.Android.Resource.Attribute.title;
+			global::FormsControls.Droid.Resource.Attribute.titleEnabled = global::TheScoreBook.Android.Resource.Attribute.titleEnabled;
+			global::FormsControls.Droid.Resource.Attribute.titleMargin = global::TheScoreBook.Android.Resource.Attribute.titleMargin;
+			global::FormsControls.Droid.Resource.Attribute.titleMarginBottom = global::TheScoreBook.Android.Resource.Attribute.titleMarginBottom;
+			global::FormsControls.Droid.Resource.Attribute.titleMarginEnd = global::TheScoreBook.Android.Resource.Attribute.titleMarginEnd;
+			global::FormsControls.Droid.Resource.Attribute.titleMargins = global::TheScoreBook.Android.Resource.Attribute.titleMargins;
+			global::FormsControls.Droid.Resource.Attribute.titleMarginStart = global::TheScoreBook.Android.Resource.Attribute.titleMarginStart;
+			global::FormsControls.Droid.Resource.Attribute.titleMarginTop = global::TheScoreBook.Android.Resource.Attribute.titleMarginTop;
+			global::FormsControls.Droid.Resource.Attribute.titleTextAppearance = global::TheScoreBook.Android.Resource.Attribute.titleTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.titleTextColor = global::TheScoreBook.Android.Resource.Attribute.titleTextColor;
+			global::FormsControls.Droid.Resource.Attribute.titleTextStyle = global::TheScoreBook.Android.Resource.Attribute.titleTextStyle;
+			global::FormsControls.Droid.Resource.Attribute.toolbarId = global::TheScoreBook.Android.Resource.Attribute.toolbarId;
+			global::FormsControls.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::TheScoreBook.Android.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.toolbarStyle = global::TheScoreBook.Android.Resource.Attribute.toolbarStyle;
+			global::FormsControls.Droid.Resource.Attribute.tooltipForegroundColor = global::TheScoreBook.Android.Resource.Attribute.tooltipForegroundColor;
+			global::FormsControls.Droid.Resource.Attribute.tooltipFrameBackground = global::TheScoreBook.Android.Resource.Attribute.tooltipFrameBackground;
+			global::FormsControls.Droid.Resource.Attribute.tooltipText = global::TheScoreBook.Android.Resource.Attribute.tooltipText;
+			global::FormsControls.Droid.Resource.Attribute.track = global::TheScoreBook.Android.Resource.Attribute.track;
+			global::FormsControls.Droid.Resource.Attribute.trackTint = global::TheScoreBook.Android.Resource.Attribute.trackTint;
+			global::FormsControls.Droid.Resource.Attribute.trackTintMode = global::TheScoreBook.Android.Resource.Attribute.trackTintMode;
+			global::FormsControls.Droid.Resource.Attribute.ttcIndex = global::TheScoreBook.Android.Resource.Attribute.ttcIndex;
+			global::FormsControls.Droid.Resource.Attribute.useCompatPadding = global::TheScoreBook.Android.Resource.Attribute.useCompatPadding;
+			global::FormsControls.Droid.Resource.Attribute.viewInflaterClass = global::TheScoreBook.Android.Resource.Attribute.viewInflaterClass;
+			global::FormsControls.Droid.Resource.Attribute.voiceIcon = global::TheScoreBook.Android.Resource.Attribute.voiceIcon;
+			global::FormsControls.Droid.Resource.Attribute.windowActionBar = global::TheScoreBook.Android.Resource.Attribute.windowActionBar;
+			global::FormsControls.Droid.Resource.Attribute.windowActionBarOverlay = global::TheScoreBook.Android.Resource.Attribute.windowActionBarOverlay;
+			global::FormsControls.Droid.Resource.Attribute.windowActionModeOverlay = global::TheScoreBook.Android.Resource.Attribute.windowActionModeOverlay;
+			global::FormsControls.Droid.Resource.Attribute.windowFixedHeightMajor = global::TheScoreBook.Android.Resource.Attribute.windowFixedHeightMajor;
+			global::FormsControls.Droid.Resource.Attribute.windowFixedHeightMinor = global::TheScoreBook.Android.Resource.Attribute.windowFixedHeightMinor;
+			global::FormsControls.Droid.Resource.Attribute.windowFixedWidthMajor = global::TheScoreBook.Android.Resource.Attribute.windowFixedWidthMajor;
+			global::FormsControls.Droid.Resource.Attribute.windowFixedWidthMinor = global::TheScoreBook.Android.Resource.Attribute.windowFixedWidthMinor;
+			global::FormsControls.Droid.Resource.Attribute.windowMinWidthMajor = global::TheScoreBook.Android.Resource.Attribute.windowMinWidthMajor;
+			global::FormsControls.Droid.Resource.Attribute.windowMinWidthMinor = global::TheScoreBook.Android.Resource.Attribute.windowMinWidthMinor;
+			global::FormsControls.Droid.Resource.Attribute.windowNoTitle = global::TheScoreBook.Android.Resource.Attribute.windowNoTitle;
+			global::FormsControls.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::TheScoreBook.Android.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::FormsControls.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::TheScoreBook.Android.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::FormsControls.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::TheScoreBook.Android.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::FormsControls.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::TheScoreBook.Android.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::FormsControls.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::TheScoreBook.Android.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::FormsControls.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::TheScoreBook.Android.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::FormsControls.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::TheScoreBook.Android.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::FormsControls.Droid.Resource.Color.abc_btn_colored_text_material = global::TheScoreBook.Android.Resource.Color.abc_btn_colored_text_material;
+			global::FormsControls.Droid.Resource.Color.abc_color_highlight_material = global::TheScoreBook.Android.Resource.Color.abc_color_highlight_material;
+			global::FormsControls.Droid.Resource.Color.abc_hint_foreground_material_dark = global::TheScoreBook.Android.Resource.Color.abc_hint_foreground_material_dark;
+			global::FormsControls.Droid.Resource.Color.abc_hint_foreground_material_light = global::TheScoreBook.Android.Resource.Color.abc_hint_foreground_material_light;
+			global::FormsControls.Droid.Resource.Color.abc_input_method_navigation_guard = global::TheScoreBook.Android.Resource.Color.abc_input_method_navigation_guard;
+			global::FormsControls.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::TheScoreBook.Android.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::FormsControls.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::TheScoreBook.Android.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::FormsControls.Droid.Resource.Color.abc_primary_text_material_dark = global::TheScoreBook.Android.Resource.Color.abc_primary_text_material_dark;
+			global::FormsControls.Droid.Resource.Color.abc_primary_text_material_light = global::TheScoreBook.Android.Resource.Color.abc_primary_text_material_light;
+			global::FormsControls.Droid.Resource.Color.abc_search_url_text = global::TheScoreBook.Android.Resource.Color.abc_search_url_text;
+			global::FormsControls.Droid.Resource.Color.abc_search_url_text_normal = global::TheScoreBook.Android.Resource.Color.abc_search_url_text_normal;
+			global::FormsControls.Droid.Resource.Color.abc_search_url_text_pressed = global::TheScoreBook.Android.Resource.Color.abc_search_url_text_pressed;
+			global::FormsControls.Droid.Resource.Color.abc_search_url_text_selected = global::TheScoreBook.Android.Resource.Color.abc_search_url_text_selected;
+			global::FormsControls.Droid.Resource.Color.abc_secondary_text_material_dark = global::TheScoreBook.Android.Resource.Color.abc_secondary_text_material_dark;
+			global::FormsControls.Droid.Resource.Color.abc_secondary_text_material_light = global::TheScoreBook.Android.Resource.Color.abc_secondary_text_material_light;
+			global::FormsControls.Droid.Resource.Color.abc_tint_btn_checkable = global::TheScoreBook.Android.Resource.Color.abc_tint_btn_checkable;
+			global::FormsControls.Droid.Resource.Color.abc_tint_default = global::TheScoreBook.Android.Resource.Color.abc_tint_default;
+			global::FormsControls.Droid.Resource.Color.abc_tint_edittext = global::TheScoreBook.Android.Resource.Color.abc_tint_edittext;
+			global::FormsControls.Droid.Resource.Color.abc_tint_seek_thumb = global::TheScoreBook.Android.Resource.Color.abc_tint_seek_thumb;
+			global::FormsControls.Droid.Resource.Color.abc_tint_spinner = global::TheScoreBook.Android.Resource.Color.abc_tint_spinner;
+			global::FormsControls.Droid.Resource.Color.abc_tint_switch_track = global::TheScoreBook.Android.Resource.Color.abc_tint_switch_track;
+			global::FormsControls.Droid.Resource.Color.accent_material_dark = global::TheScoreBook.Android.Resource.Color.accent_material_dark;
+			global::FormsControls.Droid.Resource.Color.accent_material_light = global::TheScoreBook.Android.Resource.Color.accent_material_light;
+			global::FormsControls.Droid.Resource.Color.background_floating_material_dark = global::TheScoreBook.Android.Resource.Color.background_floating_material_dark;
+			global::FormsControls.Droid.Resource.Color.background_floating_material_light = global::TheScoreBook.Android.Resource.Color.background_floating_material_light;
+			global::FormsControls.Droid.Resource.Color.background_material_dark = global::TheScoreBook.Android.Resource.Color.background_material_dark;
+			global::FormsControls.Droid.Resource.Color.background_material_light = global::TheScoreBook.Android.Resource.Color.background_material_light;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::TheScoreBook.Android.Resource.Color.bright_foreground_disabled_material_dark;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_disabled_material_light = global::TheScoreBook.Android.Resource.Color.bright_foreground_disabled_material_light;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::TheScoreBook.Android.Resource.Color.bright_foreground_inverse_material_dark;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_inverse_material_light = global::TheScoreBook.Android.Resource.Color.bright_foreground_inverse_material_light;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_material_dark = global::TheScoreBook.Android.Resource.Color.bright_foreground_material_dark;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_material_light = global::TheScoreBook.Android.Resource.Color.bright_foreground_material_light;
+			global::FormsControls.Droid.Resource.Color.browser_actions_bg_grey = global::TheScoreBook.Android.Resource.Color.browser_actions_bg_grey;
+			global::FormsControls.Droid.Resource.Color.browser_actions_divider_color = global::TheScoreBook.Android.Resource.Color.browser_actions_divider_color;
+			global::FormsControls.Droid.Resource.Color.browser_actions_text_color = global::TheScoreBook.Android.Resource.Color.browser_actions_text_color;
+			global::FormsControls.Droid.Resource.Color.browser_actions_title_color = global::TheScoreBook.Android.Resource.Color.browser_actions_title_color;
+			global::FormsControls.Droid.Resource.Color.button_material_dark = global::TheScoreBook.Android.Resource.Color.button_material_dark;
+			global::FormsControls.Droid.Resource.Color.button_material_light = global::TheScoreBook.Android.Resource.Color.button_material_light;
+			global::FormsControls.Droid.Resource.Color.cardview_dark_background = global::TheScoreBook.Android.Resource.Color.cardview_dark_background;
+			global::FormsControls.Droid.Resource.Color.cardview_light_background = global::TheScoreBook.Android.Resource.Color.cardview_light_background;
+			global::FormsControls.Droid.Resource.Color.cardview_shadow_end_color = global::TheScoreBook.Android.Resource.Color.cardview_shadow_end_color;
+			global::FormsControls.Droid.Resource.Color.cardview_shadow_start_color = global::TheScoreBook.Android.Resource.Color.cardview_shadow_start_color;
+			global::FormsControls.Droid.Resource.Color.design_bottom_navigation_shadow_color = global::TheScoreBook.Android.Resource.Color.design_bottom_navigation_shadow_color;
+			global::FormsControls.Droid.Resource.Color.design_default_color_primary = global::TheScoreBook.Android.Resource.Color.design_default_color_primary;
+			global::FormsControls.Droid.Resource.Color.design_default_color_primary_dark = global::TheScoreBook.Android.Resource.Color.design_default_color_primary_dark;
+			global::FormsControls.Droid.Resource.Color.design_error = global::TheScoreBook.Android.Resource.Color.design_error;
+			global::FormsControls.Droid.Resource.Color.design_fab_shadow_end_color = global::TheScoreBook.Android.Resource.Color.design_fab_shadow_end_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_shadow_mid_color = global::TheScoreBook.Android.Resource.Color.design_fab_shadow_mid_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_shadow_start_color = global::TheScoreBook.Android.Resource.Color.design_fab_shadow_start_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::TheScoreBook.Android.Resource.Color.design_fab_stroke_end_inner_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::TheScoreBook.Android.Resource.Color.design_fab_stroke_end_outer_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::TheScoreBook.Android.Resource.Color.design_fab_stroke_top_inner_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::TheScoreBook.Android.Resource.Color.design_fab_stroke_top_outer_color;
+			global::FormsControls.Droid.Resource.Color.design_snackbar_background_color = global::TheScoreBook.Android.Resource.Color.design_snackbar_background_color;
+			global::FormsControls.Droid.Resource.Color.design_tint_password_toggle = global::TheScoreBook.Android.Resource.Color.design_tint_password_toggle;
+			global::FormsControls.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::TheScoreBook.Android.Resource.Color.dim_foreground_disabled_material_dark;
+			global::FormsControls.Droid.Resource.Color.dim_foreground_disabled_material_light = global::TheScoreBook.Android.Resource.Color.dim_foreground_disabled_material_light;
+			global::FormsControls.Droid.Resource.Color.dim_foreground_material_dark = global::TheScoreBook.Android.Resource.Color.dim_foreground_material_dark;
+			global::FormsControls.Droid.Resource.Color.dim_foreground_material_light = global::TheScoreBook.Android.Resource.Color.dim_foreground_material_light;
+			global::FormsControls.Droid.Resource.Color.error_color_material_dark = global::TheScoreBook.Android.Resource.Color.error_color_material_dark;
+			global::FormsControls.Droid.Resource.Color.error_color_material_light = global::TheScoreBook.Android.Resource.Color.error_color_material_light;
+			global::FormsControls.Droid.Resource.Color.foreground_material_dark = global::TheScoreBook.Android.Resource.Color.foreground_material_dark;
+			global::FormsControls.Droid.Resource.Color.foreground_material_light = global::TheScoreBook.Android.Resource.Color.foreground_material_light;
+			global::FormsControls.Droid.Resource.Color.highlighted_text_material_dark = global::TheScoreBook.Android.Resource.Color.highlighted_text_material_dark;
+			global::FormsControls.Droid.Resource.Color.highlighted_text_material_light = global::TheScoreBook.Android.Resource.Color.highlighted_text_material_light;
+			global::FormsControls.Droid.Resource.Color.material_blue_grey_800 = global::TheScoreBook.Android.Resource.Color.material_blue_grey_800;
+			global::FormsControls.Droid.Resource.Color.material_blue_grey_900 = global::TheScoreBook.Android.Resource.Color.material_blue_grey_900;
+			global::FormsControls.Droid.Resource.Color.material_blue_grey_950 = global::TheScoreBook.Android.Resource.Color.material_blue_grey_950;
+			global::FormsControls.Droid.Resource.Color.material_deep_teal_200 = global::TheScoreBook.Android.Resource.Color.material_deep_teal_200;
+			global::FormsControls.Droid.Resource.Color.material_deep_teal_500 = global::TheScoreBook.Android.Resource.Color.material_deep_teal_500;
+			global::FormsControls.Droid.Resource.Color.material_grey_100 = global::TheScoreBook.Android.Resource.Color.material_grey_100;
+			global::FormsControls.Droid.Resource.Color.material_grey_300 = global::TheScoreBook.Android.Resource.Color.material_grey_300;
+			global::FormsControls.Droid.Resource.Color.material_grey_50 = global::TheScoreBook.Android.Resource.Color.material_grey_50;
+			global::FormsControls.Droid.Resource.Color.material_grey_600 = global::TheScoreBook.Android.Resource.Color.material_grey_600;
+			global::FormsControls.Droid.Resource.Color.material_grey_800 = global::TheScoreBook.Android.Resource.Color.material_grey_800;
+			global::FormsControls.Droid.Resource.Color.material_grey_850 = global::TheScoreBook.Android.Resource.Color.material_grey_850;
+			global::FormsControls.Droid.Resource.Color.material_grey_900 = global::TheScoreBook.Android.Resource.Color.material_grey_900;
+			global::FormsControls.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::TheScoreBook.Android.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::FormsControls.Droid.Resource.Color.mtrl_bottom_nav_item_tint = global::TheScoreBook.Android.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_bg_color_disabled = global::TheScoreBook.Android.Resource.Color.mtrl_btn_bg_color_disabled;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_bg_color_selector = global::TheScoreBook.Android.Resource.Color.mtrl_btn_bg_color_selector;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_ripple_color = global::TheScoreBook.Android.Resource.Color.mtrl_btn_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_stroke_color_selector = global::TheScoreBook.Android.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color = global::TheScoreBook.Android.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_text_color_disabled = global::TheScoreBook.Android.Resource.Color.mtrl_btn_text_color_disabled;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_text_color_selector = global::TheScoreBook.Android.Resource.Color.mtrl_btn_text_color_selector;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_transparent_bg_color = global::TheScoreBook.Android.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_chip_background_color = global::TheScoreBook.Android.Resource.Color.mtrl_chip_background_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_chip_close_icon_tint = global::TheScoreBook.Android.Resource.Color.mtrl_chip_close_icon_tint;
+			global::FormsControls.Droid.Resource.Color.mtrl_chip_ripple_color = global::TheScoreBook.Android.Resource.Color.mtrl_chip_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_chip_text_color = global::TheScoreBook.Android.Resource.Color.mtrl_chip_text_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_fab_ripple_color = global::TheScoreBook.Android.Resource.Color.mtrl_fab_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_scrim_color = global::TheScoreBook.Android.Resource.Color.mtrl_scrim_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_tabs_colored_ripple_color = global::TheScoreBook.Android.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_tabs_icon_color_selector = global::TheScoreBook.Android.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::FormsControls.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::TheScoreBook.Android.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::FormsControls.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::TheScoreBook.Android.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::FormsControls.Droid.Resource.Color.mtrl_tabs_ripple_color = global::TheScoreBook.Android.Resource.Color.mtrl_tabs_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color = global::TheScoreBook.Android.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_textinput_disabled_color = global::TheScoreBook.Android.Resource.Color.mtrl_textinput_disabled_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::TheScoreBook.Android.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::TheScoreBook.Android.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_text_btn_text_color_selector = global::TheScoreBook.Android.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::FormsControls.Droid.Resource.Color.notification_action_color_filter = global::TheScoreBook.Android.Resource.Color.notification_action_color_filter;
+			global::FormsControls.Droid.Resource.Color.notification_icon_bg_color = global::TheScoreBook.Android.Resource.Color.notification_icon_bg_color;
+			global::FormsControls.Droid.Resource.Color.notification_material_background_media_default_color = global::TheScoreBook.Android.Resource.Color.notification_material_background_media_default_color;
+			global::FormsControls.Droid.Resource.Color.primary_dark_material_dark = global::TheScoreBook.Android.Resource.Color.primary_dark_material_dark;
+			global::FormsControls.Droid.Resource.Color.primary_dark_material_light = global::TheScoreBook.Android.Resource.Color.primary_dark_material_light;
+			global::FormsControls.Droid.Resource.Color.primary_material_dark = global::TheScoreBook.Android.Resource.Color.primary_material_dark;
+			global::FormsControls.Droid.Resource.Color.primary_material_light = global::TheScoreBook.Android.Resource.Color.primary_material_light;
+			global::FormsControls.Droid.Resource.Color.primary_text_default_material_dark = global::TheScoreBook.Android.Resource.Color.primary_text_default_material_dark;
+			global::FormsControls.Droid.Resource.Color.primary_text_default_material_light = global::TheScoreBook.Android.Resource.Color.primary_text_default_material_light;
+			global::FormsControls.Droid.Resource.Color.primary_text_disabled_material_dark = global::TheScoreBook.Android.Resource.Color.primary_text_disabled_material_dark;
+			global::FormsControls.Droid.Resource.Color.primary_text_disabled_material_light = global::TheScoreBook.Android.Resource.Color.primary_text_disabled_material_light;
+			global::FormsControls.Droid.Resource.Color.ripple_material_dark = global::TheScoreBook.Android.Resource.Color.ripple_material_dark;
+			global::FormsControls.Droid.Resource.Color.ripple_material_light = global::TheScoreBook.Android.Resource.Color.ripple_material_light;
+			global::FormsControls.Droid.Resource.Color.secondary_text_default_material_dark = global::TheScoreBook.Android.Resource.Color.secondary_text_default_material_dark;
+			global::FormsControls.Droid.Resource.Color.secondary_text_default_material_light = global::TheScoreBook.Android.Resource.Color.secondary_text_default_material_light;
+			global::FormsControls.Droid.Resource.Color.secondary_text_disabled_material_dark = global::TheScoreBook.Android.Resource.Color.secondary_text_disabled_material_dark;
+			global::FormsControls.Droid.Resource.Color.secondary_text_disabled_material_light = global::TheScoreBook.Android.Resource.Color.secondary_text_disabled_material_light;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::TheScoreBook.Android.Resource.Color.switch_thumb_disabled_material_dark;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_disabled_material_light = global::TheScoreBook.Android.Resource.Color.switch_thumb_disabled_material_light;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_material_dark = global::TheScoreBook.Android.Resource.Color.switch_thumb_material_dark;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_material_light = global::TheScoreBook.Android.Resource.Color.switch_thumb_material_light;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_normal_material_dark = global::TheScoreBook.Android.Resource.Color.switch_thumb_normal_material_dark;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_normal_material_light = global::TheScoreBook.Android.Resource.Color.switch_thumb_normal_material_light;
+			global::FormsControls.Droid.Resource.Color.tooltip_background_dark = global::TheScoreBook.Android.Resource.Color.tooltip_background_dark;
+			global::FormsControls.Droid.Resource.Color.tooltip_background_light = global::TheScoreBook.Android.Resource.Color.tooltip_background_light;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_default_height_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_elevation_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_button_min_height_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_button_min_height_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_button_min_width_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_button_min_width_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::TheScoreBook.Android.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::TheScoreBook.Android.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::FormsControls.Droid.Resource.Dimension.abc_alert_dialog_button_dimen = global::TheScoreBook.Android.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::FormsControls.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::TheScoreBook.Android.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::TheScoreBook.Android.Resource.Dimension.abc_button_inset_vertical_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::TheScoreBook.Android.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::TheScoreBook.Android.Resource.Dimension.abc_button_padding_vertical_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::TheScoreBook.Android.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::FormsControls.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::TheScoreBook.Android.Resource.Dimension.abc_config_prefDialogWidth;
+			global::FormsControls.Droid.Resource.Dimension.abc_control_corner_material = global::TheScoreBook.Android.Resource.Dimension.abc_control_corner_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_control_inset_material = global::TheScoreBook.Android.Resource.Dimension.abc_control_inset_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_control_padding_material = global::TheScoreBook.Android.Resource.Dimension.abc_control_padding_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_corner_radius_material = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_min_width_major = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_min_width_major;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_min_width_minor;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_padding_material = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_padding_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_padding_top_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::TheScoreBook.Android.Resource.Dimension.abc_dialog_title_divider_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::TheScoreBook.Android.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::FormsControls.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::TheScoreBook.Android.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::FormsControls.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::TheScoreBook.Android.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::FormsControls.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::TheScoreBook.Android.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::FormsControls.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::TheScoreBook.Android.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::FormsControls.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::TheScoreBook.Android.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::TheScoreBook.Android.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::TheScoreBook.Android.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_floating_window_z = global::TheScoreBook.Android.Resource.Dimension.abc_floating_window_z;
+			global::FormsControls.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::TheScoreBook.Android.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_panel_menu_list_width = global::TheScoreBook.Android.Resource.Dimension.abc_panel_menu_list_width;
+			global::FormsControls.Droid.Resource.Dimension.abc_progress_bar_height_material = global::TheScoreBook.Android.Resource.Dimension.abc_progress_bar_height_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_search_view_preferred_height = global::TheScoreBook.Android.Resource.Dimension.abc_search_view_preferred_height;
+			global::FormsControls.Droid.Resource.Dimension.abc_search_view_preferred_width = global::TheScoreBook.Android.Resource.Dimension.abc_search_view_preferred_width;
+			global::FormsControls.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::TheScoreBook.Android.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::TheScoreBook.Android.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::TheScoreBook.Android.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_switch_padding = global::TheScoreBook.Android.Resource.Dimension.abc_switch_padding;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_body_1_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_body_1_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_body_2_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_body_2_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_button_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_button_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_caption_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_caption_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_display_1_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_display_1_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_display_2_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_display_2_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_display_3_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_display_3_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_display_4_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_display_4_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_headline_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_headline_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_large_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_large_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_medium_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_medium_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_menu_header_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_menu_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_menu_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_small_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_small_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_subhead_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_subhead_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_title_material = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_title_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::TheScoreBook.Android.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::FormsControls.Droid.Resource.Dimension.browser_actions_context_menu_max_width = global::TheScoreBook.Android.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::FormsControls.Droid.Resource.Dimension.browser_actions_context_menu_min_padding = global::TheScoreBook.Android.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::FormsControls.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::TheScoreBook.Android.Resource.Dimension.cardview_compat_inset_shadow;
+			global::FormsControls.Droid.Resource.Dimension.cardview_default_elevation = global::TheScoreBook.Android.Resource.Dimension.cardview_default_elevation;
+			global::FormsControls.Droid.Resource.Dimension.cardview_default_radius = global::TheScoreBook.Android.Resource.Dimension.cardview_default_radius;
+			global::FormsControls.Droid.Resource.Dimension.compat_button_inset_horizontal_material = global::TheScoreBook.Android.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.compat_button_inset_vertical_material = global::TheScoreBook.Android.Resource.Dimension.compat_button_inset_vertical_material;
+			global::FormsControls.Droid.Resource.Dimension.compat_button_padding_horizontal_material = global::TheScoreBook.Android.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.compat_button_padding_vertical_material = global::TheScoreBook.Android.Resource.Dimension.compat_button_padding_vertical_material;
+			global::FormsControls.Droid.Resource.Dimension.compat_control_corner_material = global::TheScoreBook.Android.Resource.Dimension.compat_control_corner_material;
+			global::FormsControls.Droid.Resource.Dimension.compat_notification_large_icon_max_height = global::TheScoreBook.Android.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::FormsControls.Droid.Resource.Dimension.compat_notification_large_icon_max_width = global::TheScoreBook.Android.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_appbar_elevation = global::TheScoreBook.Android.Resource.Dimension.design_appbar_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::TheScoreBook.Android.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::TheScoreBook.Android.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_active_text_size = global::TheScoreBook.Android.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_elevation = global::TheScoreBook.Android.Resource.Dimension.design_bottom_navigation_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_height = global::TheScoreBook.Android.Resource.Dimension.design_bottom_navigation_height;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_icon_size = global::TheScoreBook.Android.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_item_max_width = global::TheScoreBook.Android.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_item_min_width = global::TheScoreBook.Android.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_margin = global::TheScoreBook.Android.Resource.Dimension.design_bottom_navigation_margin;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_shadow_height = global::TheScoreBook.Android.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_text_size = global::TheScoreBook.Android.Resource.Dimension.design_bottom_navigation_text_size;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::TheScoreBook.Android.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min = global::TheScoreBook.Android.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_border_width = global::TheScoreBook.Android.Resource.Dimension.design_fab_border_width;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_elevation = global::TheScoreBook.Android.Resource.Dimension.design_fab_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_image_size = global::TheScoreBook.Android.Resource.Dimension.design_fab_image_size;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_size_mini = global::TheScoreBook.Android.Resource.Dimension.design_fab_size_mini;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_size_normal = global::TheScoreBook.Android.Resource.Dimension.design_fab_size_normal;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused = global::TheScoreBook.Android.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::TheScoreBook.Android.Resource.Dimension.design_fab_translation_z_pressed;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_elevation = global::TheScoreBook.Android.Resource.Dimension.design_navigation_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_icon_padding = global::TheScoreBook.Android.Resource.Dimension.design_navigation_icon_padding;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_icon_size = global::TheScoreBook.Android.Resource.Dimension.design_navigation_icon_size;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_item_horizontal_padding = global::TheScoreBook.Android.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_item_icon_padding = global::TheScoreBook.Android.Resource.Dimension.design_navigation_item_icon_padding;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_max_width = global::TheScoreBook.Android.Resource.Dimension.design_navigation_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_padding_bottom = global::TheScoreBook.Android.Resource.Dimension.design_navigation_padding_bottom;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::TheScoreBook.Android.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::TheScoreBook.Android.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::TheScoreBook.Android.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_elevation = global::TheScoreBook.Android.Resource.Dimension.design_snackbar_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::TheScoreBook.Android.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_max_width = global::TheScoreBook.Android.Resource.Dimension.design_snackbar_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_min_width = global::TheScoreBook.Android.Resource.Dimension.design_snackbar_min_width;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::TheScoreBook.Android.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::TheScoreBook.Android.Resource.Dimension.design_snackbar_padding_vertical;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::TheScoreBook.Android.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_text_size = global::TheScoreBook.Android.Resource.Dimension.design_snackbar_text_size;
+			global::FormsControls.Droid.Resource.Dimension.design_tab_max_width = global::TheScoreBook.Android.Resource.Dimension.design_tab_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::TheScoreBook.Android.Resource.Dimension.design_tab_scrollable_min_width;
+			global::FormsControls.Droid.Resource.Dimension.design_tab_text_size = global::TheScoreBook.Android.Resource.Dimension.design_tab_text_size;
+			global::FormsControls.Droid.Resource.Dimension.design_tab_text_size_2line = global::TheScoreBook.Android.Resource.Dimension.design_tab_text_size_2line;
+			global::FormsControls.Droid.Resource.Dimension.design_textinput_caption_translate_y = global::TheScoreBook.Android.Resource.Dimension.design_textinput_caption_translate_y;
+			global::FormsControls.Droid.Resource.Dimension.disabled_alpha_material_dark = global::TheScoreBook.Android.Resource.Dimension.disabled_alpha_material_dark;
+			global::FormsControls.Droid.Resource.Dimension.disabled_alpha_material_light = global::TheScoreBook.Android.Resource.Dimension.disabled_alpha_material_light;
+			global::FormsControls.Droid.Resource.Dimension.fastscroll_default_thickness = global::TheScoreBook.Android.Resource.Dimension.fastscroll_default_thickness;
+			global::FormsControls.Droid.Resource.Dimension.fastscroll_margin = global::TheScoreBook.Android.Resource.Dimension.fastscroll_margin;
+			global::FormsControls.Droid.Resource.Dimension.fastscroll_minimum_range = global::TheScoreBook.Android.Resource.Dimension.fastscroll_minimum_range;
+			global::FormsControls.Droid.Resource.Dimension.highlight_alpha_material_colored = global::TheScoreBook.Android.Resource.Dimension.highlight_alpha_material_colored;
+			global::FormsControls.Droid.Resource.Dimension.highlight_alpha_material_dark = global::TheScoreBook.Android.Resource.Dimension.highlight_alpha_material_dark;
+			global::FormsControls.Droid.Resource.Dimension.highlight_alpha_material_light = global::TheScoreBook.Android.Resource.Dimension.highlight_alpha_material_light;
+			global::FormsControls.Droid.Resource.Dimension.hint_alpha_material_dark = global::TheScoreBook.Android.Resource.Dimension.hint_alpha_material_dark;
+			global::FormsControls.Droid.Resource.Dimension.hint_alpha_material_light = global::TheScoreBook.Android.Resource.Dimension.hint_alpha_material_light;
+			global::FormsControls.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::TheScoreBook.Android.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::FormsControls.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::TheScoreBook.Android.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::FormsControls.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::TheScoreBook.Android.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::FormsControls.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::TheScoreBook.Android.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::FormsControls.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::TheScoreBook.Android.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::FormsControls.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height = global::TheScoreBook.Android.Resource.Dimension.mr_controller_volume_group_list_item_height;
+			global::FormsControls.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::TheScoreBook.Android.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
+			global::FormsControls.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height = global::TheScoreBook.Android.Resource.Dimension.mr_controller_volume_group_list_max_height;
+			global::FormsControls.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::TheScoreBook.Android.Resource.Dimension.mr_controller_volume_group_list_padding_top;
+			global::FormsControls.Droid.Resource.Dimension.mr_dialog_fixed_width_major = global::TheScoreBook.Android.Resource.Dimension.mr_dialog_fixed_width_major;
+			global::FormsControls.Droid.Resource.Dimension.mr_dialog_fixed_width_minor = global::TheScoreBook.Android.Resource.Dimension.mr_dialog_fixed_width_minor;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::TheScoreBook.Android.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::TheScoreBook.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::TheScoreBook.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::TheScoreBook.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_bottomappbar_height = global::TheScoreBook.Android.Resource.Dimension.mtrl_bottomappbar_height;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_corner_radius = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_corner_radius;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_disabled_elevation = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_disabled_z = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_disabled_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_elevation = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_elevation;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_focused_z = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_focused_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_hovered_z = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_hovered_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_icon_padding = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_icon_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_inset = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_inset;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_letter_spacing = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_padding_bottom = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_padding_left = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_padding_left;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_padding_right = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_padding_right;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_padding_top = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_padding_top;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_pressed_z = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_pressed_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_stroke_size = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_stroke_size;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_text_size = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_text_size;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_z = global::TheScoreBook.Android.Resource.Dimension.mtrl_btn_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_card_elevation = global::TheScoreBook.Android.Resource.Dimension.mtrl_card_elevation;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_card_spacing = global::TheScoreBook.Android.Resource.Dimension.mtrl_card_spacing;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z = global::TheScoreBook.Android.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_chip_text_size = global::TheScoreBook.Android.Resource.Dimension.mtrl_chip_text_size;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_fab_elevation = global::TheScoreBook.Android.Resource.Dimension.mtrl_fab_elevation;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::TheScoreBook.Android.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed = global::TheScoreBook.Android.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_navigation_elevation = global::TheScoreBook.Android.Resource.Dimension.mtrl_navigation_elevation;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::TheScoreBook.Android.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding = global::TheScoreBook.Android.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::TheScoreBook.Android.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_snackbar_margin = global::TheScoreBook.Android.Resource.Dimension.mtrl_snackbar_margin;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset = global::TheScoreBook.Android.Resource.Dimension.mtrl_textinput_box_bottom_offset;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::TheScoreBook.Android.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::TheScoreBook.Android.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::TheScoreBook.Android.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_padding_end = global::TheScoreBook.Android.Resource.Dimension.mtrl_textinput_box_padding_end;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::TheScoreBook.Android.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::TheScoreBook.Android.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::TheScoreBook.Android.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_toolbar_default_height = global::TheScoreBook.Android.Resource.Dimension.mtrl_toolbar_default_height;
+			global::FormsControls.Droid.Resource.Dimension.notification_action_icon_size = global::TheScoreBook.Android.Resource.Dimension.notification_action_icon_size;
+			global::FormsControls.Droid.Resource.Dimension.notification_action_text_size = global::TheScoreBook.Android.Resource.Dimension.notification_action_text_size;
+			global::FormsControls.Droid.Resource.Dimension.notification_big_circle_margin = global::TheScoreBook.Android.Resource.Dimension.notification_big_circle_margin;
+			global::FormsControls.Droid.Resource.Dimension.notification_content_margin_start = global::TheScoreBook.Android.Resource.Dimension.notification_content_margin_start;
+			global::FormsControls.Droid.Resource.Dimension.notification_large_icon_height = global::TheScoreBook.Android.Resource.Dimension.notification_large_icon_height;
+			global::FormsControls.Droid.Resource.Dimension.notification_large_icon_width = global::TheScoreBook.Android.Resource.Dimension.notification_large_icon_width;
+			global::FormsControls.Droid.Resource.Dimension.notification_main_column_padding_top = global::TheScoreBook.Android.Resource.Dimension.notification_main_column_padding_top;
+			global::FormsControls.Droid.Resource.Dimension.notification_media_narrow_margin = global::TheScoreBook.Android.Resource.Dimension.notification_media_narrow_margin;
+			global::FormsControls.Droid.Resource.Dimension.notification_right_icon_size = global::TheScoreBook.Android.Resource.Dimension.notification_right_icon_size;
+			global::FormsControls.Droid.Resource.Dimension.notification_right_side_padding_top = global::TheScoreBook.Android.Resource.Dimension.notification_right_side_padding_top;
+			global::FormsControls.Droid.Resource.Dimension.notification_small_icon_background_padding = global::TheScoreBook.Android.Resource.Dimension.notification_small_icon_background_padding;
+			global::FormsControls.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::TheScoreBook.Android.Resource.Dimension.notification_small_icon_size_as_large;
+			global::FormsControls.Droid.Resource.Dimension.notification_subtext_size = global::TheScoreBook.Android.Resource.Dimension.notification_subtext_size;
+			global::FormsControls.Droid.Resource.Dimension.notification_top_pad = global::TheScoreBook.Android.Resource.Dimension.notification_top_pad;
+			global::FormsControls.Droid.Resource.Dimension.notification_top_pad_large_text = global::TheScoreBook.Android.Resource.Dimension.notification_top_pad_large_text;
+			global::FormsControls.Droid.Resource.Dimension.subtitle_corner_radius = global::TheScoreBook.Android.Resource.Dimension.subtitle_corner_radius;
+			global::FormsControls.Droid.Resource.Dimension.subtitle_outline_width = global::TheScoreBook.Android.Resource.Dimension.subtitle_outline_width;
+			global::FormsControls.Droid.Resource.Dimension.subtitle_shadow_offset = global::TheScoreBook.Android.Resource.Dimension.subtitle_shadow_offset;
+			global::FormsControls.Droid.Resource.Dimension.subtitle_shadow_radius = global::TheScoreBook.Android.Resource.Dimension.subtitle_shadow_radius;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_corner_radius = global::TheScoreBook.Android.Resource.Dimension.tooltip_corner_radius;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_horizontal_padding = global::TheScoreBook.Android.Resource.Dimension.tooltip_horizontal_padding;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_margin = global::TheScoreBook.Android.Resource.Dimension.tooltip_margin;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::TheScoreBook.Android.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_precise_anchor_threshold = global::TheScoreBook.Android.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_vertical_padding = global::TheScoreBook.Android.Resource.Dimension.tooltip_vertical_padding;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_y_offset_non_touch = global::TheScoreBook.Android.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_y_offset_touch = global::TheScoreBook.Android.Resource.Dimension.tooltip_y_offset_touch;
+			global::FormsControls.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::TheScoreBook.Android.Resource.Drawable.abc_action_bar_item_background_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_borderless_material = global::TheScoreBook.Android.Resource.Drawable.abc_btn_borderless_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_check_material = global::TheScoreBook.Android.Resource.Drawable.abc_btn_check_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::TheScoreBook.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::TheScoreBook.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_colored_material = global::TheScoreBook.Android.Resource.Drawable.abc_btn_colored_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::TheScoreBook.Android.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_radio_material = global::TheScoreBook.Android.Resource.Drawable.abc_btn_radio_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::TheScoreBook.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::TheScoreBook.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::TheScoreBook.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::TheScoreBook.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::FormsControls.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::TheScoreBook.Android.Resource.Drawable.abc_cab_background_internal_bg;
+			global::FormsControls.Droid.Resource.Drawable.abc_cab_background_top_material = global::TheScoreBook.Android.Resource.Drawable.abc_cab_background_top_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_control_background_material = global::TheScoreBook.Android.Resource.Drawable.abc_control_background_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_dialog_material_background = global::TheScoreBook.Android.Resource.Drawable.abc_dialog_material_background;
+			global::FormsControls.Droid.Resource.Drawable.abc_edit_text_material = global::TheScoreBook.Android.Resource.Drawable.abc_edit_text_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_ab_back_material = global::TheScoreBook.Android.Resource.Drawable.abc_ic_ab_back_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::TheScoreBook.Android.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_clear_material = global::TheScoreBook.Android.Resource.Drawable.abc_ic_clear_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::TheScoreBook.Android.Resource.Drawable.abc_ic_go_search_api_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::TheScoreBook.Android.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_search_api_material = global::TheScoreBook.Android.Resource.Drawable.abc_ic_search_api_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::TheScoreBook.Android.Resource.Drawable.abc_ic_star_black_16dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::TheScoreBook.Android.Resource.Drawable.abc_ic_star_black_36dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::TheScoreBook.Android.Resource.Drawable.abc_ic_star_black_48dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::TheScoreBook.Android.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::TheScoreBook.Android.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::TheScoreBook.Android.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::TheScoreBook.Android.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_item_background_holo_dark = global::TheScoreBook.Android.Resource.Drawable.abc_item_background_holo_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_item_background_holo_light = global::TheScoreBook.Android.Resource.Drawable.abc_item_background_holo_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_divider_material = global::TheScoreBook.Android.Resource.Drawable.abc_list_divider_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_focused_holo = global::TheScoreBook.Android.Resource.Drawable.abc_list_focused_holo;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_longpressed_holo = global::TheScoreBook.Android.Resource.Drawable.abc_list_longpressed_holo;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::TheScoreBook.Android.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::TheScoreBook.Android.Resource.Drawable.abc_list_pressed_holo_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::TheScoreBook.Android.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::TheScoreBook.Android.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::TheScoreBook.Android.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::TheScoreBook.Android.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::TheScoreBook.Android.Resource.Drawable.abc_list_selector_holo_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_holo_light = global::TheScoreBook.Android.Resource.Drawable.abc_list_selector_holo_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::TheScoreBook.Android.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::FormsControls.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::TheScoreBook.Android.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::FormsControls.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::TheScoreBook.Android.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ratingbar_material = global::TheScoreBook.Android.Resource.Drawable.abc_ratingbar_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ratingbar_small_material = global::TheScoreBook.Android.Resource.Drawable.abc_ratingbar_small_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::TheScoreBook.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::FormsControls.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::TheScoreBook.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::FormsControls.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::TheScoreBook.Android.Resource.Drawable.abc_seekbar_thumb_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::TheScoreBook.Android.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_seekbar_track_material = global::TheScoreBook.Android.Resource.Drawable.abc_seekbar_track_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::TheScoreBook.Android.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_switch_thumb_material = global::TheScoreBook.Android.Resource.Drawable.abc_switch_thumb_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_tab_indicator_material = global::TheScoreBook.Android.Resource.Drawable.abc_tab_indicator_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::TheScoreBook.Android.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_textfield_search_material = global::TheScoreBook.Android.Resource.Drawable.abc_textfield_search_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_cursor_material = global::TheScoreBook.Android.Resource.Drawable.abc_text_cursor_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::TheScoreBook.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::TheScoreBook.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::TheScoreBook.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::TheScoreBook.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::TheScoreBook.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::TheScoreBook.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_vector_test = global::TheScoreBook.Android.Resource.Drawable.abc_vector_test;
+			global::FormsControls.Droid.Resource.Drawable.avd_hide_password = global::TheScoreBook.Android.Resource.Drawable.avd_hide_password;
+			global::FormsControls.Droid.Resource.Drawable.avd_show_password = global::TheScoreBook.Android.Resource.Drawable.avd_show_password;
+			global::FormsControls.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::TheScoreBook.Android.Resource.Drawable.design_bottom_navigation_item_background;
+			global::FormsControls.Droid.Resource.Drawable.design_fab_background = global::TheScoreBook.Android.Resource.Drawable.design_fab_background;
+			global::FormsControls.Droid.Resource.Drawable.design_ic_visibility = global::TheScoreBook.Android.Resource.Drawable.design_ic_visibility;
+			global::FormsControls.Droid.Resource.Drawable.design_ic_visibility_off = global::TheScoreBook.Android.Resource.Drawable.design_ic_visibility_off;
+			global::FormsControls.Droid.Resource.Drawable.design_password_eye = global::TheScoreBook.Android.Resource.Drawable.design_password_eye;
+			global::FormsControls.Droid.Resource.Drawable.design_snackbar_background = global::TheScoreBook.Android.Resource.Drawable.design_snackbar_background;
+			global::FormsControls.Droid.Resource.Drawable.ic_audiotrack_dark = global::TheScoreBook.Android.Resource.Drawable.ic_audiotrack_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_audiotrack_light = global::TheScoreBook.Android.Resource.Drawable.ic_audiotrack_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_dialog_close_dark = global::TheScoreBook.Android.Resource.Drawable.ic_dialog_close_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_dialog_close_light = global::TheScoreBook.Android.Resource.Drawable.ic_dialog_close_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_00 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_00;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_01 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_01;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_02 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_02;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_03 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_03;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_04 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_04;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_05 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_05;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_06 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_06;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_07 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_07;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_08 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_08;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_09 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_09;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_10 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_10;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_11 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_11;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_12 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_12;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_13 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_13;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_14 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_14;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_collapse_15 = global::TheScoreBook.Android.Resource.Drawable.ic_group_collapse_15;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_00 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_00;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_01 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_01;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_02 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_02;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_03 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_03;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_04 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_04;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_05 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_05;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_06 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_06;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_07 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_07;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_08 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_08;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_09 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_09;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_10 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_10;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_11 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_11;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_12 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_12;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_13 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_13;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_14 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_14;
+			global::FormsControls.Droid.Resource.Drawable.ic_group_expand_15 = global::TheScoreBook.Android.Resource.Drawable.ic_group_expand_15;
+			global::FormsControls.Droid.Resource.Drawable.ic_media_pause_dark = global::TheScoreBook.Android.Resource.Drawable.ic_media_pause_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_media_pause_light = global::TheScoreBook.Android.Resource.Drawable.ic_media_pause_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_media_play_dark = global::TheScoreBook.Android.Resource.Drawable.ic_media_play_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_media_play_light = global::TheScoreBook.Android.Resource.Drawable.ic_media_play_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_media_stop_dark = global::TheScoreBook.Android.Resource.Drawable.ic_media_stop_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_media_stop_light = global::TheScoreBook.Android.Resource.Drawable.ic_media_stop_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_00_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_00_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_00_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_00_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_01_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_01_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_01_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_01_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_02_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_02_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_02_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_02_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_03_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_03_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_03_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_03_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_04_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_04_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_04_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_04_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_05_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_05_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_05_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_05_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_06_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_06_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_06_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_06_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_07_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_07_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_07_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_07_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_08_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_08_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_08_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_08_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_09_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_09_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_09_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_09_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_10_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_10_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_10_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_10_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_11_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_11_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_11_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_11_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_12_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_12_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_12_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_12_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_13_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_13_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_13_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_13_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_14_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_14_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_14_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_14_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_15_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_15_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_15_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_15_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_16_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_16_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_16_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_16_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_17_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_17_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_17_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_17_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_18_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_18_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_18_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_18_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_19_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_19_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_19_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_19_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_20_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_20_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_20_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_20_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_21_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_21_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_21_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_21_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_22_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_22_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_22_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_22_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_23_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_23_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_23_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_23_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_24_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_24_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_24_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_24_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_25_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_25_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_25_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_25_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_26_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_26_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_26_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_26_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_27_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_27_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_27_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_27_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_28_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_28_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_28_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_28_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_29_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_29_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_29_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_29_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_30_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_30_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connected_30_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connected_30_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_00_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_00_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_00_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_01_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_01_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_01_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_02_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_02_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_02_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_03_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_03_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_03_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_04_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_04_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_04_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_05_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_05_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_05_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_06_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_06_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_06_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_07_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_07_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_07_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_08_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_08_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_08_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_09_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_09_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_09_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_10_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_10_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_10_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_11_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_11_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_11_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_12_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_12_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_12_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_13_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_13_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_13_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_14_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_14_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_14_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_15_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_15_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_15_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_16_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_16_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_16_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_17_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_17_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_17_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_18_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_18_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_18_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_19_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_19_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_19_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_20_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_20_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_20_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_21_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_21_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_21_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_22_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_22_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_22_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_23_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_23_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_23_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_24_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_24_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_24_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_25_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_25_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_25_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_26_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_26_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_26_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_27_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_27_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_27_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_28_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_28_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_28_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_29_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_29_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_29_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_30_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_connecting_30_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_connecting_30_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_disabled_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_disabled_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_disabled_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_disabled_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_disconnected_dark = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_disconnected_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_disconnected_light = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_disconnected_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_mr_button_grey = global::TheScoreBook.Android.Resource.Drawable.ic_mr_button_grey;
+			global::FormsControls.Droid.Resource.Drawable.ic_mtrl_chip_checked_black = global::TheScoreBook.Android.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::FormsControls.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle = global::TheScoreBook.Android.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::FormsControls.Droid.Resource.Drawable.ic_mtrl_chip_close_circle = global::TheScoreBook.Android.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::FormsControls.Droid.Resource.Drawable.ic_vol_type_speaker_dark = global::TheScoreBook.Android.Resource.Drawable.ic_vol_type_speaker_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark = global::TheScoreBook.Android.Resource.Drawable.ic_vol_type_speaker_group_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_vol_type_speaker_group_light = global::TheScoreBook.Android.Resource.Drawable.ic_vol_type_speaker_group_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_vol_type_speaker_light = global::TheScoreBook.Android.Resource.Drawable.ic_vol_type_speaker_light;
+			global::FormsControls.Droid.Resource.Drawable.ic_vol_type_tv_dark = global::TheScoreBook.Android.Resource.Drawable.ic_vol_type_tv_dark;
+			global::FormsControls.Droid.Resource.Drawable.ic_vol_type_tv_light = global::TheScoreBook.Android.Resource.Drawable.ic_vol_type_tv_light;
+			global::FormsControls.Droid.Resource.Drawable.mr_button_connected_dark = global::TheScoreBook.Android.Resource.Drawable.mr_button_connected_dark;
+			global::FormsControls.Droid.Resource.Drawable.mr_button_connected_light = global::TheScoreBook.Android.Resource.Drawable.mr_button_connected_light;
+			global::FormsControls.Droid.Resource.Drawable.mr_button_connecting_dark = global::TheScoreBook.Android.Resource.Drawable.mr_button_connecting_dark;
+			global::FormsControls.Droid.Resource.Drawable.mr_button_connecting_light = global::TheScoreBook.Android.Resource.Drawable.mr_button_connecting_light;
+			global::FormsControls.Droid.Resource.Drawable.mr_button_dark = global::TheScoreBook.Android.Resource.Drawable.mr_button_dark;
+			global::FormsControls.Droid.Resource.Drawable.mr_button_light = global::TheScoreBook.Android.Resource.Drawable.mr_button_light;
+			global::FormsControls.Droid.Resource.Drawable.mr_dialog_close_dark = global::TheScoreBook.Android.Resource.Drawable.mr_dialog_close_dark;
+			global::FormsControls.Droid.Resource.Drawable.mr_dialog_close_light = global::TheScoreBook.Android.Resource.Drawable.mr_dialog_close_light;
+			global::FormsControls.Droid.Resource.Drawable.mr_dialog_material_background_dark = global::TheScoreBook.Android.Resource.Drawable.mr_dialog_material_background_dark;
+			global::FormsControls.Droid.Resource.Drawable.mr_dialog_material_background_light = global::TheScoreBook.Android.Resource.Drawable.mr_dialog_material_background_light;
+			global::FormsControls.Droid.Resource.Drawable.mr_group_collapse = global::TheScoreBook.Android.Resource.Drawable.mr_group_collapse;
+			global::FormsControls.Droid.Resource.Drawable.mr_group_expand = global::TheScoreBook.Android.Resource.Drawable.mr_group_expand;
+			global::FormsControls.Droid.Resource.Drawable.mr_media_pause_dark = global::TheScoreBook.Android.Resource.Drawable.mr_media_pause_dark;
+			global::FormsControls.Droid.Resource.Drawable.mr_media_pause_light = global::TheScoreBook.Android.Resource.Drawable.mr_media_pause_light;
+			global::FormsControls.Droid.Resource.Drawable.mr_media_play_dark = global::TheScoreBook.Android.Resource.Drawable.mr_media_play_dark;
+			global::FormsControls.Droid.Resource.Drawable.mr_media_play_light = global::TheScoreBook.Android.Resource.Drawable.mr_media_play_light;
+			global::FormsControls.Droid.Resource.Drawable.mr_media_stop_dark = global::TheScoreBook.Android.Resource.Drawable.mr_media_stop_dark;
+			global::FormsControls.Droid.Resource.Drawable.mr_media_stop_light = global::TheScoreBook.Android.Resource.Drawable.mr_media_stop_light;
+			global::FormsControls.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark = global::TheScoreBook.Android.Resource.Drawable.mr_vol_type_audiotrack_dark;
+			global::FormsControls.Droid.Resource.Drawable.mr_vol_type_audiotrack_light = global::TheScoreBook.Android.Resource.Drawable.mr_vol_type_audiotrack_light;
+			global::FormsControls.Droid.Resource.Drawable.mtrl_snackbar_background = global::TheScoreBook.Android.Resource.Drawable.mtrl_snackbar_background;
+			global::FormsControls.Droid.Resource.Drawable.mtrl_tabs_default_indicator = global::TheScoreBook.Android.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::FormsControls.Droid.Resource.Drawable.navigation_empty_icon = global::TheScoreBook.Android.Resource.Drawable.navigation_empty_icon;
+			global::FormsControls.Droid.Resource.Drawable.notification_action_background = global::TheScoreBook.Android.Resource.Drawable.notification_action_background;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg = global::TheScoreBook.Android.Resource.Drawable.notification_bg;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg_low = global::TheScoreBook.Android.Resource.Drawable.notification_bg_low;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg_low_normal = global::TheScoreBook.Android.Resource.Drawable.notification_bg_low_normal;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg_low_pressed = global::TheScoreBook.Android.Resource.Drawable.notification_bg_low_pressed;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg_normal = global::TheScoreBook.Android.Resource.Drawable.notification_bg_normal;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg_normal_pressed = global::TheScoreBook.Android.Resource.Drawable.notification_bg_normal_pressed;
+			global::FormsControls.Droid.Resource.Drawable.notification_icon_background = global::TheScoreBook.Android.Resource.Drawable.notification_icon_background;
+			global::FormsControls.Droid.Resource.Drawable.notification_template_icon_bg = global::TheScoreBook.Android.Resource.Drawable.notification_template_icon_bg;
+			global::FormsControls.Droid.Resource.Drawable.notification_template_icon_low_bg = global::TheScoreBook.Android.Resource.Drawable.notification_template_icon_low_bg;
+			global::FormsControls.Droid.Resource.Drawable.notification_tile_bg = global::TheScoreBook.Android.Resource.Drawable.notification_tile_bg;
+			global::FormsControls.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::TheScoreBook.Android.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::FormsControls.Droid.Resource.Drawable.tooltip_frame_dark = global::TheScoreBook.Android.Resource.Drawable.tooltip_frame_dark;
+			global::FormsControls.Droid.Resource.Drawable.tooltip_frame_light = global::TheScoreBook.Android.Resource.Drawable.tooltip_frame_light;
+			global::FormsControls.Droid.Resource.Id.action0 = global::TheScoreBook.Android.Resource.Id.action0;
+			global::FormsControls.Droid.Resource.Id.actions = global::TheScoreBook.Android.Resource.Id.actions;
+			global::FormsControls.Droid.Resource.Id.action_bar = global::TheScoreBook.Android.Resource.Id.action_bar;
+			global::FormsControls.Droid.Resource.Id.action_bar_activity_content = global::TheScoreBook.Android.Resource.Id.action_bar_activity_content;
+			global::FormsControls.Droid.Resource.Id.action_bar_container = global::TheScoreBook.Android.Resource.Id.action_bar_container;
+			global::FormsControls.Droid.Resource.Id.action_bar_root = global::TheScoreBook.Android.Resource.Id.action_bar_root;
+			global::FormsControls.Droid.Resource.Id.action_bar_spinner = global::TheScoreBook.Android.Resource.Id.action_bar_spinner;
+			global::FormsControls.Droid.Resource.Id.action_bar_subtitle = global::TheScoreBook.Android.Resource.Id.action_bar_subtitle;
+			global::FormsControls.Droid.Resource.Id.action_bar_title = global::TheScoreBook.Android.Resource.Id.action_bar_title;
+			global::FormsControls.Droid.Resource.Id.action_container = global::TheScoreBook.Android.Resource.Id.action_container;
+			global::FormsControls.Droid.Resource.Id.action_context_bar = global::TheScoreBook.Android.Resource.Id.action_context_bar;
+			global::FormsControls.Droid.Resource.Id.action_divider = global::TheScoreBook.Android.Resource.Id.action_divider;
+			global::FormsControls.Droid.Resource.Id.action_image = global::TheScoreBook.Android.Resource.Id.action_image;
+			global::FormsControls.Droid.Resource.Id.action_menu_divider = global::TheScoreBook.Android.Resource.Id.action_menu_divider;
+			global::FormsControls.Droid.Resource.Id.action_menu_presenter = global::TheScoreBook.Android.Resource.Id.action_menu_presenter;
+			global::FormsControls.Droid.Resource.Id.action_mode_bar = global::TheScoreBook.Android.Resource.Id.action_mode_bar;
+			global::FormsControls.Droid.Resource.Id.action_mode_bar_stub = global::TheScoreBook.Android.Resource.Id.action_mode_bar_stub;
+			global::FormsControls.Droid.Resource.Id.action_mode_close_button = global::TheScoreBook.Android.Resource.Id.action_mode_close_button;
+			global::FormsControls.Droid.Resource.Id.action_text = global::TheScoreBook.Android.Resource.Id.action_text;
+			global::FormsControls.Droid.Resource.Id.activity_chooser_view_content = global::TheScoreBook.Android.Resource.Id.activity_chooser_view_content;
+			global::FormsControls.Droid.Resource.Id.add = global::TheScoreBook.Android.Resource.Id.add;
+			global::FormsControls.Droid.Resource.Id.alertTitle = global::TheScoreBook.Android.Resource.Id.alertTitle;
+			global::FormsControls.Droid.Resource.Id.all = global::TheScoreBook.Android.Resource.Id.all;
+			global::FormsControls.Droid.Resource.Id.ALT = global::TheScoreBook.Android.Resource.Id.ALT;
+			global::FormsControls.Droid.Resource.Id.always = global::TheScoreBook.Android.Resource.Id.always;
+			global::FormsControls.Droid.Resource.Id.async = global::TheScoreBook.Android.Resource.Id.async;
+			global::FormsControls.Droid.Resource.Id.auto = global::TheScoreBook.Android.Resource.Id.auto;
+			global::FormsControls.Droid.Resource.Id.beginning = global::TheScoreBook.Android.Resource.Id.beginning;
+			global::FormsControls.Droid.Resource.Id.blocking = global::TheScoreBook.Android.Resource.Id.blocking;
+			global::FormsControls.Droid.Resource.Id.bottom = global::TheScoreBook.Android.Resource.Id.bottom;
+			global::FormsControls.Droid.Resource.Id.bottomtab_navarea = global::TheScoreBook.Android.Resource.Id.bottomtab_navarea;
+			global::FormsControls.Droid.Resource.Id.bottomtab_tabbar = global::TheScoreBook.Android.Resource.Id.bottomtab_tabbar;
+			global::FormsControls.Droid.Resource.Id.browser_actions_header_text = global::TheScoreBook.Android.Resource.Id.browser_actions_header_text;
+			global::FormsControls.Droid.Resource.Id.browser_actions_menu_items = global::TheScoreBook.Android.Resource.Id.browser_actions_menu_items;
+			global::FormsControls.Droid.Resource.Id.browser_actions_menu_item_icon = global::TheScoreBook.Android.Resource.Id.browser_actions_menu_item_icon;
+			global::FormsControls.Droid.Resource.Id.browser_actions_menu_item_text = global::TheScoreBook.Android.Resource.Id.browser_actions_menu_item_text;
+			global::FormsControls.Droid.Resource.Id.browser_actions_menu_view = global::TheScoreBook.Android.Resource.Id.browser_actions_menu_view;
+			global::FormsControls.Droid.Resource.Id.buttonPanel = global::TheScoreBook.Android.Resource.Id.buttonPanel;
+			global::FormsControls.Droid.Resource.Id.cancel_action = global::TheScoreBook.Android.Resource.Id.cancel_action;
+			global::FormsControls.Droid.Resource.Id.center = global::TheScoreBook.Android.Resource.Id.center;
+			global::FormsControls.Droid.Resource.Id.center_horizontal = global::TheScoreBook.Android.Resource.Id.center_horizontal;
+			global::FormsControls.Droid.Resource.Id.center_vertical = global::TheScoreBook.Android.Resource.Id.center_vertical;
+			global::FormsControls.Droid.Resource.Id.checkbox = global::TheScoreBook.Android.Resource.Id.checkbox;
+			global::FormsControls.Droid.Resource.Id.chronometer = global::TheScoreBook.Android.Resource.Id.chronometer;
+			global::FormsControls.Droid.Resource.Id.clip_horizontal = global::TheScoreBook.Android.Resource.Id.clip_horizontal;
+			global::FormsControls.Droid.Resource.Id.clip_vertical = global::TheScoreBook.Android.Resource.Id.clip_vertical;
+			global::FormsControls.Droid.Resource.Id.collapseActionView = global::TheScoreBook.Android.Resource.Id.collapseActionView;
+			global::FormsControls.Droid.Resource.Id.container = global::TheScoreBook.Android.Resource.Id.container;
+			global::FormsControls.Droid.Resource.Id.content = global::TheScoreBook.Android.Resource.Id.content;
+			global::FormsControls.Droid.Resource.Id.contentPanel = global::TheScoreBook.Android.Resource.Id.contentPanel;
+			global::FormsControls.Droid.Resource.Id.coordinator = global::TheScoreBook.Android.Resource.Id.coordinator;
+			global::FormsControls.Droid.Resource.Id.CTRL = global::TheScoreBook.Android.Resource.Id.CTRL;
+			global::FormsControls.Droid.Resource.Id.custom = global::TheScoreBook.Android.Resource.Id.custom;
+			global::FormsControls.Droid.Resource.Id.customPanel = global::TheScoreBook.Android.Resource.Id.customPanel;
+			global::FormsControls.Droid.Resource.Id.decor_content_parent = global::TheScoreBook.Android.Resource.Id.decor_content_parent;
+			global::FormsControls.Droid.Resource.Id.default_activity_button = global::TheScoreBook.Android.Resource.Id.default_activity_button;
+			global::FormsControls.Droid.Resource.Id.design_bottom_sheet = global::TheScoreBook.Android.Resource.Id.design_bottom_sheet;
+			global::FormsControls.Droid.Resource.Id.design_menu_item_action_area = global::TheScoreBook.Android.Resource.Id.design_menu_item_action_area;
+			global::FormsControls.Droid.Resource.Id.design_menu_item_action_area_stub = global::TheScoreBook.Android.Resource.Id.design_menu_item_action_area_stub;
+			global::FormsControls.Droid.Resource.Id.design_menu_item_text = global::TheScoreBook.Android.Resource.Id.design_menu_item_text;
+			global::FormsControls.Droid.Resource.Id.design_navigation_view = global::TheScoreBook.Android.Resource.Id.design_navigation_view;
+			global::FormsControls.Droid.Resource.Id.disableHome = global::TheScoreBook.Android.Resource.Id.disableHome;
+			global::FormsControls.Droid.Resource.Id.edit_query = global::TheScoreBook.Android.Resource.Id.edit_query;
+			global::FormsControls.Droid.Resource.Id.end = global::TheScoreBook.Android.Resource.Id.end;
+			global::FormsControls.Droid.Resource.Id.end_padder = global::TheScoreBook.Android.Resource.Id.end_padder;
+			global::FormsControls.Droid.Resource.Id.enterAlways = global::TheScoreBook.Android.Resource.Id.enterAlways;
+			global::FormsControls.Droid.Resource.Id.enterAlwaysCollapsed = global::TheScoreBook.Android.Resource.Id.enterAlwaysCollapsed;
+			global::FormsControls.Droid.Resource.Id.exitUntilCollapsed = global::TheScoreBook.Android.Resource.Id.exitUntilCollapsed;
+			global::FormsControls.Droid.Resource.Id.expanded_menu = global::TheScoreBook.Android.Resource.Id.expanded_menu;
+			global::FormsControls.Droid.Resource.Id.expand_activities_button = global::TheScoreBook.Android.Resource.Id.expand_activities_button;
+			global::FormsControls.Droid.Resource.Id.fill = global::TheScoreBook.Android.Resource.Id.fill;
+			global::FormsControls.Droid.Resource.Id.filled = global::TheScoreBook.Android.Resource.Id.filled;
+			global::FormsControls.Droid.Resource.Id.fill_horizontal = global::TheScoreBook.Android.Resource.Id.fill_horizontal;
+			global::FormsControls.Droid.Resource.Id.fill_vertical = global::TheScoreBook.Android.Resource.Id.fill_vertical;
+			global::FormsControls.Droid.Resource.Id.@fixed = global::TheScoreBook.Android.Resource.Id.@fixed;
+			global::FormsControls.Droid.Resource.Id.flyoutcontent_appbar = global::TheScoreBook.Android.Resource.Id.flyoutcontent_appbar;
+			global::FormsControls.Droid.Resource.Id.flyoutcontent_recycler = global::TheScoreBook.Android.Resource.Id.flyoutcontent_recycler;
+			global::FormsControls.Droid.Resource.Id.forever = global::TheScoreBook.Android.Resource.Id.forever;
+			global::FormsControls.Droid.Resource.Id.FUNCTION = global::TheScoreBook.Android.Resource.Id.FUNCTION;
+			global::FormsControls.Droid.Resource.Id.ghost_view = global::TheScoreBook.Android.Resource.Id.ghost_view;
+			global::FormsControls.Droid.Resource.Id.group_divider = global::TheScoreBook.Android.Resource.Id.group_divider;
+			global::FormsControls.Droid.Resource.Id.home = global::TheScoreBook.Android.Resource.Id.home;
+			global::FormsControls.Droid.Resource.Id.homeAsUp = global::TheScoreBook.Android.Resource.Id.homeAsUp;
+			global::FormsControls.Droid.Resource.Id.icon = global::TheScoreBook.Android.Resource.Id.icon;
+			global::FormsControls.Droid.Resource.Id.icon_group = global::TheScoreBook.Android.Resource.Id.icon_group;
+			global::FormsControls.Droid.Resource.Id.ifRoom = global::TheScoreBook.Android.Resource.Id.ifRoom;
+			global::FormsControls.Droid.Resource.Id.image = global::TheScoreBook.Android.Resource.Id.image;
+			global::FormsControls.Droid.Resource.Id.info = global::TheScoreBook.Android.Resource.Id.info;
+			global::FormsControls.Droid.Resource.Id.italic = global::TheScoreBook.Android.Resource.Id.italic;
+			global::FormsControls.Droid.Resource.Id.item_touch_helper_previous_elevation = global::TheScoreBook.Android.Resource.Id.item_touch_helper_previous_elevation;
+			global::FormsControls.Droid.Resource.Id.labeled = global::TheScoreBook.Android.Resource.Id.labeled;
+			global::FormsControls.Droid.Resource.Id.largeLabel = global::TheScoreBook.Android.Resource.Id.largeLabel;
+			global::FormsControls.Droid.Resource.Id.left = global::TheScoreBook.Android.Resource.Id.left;
+			global::FormsControls.Droid.Resource.Id.line1 = global::TheScoreBook.Android.Resource.Id.line1;
+			global::FormsControls.Droid.Resource.Id.line3 = global::TheScoreBook.Android.Resource.Id.line3;
+			global::FormsControls.Droid.Resource.Id.listMode = global::TheScoreBook.Android.Resource.Id.listMode;
+			global::FormsControls.Droid.Resource.Id.list_item = global::TheScoreBook.Android.Resource.Id.list_item;
+			global::FormsControls.Droid.Resource.Id.main_appbar = global::TheScoreBook.Android.Resource.Id.main_appbar;
+			global::FormsControls.Droid.Resource.Id.main_tablayout = global::TheScoreBook.Android.Resource.Id.main_tablayout;
+			global::FormsControls.Droid.Resource.Id.main_toolbar = global::TheScoreBook.Android.Resource.Id.main_toolbar;
+			global::FormsControls.Droid.Resource.Id.main_viewpager = global::TheScoreBook.Android.Resource.Id.main_viewpager;
+			global::FormsControls.Droid.Resource.Id.masked = global::TheScoreBook.Android.Resource.Id.masked;
+			global::FormsControls.Droid.Resource.Id.media_actions = global::TheScoreBook.Android.Resource.Id.media_actions;
+			global::FormsControls.Droid.Resource.Id.message = global::TheScoreBook.Android.Resource.Id.message;
+			global::FormsControls.Droid.Resource.Id.META = global::TheScoreBook.Android.Resource.Id.META;
+			global::FormsControls.Droid.Resource.Id.middle = global::TheScoreBook.Android.Resource.Id.middle;
+			global::FormsControls.Droid.Resource.Id.mini = global::TheScoreBook.Android.Resource.Id.mini;
+			global::FormsControls.Droid.Resource.Id.mr_art = global::TheScoreBook.Android.Resource.Id.mr_art;
+			global::FormsControls.Droid.Resource.Id.mr_cast_checkbox = global::TheScoreBook.Android.Resource.Id.mr_cast_checkbox;
+			global::FormsControls.Droid.Resource.Id.mr_cast_close_button = global::TheScoreBook.Android.Resource.Id.mr_cast_close_button;
+			global::FormsControls.Droid.Resource.Id.mr_cast_group_icon = global::TheScoreBook.Android.Resource.Id.mr_cast_group_icon;
+			global::FormsControls.Droid.Resource.Id.mr_cast_group_name = global::TheScoreBook.Android.Resource.Id.mr_cast_group_name;
+			global::FormsControls.Droid.Resource.Id.mr_cast_list = global::TheScoreBook.Android.Resource.Id.mr_cast_list;
+			global::FormsControls.Droid.Resource.Id.mr_cast_meta = global::TheScoreBook.Android.Resource.Id.mr_cast_meta;
+			global::FormsControls.Droid.Resource.Id.mr_cast_meta_art = global::TheScoreBook.Android.Resource.Id.mr_cast_meta_art;
+			global::FormsControls.Droid.Resource.Id.mr_cast_meta_subtitle = global::TheScoreBook.Android.Resource.Id.mr_cast_meta_subtitle;
+			global::FormsControls.Droid.Resource.Id.mr_cast_meta_title = global::TheScoreBook.Android.Resource.Id.mr_cast_meta_title;
+			global::FormsControls.Droid.Resource.Id.mr_cast_route_icon = global::TheScoreBook.Android.Resource.Id.mr_cast_route_icon;
+			global::FormsControls.Droid.Resource.Id.mr_cast_route_name = global::TheScoreBook.Android.Resource.Id.mr_cast_route_name;
+			global::FormsControls.Droid.Resource.Id.mr_cast_stop_button = global::TheScoreBook.Android.Resource.Id.mr_cast_stop_button;
+			global::FormsControls.Droid.Resource.Id.mr_cast_volume_layout = global::TheScoreBook.Android.Resource.Id.mr_cast_volume_layout;
+			global::FormsControls.Droid.Resource.Id.mr_cast_volume_slider = global::TheScoreBook.Android.Resource.Id.mr_cast_volume_slider;
+			global::FormsControls.Droid.Resource.Id.mr_chooser_list = global::TheScoreBook.Android.Resource.Id.mr_chooser_list;
+			global::FormsControls.Droid.Resource.Id.mr_chooser_route_desc = global::TheScoreBook.Android.Resource.Id.mr_chooser_route_desc;
+			global::FormsControls.Droid.Resource.Id.mr_chooser_route_icon = global::TheScoreBook.Android.Resource.Id.mr_chooser_route_icon;
+			global::FormsControls.Droid.Resource.Id.mr_chooser_route_name = global::TheScoreBook.Android.Resource.Id.mr_chooser_route_name;
+			global::FormsControls.Droid.Resource.Id.mr_chooser_title = global::TheScoreBook.Android.Resource.Id.mr_chooser_title;
+			global::FormsControls.Droid.Resource.Id.mr_close = global::TheScoreBook.Android.Resource.Id.mr_close;
+			global::FormsControls.Droid.Resource.Id.mr_control_divider = global::TheScoreBook.Android.Resource.Id.mr_control_divider;
+			global::FormsControls.Droid.Resource.Id.mr_control_playback_ctrl = global::TheScoreBook.Android.Resource.Id.mr_control_playback_ctrl;
+			global::FormsControls.Droid.Resource.Id.mr_control_subtitle = global::TheScoreBook.Android.Resource.Id.mr_control_subtitle;
+			global::FormsControls.Droid.Resource.Id.mr_control_title = global::TheScoreBook.Android.Resource.Id.mr_control_title;
+			global::FormsControls.Droid.Resource.Id.mr_control_title_container = global::TheScoreBook.Android.Resource.Id.mr_control_title_container;
+			global::FormsControls.Droid.Resource.Id.mr_custom_control = global::TheScoreBook.Android.Resource.Id.mr_custom_control;
+			global::FormsControls.Droid.Resource.Id.mr_default_control = global::TheScoreBook.Android.Resource.Id.mr_default_control;
+			global::FormsControls.Droid.Resource.Id.mr_dialog_area = global::TheScoreBook.Android.Resource.Id.mr_dialog_area;
+			global::FormsControls.Droid.Resource.Id.mr_dialog_header_name = global::TheScoreBook.Android.Resource.Id.mr_dialog_header_name;
+			global::FormsControls.Droid.Resource.Id.mr_expandable_area = global::TheScoreBook.Android.Resource.Id.mr_expandable_area;
+			global::FormsControls.Droid.Resource.Id.mr_group_expand_collapse = global::TheScoreBook.Android.Resource.Id.mr_group_expand_collapse;
+			global::FormsControls.Droid.Resource.Id.mr_group_volume_route_name = global::TheScoreBook.Android.Resource.Id.mr_group_volume_route_name;
+			global::FormsControls.Droid.Resource.Id.mr_group_volume_slider = global::TheScoreBook.Android.Resource.Id.mr_group_volume_slider;
+			global::FormsControls.Droid.Resource.Id.mr_media_main_control = global::TheScoreBook.Android.Resource.Id.mr_media_main_control;
+			global::FormsControls.Droid.Resource.Id.mr_name = global::TheScoreBook.Android.Resource.Id.mr_name;
+			global::FormsControls.Droid.Resource.Id.mr_picker_close_button = global::TheScoreBook.Android.Resource.Id.mr_picker_close_button;
+			global::FormsControls.Droid.Resource.Id.mr_picker_list = global::TheScoreBook.Android.Resource.Id.mr_picker_list;
+			global::FormsControls.Droid.Resource.Id.mr_picker_route_icon = global::TheScoreBook.Android.Resource.Id.mr_picker_route_icon;
+			global::FormsControls.Droid.Resource.Id.mr_picker_route_name = global::TheScoreBook.Android.Resource.Id.mr_picker_route_name;
+			global::FormsControls.Droid.Resource.Id.mr_playback_control = global::TheScoreBook.Android.Resource.Id.mr_playback_control;
+			global::FormsControls.Droid.Resource.Id.mr_title_bar = global::TheScoreBook.Android.Resource.Id.mr_title_bar;
+			global::FormsControls.Droid.Resource.Id.mr_volume_control = global::TheScoreBook.Android.Resource.Id.mr_volume_control;
+			global::FormsControls.Droid.Resource.Id.mr_volume_group_list = global::TheScoreBook.Android.Resource.Id.mr_volume_group_list;
+			global::FormsControls.Droid.Resource.Id.mr_volume_item_icon = global::TheScoreBook.Android.Resource.Id.mr_volume_item_icon;
+			global::FormsControls.Droid.Resource.Id.mr_volume_slider = global::TheScoreBook.Android.Resource.Id.mr_volume_slider;
+			global::FormsControls.Droid.Resource.Id.mtrl_child_content_container = global::TheScoreBook.Android.Resource.Id.mtrl_child_content_container;
+			global::FormsControls.Droid.Resource.Id.mtrl_internal_children_alpha_tag = global::TheScoreBook.Android.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::FormsControls.Droid.Resource.Id.multiply = global::TheScoreBook.Android.Resource.Id.multiply;
+			global::FormsControls.Droid.Resource.Id.navigation_header_container = global::TheScoreBook.Android.Resource.Id.navigation_header_container;
+			global::FormsControls.Droid.Resource.Id.never = global::TheScoreBook.Android.Resource.Id.never;
+			global::FormsControls.Droid.Resource.Id.none = global::TheScoreBook.Android.Resource.Id.none;
+			global::FormsControls.Droid.Resource.Id.normal = global::TheScoreBook.Android.Resource.Id.normal;
+			global::FormsControls.Droid.Resource.Id.notification_background = global::TheScoreBook.Android.Resource.Id.notification_background;
+			global::FormsControls.Droid.Resource.Id.notification_main_column = global::TheScoreBook.Android.Resource.Id.notification_main_column;
+			global::FormsControls.Droid.Resource.Id.notification_main_column_container = global::TheScoreBook.Android.Resource.Id.notification_main_column_container;
+			global::FormsControls.Droid.Resource.Id.outline = global::TheScoreBook.Android.Resource.Id.outline;
+			global::FormsControls.Droid.Resource.Id.parallax = global::TheScoreBook.Android.Resource.Id.parallax;
+			global::FormsControls.Droid.Resource.Id.parentPanel = global::TheScoreBook.Android.Resource.Id.parentPanel;
+			global::FormsControls.Droid.Resource.Id.parent_matrix = global::TheScoreBook.Android.Resource.Id.parent_matrix;
+			global::FormsControls.Droid.Resource.Id.pin = global::TheScoreBook.Android.Resource.Id.pin;
+			global::FormsControls.Droid.Resource.Id.progress_circular = global::TheScoreBook.Android.Resource.Id.progress_circular;
+			global::FormsControls.Droid.Resource.Id.progress_horizontal = global::TheScoreBook.Android.Resource.Id.progress_horizontal;
+			global::FormsControls.Droid.Resource.Id.radio = global::TheScoreBook.Android.Resource.Id.radio;
+			global::FormsControls.Droid.Resource.Id.right = global::TheScoreBook.Android.Resource.Id.right;
+			global::FormsControls.Droid.Resource.Id.right_icon = global::TheScoreBook.Android.Resource.Id.right_icon;
+			global::FormsControls.Droid.Resource.Id.right_side = global::TheScoreBook.Android.Resource.Id.right_side;
+			global::FormsControls.Droid.Resource.Id.save_image_matrix = global::TheScoreBook.Android.Resource.Id.save_image_matrix;
+			global::FormsControls.Droid.Resource.Id.save_non_transition_alpha = global::TheScoreBook.Android.Resource.Id.save_non_transition_alpha;
+			global::FormsControls.Droid.Resource.Id.save_scale_type = global::TheScoreBook.Android.Resource.Id.save_scale_type;
+			global::FormsControls.Droid.Resource.Id.screen = global::TheScoreBook.Android.Resource.Id.screen;
+			global::FormsControls.Droid.Resource.Id.scroll = global::TheScoreBook.Android.Resource.Id.scroll;
+			global::FormsControls.Droid.Resource.Id.scrollable = global::TheScoreBook.Android.Resource.Id.scrollable;
+			global::FormsControls.Droid.Resource.Id.scrollIndicatorDown = global::TheScoreBook.Android.Resource.Id.scrollIndicatorDown;
+			global::FormsControls.Droid.Resource.Id.scrollIndicatorUp = global::TheScoreBook.Android.Resource.Id.scrollIndicatorUp;
+			global::FormsControls.Droid.Resource.Id.scrollView = global::TheScoreBook.Android.Resource.Id.scrollView;
+			global::FormsControls.Droid.Resource.Id.search_badge = global::TheScoreBook.Android.Resource.Id.search_badge;
+			global::FormsControls.Droid.Resource.Id.search_bar = global::TheScoreBook.Android.Resource.Id.search_bar;
+			global::FormsControls.Droid.Resource.Id.search_button = global::TheScoreBook.Android.Resource.Id.search_button;
+			global::FormsControls.Droid.Resource.Id.search_close_btn = global::TheScoreBook.Android.Resource.Id.search_close_btn;
+			global::FormsControls.Droid.Resource.Id.search_edit_frame = global::TheScoreBook.Android.Resource.Id.search_edit_frame;
+			global::FormsControls.Droid.Resource.Id.search_go_btn = global::TheScoreBook.Android.Resource.Id.search_go_btn;
+			global::FormsControls.Droid.Resource.Id.search_mag_icon = global::TheScoreBook.Android.Resource.Id.search_mag_icon;
+			global::FormsControls.Droid.Resource.Id.search_plate = global::TheScoreBook.Android.Resource.Id.search_plate;
+			global::FormsControls.Droid.Resource.Id.search_src_text = global::TheScoreBook.Android.Resource.Id.search_src_text;
+			global::FormsControls.Droid.Resource.Id.search_voice_btn = global::TheScoreBook.Android.Resource.Id.search_voice_btn;
+			global::FormsControls.Droid.Resource.Id.selected = global::TheScoreBook.Android.Resource.Id.selected;
+			global::FormsControls.Droid.Resource.Id.select_dialog_listview = global::TheScoreBook.Android.Resource.Id.select_dialog_listview;
+			global::FormsControls.Droid.Resource.Id.shellcontent_appbar = global::TheScoreBook.Android.Resource.Id.shellcontent_appbar;
+			global::FormsControls.Droid.Resource.Id.shellcontent_toolbar = global::TheScoreBook.Android.Resource.Id.shellcontent_toolbar;
+			global::FormsControls.Droid.Resource.Id.SHIFT = global::TheScoreBook.Android.Resource.Id.SHIFT;
+			global::FormsControls.Droid.Resource.Id.shortcut = global::TheScoreBook.Android.Resource.Id.shortcut;
+			global::FormsControls.Droid.Resource.Id.showCustom = global::TheScoreBook.Android.Resource.Id.showCustom;
+			global::FormsControls.Droid.Resource.Id.showHome = global::TheScoreBook.Android.Resource.Id.showHome;
+			global::FormsControls.Droid.Resource.Id.showTitle = global::TheScoreBook.Android.Resource.Id.showTitle;
+			global::FormsControls.Droid.Resource.Id.smallLabel = global::TheScoreBook.Android.Resource.Id.smallLabel;
+			global::FormsControls.Droid.Resource.Id.snackbar_action = global::TheScoreBook.Android.Resource.Id.snackbar_action;
+			global::FormsControls.Droid.Resource.Id.snackbar_text = global::TheScoreBook.Android.Resource.Id.snackbar_text;
+			global::FormsControls.Droid.Resource.Id.snap = global::TheScoreBook.Android.Resource.Id.snap;
+			global::FormsControls.Droid.Resource.Id.snapMargins = global::TheScoreBook.Android.Resource.Id.snapMargins;
+			global::FormsControls.Droid.Resource.Id.spacer = global::TheScoreBook.Android.Resource.Id.spacer;
+			global::FormsControls.Droid.Resource.Id.split_action_bar = global::TheScoreBook.Android.Resource.Id.split_action_bar;
+			global::FormsControls.Droid.Resource.Id.src_atop = global::TheScoreBook.Android.Resource.Id.src_atop;
+			global::FormsControls.Droid.Resource.Id.src_in = global::TheScoreBook.Android.Resource.Id.src_in;
+			global::FormsControls.Droid.Resource.Id.src_over = global::TheScoreBook.Android.Resource.Id.src_over;
+			global::FormsControls.Droid.Resource.Id.start = global::TheScoreBook.Android.Resource.Id.start;
+			global::FormsControls.Droid.Resource.Id.status_bar_latest_event_content = global::TheScoreBook.Android.Resource.Id.status_bar_latest_event_content;
+			global::FormsControls.Droid.Resource.Id.stretch = global::TheScoreBook.Android.Resource.Id.stretch;
+			global::FormsControls.Droid.Resource.Id.submenuarrow = global::TheScoreBook.Android.Resource.Id.submenuarrow;
+			global::FormsControls.Droid.Resource.Id.submit_area = global::TheScoreBook.Android.Resource.Id.submit_area;
+			global::FormsControls.Droid.Resource.Id.SYM = global::TheScoreBook.Android.Resource.Id.SYM;
+			global::FormsControls.Droid.Resource.Id.tabMode = global::TheScoreBook.Android.Resource.Id.tabMode;
+			global::FormsControls.Droid.Resource.Id.tag_transition_group = global::TheScoreBook.Android.Resource.Id.tag_transition_group;
+			global::FormsControls.Droid.Resource.Id.tag_unhandled_key_event_manager = global::TheScoreBook.Android.Resource.Id.tag_unhandled_key_event_manager;
+			global::FormsControls.Droid.Resource.Id.tag_unhandled_key_listeners = global::TheScoreBook.Android.Resource.Id.tag_unhandled_key_listeners;
+			global::FormsControls.Droid.Resource.Id.text = global::TheScoreBook.Android.Resource.Id.text;
+			global::FormsControls.Droid.Resource.Id.text2 = global::TheScoreBook.Android.Resource.Id.text2;
+			global::FormsControls.Droid.Resource.Id.textinput_counter = global::TheScoreBook.Android.Resource.Id.textinput_counter;
+			global::FormsControls.Droid.Resource.Id.textinput_error = global::TheScoreBook.Android.Resource.Id.textinput_error;
+			global::FormsControls.Droid.Resource.Id.textinput_helper_text = global::TheScoreBook.Android.Resource.Id.textinput_helper_text;
+			global::FormsControls.Droid.Resource.Id.textSpacerNoButtons = global::TheScoreBook.Android.Resource.Id.textSpacerNoButtons;
+			global::FormsControls.Droid.Resource.Id.textSpacerNoTitle = global::TheScoreBook.Android.Resource.Id.textSpacerNoTitle;
+			global::FormsControls.Droid.Resource.Id.textStart = global::TheScoreBook.Android.Resource.Id.textStart;
+			global::FormsControls.Droid.Resource.Id.text_input_password_toggle = global::TheScoreBook.Android.Resource.Id.text_input_password_toggle;
+			global::FormsControls.Droid.Resource.Id.time = global::TheScoreBook.Android.Resource.Id.time;
+			global::FormsControls.Droid.Resource.Id.title = global::TheScoreBook.Android.Resource.Id.title;
+			global::FormsControls.Droid.Resource.Id.titleDividerNoCustom = global::TheScoreBook.Android.Resource.Id.titleDividerNoCustom;
+			global::FormsControls.Droid.Resource.Id.title_template = global::TheScoreBook.Android.Resource.Id.title_template;
+			global::FormsControls.Droid.Resource.Id.top = global::TheScoreBook.Android.Resource.Id.top;
+			global::FormsControls.Droid.Resource.Id.topPanel = global::TheScoreBook.Android.Resource.Id.topPanel;
+			global::FormsControls.Droid.Resource.Id.touch_outside = global::TheScoreBook.Android.Resource.Id.touch_outside;
+			global::FormsControls.Droid.Resource.Id.transition_current_scene = global::TheScoreBook.Android.Resource.Id.transition_current_scene;
+			global::FormsControls.Droid.Resource.Id.transition_layout_save = global::TheScoreBook.Android.Resource.Id.transition_layout_save;
+			global::FormsControls.Droid.Resource.Id.transition_position = global::TheScoreBook.Android.Resource.Id.transition_position;
+			global::FormsControls.Droid.Resource.Id.transition_scene_layoutid_cache = global::TheScoreBook.Android.Resource.Id.transition_scene_layoutid_cache;
+			global::FormsControls.Droid.Resource.Id.transition_transform = global::TheScoreBook.Android.Resource.Id.transition_transform;
+			global::FormsControls.Droid.Resource.Id.uniform = global::TheScoreBook.Android.Resource.Id.uniform;
+			global::FormsControls.Droid.Resource.Id.unlabeled = global::TheScoreBook.Android.Resource.Id.unlabeled;
+			global::FormsControls.Droid.Resource.Id.up = global::TheScoreBook.Android.Resource.Id.up;
+			global::FormsControls.Droid.Resource.Id.useLogo = global::TheScoreBook.Android.Resource.Id.useLogo;
+			global::FormsControls.Droid.Resource.Id.view_offset_helper = global::TheScoreBook.Android.Resource.Id.view_offset_helper;
+			global::FormsControls.Droid.Resource.Id.visible = global::TheScoreBook.Android.Resource.Id.visible;
+			global::FormsControls.Droid.Resource.Id.volume_item_container = global::TheScoreBook.Android.Resource.Id.volume_item_container;
+			global::FormsControls.Droid.Resource.Id.withText = global::TheScoreBook.Android.Resource.Id.withText;
+			global::FormsControls.Droid.Resource.Id.wrap_content = global::TheScoreBook.Android.Resource.Id.wrap_content;
+			global::FormsControls.Droid.Resource.Integer.abc_config_activityDefaultDur = global::TheScoreBook.Android.Resource.Integer.abc_config_activityDefaultDur;
+			global::FormsControls.Droid.Resource.Integer.abc_config_activityShortDur = global::TheScoreBook.Android.Resource.Integer.abc_config_activityShortDur;
+			global::FormsControls.Droid.Resource.Integer.animation_duration = global::TheScoreBook.Android.Resource.Integer.animation_duration;
+			global::FormsControls.Droid.Resource.Integer.animation_duration_long = global::TheScoreBook.Android.Resource.Integer.animation_duration_long;
+			global::FormsControls.Droid.Resource.Integer.animation_duration_short = global::TheScoreBook.Android.Resource.Integer.animation_duration_short;
+			global::FormsControls.Droid.Resource.Integer.app_bar_elevation_anim_duration = global::TheScoreBook.Android.Resource.Integer.app_bar_elevation_anim_duration;
+			global::FormsControls.Droid.Resource.Integer.bottom_sheet_slide_duration = global::TheScoreBook.Android.Resource.Integer.bottom_sheet_slide_duration;
+			global::FormsControls.Droid.Resource.Integer.cancel_button_image_alpha = global::TheScoreBook.Android.Resource.Integer.cancel_button_image_alpha;
+			global::FormsControls.Droid.Resource.Integer.config_tooltipAnimTime = global::TheScoreBook.Android.Resource.Integer.config_tooltipAnimTime;
+			global::FormsControls.Droid.Resource.Integer.design_snackbar_text_max_lines = global::TheScoreBook.Android.Resource.Integer.design_snackbar_text_max_lines;
+			global::FormsControls.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms = global::TheScoreBook.Android.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::FormsControls.Droid.Resource.Integer.hide_password_duration = global::TheScoreBook.Android.Resource.Integer.hide_password_duration;
+			global::FormsControls.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::TheScoreBook.Android.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
+			global::FormsControls.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::TheScoreBook.Android.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
+			global::FormsControls.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::TheScoreBook.Android.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
+			global::FormsControls.Droid.Resource.Integer.mr_update_routes_delay_ms = global::TheScoreBook.Android.Resource.Integer.mr_update_routes_delay_ms;
+			global::FormsControls.Droid.Resource.Integer.mtrl_btn_anim_delay_ms = global::TheScoreBook.Android.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::FormsControls.Droid.Resource.Integer.mtrl_btn_anim_duration_ms = global::TheScoreBook.Android.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::FormsControls.Droid.Resource.Integer.mtrl_chip_anim_duration = global::TheScoreBook.Android.Resource.Integer.mtrl_chip_anim_duration;
+			global::FormsControls.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::TheScoreBook.Android.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::FormsControls.Droid.Resource.Integer.show_password_duration = global::TheScoreBook.Android.Resource.Integer.show_password_duration;
+			global::FormsControls.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::TheScoreBook.Android.Resource.Integer.status_bar_notification_info_maxnum;
+			global::FormsControls.Droid.Resource.Interpolator.mr_fast_out_slow_in = global::TheScoreBook.Android.Resource.Interpolator.mr_fast_out_slow_in;
+			global::FormsControls.Droid.Resource.Interpolator.mr_linear_out_slow_in = global::TheScoreBook.Android.Resource.Interpolator.mr_linear_out_slow_in;
+			global::FormsControls.Droid.Resource.Interpolator.mtrl_fast_out_linear_in = global::TheScoreBook.Android.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::FormsControls.Droid.Resource.Interpolator.mtrl_fast_out_slow_in = global::TheScoreBook.Android.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::FormsControls.Droid.Resource.Interpolator.mtrl_linear = global::TheScoreBook.Android.Resource.Interpolator.mtrl_linear;
+			global::FormsControls.Droid.Resource.Interpolator.mtrl_linear_out_slow_in = global::TheScoreBook.Android.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::FormsControls.Droid.Resource.Layout.abc_action_bar_title_item = global::TheScoreBook.Android.Resource.Layout.abc_action_bar_title_item;
+			global::FormsControls.Droid.Resource.Layout.abc_action_bar_up_container = global::TheScoreBook.Android.Resource.Layout.abc_action_bar_up_container;
+			global::FormsControls.Droid.Resource.Layout.abc_action_menu_item_layout = global::TheScoreBook.Android.Resource.Layout.abc_action_menu_item_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_action_menu_layout = global::TheScoreBook.Android.Resource.Layout.abc_action_menu_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_action_mode_bar = global::TheScoreBook.Android.Resource.Layout.abc_action_mode_bar;
+			global::FormsControls.Droid.Resource.Layout.abc_action_mode_close_item_material = global::TheScoreBook.Android.Resource.Layout.abc_action_mode_close_item_material;
+			global::FormsControls.Droid.Resource.Layout.abc_activity_chooser_view = global::TheScoreBook.Android.Resource.Layout.abc_activity_chooser_view;
+			global::FormsControls.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::TheScoreBook.Android.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::FormsControls.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::TheScoreBook.Android.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::FormsControls.Droid.Resource.Layout.abc_alert_dialog_material = global::TheScoreBook.Android.Resource.Layout.abc_alert_dialog_material;
+			global::FormsControls.Droid.Resource.Layout.abc_alert_dialog_title_material = global::TheScoreBook.Android.Resource.Layout.abc_alert_dialog_title_material;
+			global::FormsControls.Droid.Resource.Layout.abc_cascading_menu_item_layout = global::TheScoreBook.Android.Resource.Layout.abc_cascading_menu_item_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_dialog_title_material = global::TheScoreBook.Android.Resource.Layout.abc_dialog_title_material;
+			global::FormsControls.Droid.Resource.Layout.abc_expanded_menu_layout = global::TheScoreBook.Android.Resource.Layout.abc_expanded_menu_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::TheScoreBook.Android.Resource.Layout.abc_list_menu_item_checkbox;
+			global::FormsControls.Droid.Resource.Layout.abc_list_menu_item_icon = global::TheScoreBook.Android.Resource.Layout.abc_list_menu_item_icon;
+			global::FormsControls.Droid.Resource.Layout.abc_list_menu_item_layout = global::TheScoreBook.Android.Resource.Layout.abc_list_menu_item_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_list_menu_item_radio = global::TheScoreBook.Android.Resource.Layout.abc_list_menu_item_radio;
+			global::FormsControls.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::TheScoreBook.Android.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_popup_menu_item_layout = global::TheScoreBook.Android.Resource.Layout.abc_popup_menu_item_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_screen_content_include = global::TheScoreBook.Android.Resource.Layout.abc_screen_content_include;
+			global::FormsControls.Droid.Resource.Layout.abc_screen_simple = global::TheScoreBook.Android.Resource.Layout.abc_screen_simple;
+			global::FormsControls.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::TheScoreBook.Android.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::FormsControls.Droid.Resource.Layout.abc_screen_toolbar = global::TheScoreBook.Android.Resource.Layout.abc_screen_toolbar;
+			global::FormsControls.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::TheScoreBook.Android.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::FormsControls.Droid.Resource.Layout.abc_search_view = global::TheScoreBook.Android.Resource.Layout.abc_search_view;
+			global::FormsControls.Droid.Resource.Layout.abc_select_dialog_material = global::TheScoreBook.Android.Resource.Layout.abc_select_dialog_material;
+			global::FormsControls.Droid.Resource.Layout.abc_tooltip = global::TheScoreBook.Android.Resource.Layout.abc_tooltip;
+			global::FormsControls.Droid.Resource.Layout.BottomTabLayout = global::TheScoreBook.Android.Resource.Layout.BottomTabLayout;
+			global::FormsControls.Droid.Resource.Layout.browser_actions_context_menu_page = global::TheScoreBook.Android.Resource.Layout.browser_actions_context_menu_page;
+			global::FormsControls.Droid.Resource.Layout.browser_actions_context_menu_row = global::TheScoreBook.Android.Resource.Layout.browser_actions_context_menu_row;
+			global::FormsControls.Droid.Resource.Layout.design_bottom_navigation_item = global::TheScoreBook.Android.Resource.Layout.design_bottom_navigation_item;
+			global::FormsControls.Droid.Resource.Layout.design_bottom_sheet_dialog = global::TheScoreBook.Android.Resource.Layout.design_bottom_sheet_dialog;
+			global::FormsControls.Droid.Resource.Layout.design_layout_snackbar = global::TheScoreBook.Android.Resource.Layout.design_layout_snackbar;
+			global::FormsControls.Droid.Resource.Layout.design_layout_snackbar_include = global::TheScoreBook.Android.Resource.Layout.design_layout_snackbar_include;
+			global::FormsControls.Droid.Resource.Layout.design_layout_tab_icon = global::TheScoreBook.Android.Resource.Layout.design_layout_tab_icon;
+			global::FormsControls.Droid.Resource.Layout.design_layout_tab_text = global::TheScoreBook.Android.Resource.Layout.design_layout_tab_text;
+			global::FormsControls.Droid.Resource.Layout.design_menu_item_action_area = global::TheScoreBook.Android.Resource.Layout.design_menu_item_action_area;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_item = global::TheScoreBook.Android.Resource.Layout.design_navigation_item;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_item_header = global::TheScoreBook.Android.Resource.Layout.design_navigation_item_header;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_item_separator = global::TheScoreBook.Android.Resource.Layout.design_navigation_item_separator;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_item_subheader = global::TheScoreBook.Android.Resource.Layout.design_navigation_item_subheader;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_menu = global::TheScoreBook.Android.Resource.Layout.design_navigation_menu;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_menu_item = global::TheScoreBook.Android.Resource.Layout.design_navigation_menu_item;
+			global::FormsControls.Droid.Resource.Layout.design_text_input_password_icon = global::TheScoreBook.Android.Resource.Layout.design_text_input_password_icon;
+			global::FormsControls.Droid.Resource.Layout.FlyoutContent = global::TheScoreBook.Android.Resource.Layout.FlyoutContent;
+			global::FormsControls.Droid.Resource.Layout.mr_cast_dialog = global::TheScoreBook.Android.Resource.Layout.mr_cast_dialog;
+			global::FormsControls.Droid.Resource.Layout.mr_cast_group_item = global::TheScoreBook.Android.Resource.Layout.mr_cast_group_item;
+			global::FormsControls.Droid.Resource.Layout.mr_cast_group_volume_item = global::TheScoreBook.Android.Resource.Layout.mr_cast_group_volume_item;
+			global::FormsControls.Droid.Resource.Layout.mr_cast_media_metadata = global::TheScoreBook.Android.Resource.Layout.mr_cast_media_metadata;
+			global::FormsControls.Droid.Resource.Layout.mr_cast_route_item = global::TheScoreBook.Android.Resource.Layout.mr_cast_route_item;
+			global::FormsControls.Droid.Resource.Layout.mr_chooser_dialog = global::TheScoreBook.Android.Resource.Layout.mr_chooser_dialog;
+			global::FormsControls.Droid.Resource.Layout.mr_chooser_list_item = global::TheScoreBook.Android.Resource.Layout.mr_chooser_list_item;
+			global::FormsControls.Droid.Resource.Layout.mr_controller_material_dialog_b = global::TheScoreBook.Android.Resource.Layout.mr_controller_material_dialog_b;
+			global::FormsControls.Droid.Resource.Layout.mr_controller_volume_item = global::TheScoreBook.Android.Resource.Layout.mr_controller_volume_item;
+			global::FormsControls.Droid.Resource.Layout.mr_dialog_header_item = global::TheScoreBook.Android.Resource.Layout.mr_dialog_header_item;
+			global::FormsControls.Droid.Resource.Layout.mr_picker_dialog = global::TheScoreBook.Android.Resource.Layout.mr_picker_dialog;
+			global::FormsControls.Droid.Resource.Layout.mr_picker_route_item = global::TheScoreBook.Android.Resource.Layout.mr_picker_route_item;
+			global::FormsControls.Droid.Resource.Layout.mr_playback_control = global::TheScoreBook.Android.Resource.Layout.mr_playback_control;
+			global::FormsControls.Droid.Resource.Layout.mr_volume_control = global::TheScoreBook.Android.Resource.Layout.mr_volume_control;
+			global::FormsControls.Droid.Resource.Layout.mtrl_layout_snackbar = global::TheScoreBook.Android.Resource.Layout.mtrl_layout_snackbar;
+			global::FormsControls.Droid.Resource.Layout.mtrl_layout_snackbar_include = global::TheScoreBook.Android.Resource.Layout.mtrl_layout_snackbar_include;
+			global::FormsControls.Droid.Resource.Layout.notification_action = global::TheScoreBook.Android.Resource.Layout.notification_action;
+			global::FormsControls.Droid.Resource.Layout.notification_action_tombstone = global::TheScoreBook.Android.Resource.Layout.notification_action_tombstone;
+			global::FormsControls.Droid.Resource.Layout.notification_media_action = global::TheScoreBook.Android.Resource.Layout.notification_media_action;
+			global::FormsControls.Droid.Resource.Layout.notification_media_cancel_action = global::TheScoreBook.Android.Resource.Layout.notification_media_cancel_action;
+			global::FormsControls.Droid.Resource.Layout.notification_template_big_media = global::TheScoreBook.Android.Resource.Layout.notification_template_big_media;
+			global::FormsControls.Droid.Resource.Layout.notification_template_big_media_custom = global::TheScoreBook.Android.Resource.Layout.notification_template_big_media_custom;
+			global::FormsControls.Droid.Resource.Layout.notification_template_big_media_narrow = global::TheScoreBook.Android.Resource.Layout.notification_template_big_media_narrow;
+			global::FormsControls.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::TheScoreBook.Android.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::FormsControls.Droid.Resource.Layout.notification_template_custom_big = global::TheScoreBook.Android.Resource.Layout.notification_template_custom_big;
+			global::FormsControls.Droid.Resource.Layout.notification_template_icon_group = global::TheScoreBook.Android.Resource.Layout.notification_template_icon_group;
+			global::FormsControls.Droid.Resource.Layout.notification_template_lines_media = global::TheScoreBook.Android.Resource.Layout.notification_template_lines_media;
+			global::FormsControls.Droid.Resource.Layout.notification_template_media = global::TheScoreBook.Android.Resource.Layout.notification_template_media;
+			global::FormsControls.Droid.Resource.Layout.notification_template_media_custom = global::TheScoreBook.Android.Resource.Layout.notification_template_media_custom;
+			global::FormsControls.Droid.Resource.Layout.notification_template_part_chronometer = global::TheScoreBook.Android.Resource.Layout.notification_template_part_chronometer;
+			global::FormsControls.Droid.Resource.Layout.notification_template_part_time = global::TheScoreBook.Android.Resource.Layout.notification_template_part_time;
+			global::FormsControls.Droid.Resource.Layout.RootLayout = global::TheScoreBook.Android.Resource.Layout.RootLayout;
+			global::FormsControls.Droid.Resource.Layout.select_dialog_item_material = global::TheScoreBook.Android.Resource.Layout.select_dialog_item_material;
+			global::FormsControls.Droid.Resource.Layout.select_dialog_multichoice_material = global::TheScoreBook.Android.Resource.Layout.select_dialog_multichoice_material;
+			global::FormsControls.Droid.Resource.Layout.select_dialog_singlechoice_material = global::TheScoreBook.Android.Resource.Layout.select_dialog_singlechoice_material;
+			global::FormsControls.Droid.Resource.Layout.ShellContent = global::TheScoreBook.Android.Resource.Layout.ShellContent;
+			global::FormsControls.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::TheScoreBook.Android.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::FormsControls.Droid.Resource.String.abc_action_bar_home_description = global::TheScoreBook.Android.Resource.String.abc_action_bar_home_description;
+			global::FormsControls.Droid.Resource.String.abc_action_bar_up_description = global::TheScoreBook.Android.Resource.String.abc_action_bar_up_description;
+			global::FormsControls.Droid.Resource.String.abc_action_menu_overflow_description = global::TheScoreBook.Android.Resource.String.abc_action_menu_overflow_description;
+			global::FormsControls.Droid.Resource.String.abc_action_mode_done = global::TheScoreBook.Android.Resource.String.abc_action_mode_done;
+			global::FormsControls.Droid.Resource.String.abc_activitychooserview_choose_application = global::TheScoreBook.Android.Resource.String.abc_activitychooserview_choose_application;
+			global::FormsControls.Droid.Resource.String.abc_activity_chooser_view_see_all = global::TheScoreBook.Android.Resource.String.abc_activity_chooser_view_see_all;
+			global::FormsControls.Droid.Resource.String.abc_capital_off = global::TheScoreBook.Android.Resource.String.abc_capital_off;
+			global::FormsControls.Droid.Resource.String.abc_capital_on = global::TheScoreBook.Android.Resource.String.abc_capital_on;
+			global::FormsControls.Droid.Resource.String.abc_font_family_body_1_material = global::TheScoreBook.Android.Resource.String.abc_font_family_body_1_material;
+			global::FormsControls.Droid.Resource.String.abc_font_family_body_2_material = global::TheScoreBook.Android.Resource.String.abc_font_family_body_2_material;
+			global::FormsControls.Droid.Resource.String.abc_font_family_button_material = global::TheScoreBook.Android.Resource.String.abc_font_family_button_material;
+			global::FormsControls.Droid.Resource.String.abc_font_family_caption_material = global::TheScoreBook.Android.Resource.String.abc_font_family_caption_material;
+			global::FormsControls.Droid.Resource.String.abc_font_family_display_1_material = global::TheScoreBook.Android.Resource.String.abc_font_family_display_1_material;
+			global::FormsControls.Droid.Resource.String.abc_font_family_display_2_material = global::TheScoreBook.Android.Resource.String.abc_font_family_display_2_material;
+			global::FormsControls.Droid.Resource.String.abc_font_family_display_3_material = global::TheScoreBook.Android.Resource.String.abc_font_family_display_3_material;
+			global::FormsControls.Droid.Resource.String.abc_font_family_display_4_material = global::TheScoreBook.Android.Resource.String.abc_font_family_display_4_material;
+			global::FormsControls.Droid.Resource.String.abc_font_family_headline_material = global::TheScoreBook.Android.Resource.String.abc_font_family_headline_material;
+			global::FormsControls.Droid.Resource.String.abc_font_family_menu_material = global::TheScoreBook.Android.Resource.String.abc_font_family_menu_material;
+			global::FormsControls.Droid.Resource.String.abc_font_family_subhead_material = global::TheScoreBook.Android.Resource.String.abc_font_family_subhead_material;
+			global::FormsControls.Droid.Resource.String.abc_font_family_title_material = global::TheScoreBook.Android.Resource.String.abc_font_family_title_material;
+			global::FormsControls.Droid.Resource.String.abc_menu_alt_shortcut_label = global::TheScoreBook.Android.Resource.String.abc_menu_alt_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_ctrl_shortcut_label = global::TheScoreBook.Android.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_delete_shortcut_label = global::TheScoreBook.Android.Resource.String.abc_menu_delete_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_enter_shortcut_label = global::TheScoreBook.Android.Resource.String.abc_menu_enter_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_function_shortcut_label = global::TheScoreBook.Android.Resource.String.abc_menu_function_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_meta_shortcut_label = global::TheScoreBook.Android.Resource.String.abc_menu_meta_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_shift_shortcut_label = global::TheScoreBook.Android.Resource.String.abc_menu_shift_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_space_shortcut_label = global::TheScoreBook.Android.Resource.String.abc_menu_space_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_sym_shortcut_label = global::TheScoreBook.Android.Resource.String.abc_menu_sym_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_prepend_shortcut_label = global::TheScoreBook.Android.Resource.String.abc_prepend_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_searchview_description_clear = global::TheScoreBook.Android.Resource.String.abc_searchview_description_clear;
+			global::FormsControls.Droid.Resource.String.abc_searchview_description_query = global::TheScoreBook.Android.Resource.String.abc_searchview_description_query;
+			global::FormsControls.Droid.Resource.String.abc_searchview_description_search = global::TheScoreBook.Android.Resource.String.abc_searchview_description_search;
+			global::FormsControls.Droid.Resource.String.abc_searchview_description_submit = global::TheScoreBook.Android.Resource.String.abc_searchview_description_submit;
+			global::FormsControls.Droid.Resource.String.abc_searchview_description_voice = global::TheScoreBook.Android.Resource.String.abc_searchview_description_voice;
+			global::FormsControls.Droid.Resource.String.abc_search_hint = global::TheScoreBook.Android.Resource.String.abc_search_hint;
+			global::FormsControls.Droid.Resource.String.abc_shareactionprovider_share_with = global::TheScoreBook.Android.Resource.String.abc_shareactionprovider_share_with;
+			global::FormsControls.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::TheScoreBook.Android.Resource.String.abc_shareactionprovider_share_with_application;
+			global::FormsControls.Droid.Resource.String.abc_toolbar_collapse_description = global::TheScoreBook.Android.Resource.String.abc_toolbar_collapse_description;
+			global::FormsControls.Droid.Resource.String.appbar_scrolling_view_behavior = global::TheScoreBook.Android.Resource.String.appbar_scrolling_view_behavior;
+			global::FormsControls.Droid.Resource.String.bottom_sheet_behavior = global::TheScoreBook.Android.Resource.String.bottom_sheet_behavior;
+			global::FormsControls.Droid.Resource.String.character_counter_content_description = global::TheScoreBook.Android.Resource.String.character_counter_content_description;
+			global::FormsControls.Droid.Resource.String.character_counter_pattern = global::TheScoreBook.Android.Resource.String.character_counter_pattern;
+			global::FormsControls.Droid.Resource.String.fab_transformation_scrim_behavior = global::TheScoreBook.Android.Resource.String.fab_transformation_scrim_behavior;
+			global::FormsControls.Droid.Resource.String.fab_transformation_sheet_behavior = global::TheScoreBook.Android.Resource.String.fab_transformation_sheet_behavior;
+			global::FormsControls.Droid.Resource.String.hide_bottom_view_on_scroll_behavior = global::TheScoreBook.Android.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::FormsControls.Droid.Resource.String.mr_button_content_description = global::TheScoreBook.Android.Resource.String.mr_button_content_description;
+			global::FormsControls.Droid.Resource.String.mr_cast_button_connected = global::TheScoreBook.Android.Resource.String.mr_cast_button_connected;
+			global::FormsControls.Droid.Resource.String.mr_cast_button_connecting = global::TheScoreBook.Android.Resource.String.mr_cast_button_connecting;
+			global::FormsControls.Droid.Resource.String.mr_cast_button_disconnected = global::TheScoreBook.Android.Resource.String.mr_cast_button_disconnected;
+			global::FormsControls.Droid.Resource.String.mr_cast_dialog_title_view_placeholder = global::TheScoreBook.Android.Resource.String.mr_cast_dialog_title_view_placeholder;
+			global::FormsControls.Droid.Resource.String.mr_chooser_searching = global::TheScoreBook.Android.Resource.String.mr_chooser_searching;
+			global::FormsControls.Droid.Resource.String.mr_chooser_title = global::TheScoreBook.Android.Resource.String.mr_chooser_title;
+			global::FormsControls.Droid.Resource.String.mr_controller_album_art = global::TheScoreBook.Android.Resource.String.mr_controller_album_art;
+			global::FormsControls.Droid.Resource.String.mr_controller_casting_screen = global::TheScoreBook.Android.Resource.String.mr_controller_casting_screen;
+			global::FormsControls.Droid.Resource.String.mr_controller_close_description = global::TheScoreBook.Android.Resource.String.mr_controller_close_description;
+			global::FormsControls.Droid.Resource.String.mr_controller_collapse_group = global::TheScoreBook.Android.Resource.String.mr_controller_collapse_group;
+			global::FormsControls.Droid.Resource.String.mr_controller_disconnect = global::TheScoreBook.Android.Resource.String.mr_controller_disconnect;
+			global::FormsControls.Droid.Resource.String.mr_controller_expand_group = global::TheScoreBook.Android.Resource.String.mr_controller_expand_group;
+			global::FormsControls.Droid.Resource.String.mr_controller_no_info_available = global::TheScoreBook.Android.Resource.String.mr_controller_no_info_available;
+			global::FormsControls.Droid.Resource.String.mr_controller_no_media_selected = global::TheScoreBook.Android.Resource.String.mr_controller_no_media_selected;
+			global::FormsControls.Droid.Resource.String.mr_controller_pause = global::TheScoreBook.Android.Resource.String.mr_controller_pause;
+			global::FormsControls.Droid.Resource.String.mr_controller_play = global::TheScoreBook.Android.Resource.String.mr_controller_play;
+			global::FormsControls.Droid.Resource.String.mr_controller_stop = global::TheScoreBook.Android.Resource.String.mr_controller_stop;
+			global::FormsControls.Droid.Resource.String.mr_controller_stop_casting = global::TheScoreBook.Android.Resource.String.mr_controller_stop_casting;
+			global::FormsControls.Droid.Resource.String.mr_controller_volume_slider = global::TheScoreBook.Android.Resource.String.mr_controller_volume_slider;
+			global::FormsControls.Droid.Resource.String.mr_dialog_device_header = global::TheScoreBook.Android.Resource.String.mr_dialog_device_header;
+			global::FormsControls.Droid.Resource.String.mr_dialog_route_header = global::TheScoreBook.Android.Resource.String.mr_dialog_route_header;
+			global::FormsControls.Droid.Resource.String.mr_system_route_name = global::TheScoreBook.Android.Resource.String.mr_system_route_name;
+			global::FormsControls.Droid.Resource.String.mr_user_route_category_name = global::TheScoreBook.Android.Resource.String.mr_user_route_category_name;
+			global::FormsControls.Droid.Resource.String.mtrl_chip_close_icon_content_description = global::TheScoreBook.Android.Resource.String.mtrl_chip_close_icon_content_description;
+			global::FormsControls.Droid.Resource.String.password_toggle_content_description = global::TheScoreBook.Android.Resource.String.password_toggle_content_description;
+			global::FormsControls.Droid.Resource.String.path_password_eye = global::TheScoreBook.Android.Resource.String.path_password_eye;
+			global::FormsControls.Droid.Resource.String.path_password_eye_mask_strike_through = global::TheScoreBook.Android.Resource.String.path_password_eye_mask_strike_through;
+			global::FormsControls.Droid.Resource.String.path_password_eye_mask_visible = global::TheScoreBook.Android.Resource.String.path_password_eye_mask_visible;
+			global::FormsControls.Droid.Resource.String.path_password_strike_through = global::TheScoreBook.Android.Resource.String.path_password_strike_through;
+			global::FormsControls.Droid.Resource.String.search_menu_title = global::TheScoreBook.Android.Resource.String.search_menu_title;
+			global::FormsControls.Droid.Resource.String.status_bar_notification_info_overflow = global::TheScoreBook.Android.Resource.String.status_bar_notification_info_overflow;
+			global::FormsControls.Droid.Resource.Style.AlertDialog_AppCompat = global::TheScoreBook.Android.Resource.Style.AlertDialog_AppCompat;
+			global::FormsControls.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.AlertDialog_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Animation_AppCompat_Dialog = global::TheScoreBook.Android.Resource.Style.Animation_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::TheScoreBook.Android.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::FormsControls.Droid.Resource.Style.Animation_AppCompat_Tooltip = global::TheScoreBook.Android.Resource.Style.Animation_AppCompat_Tooltip;
+			global::FormsControls.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::TheScoreBook.Android.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::FormsControls.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_AlertDialog_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::TheScoreBook.Android.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::TheScoreBook.Android.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::FormsControls.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip = global::TheScoreBook.Android.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::FormsControls.Droid.Resource.Style.Base_CardView = global::TheScoreBook.Android.Resource.Style.Base_CardView;
+			global::FormsControls.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::TheScoreBook.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::TheScoreBook.Android.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::TheScoreBook.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::TheScoreBook.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::TheScoreBook.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::TheScoreBook.Android.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::TheScoreBook.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::TheScoreBook.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::TheScoreBook.Android.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents = global::TheScoreBook.Android.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::TheScoreBook.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::TheScoreBook.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::TheScoreBook.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::TheScoreBook.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::TheScoreBook.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::TheScoreBook.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::TheScoreBook.Android.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_V21_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::TheScoreBook.Android.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::TheScoreBook.Android.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_V22_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_V23_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V26_Theme_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_V26_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::TheScoreBook.Android.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::FormsControls.Droid.Resource.Style.Base_V28_Theme_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_V28_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::TheScoreBook.Android.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::TheScoreBook.Android.Resource.Style.Base_V7_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::TheScoreBook.Android.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::TheScoreBook.Android.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::TheScoreBook.Android.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::TheScoreBook.Android.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::TheScoreBook.Android.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Button;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::TheScoreBook.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::TheScoreBook.Android.Resource.Style.Base_Widget_Design_TabLayout;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip = global::TheScoreBook.Android.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::TheScoreBook.Android.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::TheScoreBook.Android.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::FormsControls.Droid.Resource.Style.CardView = global::TheScoreBook.Android.Resource.Style.CardView;
+			global::FormsControls.Droid.Resource.Style.CardView_Dark = global::TheScoreBook.Android.Resource.Style.CardView_Dark;
+			global::FormsControls.Droid.Resource.Style.CardView_Light = global::TheScoreBook.Android.Resource.Style.CardView_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_AppCompat = global::TheScoreBook.Android.Resource.Style.Platform_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Platform_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Platform_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_MaterialComponents = global::TheScoreBook.Android.Resource.Style.Platform_MaterialComponents;
+			global::FormsControls.Droid.Resource.Style.Platform_MaterialComponents_Dialog = global::TheScoreBook.Android.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Platform_MaterialComponents_Light = global::TheScoreBook.Android.Resource.Style.Platform_MaterialComponents_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::TheScoreBook.Android.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::TheScoreBook.Android.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::TheScoreBook.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::FormsControls.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_V21_AppCompat = global::TheScoreBook.Android.Resource.Style.Platform_V21_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Platform_V21_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_V25_AppCompat = global::TheScoreBook.Android.Resource.Style.Platform_V25_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Platform_V25_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::TheScoreBook.Android.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::TheScoreBook.Android.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::TheScoreBook.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::FormsControls.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::TheScoreBook.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::FormsControls.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::TheScoreBook.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Button;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Large;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Small;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::TheScoreBook.Android.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification = global::TheScoreBook.Android.Resource.Style.TextAppearance_Compat_Notification;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Info = global::TheScoreBook.Android.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::TheScoreBook.Android.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::TheScoreBook.Android.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::TheScoreBook.Android.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Media = global::TheScoreBook.Android.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Time = global::TheScoreBook.Android.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::TheScoreBook.Android.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Title = global::TheScoreBook.Android.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::TheScoreBook.Android.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::TheScoreBook.Android.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Counter = global::TheScoreBook.Android.Resource.Style.TextAppearance_Design_Counter;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::TheScoreBook.Android.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Error = global::TheScoreBook.Android.Resource.Style.TextAppearance_Design_Error;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_HelperText = global::TheScoreBook.Android.Resource.Style.TextAppearance_Design_HelperText;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Hint = global::TheScoreBook.Android.Resource.Style.TextAppearance_Design_Hint;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::TheScoreBook.Android.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Tab = global::TheScoreBook.Android.Resource.Style.TextAppearance_Design_Tab;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Button = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab = global::TheScoreBook.Android.Resource.Style.TextAppearance_MaterialComponents_Tab;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText = global::TheScoreBook.Android.Resource.Style.TextAppearance_MediaRouter_PrimaryText;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText = global::TheScoreBook.Android.Resource.Style.TextAppearance_MediaRouter_SecondaryText;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MediaRouter_Title = global::TheScoreBook.Android.Resource.Style.TextAppearance_MediaRouter_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::TheScoreBook.Android.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::TheScoreBook.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::TheScoreBook.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_AppCompat;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MediaRouter_Dark;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light = global::TheScoreBook.Android.Resource.Style.ThemeOverlay_MediaRouter_Light;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_DayNight;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Dialog = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::TheScoreBook.Android.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_Design = global::TheScoreBook.Android.Resource.Style.Theme_Design;
+			global::FormsControls.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::TheScoreBook.Android.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::FormsControls.Droid.Resource.Style.Theme_Design_Light = global::TheScoreBook.Android.Resource.Style.Theme_Design_Light;
+			global::FormsControls.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::TheScoreBook.Android.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::FormsControls.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::TheScoreBook.Android.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_Design_NoActionBar = global::TheScoreBook.Android.Resource.Style.Theme_Design_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Bridge = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Dialog = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Light;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::TheScoreBook.Android.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::FormsControls.Droid.Resource.Style.Theme_MediaRouter = global::TheScoreBook.Android.Resource.Style.Theme_MediaRouter;
+			global::FormsControls.Droid.Resource.Style.Theme_MediaRouter_Light = global::TheScoreBook.Android.Resource.Style.Theme_MediaRouter_Light;
+			global::FormsControls.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel = global::TheScoreBook.Android.Resource.Style.Theme_MediaRouter_LightControlPanel;
+			global::FormsControls.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::TheScoreBook.Android.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ActionButton;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ActionMode;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Button;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Button_Small;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_EditText = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_EditText;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ImageButton;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ListView = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ListView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_RatingBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_SearchView = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_SearchView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_SeekBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Spinner = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Spinner;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Toolbar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::TheScoreBook.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::FormsControls.Droid.Resource.Style.Widget_Compat_NotificationActionContainer = global::TheScoreBook.Android.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::FormsControls.Droid.Resource.Style.Widget_Compat_NotificationActionText = global::TheScoreBook.Android.Resource.Style.Widget_Compat_NotificationActionText;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_AppBarLayout = global::TheScoreBook.Android.Resource.Style.Widget_Design_AppBarLayout;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_BottomNavigationView = global::TheScoreBook.Android.Resource.Style.Widget_Design_BottomNavigationView;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::TheScoreBook.Android.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::TheScoreBook.Android.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::TheScoreBook.Android.Resource.Style.Widget_Design_FloatingActionButton;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_NavigationView = global::TheScoreBook.Android.Resource.Style.Widget_Design_NavigationView;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::TheScoreBook.Android.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_Snackbar = global::TheScoreBook.Android.Resource.Style.Widget_Design_Snackbar;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_TabLayout = global::TheScoreBook.Android.Resource.Style.Widget_Design_TabLayout;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_TextInputLayout = global::TheScoreBook.Android.Resource.Style.Widget_Design_TextInputLayout;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Button;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_CardView = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_CardView;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_NavigationView = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Snackbar = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TabLayout = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Toolbar = global::TheScoreBook.Android.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::FormsControls.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::TheScoreBook.Android.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::FormsControls.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::TheScoreBook.Android.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::FormsControls.Droid.Resource.Style.Widget_Support_CoordinatorLayout = global::TheScoreBook.Android.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar = global::TheScoreBook.Android.Resource.Styleable.ActionBar;
+			global::FormsControls.Droid.Resource.Styleable.ActionBarLayout = global::TheScoreBook.Android.Resource.Styleable.ActionBarLayout;
+			global::FormsControls.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::TheScoreBook.Android.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_background = global::TheScoreBook.Android.Resource.Styleable.ActionBar_background;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::TheScoreBook.Android.Resource.Styleable.ActionBar_backgroundSplit;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::TheScoreBook.Android.Resource.Styleable.ActionBar_backgroundStacked;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::TheScoreBook.Android.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::TheScoreBook.Android.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::TheScoreBook.Android.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::TheScoreBook.Android.Resource.Styleable.ActionBar_contentInsetRight;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::TheScoreBook.Android.Resource.Styleable.ActionBar_contentInsetStart;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::TheScoreBook.Android.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::TheScoreBook.Android.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_displayOptions = global::TheScoreBook.Android.Resource.Styleable.ActionBar_displayOptions;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_divider = global::TheScoreBook.Android.Resource.Styleable.ActionBar_divider;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_elevation = global::TheScoreBook.Android.Resource.Styleable.ActionBar_elevation;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_height = global::TheScoreBook.Android.Resource.Styleable.ActionBar_height;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::TheScoreBook.Android.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::TheScoreBook.Android.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_homeLayout = global::TheScoreBook.Android.Resource.Styleable.ActionBar_homeLayout;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_icon = global::TheScoreBook.Android.Resource.Styleable.ActionBar_icon;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::TheScoreBook.Android.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_itemPadding = global::TheScoreBook.Android.Resource.Styleable.ActionBar_itemPadding;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_logo = global::TheScoreBook.Android.Resource.Styleable.ActionBar_logo;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_navigationMode = global::TheScoreBook.Android.Resource.Styleable.ActionBar_navigationMode;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_popupTheme = global::TheScoreBook.Android.Resource.Styleable.ActionBar_popupTheme;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::TheScoreBook.Android.Resource.Styleable.ActionBar_progressBarPadding;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::TheScoreBook.Android.Resource.Styleable.ActionBar_progressBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_subtitle = global::TheScoreBook.Android.Resource.Styleable.ActionBar_subtitle;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::TheScoreBook.Android.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_title = global::TheScoreBook.Android.Resource.Styleable.ActionBar_title;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::TheScoreBook.Android.Resource.Styleable.ActionBar_titleTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActionMenuItemView = global::TheScoreBook.Android.Resource.Styleable.ActionMenuItemView;
+			global::FormsControls.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::TheScoreBook.Android.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::FormsControls.Droid.Resource.Styleable.ActionMenuView = global::TheScoreBook.Android.Resource.Styleable.ActionMenuView;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode = global::TheScoreBook.Android.Resource.Styleable.ActionMode;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_background = global::TheScoreBook.Android.Resource.Styleable.ActionMode_background;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::TheScoreBook.Android.Resource.Styleable.ActionMode_backgroundSplit;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::TheScoreBook.Android.Resource.Styleable.ActionMode_closeItemLayout;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_height = global::TheScoreBook.Android.Resource.Styleable.ActionMode_height;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::TheScoreBook.Android.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::TheScoreBook.Android.Resource.Styleable.ActionMode_titleTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActivityChooserView = global::TheScoreBook.Android.Resource.Styleable.ActivityChooserView;
+			global::FormsControls.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::TheScoreBook.Android.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::FormsControls.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::TheScoreBook.Android.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog = global::TheScoreBook.Android.Resource.Styleable.AlertDialog;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_android_layout = global::TheScoreBook.Android.Resource.Styleable.AlertDialog_android_layout;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_buttonIconDimen = global::TheScoreBook.Android.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::TheScoreBook.Android.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::TheScoreBook.Android.Resource.Styleable.AlertDialog_listItemLayout;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_listLayout = global::TheScoreBook.Android.Resource.Styleable.AlertDialog_listLayout;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::TheScoreBook.Android.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_showTitle = global::TheScoreBook.Android.Resource.Styleable.AlertDialog_showTitle;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::TheScoreBook.Android.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableItem = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableTransition = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::TheScoreBook.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout = global::TheScoreBook.Android.Resource.Styleable.AppBarLayout;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayoutStates = global::TheScoreBook.Android.Resource.Styleable.AppBarLayoutStates;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::TheScoreBook.Android.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::TheScoreBook.Android.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable = global::TheScoreBook.Android.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted = global::TheScoreBook.Android.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_android_background = global::TheScoreBook.Android.Resource.Styleable.AppBarLayout_android_background;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::TheScoreBook.Android.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::TheScoreBook.Android.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_elevation = global::TheScoreBook.Android.Resource.Styleable.AppBarLayout_elevation;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_expanded = global::TheScoreBook.Android.Resource.Styleable.AppBarLayout_expanded;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_Layout = global::TheScoreBook.Android.Resource.Styleable.AppBarLayout_Layout;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::TheScoreBook.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::TheScoreBook.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_liftOnScroll = global::TheScoreBook.Android.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatImageView = global::TheScoreBook.Android.Resource.Styleable.AppCompatImageView;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatImageView_android_src = global::TheScoreBook.Android.Resource.Styleable.AppCompatImageView_android_src;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::TheScoreBook.Android.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatImageView_tint = global::TheScoreBook.Android.Resource.Styleable.AppCompatImageView_tint;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::TheScoreBook.Android.Resource.Styleable.AppCompatImageView_tintMode;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatSeekBar = global::TheScoreBook.Android.Resource.Styleable.AppCompatSeekBar;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::TheScoreBook.Android.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::TheScoreBook.Android.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::TheScoreBook.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::TheScoreBook.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextHelper;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_fontFamily = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_lineHeight = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::TheScoreBook.Android.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorError = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_colorError;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::TheScoreBook.Android.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar = global::TheScoreBook.Android.Resource.Styleable.BottomAppBar;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_backgroundTint = global::TheScoreBook.Android.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::TheScoreBook.Android.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin = global::TheScoreBook.Android.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::TheScoreBook.Android.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::TheScoreBook.Android.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_hideOnScroll = global::TheScoreBook.Android.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView = global::TheScoreBook.Android.Resource.Styleable.BottomNavigationView;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_elevation = global::TheScoreBook.Android.Resource.Styleable.BottomNavigationView_elevation;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemBackground = global::TheScoreBook.Android.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::TheScoreBook.Android.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemIconSize = global::TheScoreBook.Android.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemIconTint = global::TheScoreBook.Android.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::TheScoreBook.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::TheScoreBook.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemTextColor = global::TheScoreBook.Android.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::TheScoreBook.Android.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_menu = global::TheScoreBook.Android.Resource.Styleable.BottomNavigationView_menu;
+			global::FormsControls.Droid.Resource.Styleable.BottomSheetBehavior_Layout = global::TheScoreBook.Android.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::FormsControls.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::TheScoreBook.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::FormsControls.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::TheScoreBook.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::FormsControls.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::TheScoreBook.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::FormsControls.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::TheScoreBook.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::FormsControls.Droid.Resource.Styleable.ButtonBarLayout = global::TheScoreBook.Android.Resource.Styleable.ButtonBarLayout;
+			global::FormsControls.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::TheScoreBook.Android.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::FormsControls.Droid.Resource.Styleable.CardView = global::TheScoreBook.Android.Resource.Styleable.CardView;
+			global::FormsControls.Droid.Resource.Styleable.CardView_android_minHeight = global::TheScoreBook.Android.Resource.Styleable.CardView_android_minHeight;
+			global::FormsControls.Droid.Resource.Styleable.CardView_android_minWidth = global::TheScoreBook.Android.Resource.Styleable.CardView_android_minWidth;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::TheScoreBook.Android.Resource.Styleable.CardView_cardBackgroundColor;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardCornerRadius = global::TheScoreBook.Android.Resource.Styleable.CardView_cardCornerRadius;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardElevation = global::TheScoreBook.Android.Resource.Styleable.CardView_cardElevation;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardMaxElevation = global::TheScoreBook.Android.Resource.Styleable.CardView_cardMaxElevation;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::TheScoreBook.Android.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::TheScoreBook.Android.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::FormsControls.Droid.Resource.Styleable.CardView_contentPadding = global::TheScoreBook.Android.Resource.Styleable.CardView_contentPadding;
+			global::FormsControls.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::TheScoreBook.Android.Resource.Styleable.CardView_contentPaddingBottom;
+			global::FormsControls.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::TheScoreBook.Android.Resource.Styleable.CardView_contentPaddingLeft;
+			global::FormsControls.Droid.Resource.Styleable.CardView_contentPaddingRight = global::TheScoreBook.Android.Resource.Styleable.CardView_contentPaddingRight;
+			global::FormsControls.Droid.Resource.Styleable.CardView_contentPaddingTop = global::TheScoreBook.Android.Resource.Styleable.CardView_contentPaddingTop;
+			global::FormsControls.Droid.Resource.Styleable.Chip = global::TheScoreBook.Android.Resource.Styleable.Chip;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup = global::TheScoreBook.Android.Resource.Styleable.ChipGroup;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_checkedChip = global::TheScoreBook.Android.Resource.Styleable.ChipGroup_checkedChip;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_chipSpacing = global::TheScoreBook.Android.Resource.Styleable.ChipGroup_chipSpacing;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::TheScoreBook.Android.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical = global::TheScoreBook.Android.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_singleLine = global::TheScoreBook.Android.Resource.Styleable.ChipGroup_singleLine;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_singleSelection = global::TheScoreBook.Android.Resource.Styleable.ChipGroup_singleSelection;
+			global::FormsControls.Droid.Resource.Styleable.Chip_android_checkable = global::TheScoreBook.Android.Resource.Styleable.Chip_android_checkable;
+			global::FormsControls.Droid.Resource.Styleable.Chip_android_ellipsize = global::TheScoreBook.Android.Resource.Styleable.Chip_android_ellipsize;
+			global::FormsControls.Droid.Resource.Styleable.Chip_android_maxWidth = global::TheScoreBook.Android.Resource.Styleable.Chip_android_maxWidth;
+			global::FormsControls.Droid.Resource.Styleable.Chip_android_text = global::TheScoreBook.Android.Resource.Styleable.Chip_android_text;
+			global::FormsControls.Droid.Resource.Styleable.Chip_android_textAppearance = global::TheScoreBook.Android.Resource.Styleable.Chip_android_textAppearance;
+			global::FormsControls.Droid.Resource.Styleable.Chip_checkedIcon = global::TheScoreBook.Android.Resource.Styleable.Chip_checkedIcon;
+			global::FormsControls.Droid.Resource.Styleable.Chip_checkedIconEnabled = global::TheScoreBook.Android.Resource.Styleable.Chip_checkedIconEnabled;
+			global::FormsControls.Droid.Resource.Styleable.Chip_checkedIconVisible = global::TheScoreBook.Android.Resource.Styleable.Chip_checkedIconVisible;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipBackgroundColor = global::TheScoreBook.Android.Resource.Styleable.Chip_chipBackgroundColor;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipCornerRadius = global::TheScoreBook.Android.Resource.Styleable.Chip_chipCornerRadius;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipEndPadding = global::TheScoreBook.Android.Resource.Styleable.Chip_chipEndPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipIcon = global::TheScoreBook.Android.Resource.Styleable.Chip_chipIcon;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipIconEnabled = global::TheScoreBook.Android.Resource.Styleable.Chip_chipIconEnabled;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipIconSize = global::TheScoreBook.Android.Resource.Styleable.Chip_chipIconSize;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipIconTint = global::TheScoreBook.Android.Resource.Styleable.Chip_chipIconTint;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipIconVisible = global::TheScoreBook.Android.Resource.Styleable.Chip_chipIconVisible;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipMinHeight = global::TheScoreBook.Android.Resource.Styleable.Chip_chipMinHeight;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipStartPadding = global::TheScoreBook.Android.Resource.Styleable.Chip_chipStartPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipStrokeColor = global::TheScoreBook.Android.Resource.Styleable.Chip_chipStrokeColor;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipStrokeWidth = global::TheScoreBook.Android.Resource.Styleable.Chip_chipStrokeWidth;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIcon = global::TheScoreBook.Android.Resource.Styleable.Chip_closeIcon;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconEnabled = global::TheScoreBook.Android.Resource.Styleable.Chip_closeIconEnabled;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconEndPadding = global::TheScoreBook.Android.Resource.Styleable.Chip_closeIconEndPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconSize = global::TheScoreBook.Android.Resource.Styleable.Chip_closeIconSize;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconStartPadding = global::TheScoreBook.Android.Resource.Styleable.Chip_closeIconStartPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconTint = global::TheScoreBook.Android.Resource.Styleable.Chip_closeIconTint;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconVisible = global::TheScoreBook.Android.Resource.Styleable.Chip_closeIconVisible;
+			global::FormsControls.Droid.Resource.Styleable.Chip_hideMotionSpec = global::TheScoreBook.Android.Resource.Styleable.Chip_hideMotionSpec;
+			global::FormsControls.Droid.Resource.Styleable.Chip_iconEndPadding = global::TheScoreBook.Android.Resource.Styleable.Chip_iconEndPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_iconStartPadding = global::TheScoreBook.Android.Resource.Styleable.Chip_iconStartPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_rippleColor = global::TheScoreBook.Android.Resource.Styleable.Chip_rippleColor;
+			global::FormsControls.Droid.Resource.Styleable.Chip_showMotionSpec = global::TheScoreBook.Android.Resource.Styleable.Chip_showMotionSpec;
+			global::FormsControls.Droid.Resource.Styleable.Chip_textEndPadding = global::TheScoreBook.Android.Resource.Styleable.Chip_textEndPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_textStartPadding = global::TheScoreBook.Android.Resource.Styleable.Chip_textStartPadding;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::TheScoreBook.Android.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::FormsControls.Droid.Resource.Styleable.ColorStateListItem = global::TheScoreBook.Android.Resource.Styleable.ColorStateListItem;
+			global::FormsControls.Droid.Resource.Styleable.ColorStateListItem_alpha = global::TheScoreBook.Android.Resource.Styleable.ColorStateListItem_alpha;
+			global::FormsControls.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::TheScoreBook.Android.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::FormsControls.Droid.Resource.Styleable.ColorStateListItem_android_color = global::TheScoreBook.Android.Resource.Styleable.ColorStateListItem_android_color;
+			global::FormsControls.Droid.Resource.Styleable.CompoundButton = global::TheScoreBook.Android.Resource.Styleable.CompoundButton;
+			global::FormsControls.Droid.Resource.Styleable.CompoundButton_android_button = global::TheScoreBook.Android.Resource.Styleable.CompoundButton_android_button;
+			global::FormsControls.Droid.Resource.Styleable.CompoundButton_buttonTint = global::TheScoreBook.Android.Resource.Styleable.CompoundButton_buttonTint;
+			global::FormsControls.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::TheScoreBook.Android.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout = global::TheScoreBook.Android.Resource.Styleable.CoordinatorLayout;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::TheScoreBook.Android.Resource.Styleable.CoordinatorLayout_keylines;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout = global::TheScoreBook.Android.Resource.Styleable.CoordinatorLayout_Layout;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::TheScoreBook.Android.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::TheScoreBook.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::TheScoreBook.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::TheScoreBook.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::TheScoreBook.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::TheScoreBook.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::TheScoreBook.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::TheScoreBook.Android.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::FormsControls.Droid.Resource.Styleable.DesignTheme = global::TheScoreBook.Android.Resource.Styleable.DesignTheme;
+			global::FormsControls.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::TheScoreBook.Android.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::FormsControls.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle = global::TheScoreBook.Android.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle = global::TheScoreBook.Android.Resource.Styleable.DrawerArrowToggle;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::TheScoreBook.Android.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::TheScoreBook.Android.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::TheScoreBook.Android.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_color = global::TheScoreBook.Android.Resource.Styleable.DrawerArrowToggle_color;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::TheScoreBook.Android.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::TheScoreBook.Android.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::TheScoreBook.Android.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::TheScoreBook.Android.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_elevation = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_elevation;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_fabSize;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_maxImageSize = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::TheScoreBook.Android.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::FormsControls.Droid.Resource.Styleable.FlowLayout = global::TheScoreBook.Android.Resource.Styleable.FlowLayout;
+			global::FormsControls.Droid.Resource.Styleable.FlowLayout_itemSpacing = global::TheScoreBook.Android.Resource.Styleable.FlowLayout_itemSpacing;
+			global::FormsControls.Droid.Resource.Styleable.FlowLayout_lineSpacing = global::TheScoreBook.Android.Resource.Styleable.FlowLayout_lineSpacing;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily = global::TheScoreBook.Android.Resource.Styleable.FontFamily;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont = global::TheScoreBook.Android.Resource.Styleable.FontFamilyFont;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_android_font = global::TheScoreBook.Android.Resource.Styleable.FontFamilyFont_android_font;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle = global::TheScoreBook.Android.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::TheScoreBook.Android.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight = global::TheScoreBook.Android.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::TheScoreBook.Android.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_font = global::TheScoreBook.Android.Resource.Styleable.FontFamilyFont_font;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_fontStyle = global::TheScoreBook.Android.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::TheScoreBook.Android.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_fontWeight = global::TheScoreBook.Android.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_ttcIndex = global::TheScoreBook.Android.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderAuthority = global::TheScoreBook.Android.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderCerts = global::TheScoreBook.Android.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::TheScoreBook.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::TheScoreBook.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderPackage = global::TheScoreBook.Android.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderQuery = global::TheScoreBook.Android.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::FormsControls.Droid.Resource.Styleable.ForegroundLinearLayout = global::TheScoreBook.Android.Resource.Styleable.ForegroundLinearLayout;
+			global::FormsControls.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::TheScoreBook.Android.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::FormsControls.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::TheScoreBook.Android.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::FormsControls.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::TheScoreBook.Android.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor = global::TheScoreBook.Android.Resource.Styleable.GradientColor;
+			global::FormsControls.Droid.Resource.Styleable.GradientColorItem = global::TheScoreBook.Android.Resource.Styleable.GradientColorItem;
+			global::FormsControls.Droid.Resource.Styleable.GradientColorItem_android_color = global::TheScoreBook.Android.Resource.Styleable.GradientColorItem_android_color;
+			global::FormsControls.Droid.Resource.Styleable.GradientColorItem_android_offset = global::TheScoreBook.Android.Resource.Styleable.GradientColorItem_android_offset;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_centerColor = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_centerColor;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_centerX = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_centerX;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_centerY = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_centerY;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_endColor = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_endColor;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_endX = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_endX;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_endY = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_endY;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_gradientRadius = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_startColor = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_startColor;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_startX = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_startX;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_startY = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_startY;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_tileMode = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_tileMode;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_type = global::TheScoreBook.Android.Resource.Styleable.GradientColor_android_type;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_divider;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::TheScoreBook.Android.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::FormsControls.Droid.Resource.Styleable.ListPopupWindow = global::TheScoreBook.Android.Resource.Styleable.ListPopupWindow;
+			global::FormsControls.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::TheScoreBook.Android.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::FormsControls.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::TheScoreBook.Android.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton = global::TheScoreBook.Android.Resource.Styleable.MaterialButton;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_android_insetBottom = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_android_insetLeft = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_android_insetRight = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_android_insetRight;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_android_insetTop = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_android_insetTop;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_backgroundTint = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_backgroundTint;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_backgroundTintMode = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_cornerRadius = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_cornerRadius;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_icon = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_icon;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_iconGravity = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_iconGravity;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_iconPadding = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_iconPadding;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_iconSize = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_iconSize;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_iconTint = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_iconTint;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_iconTintMode = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_iconTintMode;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_rippleColor = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_rippleColor;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_strokeColor = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_strokeColor;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_strokeWidth = global::TheScoreBook.Android.Resource.Styleable.MaterialButton_strokeWidth;
+			global::FormsControls.Droid.Resource.Styleable.MaterialCardView = global::TheScoreBook.Android.Resource.Styleable.MaterialCardView;
+			global::FormsControls.Droid.Resource.Styleable.MaterialCardView_strokeColor = global::TheScoreBook.Android.Resource.Styleable.MaterialCardView_strokeColor;
+			global::FormsControls.Droid.Resource.Styleable.MaterialCardView_strokeWidth = global::TheScoreBook.Android.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_chipStyle;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_colorAccent;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_colorPrimary;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_colorSecondary;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_editTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_scrimBackground;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_tabStyle;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1 = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2 = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1 = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2 = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3 = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4 = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5 = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6 = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1 = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2 = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2;
+			global::FormsControls.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle = global::TheScoreBook.Android.Resource.Styleable.MaterialComponentsTheme_textInputStyle;
+			global::FormsControls.Droid.Resource.Styleable.MediaRouteButton = global::TheScoreBook.Android.Resource.Styleable.MediaRouteButton;
+			global::FormsControls.Droid.Resource.Styleable.MediaRouteButton_android_minHeight = global::TheScoreBook.Android.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::FormsControls.Droid.Resource.Styleable.MediaRouteButton_android_minWidth = global::TheScoreBook.Android.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::FormsControls.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::TheScoreBook.Android.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::FormsControls.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint = global::TheScoreBook.Android.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup = global::TheScoreBook.Android.Resource.Styleable.MenuGroup;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::TheScoreBook.Android.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_enabled = global::TheScoreBook.Android.Resource.Styleable.MenuGroup_android_enabled;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_id = global::TheScoreBook.Android.Resource.Styleable.MenuGroup_android_id;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::TheScoreBook.Android.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::TheScoreBook.Android.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_visible = global::TheScoreBook.Android.Resource.Styleable.MenuGroup_android_visible;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem = global::TheScoreBook.Android.Resource.Styleable.MenuItem;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_actionLayout = global::TheScoreBook.Android.Resource.Styleable.MenuItem_actionLayout;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::TheScoreBook.Android.Resource.Styleable.MenuItem_actionProviderClass;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_actionViewClass = global::TheScoreBook.Android.Resource.Styleable.MenuItem_actionViewClass;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_alphabeticModifiers = global::TheScoreBook.Android.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_checkable = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_checkable;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_checked = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_checked;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_enabled = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_enabled;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_icon = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_icon;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_id = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_id;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_menuCategory;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_onClick = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_onClick;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_title = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_title;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_visible = global::TheScoreBook.Android.Resource.Styleable.MenuItem_android_visible;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_contentDescription = global::TheScoreBook.Android.Resource.Styleable.MenuItem_contentDescription;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_iconTint = global::TheScoreBook.Android.Resource.Styleable.MenuItem_iconTint;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_iconTintMode = global::TheScoreBook.Android.Resource.Styleable.MenuItem_iconTintMode;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_numericModifiers = global::TheScoreBook.Android.Resource.Styleable.MenuItem_numericModifiers;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_showAsAction = global::TheScoreBook.Android.Resource.Styleable.MenuItem_showAsAction;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_tooltipText = global::TheScoreBook.Android.Resource.Styleable.MenuItem_tooltipText;
+			global::FormsControls.Droid.Resource.Styleable.MenuView = global::TheScoreBook.Android.Resource.Styleable.MenuView;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_headerBackground = global::TheScoreBook.Android.Resource.Styleable.MenuView_android_headerBackground;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::TheScoreBook.Android.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_itemBackground = global::TheScoreBook.Android.Resource.Styleable.MenuView_android_itemBackground;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::TheScoreBook.Android.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::TheScoreBook.Android.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::TheScoreBook.Android.Resource.Styleable.MenuView_android_verticalDivider;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::TheScoreBook.Android.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::TheScoreBook.Android.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_subMenuArrow = global::TheScoreBook.Android.Resource.Styleable.MenuView_subMenuArrow;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView = global::TheScoreBook.Android.Resource.Styleable.NavigationView;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_android_background = global::TheScoreBook.Android.Resource.Styleable.NavigationView_android_background;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::TheScoreBook.Android.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::TheScoreBook.Android.Resource.Styleable.NavigationView_android_maxWidth;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_elevation = global::TheScoreBook.Android.Resource.Styleable.NavigationView_elevation;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_headerLayout = global::TheScoreBook.Android.Resource.Styleable.NavigationView_headerLayout;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemBackground = global::TheScoreBook.Android.Resource.Styleable.NavigationView_itemBackground;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding = global::TheScoreBook.Android.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemIconPadding = global::TheScoreBook.Android.Resource.Styleable.NavigationView_itemIconPadding;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemIconTint = global::TheScoreBook.Android.Resource.Styleable.NavigationView_itemIconTint;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::TheScoreBook.Android.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemTextColor = global::TheScoreBook.Android.Resource.Styleable.NavigationView_itemTextColor;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_menu = global::TheScoreBook.Android.Resource.Styleable.NavigationView_menu;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindow = global::TheScoreBook.Android.Resource.Styleable.PopupWindow;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindowBackgroundState = global::TheScoreBook.Android.Resource.Styleable.PopupWindowBackgroundState;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::TheScoreBook.Android.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::TheScoreBook.Android.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::TheScoreBook.Android.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::TheScoreBook.Android.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::FormsControls.Droid.Resource.Styleable.RecycleListView = global::TheScoreBook.Android.Resource.Styleable.RecycleListView;
+			global::FormsControls.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::TheScoreBook.Android.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::FormsControls.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::TheScoreBook.Android.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView = global::TheScoreBook.Android.Resource.Styleable.RecyclerView;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability = global::TheScoreBook.Android.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_android_orientation = global::TheScoreBook.Android.Resource.Styleable.RecyclerView_android_orientation;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled = global::TheScoreBook.Android.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::TheScoreBook.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::TheScoreBook.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::TheScoreBook.Android.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::TheScoreBook.Android.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_layoutManager = global::TheScoreBook.Android.Resource.Styleable.RecyclerView_layoutManager;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::TheScoreBook.Android.Resource.Styleable.RecyclerView_reverseLayout;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_spanCount = global::TheScoreBook.Android.Resource.Styleable.RecyclerView_spanCount;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::TheScoreBook.Android.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::FormsControls.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::TheScoreBook.Android.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::FormsControls.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::TheScoreBook.Android.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::FormsControls.Droid.Resource.Styleable.ScrollingViewBehavior_Layout = global::TheScoreBook.Android.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::FormsControls.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::TheScoreBook.Android.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::FormsControls.Droid.Resource.Styleable.SearchView = global::TheScoreBook.Android.Resource.Styleable.SearchView;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_android_focusable = global::TheScoreBook.Android.Resource.Styleable.SearchView_android_focusable;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_android_imeOptions = global::TheScoreBook.Android.Resource.Styleable.SearchView_android_imeOptions;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_android_inputType = global::TheScoreBook.Android.Resource.Styleable.SearchView_android_inputType;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_android_maxWidth = global::TheScoreBook.Android.Resource.Styleable.SearchView_android_maxWidth;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_closeIcon = global::TheScoreBook.Android.Resource.Styleable.SearchView_closeIcon;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_commitIcon = global::TheScoreBook.Android.Resource.Styleable.SearchView_commitIcon;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::TheScoreBook.Android.Resource.Styleable.SearchView_defaultQueryHint;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_goIcon = global::TheScoreBook.Android.Resource.Styleable.SearchView_goIcon;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::TheScoreBook.Android.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_layout = global::TheScoreBook.Android.Resource.Styleable.SearchView_layout;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_queryBackground = global::TheScoreBook.Android.Resource.Styleable.SearchView_queryBackground;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_queryHint = global::TheScoreBook.Android.Resource.Styleable.SearchView_queryHint;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_searchHintIcon = global::TheScoreBook.Android.Resource.Styleable.SearchView_searchHintIcon;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_searchIcon = global::TheScoreBook.Android.Resource.Styleable.SearchView_searchIcon;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_submitBackground = global::TheScoreBook.Android.Resource.Styleable.SearchView_submitBackground;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::TheScoreBook.Android.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_voiceIcon = global::TheScoreBook.Android.Resource.Styleable.SearchView_voiceIcon;
+			global::FormsControls.Droid.Resource.Styleable.Snackbar = global::TheScoreBook.Android.Resource.Styleable.Snackbar;
+			global::FormsControls.Droid.Resource.Styleable.SnackbarLayout = global::TheScoreBook.Android.Resource.Styleable.SnackbarLayout;
+			global::FormsControls.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::TheScoreBook.Android.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::FormsControls.Droid.Resource.Styleable.SnackbarLayout_elevation = global::TheScoreBook.Android.Resource.Styleable.SnackbarLayout_elevation;
+			global::FormsControls.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::TheScoreBook.Android.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::FormsControls.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle = global::TheScoreBook.Android.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.Snackbar_snackbarStyle = global::TheScoreBook.Android.Resource.Styleable.Snackbar_snackbarStyle;
+			global::FormsControls.Droid.Resource.Styleable.Spinner = global::TheScoreBook.Android.Resource.Styleable.Spinner;
+			global::FormsControls.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::TheScoreBook.Android.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::FormsControls.Droid.Resource.Styleable.Spinner_android_entries = global::TheScoreBook.Android.Resource.Styleable.Spinner_android_entries;
+			global::FormsControls.Droid.Resource.Styleable.Spinner_android_popupBackground = global::TheScoreBook.Android.Resource.Styleable.Spinner_android_popupBackground;
+			global::FormsControls.Droid.Resource.Styleable.Spinner_android_prompt = global::TheScoreBook.Android.Resource.Styleable.Spinner_android_prompt;
+			global::FormsControls.Droid.Resource.Styleable.Spinner_popupTheme = global::TheScoreBook.Android.Resource.Styleable.Spinner_popupTheme;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable = global::TheScoreBook.Android.Resource.Styleable.StateListDrawable;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawableItem = global::TheScoreBook.Android.Resource.Styleable.StateListDrawableItem;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawableItem_android_drawable = global::TheScoreBook.Android.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_constantSize = global::TheScoreBook.Android.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_dither = global::TheScoreBook.Android.Resource.Styleable.StateListDrawable_android_dither;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::TheScoreBook.Android.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::TheScoreBook.Android.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_variablePadding = global::TheScoreBook.Android.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_visible = global::TheScoreBook.Android.Resource.Styleable.StateListDrawable_android_visible;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_android_textOff;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_android_textOn;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_android_thumb;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_showText = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_showText;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_splitTrack;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_switchPadding;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_thumbTint;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_track = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_track;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_trackTint = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_trackTint;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::TheScoreBook.Android.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::FormsControls.Droid.Resource.Styleable.TabItem = global::TheScoreBook.Android.Resource.Styleable.TabItem;
+			global::FormsControls.Droid.Resource.Styleable.TabItem_android_icon = global::TheScoreBook.Android.Resource.Styleable.TabItem_android_icon;
+			global::FormsControls.Droid.Resource.Styleable.TabItem_android_layout = global::TheScoreBook.Android.Resource.Styleable.TabItem_android_layout;
+			global::FormsControls.Droid.Resource.Styleable.TabItem_android_text = global::TheScoreBook.Android.Resource.Styleable.TabItem_android_text;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout = global::TheScoreBook.Android.Resource.Styleable.TabLayout;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabBackground = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabBackground;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabContentStart = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabContentStart;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabGravity = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabGravity;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIconTint = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabIconTint;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIconTintMode = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicator = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabIndicator;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabInlineLabel = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabMinWidth;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabMode = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabMode;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabPadding = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabPadding;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabRippleColor = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabRippleColor;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabTextColor = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabTextColor;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple = global::TheScoreBook.Android.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance = global::TheScoreBook.Android.Resource.Styleable.TextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_fontFamily = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_textColor = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_android_textColor;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_textColorLink = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_textSize = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_android_textSize;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_android_textStyle;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_typeface = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_android_typeface;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_fontFamily = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_fontFamily;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::TheScoreBook.Android.Resource.Styleable.TextAppearance_textAllCaps;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_android_hint = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_android_hint;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_helperText = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_helperText;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::TheScoreBook.Android.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::FormsControls.Droid.Resource.Styleable.ThemeEnforcement = global::TheScoreBook.Android.Resource.Styleable.ThemeEnforcement;
+			global::FormsControls.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::TheScoreBook.Android.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::FormsControls.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::TheScoreBook.Android.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::FormsControls.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::TheScoreBook.Android.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar = global::TheScoreBook.Android.Resource.Styleable.Toolbar;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_android_gravity = global::TheScoreBook.Android.Resource.Styleable.Toolbar_android_gravity;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_android_minHeight = global::TheScoreBook.Android.Resource.Styleable.Toolbar_android_minHeight;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_buttonGravity = global::TheScoreBook.Android.Resource.Styleable.Toolbar_buttonGravity;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::TheScoreBook.Android.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_collapseIcon = global::TheScoreBook.Android.Resource.Styleable.Toolbar_collapseIcon;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::TheScoreBook.Android.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::TheScoreBook.Android.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::TheScoreBook.Android.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::TheScoreBook.Android.Resource.Styleable.Toolbar_contentInsetRight;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::TheScoreBook.Android.Resource.Styleable.Toolbar_contentInsetStart;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::TheScoreBook.Android.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_logo = global::TheScoreBook.Android.Resource.Styleable.Toolbar_logo;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_logoDescription = global::TheScoreBook.Android.Resource.Styleable.Toolbar_logoDescription;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::TheScoreBook.Android.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::TheScoreBook.Android.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_navigationIcon = global::TheScoreBook.Android.Resource.Styleable.Toolbar_navigationIcon;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_popupTheme = global::TheScoreBook.Android.Resource.Styleable.Toolbar_popupTheme;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_subtitle = global::TheScoreBook.Android.Resource.Styleable.Toolbar_subtitle;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::TheScoreBook.Android.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::TheScoreBook.Android.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_title = global::TheScoreBook.Android.Resource.Styleable.Toolbar_title;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMargin = global::TheScoreBook.Android.Resource.Styleable.Toolbar_titleMargin;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::TheScoreBook.Android.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::TheScoreBook.Android.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMargins = global::TheScoreBook.Android.Resource.Styleable.Toolbar_titleMargins;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::TheScoreBook.Android.Resource.Styleable.Toolbar_titleMarginStart;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::TheScoreBook.Android.Resource.Styleable.Toolbar_titleMarginTop;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::TheScoreBook.Android.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleTextColor = global::TheScoreBook.Android.Resource.Styleable.Toolbar_titleTextColor;
+			global::FormsControls.Droid.Resource.Styleable.View = global::TheScoreBook.Android.Resource.Styleable.View;
+			global::FormsControls.Droid.Resource.Styleable.ViewBackgroundHelper = global::TheScoreBook.Android.Resource.Styleable.ViewBackgroundHelper;
+			global::FormsControls.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::TheScoreBook.Android.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::FormsControls.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::TheScoreBook.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::FormsControls.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::TheScoreBook.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::FormsControls.Droid.Resource.Styleable.ViewStubCompat = global::TheScoreBook.Android.Resource.Styleable.ViewStubCompat;
+			global::FormsControls.Droid.Resource.Styleable.ViewStubCompat_android_id = global::TheScoreBook.Android.Resource.Styleable.ViewStubCompat_android_id;
+			global::FormsControls.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::TheScoreBook.Android.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::FormsControls.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::TheScoreBook.Android.Resource.Styleable.ViewStubCompat_android_layout;
+			global::FormsControls.Droid.Resource.Styleable.View_android_focusable = global::TheScoreBook.Android.Resource.Styleable.View_android_focusable;
+			global::FormsControls.Droid.Resource.Styleable.View_android_theme = global::TheScoreBook.Android.Resource.Styleable.View_android_theme;
+			global::FormsControls.Droid.Resource.Styleable.View_paddingEnd = global::TheScoreBook.Android.Resource.Styleable.View_paddingEnd;
+			global::FormsControls.Droid.Resource.Styleable.View_paddingStart = global::TheScoreBook.Android.Resource.Styleable.View_paddingStart;
+			global::FormsControls.Droid.Resource.Styleable.View_theme = global::TheScoreBook.Android.Resource.Styleable.View_theme;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_in = global::TheScoreBook.Android.Resource.Animation.abc_fade_in;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_out = global::TheScoreBook.Android.Resource.Animation.abc_fade_out;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_grow_fade_in_from_bottom = global::TheScoreBook.Android.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -8017,25 +11140,691 @@ namespace TheScoreBook.Android
 			public const int design_fab_show_motion_spec = 2130837506;
 			
 			// aapt resource value: 0x7F020003
-			public const int mtrl_btn_state_list_anim = 2130837507;
+			public const int empty_Animation = 2130837507;
 			
 			// aapt resource value: 0x7F020004
-			public const int mtrl_btn_unelevated_state_list_anim = 2130837508;
+			public const int empty_Animation_long = 2130837508;
 			
 			// aapt resource value: 0x7F020005
-			public const int mtrl_chip_state_list_anim = 2130837509;
+			public const int empty_Animation_short = 2130837509;
 			
 			// aapt resource value: 0x7F020006
-			public const int mtrl_fab_hide_motion_spec = 2130837510;
+			public const int enter_from_bottom = 2130837510;
 			
 			// aapt resource value: 0x7F020007
-			public const int mtrl_fab_show_motion_spec = 2130837511;
+			public const int enter_from_bottom_bounce = 2130837511;
 			
 			// aapt resource value: 0x7F020008
-			public const int mtrl_fab_transformation_sheet_collapse_spec = 2130837512;
+			public const int enter_from_bottom_long = 2130837512;
 			
 			// aapt resource value: 0x7F020009
-			public const int mtrl_fab_transformation_sheet_expand_spec = 2130837513;
+			public const int enter_from_bottom_long_bounce = 2130837513;
+			
+			// aapt resource value: 0x7F02000A
+			public const int enter_from_bottom_short = 2130837514;
+			
+			// aapt resource value: 0x7F02000B
+			public const int enter_from_bottom_short_bounce = 2130837515;
+			
+			// aapt resource value: 0x7F02000C
+			public const int enter_from_left = 2130837516;
+			
+			// aapt resource value: 0x7F02000D
+			public const int enter_from_left_bounce = 2130837517;
+			
+			// aapt resource value: 0x7F02000E
+			public const int enter_from_left_long = 2130837518;
+			
+			// aapt resource value: 0x7F02000F
+			public const int enter_from_left_long_bounce = 2130837519;
+			
+			// aapt resource value: 0x7F020010
+			public const int enter_from_left_short = 2130837520;
+			
+			// aapt resource value: 0x7F020011
+			public const int enter_from_left_short_bounce = 2130837521;
+			
+			// aapt resource value: 0x7F020012
+			public const int enter_from_right = 2130837522;
+			
+			// aapt resource value: 0x7F020013
+			public const int enter_from_right_bounce = 2130837523;
+			
+			// aapt resource value: 0x7F020014
+			public const int enter_from_right_long = 2130837524;
+			
+			// aapt resource value: 0x7F020015
+			public const int enter_from_right_long_bounce = 2130837525;
+			
+			// aapt resource value: 0x7F020016
+			public const int enter_from_right_short = 2130837526;
+			
+			// aapt resource value: 0x7F020017
+			public const int enter_from_right_short_bounce = 2130837527;
+			
+			// aapt resource value: 0x7F020018
+			public const int enter_from_top = 2130837528;
+			
+			// aapt resource value: 0x7F020019
+			public const int enter_from_top_bounce = 2130837529;
+			
+			// aapt resource value: 0x7F02001A
+			public const int enter_from_top_long = 2130837530;
+			
+			// aapt resource value: 0x7F02001B
+			public const int enter_from_top_long_bounce = 2130837531;
+			
+			// aapt resource value: 0x7F02001C
+			public const int enter_from_top_short = 2130837532;
+			
+			// aapt resource value: 0x7F02001D
+			public const int enter_from_top_short_bounce = 2130837533;
+			
+			// aapt resource value: 0x7F02001E
+			public const int enter_landing = 2130837534;
+			
+			// aapt resource value: 0x7F02001F
+			public const int enter_landing_bounce = 2130837535;
+			
+			// aapt resource value: 0x7F020020
+			public const int enter_landing_from_bottom = 2130837536;
+			
+			// aapt resource value: 0x7F020021
+			public const int enter_landing_from_bottom_bounce = 2130837537;
+			
+			// aapt resource value: 0x7F020022
+			public const int enter_landing_from_bottom_long = 2130837538;
+			
+			// aapt resource value: 0x7F020023
+			public const int enter_landing_from_bottom_long_bounce = 2130837539;
+			
+			// aapt resource value: 0x7F020024
+			public const int enter_landing_from_bottom_short = 2130837540;
+			
+			// aapt resource value: 0x7F020025
+			public const int enter_landing_from_bottom_short_bounce = 2130837541;
+			
+			// aapt resource value: 0x7F020026
+			public const int enter_landing_from_left = 2130837542;
+			
+			// aapt resource value: 0x7F020027
+			public const int enter_landing_from_left_bounce = 2130837543;
+			
+			// aapt resource value: 0x7F020028
+			public const int enter_landing_from_left_long = 2130837544;
+			
+			// aapt resource value: 0x7F020029
+			public const int enter_landing_from_left_long_bounce = 2130837545;
+			
+			// aapt resource value: 0x7F02002A
+			public const int enter_landing_from_left_short = 2130837546;
+			
+			// aapt resource value: 0x7F02002B
+			public const int enter_landing_from_left_short_bounce = 2130837547;
+			
+			// aapt resource value: 0x7F02002C
+			public const int enter_landing_from_right = 2130837548;
+			
+			// aapt resource value: 0x7F02002D
+			public const int enter_landing_from_right_bounce = 2130837549;
+			
+			// aapt resource value: 0x7F02002E
+			public const int enter_landing_from_right_long = 2130837550;
+			
+			// aapt resource value: 0x7F02002F
+			public const int enter_landing_from_right_long_bounce = 2130837551;
+			
+			// aapt resource value: 0x7F020030
+			public const int enter_landing_from_right_short = 2130837552;
+			
+			// aapt resource value: 0x7F020031
+			public const int enter_landing_from_right_short_bounce = 2130837553;
+			
+			// aapt resource value: 0x7F020032
+			public const int enter_landing_from_top = 2130837554;
+			
+			// aapt resource value: 0x7F020033
+			public const int enter_landing_from_top_bounce = 2130837555;
+			
+			// aapt resource value: 0x7F020034
+			public const int enter_landing_from_top_long = 2130837556;
+			
+			// aapt resource value: 0x7F020035
+			public const int enter_landing_from_top_long_bounce = 2130837557;
+			
+			// aapt resource value: 0x7F020036
+			public const int enter_landing_from_top_short = 2130837558;
+			
+			// aapt resource value: 0x7F020037
+			public const int enter_landing_from_top_short_bounce = 2130837559;
+			
+			// aapt resource value: 0x7F020038
+			public const int enter_landing_long = 2130837560;
+			
+			// aapt resource value: 0x7F020039
+			public const int enter_landing_long_bounce = 2130837561;
+			
+			// aapt resource value: 0x7F02003A
+			public const int enter_landing_short = 2130837562;
+			
+			// aapt resource value: 0x7F02003B
+			public const int enter_landing_short_bounce = 2130837563;
+			
+			// aapt resource value: 0x7F02003C
+			public const int enter_roll_from_bottom = 2130837564;
+			
+			// aapt resource value: 0x7F02003D
+			public const int enter_roll_from_bottom_bounce = 2130837565;
+			
+			// aapt resource value: 0x7F02003E
+			public const int enter_roll_from_bottom_long = 2130837566;
+			
+			// aapt resource value: 0x7F02003F
+			public const int enter_roll_from_bottom_long_bounce = 2130837567;
+			
+			// aapt resource value: 0x7F020040
+			public const int enter_roll_from_bottom_short = 2130837568;
+			
+			// aapt resource value: 0x7F020041
+			public const int enter_roll_from_bottom_short_bounce = 2130837569;
+			
+			// aapt resource value: 0x7F020042
+			public const int enter_roll_from_left = 2130837570;
+			
+			// aapt resource value: 0x7F020043
+			public const int enter_roll_from_left_bounce = 2130837571;
+			
+			// aapt resource value: 0x7F020044
+			public const int enter_roll_from_left_long = 2130837572;
+			
+			// aapt resource value: 0x7F020045
+			public const int enter_roll_from_left_long_bounce = 2130837573;
+			
+			// aapt resource value: 0x7F020046
+			public const int enter_roll_from_left_short = 2130837574;
+			
+			// aapt resource value: 0x7F020047
+			public const int enter_roll_from_left_short_bounce = 2130837575;
+			
+			// aapt resource value: 0x7F020048
+			public const int enter_roll_from_right = 2130837576;
+			
+			// aapt resource value: 0x7F020049
+			public const int enter_roll_from_right_bounce = 2130837577;
+			
+			// aapt resource value: 0x7F02004A
+			public const int enter_roll_from_right_long = 2130837578;
+			
+			// aapt resource value: 0x7F02004B
+			public const int enter_roll_from_right_long_bounce = 2130837579;
+			
+			// aapt resource value: 0x7F02004C
+			public const int enter_roll_from_right_short = 2130837580;
+			
+			// aapt resource value: 0x7F02004D
+			public const int enter_roll_from_right_short_bounce = 2130837581;
+			
+			// aapt resource value: 0x7F02004E
+			public const int enter_roll_from_top = 2130837582;
+			
+			// aapt resource value: 0x7F02004F
+			public const int enter_roll_from_top_bounce = 2130837583;
+			
+			// aapt resource value: 0x7F020050
+			public const int enter_roll_from_top_long = 2130837584;
+			
+			// aapt resource value: 0x7F020051
+			public const int enter_roll_from_top_long_bounce = 2130837585;
+			
+			// aapt resource value: 0x7F020052
+			public const int enter_roll_from_top_short = 2130837586;
+			
+			// aapt resource value: 0x7F020053
+			public const int enter_roll_from_top_short_bounce = 2130837587;
+			
+			// aapt resource value: 0x7F020054
+			public const int enter_rotate = 2130837588;
+			
+			// aapt resource value: 0x7F020055
+			public const int enter_rotate_bounce = 2130837589;
+			
+			// aapt resource value: 0x7F020056
+			public const int enter_rotate_from_bottom = 2130837590;
+			
+			// aapt resource value: 0x7F020057
+			public const int enter_rotate_from_bottom_bounce = 2130837591;
+			
+			// aapt resource value: 0x7F020058
+			public const int enter_rotate_from_bottom_long = 2130837592;
+			
+			// aapt resource value: 0x7F020059
+			public const int enter_rotate_from_bottom_long_bounce = 2130837593;
+			
+			// aapt resource value: 0x7F02005A
+			public const int enter_rotate_from_bottom_short = 2130837594;
+			
+			// aapt resource value: 0x7F02005B
+			public const int enter_rotate_from_bottom_short_bounce = 2130837595;
+			
+			// aapt resource value: 0x7F02005C
+			public const int enter_rotate_from_left = 2130837596;
+			
+			// aapt resource value: 0x7F02005D
+			public const int enter_rotate_from_left_bounce = 2130837597;
+			
+			// aapt resource value: 0x7F02005E
+			public const int enter_rotate_from_left_long = 2130837598;
+			
+			// aapt resource value: 0x7F02005F
+			public const int enter_rotate_from_left_long_bounce = 2130837599;
+			
+			// aapt resource value: 0x7F020060
+			public const int enter_rotate_from_left_short = 2130837600;
+			
+			// aapt resource value: 0x7F020061
+			public const int enter_rotate_from_left_short_bounce = 2130837601;
+			
+			// aapt resource value: 0x7F020062
+			public const int enter_rotate_from_right = 2130837602;
+			
+			// aapt resource value: 0x7F020063
+			public const int enter_rotate_from_right_bounce = 2130837603;
+			
+			// aapt resource value: 0x7F020064
+			public const int enter_rotate_from_right_long = 2130837604;
+			
+			// aapt resource value: 0x7F020065
+			public const int enter_rotate_from_right_long_bounce = 2130837605;
+			
+			// aapt resource value: 0x7F020066
+			public const int enter_rotate_from_right_short = 2130837606;
+			
+			// aapt resource value: 0x7F020067
+			public const int enter_rotate_from_right_short_bounce = 2130837607;
+			
+			// aapt resource value: 0x7F020068
+			public const int enter_rotate_from_top = 2130837608;
+			
+			// aapt resource value: 0x7F020069
+			public const int enter_rotate_from_top_bounce = 2130837609;
+			
+			// aapt resource value: 0x7F02006A
+			public const int enter_rotate_from_top_long = 2130837610;
+			
+			// aapt resource value: 0x7F02006B
+			public const int enter_rotate_from_top_long_bounce = 2130837611;
+			
+			// aapt resource value: 0x7F02006C
+			public const int enter_rotate_from_top_short = 2130837612;
+			
+			// aapt resource value: 0x7F02006D
+			public const int enter_rotate_from_top_short_bounce = 2130837613;
+			
+			// aapt resource value: 0x7F02006E
+			public const int enter_rotate_long = 2130837614;
+			
+			// aapt resource value: 0x7F02006F
+			public const int enter_rotate_long_bounce = 2130837615;
+			
+			// aapt resource value: 0x7F020070
+			public const int enter_rotate_short = 2130837616;
+			
+			// aapt resource value: 0x7F020071
+			public const int enter_rotate_short_bounce = 2130837617;
+			
+			// aapt resource value: 0x7F020072
+			public const int enter_scale = 2130837618;
+			
+			// aapt resource value: 0x7F020073
+			public const int enter_scale_bounce = 2130837619;
+			
+			// aapt resource value: 0x7F020074
+			public const int enter_scale_from_bottom = 2130837620;
+			
+			// aapt resource value: 0x7F020075
+			public const int enter_scale_from_bottom_bounce = 2130837621;
+			
+			// aapt resource value: 0x7F020076
+			public const int enter_scale_from_bottom_long = 2130837622;
+			
+			// aapt resource value: 0x7F020077
+			public const int enter_scale_from_bottom_long_bounce = 2130837623;
+			
+			// aapt resource value: 0x7F020078
+			public const int enter_scale_from_bottom_short = 2130837624;
+			
+			// aapt resource value: 0x7F020079
+			public const int enter_scale_from_bottom_short_bounce = 2130837625;
+			
+			// aapt resource value: 0x7F02007A
+			public const int enter_scale_from_left = 2130837626;
+			
+			// aapt resource value: 0x7F02007B
+			public const int enter_scale_from_left_bounce = 2130837627;
+			
+			// aapt resource value: 0x7F02007C
+			public const int enter_scale_from_left_long = 2130837628;
+			
+			// aapt resource value: 0x7F02007D
+			public const int enter_scale_from_left_long_bounce = 2130837629;
+			
+			// aapt resource value: 0x7F02007E
+			public const int enter_scale_from_left_short = 2130837630;
+			
+			// aapt resource value: 0x7F02007F
+			public const int enter_scale_from_left_short_bounce = 2130837631;
+			
+			// aapt resource value: 0x7F020080
+			public const int enter_scale_from_right = 2130837632;
+			
+			// aapt resource value: 0x7F020081
+			public const int enter_scale_from_right_bounce = 2130837633;
+			
+			// aapt resource value: 0x7F020082
+			public const int enter_scale_from_right_long = 2130837634;
+			
+			// aapt resource value: 0x7F020083
+			public const int enter_scale_from_right_long_bounce = 2130837635;
+			
+			// aapt resource value: 0x7F020084
+			public const int enter_scale_from_right_short = 2130837636;
+			
+			// aapt resource value: 0x7F020085
+			public const int enter_scale_from_right_short_bounce = 2130837637;
+			
+			// aapt resource value: 0x7F020086
+			public const int enter_scale_from_top = 2130837638;
+			
+			// aapt resource value: 0x7F020087
+			public const int enter_scale_from_top_bounce = 2130837639;
+			
+			// aapt resource value: 0x7F020088
+			public const int enter_scale_from_top_long = 2130837640;
+			
+			// aapt resource value: 0x7F020089
+			public const int enter_scale_from_top_long_bounce = 2130837641;
+			
+			// aapt resource value: 0x7F02008A
+			public const int enter_scale_from_top_short = 2130837642;
+			
+			// aapt resource value: 0x7F02008B
+			public const int enter_scale_from_top_short_bounce = 2130837643;
+			
+			// aapt resource value: 0x7F02008C
+			public const int enter_scale_long = 2130837644;
+			
+			// aapt resource value: 0x7F02008D
+			public const int enter_scale_long_bounce = 2130837645;
+			
+			// aapt resource value: 0x7F02008E
+			public const int enter_scale_short = 2130837646;
+			
+			// aapt resource value: 0x7F02008F
+			public const int enter_scale_short_bounce = 2130837647;
+			
+			// aapt resource value: 0x7F020090
+			public const int exit_landing = 2130837648;
+			
+			// aapt resource value: 0x7F020091
+			public const int exit_landing_from_bottom = 2130837649;
+			
+			// aapt resource value: 0x7F020092
+			public const int exit_landing_from_bottom_long = 2130837650;
+			
+			// aapt resource value: 0x7F020093
+			public const int exit_landing_from_bottom_short = 2130837651;
+			
+			// aapt resource value: 0x7F020094
+			public const int exit_landing_from_left = 2130837652;
+			
+			// aapt resource value: 0x7F020095
+			public const int exit_landing_from_left_long = 2130837653;
+			
+			// aapt resource value: 0x7F020096
+			public const int exit_landing_from_left_short = 2130837654;
+			
+			// aapt resource value: 0x7F020097
+			public const int exit_landing_from_right = 2130837655;
+			
+			// aapt resource value: 0x7F020098
+			public const int exit_landing_from_right_long = 2130837656;
+			
+			// aapt resource value: 0x7F020099
+			public const int exit_landing_from_right_short = 2130837657;
+			
+			// aapt resource value: 0x7F02009A
+			public const int exit_landing_from_top = 2130837658;
+			
+			// aapt resource value: 0x7F02009B
+			public const int exit_landing_from_top_long = 2130837659;
+			
+			// aapt resource value: 0x7F02009C
+			public const int exit_landing_from_top_short = 2130837660;
+			
+			// aapt resource value: 0x7F02009D
+			public const int exit_landing_long = 2130837661;
+			
+			// aapt resource value: 0x7F02009E
+			public const int exit_landing_short = 2130837662;
+			
+			// aapt resource value: 0x7F02009F
+			public const int exit_roll_to_bottom = 2130837663;
+			
+			// aapt resource value: 0x7F0200A0
+			public const int exit_roll_to_bottom_long = 2130837664;
+			
+			// aapt resource value: 0x7F0200A1
+			public const int exit_roll_to_bottom_short = 2130837665;
+			
+			// aapt resource value: 0x7F0200A2
+			public const int exit_roll_to_left = 2130837666;
+			
+			// aapt resource value: 0x7F0200A3
+			public const int exit_roll_to_left_long = 2130837667;
+			
+			// aapt resource value: 0x7F0200A4
+			public const int exit_roll_to_left_short = 2130837668;
+			
+			// aapt resource value: 0x7F0200A5
+			public const int exit_roll_to_right = 2130837669;
+			
+			// aapt resource value: 0x7F0200A6
+			public const int exit_roll_to_right_long = 2130837670;
+			
+			// aapt resource value: 0x7F0200A7
+			public const int exit_roll_to_right_short = 2130837671;
+			
+			// aapt resource value: 0x7F0200A8
+			public const int exit_roll_to_top = 2130837672;
+			
+			// aapt resource value: 0x7F0200A9
+			public const int exit_roll_to_top_long = 2130837673;
+			
+			// aapt resource value: 0x7F0200AA
+			public const int exit_roll_to_top_short = 2130837674;
+			
+			// aapt resource value: 0x7F0200AB
+			public const int exit_rotate = 2130837675;
+			
+			// aapt resource value: 0x7F0200AC
+			public const int exit_rotate_long = 2130837676;
+			
+			// aapt resource value: 0x7F0200AD
+			public const int exit_rotate_short = 2130837677;
+			
+			// aapt resource value: 0x7F0200AE
+			public const int exit_rotate_to_bottom = 2130837678;
+			
+			// aapt resource value: 0x7F0200AF
+			public const int exit_rotate_to_bottom_long = 2130837679;
+			
+			// aapt resource value: 0x7F0200B0
+			public const int exit_rotate_to_bottom_short = 2130837680;
+			
+			// aapt resource value: 0x7F0200B1
+			public const int exit_rotate_to_left = 2130837681;
+			
+			// aapt resource value: 0x7F0200B2
+			public const int exit_rotate_to_left_long = 2130837682;
+			
+			// aapt resource value: 0x7F0200B3
+			public const int exit_rotate_to_left_short = 2130837683;
+			
+			// aapt resource value: 0x7F0200B4
+			public const int exit_rotate_to_right = 2130837684;
+			
+			// aapt resource value: 0x7F0200B5
+			public const int exit_rotate_to_right_long = 2130837685;
+			
+			// aapt resource value: 0x7F0200B6
+			public const int exit_rotate_to_right_short = 2130837686;
+			
+			// aapt resource value: 0x7F0200B7
+			public const int exit_rotate_to_top = 2130837687;
+			
+			// aapt resource value: 0x7F0200B8
+			public const int exit_rotate_to_top_long = 2130837688;
+			
+			// aapt resource value: 0x7F0200B9
+			public const int exit_rotate_to_top_short = 2130837689;
+			
+			// aapt resource value: 0x7F0200BA
+			public const int exit_scale = 2130837690;
+			
+			// aapt resource value: 0x7F0200BB
+			public const int exit_scale_from_bottom = 2130837691;
+			
+			// aapt resource value: 0x7F0200BC
+			public const int exit_scale_from_bottom_long = 2130837692;
+			
+			// aapt resource value: 0x7F0200BD
+			public const int exit_scale_from_bottom_short = 2130837693;
+			
+			// aapt resource value: 0x7F0200BE
+			public const int exit_scale_from_left = 2130837694;
+			
+			// aapt resource value: 0x7F0200BF
+			public const int exit_scale_from_left_long = 2130837695;
+			
+			// aapt resource value: 0x7F0200C0
+			public const int exit_scale_from_left_short = 2130837696;
+			
+			// aapt resource value: 0x7F0200C1
+			public const int exit_scale_from_right = 2130837697;
+			
+			// aapt resource value: 0x7F0200C2
+			public const int exit_scale_from_right_long = 2130837698;
+			
+			// aapt resource value: 0x7F0200C3
+			public const int exit_scale_from_right_short = 2130837699;
+			
+			// aapt resource value: 0x7F0200C4
+			public const int exit_scale_from_top = 2130837700;
+			
+			// aapt resource value: 0x7F0200C5
+			public const int exit_scale_from_top_long = 2130837701;
+			
+			// aapt resource value: 0x7F0200C6
+			public const int exit_scale_from_top_short = 2130837702;
+			
+			// aapt resource value: 0x7F0200C7
+			public const int exit_scale_long = 2130837703;
+			
+			// aapt resource value: 0x7F0200C8
+			public const int exit_scale_short = 2130837704;
+			
+			// aapt resource value: 0x7F0200C9
+			public const int exit_to_bottom = 2130837705;
+			
+			// aapt resource value: 0x7F0200CA
+			public const int exit_to_bottom_bounce = 2130837706;
+			
+			// aapt resource value: 0x7F0200CB
+			public const int exit_to_bottom_long = 2130837707;
+			
+			// aapt resource value: 0x7F0200CC
+			public const int exit_to_bottom_long_bounce = 2130837708;
+			
+			// aapt resource value: 0x7F0200CD
+			public const int exit_to_bottom_short = 2130837709;
+			
+			// aapt resource value: 0x7F0200CE
+			public const int exit_to_bottom_short_bounce = 2130837710;
+			
+			// aapt resource value: 0x7F0200CF
+			public const int exit_to_left = 2130837711;
+			
+			// aapt resource value: 0x7F0200D0
+			public const int exit_to_left_bounce = 2130837712;
+			
+			// aapt resource value: 0x7F0200D1
+			public const int exit_to_left_long = 2130837713;
+			
+			// aapt resource value: 0x7F0200D2
+			public const int exit_to_left_long_bounce = 2130837714;
+			
+			// aapt resource value: 0x7F0200D3
+			public const int exit_to_left_short = 2130837715;
+			
+			// aapt resource value: 0x7F0200D4
+			public const int exit_to_left_short_bounce = 2130837716;
+			
+			// aapt resource value: 0x7F0200D5
+			public const int exit_to_right = 2130837717;
+			
+			// aapt resource value: 0x7F0200D6
+			public const int exit_to_right_bounce = 2130837718;
+			
+			// aapt resource value: 0x7F0200D7
+			public const int exit_to_right_long = 2130837719;
+			
+			// aapt resource value: 0x7F0200D8
+			public const int exit_to_right_long_bounce = 2130837720;
+			
+			// aapt resource value: 0x7F0200D9
+			public const int exit_to_right_short = 2130837721;
+			
+			// aapt resource value: 0x7F0200DA
+			public const int exit_to_right_short_bounce = 2130837722;
+			
+			// aapt resource value: 0x7F0200DB
+			public const int exit_to_top = 2130837723;
+			
+			// aapt resource value: 0x7F0200DC
+			public const int exit_to_top_bounce = 2130837724;
+			
+			// aapt resource value: 0x7F0200DD
+			public const int exit_to_top_long = 2130837725;
+			
+			// aapt resource value: 0x7F0200DE
+			public const int exit_to_top_long_bounce = 2130837726;
+			
+			// aapt resource value: 0x7F0200DF
+			public const int exit_to_top_short = 2130837727;
+			
+			// aapt resource value: 0x7F0200E0
+			public const int exit_to_top_short_bounce = 2130837728;
+			
+			// aapt resource value: 0x7F0200E1
+			public const int mtrl_btn_state_list_anim = 2130837729;
+			
+			// aapt resource value: 0x7F0200E2
+			public const int mtrl_btn_unelevated_state_list_anim = 2130837730;
+			
+			// aapt resource value: 0x7F0200E3
+			public const int mtrl_chip_state_list_anim = 2130837731;
+			
+			// aapt resource value: 0x7F0200E4
+			public const int mtrl_fab_hide_motion_spec = 2130837732;
+			
+			// aapt resource value: 0x7F0200E5
+			public const int mtrl_fab_show_motion_spec = 2130837733;
+			
+			// aapt resource value: 0x7F0200E6
+			public const int mtrl_fab_transformation_sheet_collapse_spec = 2130837734;
+			
+			// aapt resource value: 0x7F0200E7
+			public const int mtrl_fab_transformation_sheet_expand_spec = 2130837735;
 			
 			static Animator()
 			{
@@ -12404,55 +16193,64 @@ namespace TheScoreBook.Android
 			public const int abc_config_activityShortDur = 2131296257;
 			
 			// aapt resource value: 0x7F090002
-			public const int app_bar_elevation_anim_duration = 2131296258;
+			public const int animation_duration = 2131296258;
 			
 			// aapt resource value: 0x7F090003
-			public const int bottom_sheet_slide_duration = 2131296259;
+			public const int animation_duration_long = 2131296259;
 			
 			// aapt resource value: 0x7F090004
-			public const int cancel_button_image_alpha = 2131296260;
+			public const int animation_duration_short = 2131296260;
 			
 			// aapt resource value: 0x7F090005
-			public const int config_tooltipAnimTime = 2131296261;
+			public const int app_bar_elevation_anim_duration = 2131296261;
 			
 			// aapt resource value: 0x7F090006
-			public const int design_snackbar_text_max_lines = 2131296262;
+			public const int bottom_sheet_slide_duration = 2131296262;
 			
 			// aapt resource value: 0x7F090007
-			public const int design_tab_indicator_anim_duration_ms = 2131296263;
+			public const int cancel_button_image_alpha = 2131296263;
 			
 			// aapt resource value: 0x7F090008
-			public const int hide_password_duration = 2131296264;
+			public const int config_tooltipAnimTime = 2131296264;
 			
 			// aapt resource value: 0x7F090009
-			public const int mr_controller_volume_group_list_animation_duration_ms = 2131296265;
+			public const int design_snackbar_text_max_lines = 2131296265;
 			
 			// aapt resource value: 0x7F09000A
-			public const int mr_controller_volume_group_list_fade_in_duration_ms = 2131296266;
+			public const int design_tab_indicator_anim_duration_ms = 2131296266;
 			
 			// aapt resource value: 0x7F09000B
-			public const int mr_controller_volume_group_list_fade_out_duration_ms = 2131296267;
+			public const int hide_password_duration = 2131296267;
 			
 			// aapt resource value: 0x7F09000C
-			public const int mr_update_routes_delay_ms = 2131296268;
+			public const int mr_controller_volume_group_list_animation_duration_ms = 2131296268;
 			
 			// aapt resource value: 0x7F09000D
-			public const int mtrl_btn_anim_delay_ms = 2131296269;
+			public const int mr_controller_volume_group_list_fade_in_duration_ms = 2131296269;
 			
 			// aapt resource value: 0x7F09000E
-			public const int mtrl_btn_anim_duration_ms = 2131296270;
+			public const int mr_controller_volume_group_list_fade_out_duration_ms = 2131296270;
 			
 			// aapt resource value: 0x7F09000F
-			public const int mtrl_chip_anim_duration = 2131296271;
+			public const int mr_update_routes_delay_ms = 2131296271;
 			
 			// aapt resource value: 0x7F090010
-			public const int mtrl_tab_indicator_anim_duration_ms = 2131296272;
+			public const int mtrl_btn_anim_delay_ms = 2131296272;
 			
 			// aapt resource value: 0x7F090011
-			public const int show_password_duration = 2131296273;
+			public const int mtrl_btn_anim_duration_ms = 2131296273;
 			
 			// aapt resource value: 0x7F090012
-			public const int status_bar_notification_info_maxnum = 2131296274;
+			public const int mtrl_chip_anim_duration = 2131296274;
+			
+			// aapt resource value: 0x7F090013
+			public const int mtrl_tab_indicator_anim_duration_ms = 2131296275;
+			
+			// aapt resource value: 0x7F090014
+			public const int show_password_duration = 2131296276;
+			
+			// aapt resource value: 0x7F090015
+			public const int status_bar_notification_info_maxnum = 2131296277;
 			
 			static Integer()
 			{
