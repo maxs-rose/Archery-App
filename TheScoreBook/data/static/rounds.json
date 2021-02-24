@@ -2,6 +2,7 @@
   "portsmouth":
   [
     {
+      "location": "in",
       "distance": 18,
       "unit": "m",
       "arrowsPerEnd": 3,
@@ -11,6 +12,17 @@
   "bray 1":
   [
     {
+      "location": "in",
+      "distance": 18,
+      "unit": "m",
+      "arrowsPerEnd": 3,
+      "ends": 10
+    }
+  ],
+  "test":
+  [
+    {
+      "location": "out",
       "distance": 18,
       "unit": "m",
       "arrowsPerEnd": 3,

@@ -14,6 +14,8 @@ namespace TheScoreBook.models.round
         public int DistanceCount { get; }
         public DateTime Date { get; }
         public string RoundName { get; }
+        
+        public ELocation Location { get; }
 
         public Round(string round)
         {
@@ -32,6 +34,7 @@ namespace TheScoreBook.models.round
 
             Date = DateTime.Now;
             RoundName = round;
+            Location = Rounds.Instance.roundLocation(round);
         }
 
         public Round(JObject roundData)
@@ -46,6 +49,8 @@ namespace TheScoreBook.models.round
 
             for (var i = 0; i < DistanceCount; i++)
                 Distances[i] = new Distance(dist[i].Value<JObject>());
+
+            Location = Rounds.Instance.roundLocation(RoundName);
         }
 
         public bool AddScore(int distanceIndex, int endIndex, EScore score)

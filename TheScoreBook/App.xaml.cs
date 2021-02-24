@@ -17,7 +17,7 @@ namespace TheScoreBook
             // ExperimentalFeatures.Enable("Shapes_Experimental");
             Device.SetFlags(new[] {"Shapes_Experimental"});
 
-            // var r = new Round("bray 1");
+            // var r = new Round("test");
             // r.AddScore(0, 0, EScore.SIX);
             // r.AddScore(0, 0, EScore.TEN);
             // r.AddScore(0, 0, EScore.X);

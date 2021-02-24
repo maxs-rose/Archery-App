@@ -41,6 +41,20 @@
                 VerticalTextAlignment="Center"
                 FontSize="Title"
                 BackgroundColor="Gray"/>
+            <StackLayout Margin="0"
+                         Padding="0"
+                         BackgroundColor="Aqua">
+                <Label x:Name="IndoorRound"
+                       Margin="0"
+                       Padding="0"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"/>
+                <Label x:Name="OutdoorRound"
+                       Margin="0"
+                       Padding="0"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"/>
+            </StackLayout>
             <Label
                 Text="{localisation:Translate BestRounds}"
                 Margin="0"
@@ -49,6 +63,20 @@
                 VerticalTextAlignment="Center"
                 FontSize="Title"
                 BackgroundColor="Gray"/>
+            <StackLayout Margin="0"
+                         Padding="0"
+                         BackgroundColor="Aqua">
+                <Label x:Name="BestIndoorRound"
+                       Margin="0"
+                       Padding="0"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"/>
+                <Label x:Name="BestOutdoorRound"
+                       Margin="0"
+                       Padding="0"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"/>
+            </StackLayout>
         </StackLayout>
     </ScrollView>
 </Frame>

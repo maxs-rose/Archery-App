@@ -183,4 +183,10 @@
   <data name="SelectLanguage" xml:space="preserve">
     <value>Select Language</value>
   </data>
+  <data name="Indoor" xml:space="preserve">
+    <value>Indoor</value>
+  </data>
+  <data name="Outdoor" xml:space="preserve">
+    <value>Outdoor</value>
+  </data>
 </root>

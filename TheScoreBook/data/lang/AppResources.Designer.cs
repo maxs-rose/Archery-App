@@ -115,6 +115,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Indoor.
+        /// </summary>
+        public static string Indoor {
+            get {
+                return ResourceManager.GetString("Indoor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Input New Sight Mark.
         /// </summary>
         public static string InputNewMark {
@@ -129,6 +138,15 @@ namespace TheScoreBook.data.lang {
         public static string LanguageChanged {
             get {
                 return ResourceManager.GetString("LanguageChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Outdoor.
+        /// </summary>
+        public static string Outdoor {
+            get {
+                return ResourceManager.GetString("Outdoor", resourceCulture);
             }
         }
         

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
+using TheScoreBook.models.enums;
 
 namespace TheScoreBook.acessors
 {
@@ -24,6 +25,11 @@ namespace TheScoreBook.acessors
             }
 
             data = roundData.Properties().ToDictionary(x => x.Name, x => roundData[x.Name]!.Value<JArray>());
+        }
+
+        public ELocation roundLocation(string roundName)
+        {
+            return data[roundName]![0]!["location"]!.Value<string>() == "in" ? ELocation.INDOOR : ELocation.OUTDOOR;
         }
 
         private static readonly Lazy<Rounds> instance = new(() => new Rounds());
