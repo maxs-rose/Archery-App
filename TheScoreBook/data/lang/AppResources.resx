@@ -198,4 +198,10 @@
   <data name="Distance" xml:space="preserve">
     <value>Distance</value>
   </data>
+  <data name="Style" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
 </root>

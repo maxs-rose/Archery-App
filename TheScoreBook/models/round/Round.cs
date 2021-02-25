@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Net.Sockets;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.acessors;
 using TheScoreBook.exceptions;
@@ -14,10 +13,10 @@ namespace TheScoreBook.models.round
         public int DistanceCount { get; }
         public DateTime Date { get; }
         public string RoundName { get; }
-        
         public ELocation Location { get; }
+        public EStyle Style { get; }
 
-        public Round(string round)
+        public Round(string round, EStyle style, DateTime date)
         {
             if (!Rounds.Instance.Keys.Contains(round.ToLower()))
                 throw new InvalidRoundException($"{round} is not a valid round");
@@ -32,7 +31,8 @@ namespace TheScoreBook.models.round
                 Distances[i] = new Distance(dist!["distance"]!.Value<int>(), dist["unit"]!.Value<string>().ToEDistanceUnit(), dist["ends"]!.Value<int>(), dist["arrowsPerEnd"]!.Value<int>());
             }
 
-            Date = DateTime.Now;
+            Style = style;
+            Date = date;
             RoundName = round;
             Location = Rounds.Instance.roundLocation(round);
         }
@@ -94,7 +94,11 @@ namespace TheScoreBook.models.round
         }
 
         public int NextEndIndex(int distanceIndex)
-            => Distances[distanceIndex].NextEndIndex();
+        {
+            if(Distances.Length > distanceIndex && distanceIndex >= 0)
+                return Distances[distanceIndex].NextEndIndex();
+            return -1;
+        }
         
         public int Hits()
             => Distances.Sum(d => d.Hits());
@@ -132,6 +136,22 @@ namespace TheScoreBook.models.round
         public int Golds(int distanceIndex, int endIndex)
             => Distances[distanceIndex].Golds(endIndex);
 
+        public void Finish()
+        {
+            foreach (var dist in Distances)
+                dist.Finish();
+        }
+
+        public void Finish(int distanceIndex)
+        {
+            Distances[distanceIndex].Finish();
+        }
+
+        public void Finish(int distanceIndex, int endIndex)
+        {
+            Distances[distanceIndex].Finish(endIndex);
+        }
+        
         public JObject ToJson()
         {
             var json = new JObject()

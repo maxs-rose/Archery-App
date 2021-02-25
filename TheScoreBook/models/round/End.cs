@@ -21,6 +21,14 @@ namespace TheScoreBook.models.round
             ArrowsPerEnd = json["scoresPerEnd"].Value<int>();
         }
 
+        public EScore? GetScore(int scoreIndex)
+        {
+            if (scores.Count > scoreIndex && scoreIndex >= 0)
+                return scores[scoreIndex];
+
+            return null;
+        }
+
         public bool AddScore(EScore score)
         {
             if (scores.Count >= ArrowsPerEnd) return false;
@@ -74,6 +82,12 @@ namespace TheScoreBook.models.round
         public override string ToString()
             => $"max: {ArrowsPerEnd}, complete: {EndComplete()}, scores: {EndString()}, endScore: {Score()}]";
 
+        public void Finish()
+        {
+            while(scores.Count != ArrowsPerEnd)
+                scores.Add(EScore.M);
+        }
+        
         public JObject ToJson()
         {
             var json = new JObject

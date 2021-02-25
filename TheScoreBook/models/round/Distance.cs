@@ -1,4 +1,6 @@
 ﻿using System.Linq;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models.enums;
 
@@ -93,12 +95,33 @@ namespace TheScoreBook.models.round
         public int Score(int index)
             => Ends[index].Score();
 
+        public int RunningTotal(int toIndex)
+        {
+            var sum = 0;
+
+            for (var i = 0; i <= toIndex && i < MaxEnds; i++)
+                sum += Ends[i].Score();
+            
+            return sum;
+        }
+
         public string DistanceEndString()
             => $"[{string.Join(",", Ends.Select(e => e.EndString()))}]";
         
         public override string ToString()
             => $"ends: {MaxEnds}, scores: {DistanceEndString()}, endScore: {Score()}]";
 
+        public void Finish()
+        {
+            foreach (var end in Ends)
+                end.Finish();
+        }
+
+        public void Finish(int endIndex)
+        {
+            Ends[endIndex].Finish();
+        }
+        
         public JObject ToJson()
         {
             var json = new JObject

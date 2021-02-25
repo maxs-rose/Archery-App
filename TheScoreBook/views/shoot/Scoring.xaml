@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<base:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+                     xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+                     x:Class="TheScoreBook.views.shoot.Scoring">
+    <base:AnimationPage.PageAnimation>
+        <base:PageAnimation Duration="Short" Subtype="FromTop"/>
+    </base:AnimationPage.PageAnimation>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid
+                VerticalOptions="Start"
+                HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button 
+                    Grid.Column="0"
+                    Text="{localisation:Translate Back}" Clicked="OnBackButtonClicked" />
+                <Label
+                    Grid.Column="1"
+                    Text="{localisation:Translate Round}"/>
+                <Button
+                    Grid.Column="2"
+                    Text="{localisation:Translate Finish}" Clicked="OnFinishButtonClicked" />
+            </Grid>
+            <Grid
+                HorizontalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalTextAlignment="Center"
+                    Text="H"/>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Center"
+                    Text="G"/>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    HorizontalTextAlignment="Center"
+                    Text="T"/>
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    x:Name="HitsDisplay"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Hits}"/>
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    x:Name="GoldDisplay"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Golds}"/>
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    x:Name="TotalDisplay"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Score}"/>
+            </Grid>
+            <ScrollView>
+                <StackLayout x:Name="DistanceDisplay"/>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</base:AnimationPage>
