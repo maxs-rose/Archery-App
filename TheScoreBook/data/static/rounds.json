@@ -28,5 +28,22 @@
       "arrowsPerEnd": 3,
       "ends": 10
     }
+  ],
+  "test2":
+  [
+    {
+      "location": "out",
+      "distance": 18,
+      "unit": "m",
+      "arrowsPerEnd": 3,
+      "ends": 2
+    },
+    {
+    "location": "out",
+    "distance": 18,
+    "unit": "m",
+    "arrowsPerEnd": 3,
+    "ends": 2
+  }
   ]
 }

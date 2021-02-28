@@ -79,7 +79,10 @@ namespace TheScoreBook.models.round
             => Distances.All(d => d.AllEndsComplete());
 
         public bool DistanceComplete(int distanceIndex)
-            => Distances[distanceIndex].AllEndsComplete();
+        {
+            if (distanceIndex < 0 || distanceIndex >= DistanceCount) return false;
+            return Distances[distanceIndex].AllEndsComplete();
+        } 
 
         public bool DistanceEndComplete(int distanceIndex, int endIndex)
             => Distances[distanceIndex].EndComplete(endIndex);

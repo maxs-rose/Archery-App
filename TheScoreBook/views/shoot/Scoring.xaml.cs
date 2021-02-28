@@ -2,7 +2,6 @@
 using FormsControls.Base;
 using TheScoreBook.game;
 using TheScoreBook.models.enums;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using NavigationPage = Xamarin.Forms.NavigationPage;
 
 namespace TheScoreBook.views.shoot
@@ -27,6 +26,7 @@ namespace TheScoreBook.views.shoot
             BindingContext = this;
 
             UpdateScoringUiEvent += UpdateUI;
+            UpdateScoringUiEvent += OnDistanceFinished;
             
             DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex));
         }
@@ -34,6 +34,7 @@ namespace TheScoreBook.views.shoot
         ~Scoring()
         {
             UpdateScoringUiEvent -= UpdateUI;
+            UpdateScoringUiEvent -= OnDistanceFinished;
         }
 
         private void OnFinishButtonClicked(object sender, EventArgs e)
@@ -55,6 +56,19 @@ namespace TheScoreBook.views.shoot
             HitsDisplay.Text = Hits.ToString();
             GoldDisplay.Text = Golds.ToString();
             TotalDisplay.Text = Score.ToString();
+        }
+
+        private int previousDistance = 0;
+        private void OnDistanceFinished()
+        {
+            if (GameManager.Instance.CurrentGame.AllDistancesComplete())
+                return;
+            
+            if (NextDistanceIndex > previousDistance)
+            {
+                previousDistance = NextDistanceIndex;
+                DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex));
+            }
         }
     }
 }
