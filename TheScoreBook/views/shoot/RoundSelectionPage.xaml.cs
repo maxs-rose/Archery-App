@@ -49,7 +49,7 @@ namespace TheScoreBook.views.shoot
             if (string.IsNullOrEmpty(SelectedRound))
                 return;
             
-            GameManager.Instance.StartRound(SelectedRound.ToLower(), PossibleStyles[SelectedStyle].ToEStyle(), SelectedDate);
+            GameManager.StartRound(SelectedRound.ToLower(), PossibleStyles[SelectedStyle].ToEStyle(), SelectedDate);
             Navigation.PushAsync(new Scoring());
         }
     }

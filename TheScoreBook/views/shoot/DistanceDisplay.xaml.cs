@@ -24,7 +24,7 @@ namespace TheScoreBook.views.shoot
             Scoring.UpdateScoringUiEvent += UpdateUI;
             
             DistanceIndex = distanceIndex;
-            Distance = GameManager.Instance.CurrentGame.Distances[distanceIndex];
+            Distance = GameManager.GetDistance(distanceIndex);
 
             arrowsPerEnd = Distance.Ends[0].ArrowsPerEnd;
             endCount = Distance.MaxEnds; 

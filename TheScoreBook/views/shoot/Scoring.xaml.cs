@@ -8,12 +8,12 @@ namespace TheScoreBook.views.shoot
 {
     public partial class Scoring : AnimationPage
     {
-        public int Hits => GameManager.Instance.CurrentGame.Hits();
-        public int Golds => GameManager.Instance.CurrentGame.Golds();
-        public int Score => GameManager.Instance.CurrentGame.Score();
+        public int Hits => GameManager.Hits();
+        public int Golds => GameManager.Golds();
+        public int Score => GameManager.Score();
 
-        private int NextDistanceIndex => GameManager.Instance.CurrentGame.NextDistanceIndex();
-        private int NextEndIndex => GameManager.Instance.CurrentGame.NextEndIndex(NextDistanceIndex);
+        private int NextDistanceIndex => GameManager.NextDistanceIndex();
+        private int NextEndIndex => GameManager.NextEndIndex(NextDistanceIndex);
         
         public delegate void UpdateScoringUI();
 
@@ -39,7 +39,7 @@ namespace TheScoreBook.views.shoot
 
         private void OnFinishButtonClicked(object sender, EventArgs e)
         {
-            GameManager.Instance.FinishRound();
+            GameManager.FinishRound();
             Navigation.RemovePage(Navigation.NavigationStack[^2]);
 
             Navigation.PopAsync(true);
@@ -47,7 +47,7 @@ namespace TheScoreBook.views.shoot
 
         private void OnBackButtonClicked(object sender, EventArgs e)
         {
-            GameManager.Instance.CurrentGame.AddScore(NextDistanceIndex, NextEndIndex, EScore.TEN);
+            GameManager.AddScore(NextDistanceIndex, NextEndIndex, EScore.TEN);
             UpdateScoringUiEvent();
         }
 
@@ -61,7 +61,7 @@ namespace TheScoreBook.views.shoot
         private int previousDistance = 0;
         private void OnDistanceFinished()
         {
-            if (GameManager.Instance.CurrentGame.AllDistancesComplete())
+            if (GameManager.AllDistancesComplete)
                 return;
             
             if (NextDistanceIndex > previousDistance)
