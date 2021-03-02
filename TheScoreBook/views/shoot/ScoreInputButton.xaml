@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheScoreBook.views.shoot.ScoreInputButton">
+    <StackLayout
+        Padding="0"
+        Margin="0"
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill">
+        <Frame
+            x:Name="ColourFrame"
+            CornerRadius="100"
+            BackgroundColor="ForestGreen">
+            <Frame
+                CornerRadius="100"
+                BackgroundColor="White">
+                <Label
+                    x:Name="ButtonText"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"/>
+            </Frame>
+        </Frame>
+    </StackLayout>
+</Frame>

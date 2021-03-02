@@ -203,7 +203,7 @@ namespace TheScoreBook.views.shoot
         
         private void OpenScoreUI(int row)
         {
-            PopupNavigation.Instance.PushAsync(new ScoreInputKeyboard());
+            PopupNavigation.Instance.PushAsync(new ScoreInputKeyboard(DistanceIndex, row, arrowsPerEnd));
             Debug.WriteLine($"Clicked {row}!");
         }
     }

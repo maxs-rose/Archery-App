@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
              xmlns:pages="http://rotorgames.com"
+             xmlns:shoot="clr-namespace:TheScoreBook.views.shoot;assembly=TheScoreBook"
              x:Class="TheScoreBook.views.shoot.ScoreInputKeyboard">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation
@@ -17,7 +18,172 @@
             EasingOut="SinIn"
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
-    <StackLayout>
-        <Label Text="Hi!"/>
-    </StackLayout>
+    <StackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+        <Grid x:Name="ScoreDisplay">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Grid x:Name="ScoreInput">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <shoot:ScoreInputButton
+                x:Name="Button1"
+                Grid.Row="0"
+                Grid.Column="0"
+                Score="X"
+                Margin="0"
+                Padding="0"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                BackgroundColor="Transparent">
+            </shoot:ScoreInputButton>
+            <shoot:ScoreInputButton
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="0"
+                Padding="0"
+                BackgroundColor="Transparent"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                Score="TEN">
+            </shoot:ScoreInputButton>
+            <shoot:ScoreInputButton
+                Grid.Row="0"
+                Grid.Column="2"
+                Margin="0"
+                Padding="0"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                BackgroundColor="Transparent"
+                Score="NINE">
+            </shoot:ScoreInputButton>
+            
+            <shoot:ScoreInputButton
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0"
+                Padding="0"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                BackgroundColor="Transparent"
+                Score="EIGHT">
+            </shoot:ScoreInputButton>
+            <shoot:ScoreInputButton
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="0"
+                Padding="0"
+                BackgroundColor="Transparent"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                Score="SEVEN">
+            </shoot:ScoreInputButton>
+            <shoot:ScoreInputButton
+                Grid.Row="1"
+                Grid.Column="2"
+                Margin="0"
+                Padding="0"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                BackgroundColor="Transparent"
+                Score="SIX">
+            </shoot:ScoreInputButton>
+            
+            <shoot:ScoreInputButton
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="0"
+                Padding="0"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                BackgroundColor="Transparent"
+                Score="FIVE">
+            </shoot:ScoreInputButton>
+            <shoot:ScoreInputButton
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="0"
+                Padding="0"
+                BackgroundColor="Transparent"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                Score="FOUR">
+            </shoot:ScoreInputButton>
+            <shoot:ScoreInputButton
+                Grid.Row="2"
+                Grid.Column="2"
+                Margin="0"
+                Padding="0"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                BackgroundColor="Transparent"
+                Score="THREE">
+            </shoot:ScoreInputButton>
+            
+            <shoot:ScoreInputButton
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="0"
+                Padding="0"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                BackgroundColor="Transparent"
+                Score="TWO">
+            </shoot:ScoreInputButton>
+            <shoot:ScoreInputButton
+                Grid.Row="3"
+                Grid.Column="1"
+                Margin="0"
+                Padding="0"
+                BackgroundColor="Transparent"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                Score="ONE">
+            </shoot:ScoreInputButton>
+            <shoot:ScoreInputButton
+                Grid.Row="3"
+                Grid.Column="2"
+                Margin="0"
+                Padding="0"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                BackgroundColor="Transparent"
+                Score="M">
+            </shoot:ScoreInputButton>
+            
+            <shoot:ScoreInputButton
+                Grid.Row="4"
+                Grid.Column="0"
+                Margin="0"
+                Padding="0"
+                BackgroundColor="Transparent"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                WordString="\U0001f627">
+            </shoot:ScoreInputButton>
+            <shoot:ScoreInputButton
+                Grid.Row="4"
+                Grid.Column="2"
+                Margin="0"
+                Padding="0"
+                Width="{Binding Width, Source={x:Reference Button1}}"
+                Height="{Binding Width, Source={x:Reference Button1}}"
+                BackgroundColor="Transparent"
+                WordString="DEL">
+            </shoot:ScoreInputButton>
+        </Grid>
+    </StackLayout>    
 </pages:PopupPage>

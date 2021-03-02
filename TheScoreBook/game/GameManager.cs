@@ -75,5 +75,11 @@ namespace TheScoreBook.game
 
         public static bool EndComplete(int distanceIndex, int end)
             => GameInProgress && CurrentGame.Distances[distanceIndex].EndComplete(end);
+
+        public static void Finish(int distance, int end)
+        {
+            if(GameInProgress)
+                CurrentGame.Finish(distance, end);
+        }
     }
 }
