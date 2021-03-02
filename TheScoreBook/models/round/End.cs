@@ -105,5 +105,10 @@ namespace TheScoreBook.models.round
 
             return json;
         }
+
+        public void ClearEnd()
+        {
+            scores.Clear();
+        }
     }
 }

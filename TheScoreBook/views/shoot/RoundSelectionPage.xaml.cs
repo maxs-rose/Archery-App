@@ -46,11 +46,17 @@ namespace TheScoreBook.views.shoot
 
         private void OnStartButtonOnClicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(SelectedRound))
+            if (string.IsNullOrEmpty(SelectedRound) || GameManager.GameInProgress)
                 return;
             
             GameManager.StartRound(SelectedRound.ToLower(), PossibleStyles[SelectedStyle].ToEStyle(), SelectedDate);
             Navigation.PushAsync(new Scoring());
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            GameManager.FinishRound(false);
+            return base.OnBackButtonPressed();
         }
     }
 }

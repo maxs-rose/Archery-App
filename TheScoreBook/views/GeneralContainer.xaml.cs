@@ -59,7 +59,9 @@ namespace TheScoreBook.views
 
         private async void ShootButtonOnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new RoundSelectionPage());
+            if (Navigation.NavigationStack.OfType<RoundSelectionPage>().Any())
+                return;
+            await Navigation.PushAsync(new RoundSelectionPage());
         }
     }
 }

@@ -6,17 +6,25 @@
     <StackLayout
         Padding="0"
         Margin="0"
-        VerticalOptions="Fill"
-        HorizontalOptions="Fill">
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
         <Frame
             x:Name="ColourFrame"
             CornerRadius="100"
-            BackgroundColor="ForestGreen">
+            Padding="20"
+            Margin="0"
+            BackgroundColor="ForestGreen"
+            WidthRequest="80"
+            HeightRequest="80">
             <Frame
                 CornerRadius="100"
-                BackgroundColor="White">
+                BackgroundColor="White"
+                Padding="0"
+                Margin="0">
                 <Label
                     x:Name="ButtonText"
+                    Padding="0"
+                    Margin="0"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"

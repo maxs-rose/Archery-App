@@ -167,5 +167,10 @@ namespace TheScoreBook.models.round
             
             return json;
         }
+
+        public void ClearEnd(int distanceIndex, int endIndex)
+        {
+            Distances[distanceIndex].ClearEnd(endIndex);
+        }
     }
 }

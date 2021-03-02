@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Input;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using TheScoreBook.game;
 using TheScoreBook.models.enums;
+using Xamarin.Forms;
 
 namespace TheScoreBook.views.shoot
 {
@@ -14,6 +17,7 @@ namespace TheScoreBook.views.shoot
         private readonly int ArrowsPerEnd;
 
         private List<EScore> inputScores = new ();
+        private List<ScoreInputButton> displayButtons = new();
         
         public ScoreInputKeyboard(int distance, int end, int arrowsPerEnd)
         {
@@ -25,11 +29,41 @@ namespace TheScoreBook.views.shoot
             ArrowsPerEnd = arrowsPerEnd;
             
             GenerateDisplayButtons();
+            SetButtonBindings();
         }
 
         private void GenerateDisplayButtons()
         {
-            
+            for (var i = 0; i < ArrowsPerEnd; i++)
+            {
+                ScoreDisplay.ColumnDefinitions.Add(new ColumnDefinition
+                {
+                    Width = GridLength.Star
+                });
+                displayButtons.Add(new ScoreInputButton
+                {
+                    BackgroundColor = Color.Transparent
+                });
+                ScoreDisplay.Children.Add(displayButtons[^1], i, 0);
+            }
+        }
+
+        private void SetButtonBindings()
+        {
+            foreach (ScoreInputButton b in ScoreInput.Children)
+            {
+                ICommand com = b.WordString switch
+                {
+                    "" => new Command(() => InputScore((EScore) b.Score!)),
+                    "DEL" => new Command(RemoveScore),
+                    _ => new Command(AcceptScores)
+                };
+
+                b.GestureRecognizers.Add(new TapGestureRecognizer
+                {
+                    Command = com
+                });
+            }
         }
 
         private void InputScore(EScore score)
@@ -38,6 +72,7 @@ namespace TheScoreBook.views.shoot
                 return;
             
             inputScores.Add(score);
+            displayButtons[inputScores.Count - 1].Score = inputScores[^1];
         }
 
         private void RemoveScore()
@@ -46,15 +81,20 @@ namespace TheScoreBook.views.shoot
                 return;
             
             inputScores.RemoveAt(inputScores.Count - 1);
+            displayButtons[inputScores.Count].Score = null;
         }
 
         private void AcceptScores()
         {
+            if (GameManager.EndComplete(Distance, End))
+                GameManager.ClearEnd(Distance, End);
+            
             foreach (var s in inputScores)
                 GameManager.AddScore(Distance, End, s);
 
             GameManager.Finish(Distance, End);
             PopupNavigation.Instance.PopAsync(true);
+            Scoring.UpdateScoringUiEvent?.Invoke();
         }
     }
 }

@@ -5,8 +5,8 @@ namespace TheScoreBook.views.shoot
 {
     public partial class ScoreInputButton : Frame
     {
-        private EScore score;
-        public EScore Score
+        private EScore? score = null;
+        public EScore? Score
         {
             get => score;
             set
@@ -64,7 +64,7 @@ namespace TheScoreBook.views.shoot
         private void UpdateLabelText()
         {
             if(WordString == "")
-                ButtonText.Text = score.ToUserString();
+                ButtonText.Text = score?.ToUserString();
             else
                 ButtonText.Text = WordString;
         }

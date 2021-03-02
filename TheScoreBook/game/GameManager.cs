@@ -18,16 +18,23 @@ namespace TheScoreBook.game
             CurrentGame = new Round(roundName, style, date);
         }
         
-        public static void FinishRound()
+        public static void FinishRound(bool saveResult = true)
         {
             GameInProgress = false;
             CurrentGame.Finish();
-            UserData.Instance.SaveRound(CurrentGame);
+            if(saveResult)
+                UserData.Instance.SaveRound(CurrentGame);
             CurrentGame = null;
         }
 
         public static bool AddScore(int distanceIndex, int endIndex, EScore score)
             => GameInProgress && CurrentGame.AddScore(distanceIndex, endIndex, score);
+
+        public static void ClearEnd(int distanceIndex, int endIndex)
+        {
+            if (GameInProgress)
+                CurrentGame.ClearEnd(distanceIndex, endIndex);
+        }
 
         public static Distance GetDistance(int distanceIndex)
             => GameInProgress ? CurrentGame.Distances[distanceIndex] : null;

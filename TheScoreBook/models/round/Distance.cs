@@ -141,5 +141,10 @@ namespace TheScoreBook.models.round
 
             return json;
         }
+
+        public void ClearEnd(int endIndex)
+        {
+            Ends[endIndex].ClearEnd();
+        }
     }
 }
