@@ -1,4 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Rg.Plugins.Popup.Services;
+using TheScoreBook.behaviours;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
@@ -16,6 +22,7 @@ namespace TheScoreBook.views.shoot
         private int endCount;
         private Label[] endLabels;
         private Label[] endTotals;
+        private Button[] inputButtons;
         
         public DistanceDisplay(int distanceIndex)
         {
@@ -31,7 +38,11 @@ namespace TheScoreBook.views.shoot
             
             endLabels = new Label[arrowsPerEnd * endCount];
             endTotals = new Label[3 * endCount];
+            inputButtons = new Button[endCount];
             CreateEndDisplay();
+            
+            inputButtons[0].BorderColor = Color.Pink;
+            inputButtons[0].HeightRequest = 50;
         }
         
         ~DistanceDisplay()
@@ -61,17 +72,26 @@ namespace TheScoreBook.views.shoot
             
             EndDisplay.Children.Add(new Label()
             {
-                Text = $"ET"
+                Text = "ET",
+                InputTransparent = true,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalTextAlignment = TextAlignment.Center
             }, arrowsPerEnd, 0);
             
             EndDisplay.Children.Add(new Label()
             {
-                Text = $"G"
+                Text = "G",
+                InputTransparent = true,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalTextAlignment = TextAlignment.Center
             }, arrowsPerEnd+1, 0);
             
             EndDisplay.Children.Add(new Label()
             {
-                Text = $"RT"
+                Text = "RT",
+                InputTransparent = true,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalTextAlignment = TextAlignment.Center
             }, arrowsPerEnd+2, 0);
             
             
@@ -83,16 +103,51 @@ namespace TheScoreBook.views.shoot
 
         private void AddEnd(int row)
         {
+            EndSelectionBox(row);
             for (var j = 0; j < arrowsPerEnd; j++)
             {
                 var box = new Label
                 {
-                    Text = "0"
+                    Text = "",
+                    InputTransparent = true,
+                    VerticalTextAlignment = TextAlignment.Center,
+                    HorizontalTextAlignment = TextAlignment.Center
                 };
 
                 endLabels[arrowsPerEnd * row + j] = box;
                 EndDisplay.Children.Add(box, j, row+1);
             }
+        }
+
+        private void EndSelectionBox(int row)
+        {
+            var selectionButton = new Button()
+            {
+                Margin = 0,
+                Padding = 0,
+                BackgroundColor = Color.Transparent,
+                BorderWidth = 3
+            };
+            
+            selectionButton.Clicked += delegate
+            {
+                if(GameManager.NextDistanceIndex() == DistanceIndex 
+                   && GameManager.NextEndIndex(DistanceIndex) == row)
+                    OpenScoreUI(row);
+            };
+
+            selectionButton.Behaviors.Add(new LongButtonPressBehaviour()
+            {
+                Command = new Command(() =>
+                {
+                    if (GameManager.NextDistanceIndex() >= DistanceIndex
+                        && GameManager.EndComplete(DistanceIndex, row))
+                        OpenScoreUI(row);
+                })
+            });
+
+            inputButtons[row] = selectionButton;
+            EndDisplay.Children.Add(selectionButton, 0, arrowsPerEnd+3, row+1, row+2);
         }
 
         private void AddEndTotals()
@@ -105,7 +160,11 @@ namespace TheScoreBook.views.shoot
 
             void AddTotal(int col, int row)
             {
-                var t = new Label();
+                var t = new Label()
+                {
+                    VerticalTextAlignment = TextAlignment.Center,
+                    HorizontalTextAlignment = TextAlignment.Center
+                };
                 endTotals[3 * row + col] = t;
                 EndDisplay.Children.Add(t, arrowsPerEnd+col, row+1);
             }
@@ -121,6 +180,18 @@ namespace TheScoreBook.views.shoot
 
             for (var i = 0; i < endCount; i++)
             {
+                if (i == GameManager.NextEndIndex(DistanceIndex)
+                    && GameManager.NextDistanceIndex() == DistanceIndex)
+                {
+                    inputButtons[i].BorderColor = Color.Pink;
+                    inputButtons[i].HeightRequest = 50;
+                }
+                else
+                {
+                    inputButtons[i].BorderColor = Color.Transparent;
+                    inputButtons[i].HeightRequest = 0;
+                }
+                
                 if (ends[i]?.GetScore(0) == null)
                     continue;
                 
@@ -128,6 +199,12 @@ namespace TheScoreBook.views.shoot
                 endTotals[3 * i + 1].Text = ends[i].Golds().ToString();
                 endTotals[3 * i + 2].Text = Distance.RunningTotal(i).ToString();
             }
+        }
+        
+        private void OpenScoreUI(int row)
+        {
+            PopupNavigation.Instance.PushAsync(new ScoreInputKeyboard());
+            Debug.WriteLine($"Clicked {row}!");
         }
     }
 }

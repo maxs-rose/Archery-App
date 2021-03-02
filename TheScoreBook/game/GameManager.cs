@@ -1,6 +1,5 @@
 ﻿using System;
 using TheScoreBook.acessors;
-using TheScoreBook.Annotations;
 using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
 
@@ -73,5 +72,8 @@ namespace TheScoreBook.game
 
             return -1;   
         }
+
+        public static bool EndComplete(int distanceIndex, int end)
+            => GameInProgress && CurrentGame.Distances[distanceIndex].EndComplete(end);
     }
 }

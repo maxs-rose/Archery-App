@@ -69,7 +69,7 @@ namespace TheScoreBook.models.round
             => Ends.All(e => e.EndComplete());
         
         public bool EndComplete(int endIndex)
-            => Ends[endIndex].EndComplete();
+            => endIndex >= 0 && endIndex < MaxEnds && Ends[endIndex].EndComplete();
 
         public int Hits()
             => Ends.Sum(e => e.Hits());
