@@ -213,4 +213,7 @@
   <data name="Score" xml:space="preserve">
     <value>Score</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value>&lt;-</value>
+  </data>
 </root>
