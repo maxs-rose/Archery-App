@@ -41,14 +41,20 @@ namespace TheScoreBook.views.shoot
         {
             GameManager.FinishRound();
             Navigation.RemovePage(Navigation.NavigationStack[^2]);
-
+            ((GeneralContainer) Navigation.NavigationStack[^2]).AddFinishedPage();
             Navigation.PopAsync(true);
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            GameManager.FinishRound(false);
+            return base.OnBackButtonPressed();
         }
 
         private void OnBackButtonClicked(object sender, EventArgs e)
         {
-            GameManager.AddScore(NextDistanceIndex, NextEndIndex, EScore.TEN);
-            UpdateScoringUiEvent();
+            GameManager.FinishRound(false);
+            Navigation.PopAsync(true);
         }
 
         private void UpdateUI()

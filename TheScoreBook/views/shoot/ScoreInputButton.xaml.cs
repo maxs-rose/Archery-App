@@ -1,4 +1,5 @@
-﻿using TheScoreBook.models.enums;
+﻿using TheScoreBook.localisation;
+using TheScoreBook.models.enums;
 using Xamarin.Forms;
 
 namespace TheScoreBook.views.shoot
@@ -24,6 +25,7 @@ namespace TheScoreBook.views.shoot
             set
             {
                 wordString = value;
+                UpdateRingColour();
                 UpdateLabelText();
             }   
         }
@@ -55,10 +57,20 @@ namespace TheScoreBook.views.shoot
                 case EScore.ONE:
                     ColourFrame.BackgroundColor = Color.White;
                     break;
-                default:
+                case EScore.M:
+                case EScore.FOUR:
+                case EScore.THREE:
                     ColourFrame.BackgroundColor = Color.Black;
                     break;
+                default:
+                    ColourFrame.BackgroundColor = Color.Gray;
+                    break;
             }
+
+            if (WordString == "X")
+                WordString = LocalisationManager.Instance["Delete"];
+            else if (WordString == "^")
+                WordString = LocalisationManager.Instance["Tick"];
         }
 
         private void UpdateLabelText()

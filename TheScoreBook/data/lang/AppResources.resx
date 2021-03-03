@@ -204,4 +204,13 @@
   <data name="Finish" xml:space="preserve">
     <value>Finish</value>
   </data>
+  <data name="Tick" xml:space="preserve">
+    <value>✔</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>DEL</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Score</value>
+  </data>
 </root>

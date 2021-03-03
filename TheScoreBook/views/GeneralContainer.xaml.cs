@@ -11,7 +11,7 @@ namespace TheScoreBook.views
 {
     public partial class GeneralContainer : ContentPage
     {
-        private bool isCurrentRoundsPage = true;
+        private int currentPage = 0;
         public GeneralContainer()
         {
             InitializeComponent();
@@ -22,26 +22,24 @@ namespace TheScoreBook.views
 
         public async void ScoreButtonOnClicked(object sender, EventArgs e)
         {
-            if (isCurrentRoundsPage)
+            if (currentPage == 0)
                 return;
 
             Layout.Children.Insert(0, new PastRoundsPage());
             await TransitionInOut(Layout.Children[1], Width, Layout.Children[0], -Width, 0);
             Layout.Children.RemoveAt(1);
-            
-            isCurrentRoundsPage = true;
+            currentPage = 0;
         }
 
         public async void ProfileButtonOnClicked(object sender, EventArgs e)
         {
-            if (!isCurrentRoundsPage)
+            if (currentPage == 1)
                 return;
 
             Layout.Children.Insert(0, new UserPage());
             await TransitionInOut(Layout.Children[1], -Width, Layout.Children[0], Width, 0);
             Layout.Children.RemoveAt(1);
-            
-            isCurrentRoundsPage = false;
+            currentPage = 1;
         }
 
         private async Task TransitionInOut(VisualElement leaving, double lTo, VisualElement entering, double eFrom, double eTo, uint animationLength = 375)
@@ -55,6 +53,13 @@ namespace TheScoreBook.views
             leaving.FadeTo(0, animationLength, Easing.SinIn);
             entering.FadeTo(1, animationLength, Easing.SinOut);
             await entering.TranslateTo(eTo, 0, animationLength + 3, Easing.SinOut); // add a little extra time to the awaited operation to account for any overhead
+        }
+
+        public void AddFinishedPage()
+        {
+            Layout.Children.RemoveAt(0);
+            Layout.Children.Add(new FinishedRound());
+            currentPage = 2;
         }
 
         private async void ShootButtonOnClicked(object sender, EventArgs e)

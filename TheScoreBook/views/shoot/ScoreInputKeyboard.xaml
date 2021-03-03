@@ -5,6 +5,7 @@
                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
                  xmlns:pages="http://rotorgames.com"
                  xmlns:shoot="clr-namespace:TheScoreBook.views.shoot;assembly=TheScoreBook"
+                 xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
                  x:Class="TheScoreBook.views.shoot.ScoreInputKeyboard">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation
@@ -144,14 +145,14 @@
                     Margin="0"
                     Padding="0"
                     BackgroundColor="Transparent"
-                    WordString="&#x2714;" />
+                    WordString="^" />
                 <shoot:ScoreInputButton
                     Grid.Row="4"
                     Grid.Column="2"
                     Margin="0"
                     Padding="0"
                     BackgroundColor="Transparent"
-                    WordString="DEL" />
+                    WordString="X" />
             </Grid>
         </StackLayout>
     </Frame>

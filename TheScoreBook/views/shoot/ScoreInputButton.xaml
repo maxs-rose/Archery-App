@@ -13,14 +13,20 @@
             CornerRadius="100"
             Padding="20"
             Margin="0"
-            BackgroundColor="ForestGreen"
-            WidthRequest="80"
-            HeightRequest="80">
+            BackgroundColor="Gray"
+            WidthRequest="30"
+            HeightRequest="30"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
             <Frame
                 CornerRadius="100"
                 BackgroundColor="White"
                 Padding="0"
-                Margin="0">
+                Margin="0"
+                WidthRequest="30"
+                HeightRequest="30"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
                 <Label
                     x:Name="ButtonText"
                     Padding="0"

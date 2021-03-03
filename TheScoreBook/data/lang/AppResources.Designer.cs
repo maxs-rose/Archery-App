@@ -97,6 +97,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DEL.
+        /// </summary>
+        public static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Distance.
         /// </summary>
         public static string Distance {
@@ -232,6 +241,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Score.
+        /// </summary>
+        public static string Score {
+            get {
+                return ResourceManager.GetString("Score", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Scores.
         /// </summary>
         public static string Scores {
@@ -291,6 +309,15 @@ namespace TheScoreBook.data.lang {
         public static string Tens {
             get {
                 return ResourceManager.GetString("Tens", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ✔.
+        /// </summary>
+        public static string Tick {
+            get {
+                return ResourceManager.GetString("Tick", resourceCulture);
             }
         }
         

@@ -42,7 +42,9 @@ namespace TheScoreBook.views.shoot
                 });
                 displayButtons.Add(new ScoreInputButton
                 {
-                    BackgroundColor = Color.Transparent
+                    BackgroundColor = Color.Transparent,
+                    Margin = 0,
+                    Padding = 0
                 });
                 ScoreDisplay.Children.Add(displayButtons[^1], i, 0);
             }

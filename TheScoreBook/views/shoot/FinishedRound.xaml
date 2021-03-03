@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+             xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+             x:Class="TheScoreBook.views.shoot.FinishedRound">
+    <StackLayout>
+        <StackLayout
+            VerticalOptions="Start">
+            <Label Text="{localisation:Translate Results}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   FontSize="Header"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="{localisation:Translate Round}"/>
+                <Label
+                    x:Name="RoundName"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+                
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="{localisation:Translate Date}"/>
+                <Label
+                    x:Name="Date"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+                
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="{localisation:Translate Style}"/>
+                <Label
+                    x:Name="Bow"
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+                
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="{localisation:Translate Score}"/>
+                <Label
+                    x:Name="Score"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"/>
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+</Frame>

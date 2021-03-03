@@ -12,7 +12,7 @@
             <Label Text="{helpers:Translate Scores}"
                    HorizontalOptions="Center"
                    VerticalOptions="Start"
-                   FontSize="Header"></Label>
+                   FontSize="Header"/>
             <Grid HorizontalOptions="Center" 
                 VerticalOptions="Start"
                 Margin="40,0"

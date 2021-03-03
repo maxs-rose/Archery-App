@@ -22,6 +22,7 @@ namespace TheScoreBook.game
         {
             GameInProgress = false;
             CurrentGame.Finish();
+            UserData.LatestRound = CurrentGame;
             if(saveResult)
                 UserData.Instance.SaveRound(CurrentGame);
             CurrentGame = null;

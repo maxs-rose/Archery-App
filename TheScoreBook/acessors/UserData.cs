@@ -35,6 +35,7 @@ namespace TheScoreBook.acessors
         // Round stuff
         private static readonly Lazy<List<Round>> rounds = new(() => Instance.GetRounds());
         public static ReadOnlyCollection<Round> Rounds => rounds.Value.AsReadOnly();
+        public static Round LatestRound;
 
         private UserData()
         {
