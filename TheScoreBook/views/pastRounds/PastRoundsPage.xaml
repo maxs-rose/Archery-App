@@ -8,7 +8,8 @@
              Margin="0">
     <StackLayout 
         Padding="0"
-        Margin="0">
+        Margin="0"
+        VerticalOptions="FillAndExpand">
             <Label Text="{helpers:Translate Scores}"
                    HorizontalOptions="Center"
                    VerticalOptions="Start"
@@ -29,9 +30,6 @@
                         Grid.ColumnSpan="2"
                         Margin="0"
                         Padding="0"
-                        BorderWidth="2"
-                        CornerRadius="100"
-                        BorderColor="Black"
                         IsEnabled="False"
                         BackgroundColor="Transparent"></Button>
                 <Button x:Name="ShowAllPast" Clicked="ShowAllPast_OnClicked" BackgroundColor="Transparent" Grid.Column="0" Text="{helpers:Translate All}"
@@ -49,7 +47,6 @@
                         FontSize="Subtitle"
                         Margin="0, 2"
                         Padding="0"
-                        BorderColor="Black"
                         BorderWidth="2"
                         CornerRadius="100"></Button>
             </Grid>

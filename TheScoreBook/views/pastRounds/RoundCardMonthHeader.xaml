@@ -5,8 +5,8 @@
        x:Class="TheScoreBook.views.pastRounds.RoundCardMonthHeader"
        Margin="0" Padding="0">
        
-       <Label BackgroundColor="Gray"
-              Padding="0, 10"
+       <Label BackgroundColor="DarkGray"
+              Padding="10, 10"
               HorizontalTextAlignment="Start"
               VerticalTextAlignment="Center"
               Text="{Binding Month}"/>

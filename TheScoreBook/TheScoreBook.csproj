@@ -61,4 +61,9 @@
     <ItemGroup>
       <Folder Include="gestures" />
     </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\Icon.svg" />
+      <None Remove="Resources\ButtonBar.svg" />
+    </ItemGroup>
 </Project>

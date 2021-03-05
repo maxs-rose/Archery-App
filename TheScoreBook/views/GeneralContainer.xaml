@@ -6,29 +6,29 @@
              x:Class="TheScoreBook.views.GeneralContainer"
              Padding="0">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="Aqua" Margin="0" Padding="0" Spacing="0">
             <Grid x:Name="Layout" VerticalOptions="FillAndExpand"/>
             <StackLayout
                 Margin="0"
                 Padding="0"
-                VerticalOptions="End">
+                VerticalOptions="End"
+                BackgroundColor="DarkGray">
                 <Grid 
                     x:Name="BottomBar"
                     VerticalOptions="End"
                     Margin="0"
-                    Padding="0"
-                    BackgroundColor="Gray">
+                    Padding="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="60" />
+                        <RowDefinition Height="75" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Text="{localisation:Translate Scores}" Clicked="ScoreButtonOnClicked" />
-                    <Button Grid.Column="1" Text="{localisation:Translate Shoot}" Clicked="ShootButtonOnClicked" />
-                    <Button Grid.Column="2" Text="{localisation:Translate Profile}" Clicked="ProfileButtonOnClicked" />
+                    <Button Grid.Column="0" Text="{localisation:Translate Scores}" Clicked="ScoreButtonOnClicked" BackgroundColor="Transparent" />
+                    <ImageButton Grid.Column="1" Source="Icon" Clicked="ShootButtonOnClicked" BackgroundColor="Transparent" Margin="0, 4"/>
+                    <Button Grid.Column="2" Text="{localisation:Translate Profile}" Clicked="ProfileButtonOnClicked" BackgroundColor="Transparent" />
                 </Grid>
             </StackLayout>
         </StackLayout>

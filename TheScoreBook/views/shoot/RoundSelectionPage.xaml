@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
              xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+             xmlns:androidSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              x:Class="TheScoreBook.views.shoot.RoundSelectionPage"
              BackgroundColor="Chartreuse">
     <base:AnimationPage.PageAnimation>
@@ -19,18 +20,21 @@
                 VerticalOptions="Start"
                 Margin="0"
                 Padding="0"
-                BackgroundColor="Gray">
+                BackgroundColor="DarkGray">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="60" />
+                    <RowDefinition Height="75" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Text="{localisation:Translate Scores}" Clicked="OnScoresButtonOnClicked" />
-                <Button Grid.Column="1" Text="{localisation:Translate Start}" Clicked="OnStartButtonOnClicked" />
-                <Button Grid.Column="2" Text="{localisation:Translate Profile}" Clicked="OnProfileButtonOnClicked" />
+                <Button Grid.Column="0" Text="{localisation:Translate Scores}" Clicked="OnScoresButtonOnClicked" BackgroundColor="Transparent"/>
+                <ImageButton Grid.Column="1" Source="Icon" Clicked="OnStartButtonOnClicked" BackgroundColor="Transparent" Margin="0, 4"
+                             androidSpecific:ImageButton.IsShadowEnabled = "true"
+                             androidSpecific:ImageButton.ShadowColor = "Yellow"
+                             androidSpecific:ImageButton.ShadowRadius = "100" />
+                <Button Grid.Column="2" Text="{localisation:Translate Profile}" Clicked="OnProfileButtonOnClicked" BackgroundColor="Transparent"/>
             </Grid>
             <Label Text="{localisation:Translate Round}"/>
             <Picker

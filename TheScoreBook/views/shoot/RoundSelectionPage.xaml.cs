@@ -56,7 +56,8 @@ namespace TheScoreBook.views.shoot
         protected override bool OnBackButtonPressed()
         {
             GameManager.FinishRound(false);
-            return base.OnBackButtonPressed();
+            Navigation.PopAsync(true);
+            return true;
         }
     }
 }

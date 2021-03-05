@@ -15,6 +15,23 @@ namespace TheScoreBook.views.pastRounds
         {
             InitializeComponent();
             Device.BeginInvokeOnMainThread(async () => scoreView.Content = await LoadRounds());
+
+            var left = new SwipeGestureRecognizer
+            {
+                Direction = SwipeDirection.Left,
+                Command = new Command(() => ShowAllPast_OnClicked(null, null))
+            };
+
+            var right = new SwipeGestureRecognizer
+            {
+                Direction = SwipeDirection.Right,
+                Command = new Command(() => ShowPBs_OnClicked(null, null))
+            };
+            
+            GestureRecognizers.Add(left);
+            GestureRecognizers.Add(right);
+            scoreView.GestureRecognizers.Add(left);
+            scoreView.GestureRecognizers.Add(right);
         }
 
         async Task<StackLayout> LoadPBs()
@@ -66,12 +83,18 @@ namespace TheScoreBook.views.pastRounds
 
         private void ShowAllPast_OnClicked(object sender, EventArgs e)
         {
+            ShowPBs.BorderColor = Color.Transparent;
+            ShowAllPast.BorderColor = Color.Black;
+            
             if (!showingAll)
                 Device.BeginInvokeOnMainThread(async () => scoreView.Content = await LoadRounds());
         }
 
         private void ShowPBs_OnClicked(object sender, EventArgs e)
         {
+            ShowPBs.BorderColor = Color.Black;
+            ShowAllPast.BorderColor = Color.Transparent;
+            
             if (showingAll)
                 Device.BeginInvokeOnMainThread(async () => scoreView.Content = await LoadPBs());
         }

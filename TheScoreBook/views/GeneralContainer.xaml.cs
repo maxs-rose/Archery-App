@@ -18,6 +18,24 @@ namespace TheScoreBook.views
             NavigationPage.SetHasNavigationBar(this, false);
             Layout.Children.Add(new PastRoundsPage());
             // Layout.Children.Add(new UserPage());
+            
+            BottomBar.GestureRecognizers.Add(new SwipeGestureRecognizer
+            {
+                Direction = SwipeDirection.Up,
+                Command = new Command(() => ShootButtonOnClicked(null, null))
+            });
+            
+            BottomBar.GestureRecognizers.Add(new SwipeGestureRecognizer
+            {
+                Direction = SwipeDirection.Left,
+                Command = new Command(() => ScoreButtonOnClicked(null, null))
+            });
+            
+            BottomBar.GestureRecognizers.Add(new SwipeGestureRecognizer
+            {
+                Direction = SwipeDirection.Right,
+                Command = new Command(() => ProfileButtonOnClicked(null, null))
+            });
         }
 
         public async void ScoreButtonOnClicked(object sender, EventArgs e)
@@ -67,6 +85,16 @@ namespace TheScoreBook.views
             if (Navigation.NavigationStack.OfType<RoundSelectionPage>().Any())
                 return;
             await Navigation.PushAsync(new RoundSelectionPage());
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            if(currentPage == 1)
+                ScoreButtonOnClicked(null, null);
+            else
+                return base.OnBackButtonPressed();
+
+            return true;
         }
     }
 }

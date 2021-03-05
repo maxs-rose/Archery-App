@@ -5,6 +5,7 @@ using System.Windows.Input;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using TheScoreBook.game;
+using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using Xamarin.Forms;
 
@@ -44,8 +45,11 @@ namespace TheScoreBook.views.shoot
                 {
                     BackgroundColor = Color.Transparent,
                     Margin = 0,
-                    Padding = 0
+                    Padding = 0,
                 });
+                displayButtons[^1].Score = GameManager.EndComplete(Distance, End)
+                                                        ? GameManager.GetScore(Distance, End, i)
+                                                        : null;
                 ScoreDisplay.Children.Add(displayButtons[^1], i, 0);
             }
         }
@@ -57,8 +61,8 @@ namespace TheScoreBook.views.shoot
                 ICommand com = b.WordString switch
                 {
                     "" => new Command(() => InputScore((EScore) b.Score!)),
-                    "DEL" => new Command(RemoveScore),
-                    _ => new Command(AcceptScores)
+                    "X" => new Command(RemoveScore),
+                    "^" => new Command(AcceptScores)
                 };
 
                 b.GestureRecognizers.Add(new TapGestureRecognizer
