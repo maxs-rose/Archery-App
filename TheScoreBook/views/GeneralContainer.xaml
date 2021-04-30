@@ -6,7 +6,7 @@
              x:Class="TheScoreBook.views.GeneralContainer"
              Padding="0">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="Aqua" Margin="0" Padding="0" Spacing="0">
+        <StackLayout Margin="0" Padding="0" Spacing="0">
             <Grid x:Name="Layout" VerticalOptions="FillAndExpand"/>
             <StackLayout
                 Margin="0"

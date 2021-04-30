@@ -6,9 +6,11 @@ using Rg.Plugins.Popup.Services;
 using TheScoreBook.acessors;
 using TheScoreBook.models;
 using TheScoreBook.models.enums;
+using Xamarin.Forms.Xaml;
 
 namespace TheScoreBook.views.user
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreateSightMarkPopup : PopupPage
     {
         public List<string> Distances => Enum.GetNames(typeof(EDistanceUnit)).ToList();
@@ -24,9 +26,12 @@ namespace TheScoreBook.views.user
         private void DoneButtonClicked(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(Position.Text) ||
-                string.IsNullOrEmpty(Notch.Text)    ||
+                string.IsNullOrEmpty(Notch.Text) ||
                 string.IsNullOrEmpty(Distance.Text))
+            {
+                PopupNavigation.Instance.PopAsync();
                 return;
+            }
 
             var pos = int.Parse(Position.Text);
             var not = int.Parse(Notch.Text);

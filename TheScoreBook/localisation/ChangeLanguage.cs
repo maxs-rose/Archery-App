@@ -26,7 +26,6 @@ namespace TheScoreBook.localisation
             {
                 LocalisationManager.Instance.SetCulture(CultureInfo.GetCultureInfo(SelectedLanguage.CI));
                 LoadLanguage();
-                await App.Current.MainPage.DisplayAlert(AppResources.LanguageChanged, "", AppResources.Done);
             });
         }
 
@@ -37,7 +36,8 @@ namespace TheScoreBook.localisation
                 {new Language("English", "en") },
                 {new Language("French", "fr") }
             };
-            SelectedLanguage = Languages.FirstOrDefault(pro => pro.CI == LocalisationManager.Instance.CurrentCulture.ThreeLetterISOLanguageName);
+            SelectedLanguage = Languages.FirstOrDefault(pro => pro.CI == LocalisationManager.Instance.CurrentCulture.TwoLetterISOLanguageName) ??
+                               Languages.First();
         }
     }
 }

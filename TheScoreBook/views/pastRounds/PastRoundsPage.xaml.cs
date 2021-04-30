@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Threading.Tasks;
 using TheScoreBook.acessors;
-using TheScoreBook.Views;
 using Xamarin.Forms;
 
 namespace TheScoreBook.views.pastRounds
@@ -28,20 +27,31 @@ namespace TheScoreBook.views.pastRounds
                 Command = new Command(() => ShowPBs_OnClicked(null, null))
             };
             
-            GestureRecognizers.Add(left);
-            GestureRecognizers.Add(right);
-            scoreView.GestureRecognizers.Add(left);
-            scoreView.GestureRecognizers.Add(right);
+            GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Left, () => ShowAllPast_OnClicked(null, null)));
+            GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Right, () => ShowPBs_OnClicked(null, null)));
+            scoreView.GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Left, () => ShowAllPast_OnClicked(null, null)));
+            scoreView.GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Right, () => ShowPBs_OnClicked(null, null)));
         }
+
+        private SwipeGestureRecognizer SwipeRightLeft(SwipeDirection direction, Action function)
+        => new()
+            {
+                Direction = direction,
+                Command = new Command(function)
+            };
 
         async Task<StackLayout> LoadPBs()
         {
             // TODO: Possibly make regeneration of this triggered by a change event in the user data instead of every time it is viewed for better performance?
             
             var pbStack = new StackLayout();
-            
+
             foreach (var r in UserData.Instance.GetPB().OrderByDescending(r => r.Date))
+            {
                 pbStack.Children.Add(new RoundCard(r));
+                pbStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Left, () => ShowAllPast_OnClicked(null, null)));
+                pbStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Right, () => ShowPBs_OnClicked(null, null)));
+            }
 
             pbStack.Spacing = 0;
 
@@ -49,8 +59,6 @@ namespace TheScoreBook.views.pastRounds
             showingAll = false;
             return pbStack;
         }
-
-        
 
         async Task<StackLayout> LoadRounds()
         {
@@ -64,9 +72,15 @@ namespace TheScoreBook.views.pastRounds
             foreach (var gRound in rounds)
             {
                 roundStack.Children.Add(new RoundCardMonthHeader(gRound.First().Date));
+                roundStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Left, () => ShowAllPast_OnClicked(null, null)));
+                roundStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Right, () => ShowPBs_OnClicked(null, null)));
                 
                 foreach(var r in gRound)
+                {
                     roundStack.Children.Add(new RoundCard(r));
+                    roundStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Left, () => ShowAllPast_OnClicked(null, null)));
+                    roundStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Right, () => ShowPBs_OnClicked(null, null)));
+                }
             }
                 
             
@@ -74,11 +88,6 @@ namespace TheScoreBook.views.pastRounds
             
             showingAll = true;
             return roundStack;
-        }
-
-        async void Lang_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ChangeLanguagePage());
         }
 
         private void ShowAllPast_OnClicked(object sender, EventArgs e)

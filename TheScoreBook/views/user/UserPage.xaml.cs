@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 using Rg.Plugins.Popup.Services;
 using TheScoreBook.acessors;
 using TheScoreBook.localisation;
-using TheScoreBook.models;
 using TheScoreBook.models.enums;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Xamarin.Forms.Markup;
 
 namespace TheScoreBook.views.user
 {
@@ -25,12 +24,17 @@ namespace TheScoreBook.views.user
             Task.Run(GeneratePreferedRounds);
             Task.Run(GenerateBestRounds);
 
+            SetupPopups();
+
+            UserData.SightMarksUpdatedEvent += GenerateSightMarks;
+        }
+
+        private void SetupPopups()
+        {
             OpenAddNewSightMark.GestureRecognizers.Add(new TapGestureRecognizer
             {
                 Command = new Command(OnAddNewSightMarkTapped)
             });
-
-            UserData.SightMarksUpdatedEvent += GenerateSightMarks;
         }
 
         ~UserPage()
@@ -41,6 +45,11 @@ namespace TheScoreBook.views.user
         private void OnAddNewSightMarkTapped()
         {
             PopupNavigation.Instance.PushAsync(new CreateSightMarkPopup());
+        }
+        
+        private void SettingsButtonClicked(object o, EventArgs e)
+        {
+            PopupNavigation.Instance.PushAsync(new SettingsPopup());
         }
 
         private void GenerateSightMarks()
@@ -55,8 +64,7 @@ namespace TheScoreBook.views.user
                     Margin= 0,
                     Padding= 0,
                     HorizontalTextAlignment = TextAlignment.Start,
-                    VerticalTextAlignment = TextAlignment.Center,
-                    BackgroundColor= Color.Chartreuse
+                    VerticalTextAlignment = TextAlignment.Center
                 };
                 
                 SightMarks.Children.Add(label);

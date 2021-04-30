@@ -12,11 +12,29 @@
         <StackLayout
             Padding="0"
             Margin="0">
-            <Label
-                Text="{localisation:Translate YourProfile}"
-                VerticalOptions="Start"
-                HorizontalOptions="Center"
-                FontSize="Title"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.50*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Column="1"
+                    Text="{localisation:Translate YourProfile}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    FontSize="Title"/>
+                <Button
+                    Grid.Column="2"
+                    x:Name="settingsButton" Clicked="SettingsButtonClicked"
+                    Margin="0"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    Text="&#x2699;"/>
+            </Grid>
             <Ellipse
                 HorizontalOptions="Center"
                 Margin="0, 25"
@@ -24,7 +42,7 @@
                 HeightRequest="100"
                 Stroke="Gray"
                 StrokeThickness="4"
-                Fill="Pink"/>
+                Fill="LightGray"/>
             <Grid
                 BackgroundColor="Gray"
                 Margin="0">
@@ -38,31 +56,35 @@
                 <Label
                     Grid.Column="0"
                     Text="{localisation:Translate SightMarks}"
+                    Padding="10, 2"
                     HorizontalTextAlignment="Start"
                     VerticalTextAlignment="Center"
-                    FontSize="Title"/>
+                    FontSize="Title"
+                    TextColor="White"/>
                 <Label
                     Grid.Column="1"
                     x:Name="OpenAddNewSightMark"
                     Text="+"
+                    Padding="10, 2"
                     HorizontalTextAlignment="Start"
                     VerticalTextAlignment="Center"
-                    FontSize="Title"/>
+                    FontSize="Title"
+                    TextColor="White"/>
             </Grid>
             <StackLayout x:Name="SightMarks"
                          Margin="0"
-                         Padding="0"/>
+                         Padding="20, 0, 0, 0"/>
             <Label
                 Text="{localisation:Translate PreferedRounds}"
                 Margin="0"
-                Padding="0"
+                Padding="10, 2"
                 HorizontalTextAlignment="Start"
                 VerticalTextAlignment="Center"
                 FontSize="Title"
-                BackgroundColor="Gray"/>
+                BackgroundColor="Gray"
+                TextColor="White"/>
             <StackLayout Margin="0"
-                         Padding="0"
-                         BackgroundColor="Aqua">
+                         Padding="20, 0, 0, 0">
                 <Label x:Name="IndoorRound"
                        Margin="0"
                        Padding="0"
@@ -77,14 +99,14 @@
             <Label
                 Text="{localisation:Translate BestRounds}"
                 Margin="0"
-                Padding="0"
+                Padding="10, 2"
                 HorizontalTextAlignment="Start"
                 VerticalTextAlignment="Center"
                 FontSize="Title"
-                BackgroundColor="Gray"/>
+                BackgroundColor="Gray"
+                TextColor="White"/>
             <StackLayout Margin="0"
-                         Padding="0"
-                         BackgroundColor="Aqua">
+                         Padding="20, 0, 0, 0">
                 <Label x:Name="BestIndoorRound"
                        Margin="0"
                        Padding="0"

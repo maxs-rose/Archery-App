@@ -22,7 +22,7 @@
         VerticalOptions="Center"
         HorizontalOptions="Center"
         Padding="20"
-        BackgroundColor="Aquamarine">
+        BackgroundColor="LightGray">
         <Label Text="{localisation:Translate InputNewMark}"/>
         <Grid>
             <Grid.ColumnDefinitions>
