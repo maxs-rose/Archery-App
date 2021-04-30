@@ -62,7 +62,8 @@ namespace TheScoreBook.views.shoot
                 {
                     "" => new Command(() => InputScore((EScore) b.Score!)),
                     "X" => new Command(RemoveScore),
-                    "^" => new Command(AcceptScores)
+                    "✔" => new Command(AcceptScores),
+                    _ => throw new NotImplementedException($"{b.WordString} is not a know button!")
                 };
 
                 b.GestureRecognizers.Add(new TapGestureRecognizer
