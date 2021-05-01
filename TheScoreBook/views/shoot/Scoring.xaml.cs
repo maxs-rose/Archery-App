@@ -1,7 +1,7 @@
 ﻿using System;
 using FormsControls.Base;
 using TheScoreBook.game;
-using TheScoreBook.models.enums;
+using TheScoreBook.localisation;
 using NavigationPage = Xamarin.Forms.NavigationPage;
 
 namespace TheScoreBook.views.shoot
@@ -27,6 +27,8 @@ namespace TheScoreBook.views.shoot
 
             UpdateScoringUiEvent += UpdateUI;
             UpdateScoringUiEvent += OnDistanceFinished;
+            
+            UpdateUI();
             
             DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex));
         }
@@ -59,9 +61,9 @@ namespace TheScoreBook.views.shoot
 
         private void UpdateUI()
         {
-            HitsDisplay.Text = Hits.ToString();
-            GoldDisplay.Text = Golds.ToString();
-            TotalDisplay.Text = Score.ToString();
+            HitsDisplay.Text = $"{LocalisationManager.Instance["Hits"]}: {Hits.ToString()}";
+            GoldDisplay.Text = $"{LocalisationManager.Instance["Golds"]}: {Golds.ToString()}";
+            TotalDisplay.Text = $"{LocalisationManager.Instance["Score"]}: {Score.ToString()}";;
         }
 
         private int previousDistance = 0;

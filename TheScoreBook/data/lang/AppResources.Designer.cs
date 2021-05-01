@@ -142,6 +142,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Golds.
+        /// </summary>
+        public static string Golds {
+            get {
+                return ResourceManager.GetString("Golds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hits.
         /// </summary>
         public static string Hits {
@@ -282,6 +291,15 @@ namespace TheScoreBook.data.lang {
         public static string Shoot {
             get {
                 return ResourceManager.GetString("Shoot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sight Mark.
+        /// </summary>
+        public static string SightMark {
+            get {
+                return ResourceManager.GetString("SightMark", resourceCulture);
             }
         }
         

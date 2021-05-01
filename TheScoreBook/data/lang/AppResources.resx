@@ -216,4 +216,10 @@
   <data name="Back" xml:space="preserve">
     <value>&lt;-</value>
   </data>
+  <data name="Golds" xml:space="preserve">
+    <value>Golds</value>
+  </data>
+  <data name="SightMark" xml:space="preserve">
+    <value>Sight Mark</value>
+  </data>
 </root>

@@ -9,30 +9,48 @@
         <base:PageAnimation Duration="Short" Subtype="FromTop"/>
     </base:AnimationPage.PageAnimation>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout
+            Padding="0"
+            Margin="0">
             <Grid
                 VerticalOptions="Start"
-                HorizontalOptions="Center">
+                HorizontalOptions="Fill">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.25*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Button 
                     Grid.Column="0"
+                    Margin="4, 16"
+                    Padding="0, 0, 0, 2"
+                    BackgroundColor="Transparent"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    CornerRadius="100"
                     Text="{localisation:Translate Back}" Clicked="OnBackButtonClicked" />
                 <Label
                     Grid.Column="1"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
                     Text="{localisation:Translate Round}"/>
                 <Button
                     Grid.Column="2"
+                    Margin="4, 16"
+                    Padding="0, 0, 0, 2"
+                    BackgroundColor="Transparent"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    CornerRadius="100"
+                    TextTransform="None"
                     Text="{localisation:Translate Finish}" Clicked="OnFinishButtonClicked" />
             </Grid>
             <Grid
-                HorizontalOptions="End">
+                HorizontalOptions="End"
+                Margin="0, 0, 20, 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -40,43 +58,25 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    HorizontalTextAlignment="Center"
-                    Text="H"/>
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    HorizontalTextAlignment="Center"
-                    Text="G"/>
-                <Label
-                    Grid.Row="0"
-                    Grid.Column="2"
-                    HorizontalTextAlignment="Center"
-                    Text="T"/>
-                <Label
-                    Grid.Row="1"
                     Grid.Column="0"
                     x:Name="HitsDisplay"
                     HorizontalTextAlignment="Center"
                     Text="{Binding Hits}"/>
                 <Label
-                    Grid.Row="1"
                     Grid.Column="1"
                     x:Name="GoldDisplay"
                     HorizontalTextAlignment="Center"
                     Text="{Binding Golds}"/>
                 <Label
-                    Grid.Row="1"
                     Grid.Column="2"
                     x:Name="TotalDisplay"
                     HorizontalTextAlignment="Center"
                     Text="{Binding Score}"/>
             </Grid>
-            <ScrollView>
+            <ScrollView
+                VerticalOptions="FillAndExpand">
                 <StackLayout x:Name="DistanceDisplay"/>
             </ScrollView>
         </StackLayout>

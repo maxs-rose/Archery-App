@@ -25,6 +25,9 @@ namespace TheScoreBook.models
             Position = json["pos"].Value<float>();
             Notch = json["notch"].Value<float>();
         }
+
+        public string ToScoringString()
+            => $"{Position} - {Notch}"; 
         
         public JObject ToJson()
         {

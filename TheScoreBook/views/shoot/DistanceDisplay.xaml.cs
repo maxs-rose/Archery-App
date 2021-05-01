@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Rg.Plugins.Popup.Services;
+using TheScoreBook.acessors;
 using TheScoreBook.behaviours;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
@@ -50,6 +52,12 @@ namespace TheScoreBook.views.shoot
             Scoring.UpdateScoringUiEvent -= UpdateUI;
         }
 
+        private string GetDistanceSightMark()
+        {
+            var mark = UserData.SightMarks.FirstOrDefault(m => m.Distance == Distance.DistanceLength && m.DistanceUnit == Distance.DistanceUnit);
+            return mark != default ? $"\t\t{LocalisationManager.Instance["SightMark"]}: {mark.ToScoringString()}" : "";
+        }
+        
         private void CreateEndDisplay()
         {
             for (var i = 0; i < endCount; i++) // adds and extra row for the header
@@ -66,7 +74,7 @@ namespace TheScoreBook.views.shoot
             
             EndDisplay.Children.Add(new Label()
             {
-                Text = $"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}"
+                Text = $"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}" + GetDistanceSightMark()
             }, 0, 0);
             Grid.SetColumnSpan(EndDisplay.Children[^1], arrowsPerEnd);
             
