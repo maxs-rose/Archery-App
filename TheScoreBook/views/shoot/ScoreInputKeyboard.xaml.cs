@@ -61,7 +61,7 @@ namespace TheScoreBook.views.shoot
                 ICommand com = b.WordString switch
                 {
                     "" => new Command(() => InputScore((EScore) b.Score!)),
-                    "X" => new Command(RemoveScore),
+                    "🗑" => new Command(RemoveScore),
                     "✔" => new Command(AcceptScores),
                     _ => throw new NotImplementedException($"{b.WordString} is not a know button!")
                 };
@@ -101,7 +101,7 @@ namespace TheScoreBook.views.shoot
 
             GameManager.Finish(Distance, End);
             PopupNavigation.Instance.PopAsync(true);
-            Scoring.UpdateScoringUiEvent?.Invoke();
+            Scoring.UpdateScoringUiEvent?.Invoke(Distance, End);
         }
     }
 }

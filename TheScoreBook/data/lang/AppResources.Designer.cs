@@ -106,7 +106,7 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DEL.
+        ///   Looks up a localized string similar to 🗑.
         /// </summary>
         public static string Delete {
             get {

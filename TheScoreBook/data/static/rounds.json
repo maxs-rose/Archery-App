@@ -41,7 +41,7 @@
     {
     "location": "out",
     "distance": 18,
-    "unit": "m",
+    "unit": "yd",
     "arrowsPerEnd": 3,
     "ends": 2
   }

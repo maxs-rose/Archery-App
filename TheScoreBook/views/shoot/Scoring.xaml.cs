@@ -2,10 +2,12 @@
 using FormsControls.Base;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
+using Xamarin.Forms.Xaml;
 using NavigationPage = Xamarin.Forms.NavigationPage;
 
 namespace TheScoreBook.views.shoot
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Scoring : AnimationPage
     {
         public int Hits => GameManager.Hits();
@@ -15,7 +17,7 @@ namespace TheScoreBook.views.shoot
         private int NextDistanceIndex => GameManager.NextDistanceIndex();
         private int NextEndIndex => GameManager.NextEndIndex(NextDistanceIndex);
         
-        public delegate void UpdateScoringUI();
+        public delegate void UpdateScoringUI(int distance, int end);
 
         public static UpdateScoringUI UpdateScoringUiEvent;
         
@@ -28,7 +30,7 @@ namespace TheScoreBook.views.shoot
             UpdateScoringUiEvent += UpdateUI;
             UpdateScoringUiEvent += OnDistanceFinished;
             
-            UpdateUI();
+            UpdateUI(-1, -1);
             
             DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex));
         }
@@ -59,7 +61,7 @@ namespace TheScoreBook.views.shoot
             Navigation.PopAsync(true);
         }
 
-        private void UpdateUI()
+        private void UpdateUI(int distance, int end)
         {
             HitsDisplay.Text = $"{LocalisationManager.Instance["Hits"]}: {Hits.ToString()}";
             GoldDisplay.Text = $"{LocalisationManager.Instance["Golds"]}: {Golds.ToString()}";
@@ -67,16 +69,16 @@ namespace TheScoreBook.views.shoot
         }
 
         private int previousDistance = 0;
-        private void OnDistanceFinished()
+        private void OnDistanceFinished(int distance, int end)
         {
             if (GameManager.AllDistancesComplete)
                 return;
+
+            if (NextDistanceIndex <= previousDistance)
+                return;
             
-            if (NextDistanceIndex > previousDistance)
-            {
-                previousDistance = NextDistanceIndex;
-                DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex));
-            }
+            previousDistance = NextDistanceIndex;
+            DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex));
         }
     }
 }

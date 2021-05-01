@@ -14,7 +14,8 @@
             Margin="0">
             <Grid
                 VerticalOptions="Start"
-                HorizontalOptions="Fill">
+                HorizontalOptions="Fill"
+                MinimumHeightRequest="300">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.25*"/>
                     <ColumnDefinition Width="0.5*"/>
@@ -50,6 +51,7 @@
             </Grid>
             <Grid
                 HorizontalOptions="End"
+                MinimumHeightRequest="100"
                 Margin="0, 0, 20, 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -76,8 +78,8 @@
                     Text="{Binding Score}"/>
             </Grid>
             <ScrollView
-                VerticalOptions="FillAndExpand">
-                <StackLayout x:Name="DistanceDisplay"/>
+                VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+                <StackLayout x:Name="DistanceDisplay" BackgroundColor="Transparent"/>
             </ScrollView>
         </StackLayout>
     </ContentPage.Content>
