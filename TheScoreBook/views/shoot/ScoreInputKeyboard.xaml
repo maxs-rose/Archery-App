@@ -22,138 +22,149 @@
     <Frame
         BackgroundColor="Transparent"
         Padding="10"
-        Margin="30"
-        BorderColor="Crimson">
+        Margin="30">
         <StackLayout
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Padding="0"
             Margin="0"
             BackgroundColor="Transparent">
-            <Grid x:Name="ScoreDisplay">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-            </Grid>
-            <Grid x:Name="ScoreInput"
-                  Padding="0"
-                  Margin="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <shoot:ScoreInputButton
-                    x:Name="Button1"
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Score="X"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"/>
-                <shoot:ScoreInputButton
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    Score="TEN" />
-                <shoot:ScoreInputButton
-                    Grid.Row="0"
-                    Grid.Column="2"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    Score="NINE" />
+            <Frame
+                BorderColor="Black"
+                CornerRadius="10"
+                BackgroundColor="GhostWhite"
+                Margin="0, 0, 0, 10">
+                <Grid x:Name="ScoreDisplay" Padding="0" Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                </Grid>
+            </Frame>
+            <Frame
+                BorderColor="Black"
+                CornerRadius="10"
+                BackgroundColor="GhostWhite"
+                Margin="0, 10, 0, 0">
+                <Grid x:Name="ScoreInput"
+                      Padding="0"
+                      Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <shoot:ScoreInputButton
+                        x:Name="Button1"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Score="X"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"/>
+                    <shoot:ScoreInputButton
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Score="TEN" />
+                    <shoot:ScoreInputButton
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Score="NINE" />
 
-                <shoot:ScoreInputButton
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    Score="EIGHT" />
-                <shoot:ScoreInputButton
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    Score="SEVEN" />
-                <shoot:ScoreInputButton
-                    Grid.Row="1"
-                    Grid.Column="2"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    Score="SIX" />
+                    <shoot:ScoreInputButton
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Score="EIGHT" />
+                    <shoot:ScoreInputButton
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Score="SEVEN" />
+                    <shoot:ScoreInputButton
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Score="SIX" />
 
-                <shoot:ScoreInputButton
-                    Grid.Row="2"
-                    Grid.Column="0"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    Score="FIVE" />
-                <shoot:ScoreInputButton
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    Score="FOUR" />
-                <shoot:ScoreInputButton
-                    Grid.Row="2"
-                    Grid.Column="2"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    Score="THREE" />
+                    <shoot:ScoreInputButton
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Score="FIVE" />
+                    <shoot:ScoreInputButton
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Score="FOUR" />
+                    <shoot:ScoreInputButton
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Score="THREE" />
 
-                <shoot:ScoreInputButton
-                    Grid.Row="3"
-                    Grid.Column="0"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    Score="TWO" />
-                <shoot:ScoreInputButton
-                    Grid.Row="3"
-                    Grid.Column="1"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    Score="ONE" />
-                <shoot:ScoreInputButton
-                    Grid.Row="3"
-                    Grid.Column="2"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    Score="M" />
+                    <shoot:ScoreInputButton
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Score="TWO" />
+                    <shoot:ScoreInputButton
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Score="ONE" />
+                    <shoot:ScoreInputButton
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Score="M" />
 
-                <shoot:ScoreInputButton
-                    Grid.Row="4"
-                    Grid.Column="0"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    WordString="^" />
-                <shoot:ScoreInputButton
-                    Grid.Row="4"
-                    Grid.Column="2"
-                    Margin="0"
-                    Padding="0"
-                    BackgroundColor="Transparent"
-                    WordString="X" />
-            </Grid>
+                    <shoot:ScoreInputButton
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        WordString="^" />
+                    <shoot:ScoreInputButton
+                        Grid.Row="4"
+                        Grid.Column="2"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        WordString="X" />
+                </Grid>
+            </Frame>
         </StackLayout>
     </Frame>
 </pages:PopupPage>

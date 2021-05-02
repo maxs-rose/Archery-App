@@ -214,6 +214,9 @@ namespace TheScoreBook.views.shoot
 
         private void OpenScoreUI(int row)
         {
+            if (PopupNavigation.Instance.PopupStack.Any(p => p is ScoreInputKeyboard))
+                return;
+            
             PopupNavigation.Instance.PushAsync(new ScoreInputKeyboard(DistanceIndex, row, arrowsPerEnd));
         }
     }

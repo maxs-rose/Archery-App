@@ -44,6 +44,16 @@
     "unit": "yd",
     "arrowsPerEnd": 3,
     "ends": 2
-  }
+    }
+  ],
+  "test3":
+  [
+    {
+      "location": "out",
+      "distance": 18,
+      "unit": "m",
+      "arrowsPerEnd": 6,
+      "ends": 2
+    }
   ]
 }

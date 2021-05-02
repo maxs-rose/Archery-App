@@ -35,22 +35,40 @@ namespace TheScoreBook.views.shoot
 
         private void GenerateDisplayButtons()
         {
+            if(GameManager.EndComplete(Distance, End))
+                for(var i = 0; i < ArrowsPerEnd; i++)
+                    inputScores.Add((EScore) GameManager.GetScore(Distance, End, i));
+
+            var col = 0;
+            var row = 0;
             for (var i = 0; i < ArrowsPerEnd; i++)
             {
-                ScoreDisplay.ColumnDefinitions.Add(new ColumnDefinition
+                if (i % 3 == 0 && i != 0)
                 {
-                    Width = GridLength.Star
-                });
+                    ScoreDisplay.RowDefinitions.Add(new RowDefinition
+                    {
+                        Height = GridLength.Star
+                    });
+                    col = 0;
+                    row++;
+                }
+                
+                if(col < 1)
+                    ScoreDisplay.ColumnDefinitions.Add(new ColumnDefinition
+                    {
+                        Width = GridLength.Star
+                    });
+                
                 displayButtons.Add(new ScoreInputButton
                 {
                     BackgroundColor = Color.Transparent,
                     Margin = 0,
                     Padding = 0,
                 });
-                displayButtons[^1].Score = GameManager.EndComplete(Distance, End)
-                                                        ? GameManager.GetScore(Distance, End, i)
-                                                        : null;
-                ScoreDisplay.Children.Add(displayButtons[^1], i, 0);
+                
+                displayButtons[^1].Score = inputScores.Any() ? inputScores[i] : null;
+                
+                ScoreDisplay.Children.Add(displayButtons[^1], col++, row);
             }
         }
 

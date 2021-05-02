@@ -68,9 +68,16 @@ namespace TheScoreBook.views.shoot
             }
 
             if (WordString == "X")
+            {
                 WordString = LocalisationManager.Instance["Delete"];
+                ColourFrame.BackgroundColor = Color.DarkRed;
+            }
             else if (WordString == "^")
+            {
                 WordString = LocalisationManager.Instance["Tick"];
+                ColourFrame.BackgroundColor = Color.DarkGreen;
+                ButtonText.TextColor = Color.DarkGreen;
+            }
         }
 
         private void UpdateLabelText()
