@@ -231,4 +231,7 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="DeleteRound" xml:space="preserve">
+    <value>Delete Round</value>
+  </data>
 </root>

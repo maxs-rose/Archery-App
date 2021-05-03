@@ -32,6 +32,9 @@ namespace TheScoreBook.acessors
         public delegate void SightMarksUpdated();
         public static SightMarksUpdated SightMarksUpdatedEvent;
 
+        public delegate void RoundsUpdated();
+        public static RoundsUpdated RoundsUpdatedEvent;
+
         // Round stuff
         private static readonly Lazy<List<Round>> rounds = new(() => Instance.GetRounds());
         public static ReadOnlyCollection<Round> Rounds => rounds.Value.AsReadOnly();
@@ -148,7 +151,7 @@ namespace TheScoreBook.acessors
             Task.Run(() => SaveData(userData));
         }
 
-        public async void SaveRound(Round round)
+        public void SaveRound(Round round)
         {
             rounds.Value.Add(round);
             
@@ -156,7 +159,37 @@ namespace TheScoreBook.acessors
             userData["pastRounds"]!.Value<JArray>()!.Add(round.ToJson());
             mut.ReleaseMutex();
             
+            Device.BeginInvokeOnMainThread(() => RoundsUpdatedEvent?.Invoke());
             // we dont want to await this since we want the app to continue whilst this is saving
+            Task.Run(() => SaveData(userData));
+        }
+
+        public void DeleteRound(Round round)
+        {
+            mut.WaitOne();
+            
+            var removed = false;
+            for (var i = 0; i < rounds.Value.Count; i++)
+            {
+                if (!JToken.DeepEquals(rounds.Value[i].ToJson(), round.ToJson())) 
+                    continue;
+                
+                rounds.Value.RemoveAt(i);
+                removed = true;
+                break;
+            }
+
+            if (!removed)
+                return;
+
+            userData["pastRounds"]!.Value<JArray>()!.Clear();
+
+            foreach (var r in rounds.Value)
+                userData["pastRounds"]!.Value<JArray>()!.Add(r.ToJson());
+            
+            mut.ReleaseMutex();
+            
+            Device.BeginInvokeOnMainThread(() => RoundsUpdatedEvent?.Invoke());
             Task.Run(() => SaveData(userData));
         }
     }

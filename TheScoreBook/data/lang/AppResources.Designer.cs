@@ -133,6 +133,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete Round.
+        /// </summary>
+        public static string DeleteRound {
+            get {
+                return ResourceManager.GetString("DeleteRound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Distance.
         /// </summary>
         public static string Distance {

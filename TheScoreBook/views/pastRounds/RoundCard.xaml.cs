@@ -1,4 +1,5 @@
-﻿using TheScoreBook.localisation;
+﻿using Rg.Plugins.Popup.Services;
+using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
 using Xamarin.Forms;
@@ -16,6 +17,16 @@ namespace TheScoreBook.views.pastRounds
             this.round = round;
 
             BindingContext = this;
+            
+            GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                {
+                    if (PopupNavigation.Instance.PopupStack.Count < 1)
+                        PopupNavigation.Instance.PushAsync(new PastRound(round));
+                })
+            });
+            
         }
 
         public string RoundName => LocalisationManager.ToTitleCase(round.RoundName);

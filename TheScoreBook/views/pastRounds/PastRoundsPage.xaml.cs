@@ -36,7 +36,13 @@ namespace TheScoreBook.views.pastRounds
             scoreView.GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Right, () => ShowPBs_OnClicked(null, null)));
             
             ShowAllPast_OnClicked(null, null);
+            UserData.RoundsUpdatedEvent += ReloadRounds;
         }
+
+       ~PastRoundsPage()
+       {
+           UserData.RoundsUpdatedEvent -= ReloadRounds;
+       }
 
         private SwipeGestureRecognizer SwipeRightLeft(SwipeDirection direction, Action function)
         => new()
@@ -110,6 +116,14 @@ namespace TheScoreBook.views.pastRounds
             ShowAllPast.BorderColor = Color.Transparent;
             
             if (showingAll)
+                Device.BeginInvokeOnMainThread(async () => scoreView.Content = await LoadPBs());
+        }
+
+        private void ReloadRounds()
+        {
+            if(showingAll)
+                Device.BeginInvokeOnMainThread(async () => scoreView.Content = await LoadRounds());
+            else
                 Device.BeginInvokeOnMainThread(async () => scoreView.Content = await LoadPBs());
         }
     }
