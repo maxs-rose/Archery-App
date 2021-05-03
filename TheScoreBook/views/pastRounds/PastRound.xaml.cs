@@ -33,5 +33,10 @@ namespace TheScoreBook.views.pastRounds
             UserData.Instance.DeleteRound(Round);
             PopupNavigation.Instance.PopAsync(true);
         }
+        
+        private void BackButtonClicked(object sender, EventArgs e)
+        {
+            PopupNavigation.Instance.PopAsync(true);
+        }
     }
 }
