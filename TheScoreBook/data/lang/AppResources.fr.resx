@@ -129,4 +129,71 @@
   <data name="Done" xml:space="preserve">
     <value>Fait</value>
   </data>
+  <data name="All" xml:space="preserve">
+    <value>Tout</value>
+  </data>
+  <data name="BestRounds" xml:space="preserve">
+    <value>Meilleures Rondes</value>
+  </data>
+  <data name="Bow" xml:space="preserve">
+    <value>Arc</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Finir</value>
+  </data>
+  <data name="Golds" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="Hits" xml:space="preserve">
+    <value>Coups</value>
+  </data>
+  <data name="Indoor" xml:space="preserve">
+    <value>Intérieur</value>
+  </data>
+  <data name="InputNewMark" xml:space="preserve">
+    <value>Entrez une nouvelle marque de visée</value>
+  </data>
+  <data name="Notch" xml:space="preserve">
+    <value>Entailler</value>
+  </data>
+  <data name="Outdoor" xml:space="preserve">
+    <value>Extérieur</value>
+  </data>
+  <data name="PB" xml:space="preserve">
+    <value>BP</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Positionner</value>
+  </data>
+  <data name="PreferedRounds" xml:space="preserve">
+    <value>Rounds Préférés</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>Résultats</value>
+  </data>
+  <data name="Round" xml:space="preserve">
+    <value>Rond</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>But</value>
+  </data>
+  <data name="Shoot" xml:space="preserve">
+    <value>Tirer</value>
+  </data>
+  <data name="SightMark" xml:space="preserve">
+    <value>Marque de visée</value>
+  </data>
+  <data name="SightMarks" xml:space="preserve">
+    <value>Marque de visées</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Démarrer</value>
+  </data>
+  <data name="YourProfile" xml:space="preserve">
+    <value>
+Votre profil</value>
+  </data>
 </root>

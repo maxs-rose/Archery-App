@@ -33,6 +33,7 @@
             SelectedItem="{Binding SelectedLanguage, Mode=TwoWay}"/>
         
         <Button Text="{localisation:Translate Done}"
+                TextColor="Black"
                 Clicked="CloseSettings"/>
     </StackLayout>
 </pages:PopupPage>

@@ -3,9 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TheScoreBook"
              xmlns:helpers="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
              x:Class="TheScoreBook.views.pastRounds.PastRoundsPage"
              Padding="0"
-             Margin="0">
+             Margin="0"
+             HasShadow="False">
     <StackLayout 
         Padding="0"
         Margin="0"
@@ -13,7 +15,8 @@
             <Label Text="{helpers:Translate Scores}"
                    HorizontalOptions="Center"
                    VerticalOptions="Start"
-                   FontSize="Header"/>
+                   FontSize="90">
+            </Label>
             <Grid HorizontalOptions="Center" 
                 VerticalOptions="Start"
                 Margin="40,0"
@@ -31,26 +34,48 @@
                         Margin="0"
                         Padding="0"
                         IsEnabled="False"
-                        BackgroundColor="Transparent"></Button>
-                <Button x:Name="ShowAllPast" Clicked="ShowAllPast_OnClicked" BackgroundColor="Transparent" Grid.Column="0" Text="{helpers:Translate All}"
+                        BackgroundColor="Transparent"/>
+            <Button x:Name="ShowAllPast" Clicked="ShowAllPast_OnClicked" BackgroundColor="Transparent" Grid.Column="0" Text="{helpers:Translate All}"
                        HorizontalOptions="Center"
                        VerticalOptions="Start"
                        FontSize="Subtitle"
                        Margin="0, 2"
-                       Padding="0"
-                       BorderColor="Black"
                        BorderWidth="2"
-                       CornerRadius="100"></Button>
-                <Button x:Name="ShowPBs" Clicked="ShowPBs_OnClicked" BackgroundColor="Transparent" Grid.Column="1" Text="{helpers:Translate PB}"
+                       TextColor="Black">
+                <Button.Padding>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="Android, UWP" Value="0"/>
+                        <On Platform="iOS" Value="20"/>
+                    </OnPlatform>
+                </Button.Padding>
+                <Button.CornerRadius>
+                    <OnPlatform x:TypeArguments="system:Int32">
+                        <On Platform="Android, UWP" Value="100"/>
+                        <On Platform="iOS" Value="10"/>
+                    </OnPlatform>
+                </Button.CornerRadius>
+            </Button>
+            <Button x:Name="ShowPBs" Clicked="ShowPBs_OnClicked" BackgroundColor="Transparent" Grid.Column="1" Text="{helpers:Translate PB}"
                         HorizontalOptions="Center"
                         VerticalOptions="Start"
                         FontSize="Subtitle"
                         Margin="0, 2"
-                        Padding="0"
                         BorderWidth="2"
-                        CornerRadius="100"></Button>
-            </Grid>
+                        TextColor="Black">
+                <Button.Padding>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="Android, UWP" Value="0"/>
+                        <On Platform="iOS" Value="20"/>
+                    </OnPlatform>
+                </Button.Padding>
+                <Button.CornerRadius>
+                    <OnPlatform x:TypeArguments="system:Int32">
+                        <On Platform="Android, UWP" Value="100"/>
+                        <On Platform="iOS" Value="10"/>
+                    </OnPlatform>
+                </Button.CornerRadius>
+            </Button>
+        </Grid>
             <ScrollView x:Name="scoreView" HorizontalOptions="Fill" VerticalOptions="Fill"></ScrollView>
         </StackLayout>
-        <!--<Button Clicked="Lang_Clicked" Text="Langs"></Button>-->
 </Frame>

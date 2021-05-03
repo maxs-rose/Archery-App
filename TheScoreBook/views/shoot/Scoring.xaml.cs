@@ -32,7 +32,7 @@ namespace TheScoreBook.views.shoot
             
             UpdateUI(-1, -1);
             
-            DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex));
+            AddNewDistance();
         }
 
         ~Scoring()
@@ -78,7 +78,12 @@ namespace TheScoreBook.views.shoot
                 return;
             
             previousDistance = NextDistanceIndex;
-            DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex));
+            AddNewDistance();
+        }
+        
+        private void AddNewDistance()
+        {
+            DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex) { HasShadow = false} );
         }
     }
 }

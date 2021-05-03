@@ -4,14 +4,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
              xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
-             x:Class="TheScoreBook.views.shoot.FinishedRound">
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             x:Class="TheScoreBook.views.shoot.FinishedRound"
+       HasShadow="False">
     <StackLayout>
         <StackLayout
             VerticalOptions="Start">
             <Label Text="{localisation:Translate Results}"
                    HorizontalOptions="Center"
                    VerticalOptions="Start"
-                   FontSize="Header"/>
+                   FontSize="90"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -58,9 +60,9 @@
             </Grid>
             <Label
                 x:Name="Score"
-                FontSize="Header"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                VerticalOptions="Center"
+                FontSize="90"/>
         </StackLayout>
     </StackLayout>
 </Frame>

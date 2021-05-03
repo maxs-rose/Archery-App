@@ -130,7 +130,7 @@
     <value>All</value>
   </data>
   <data name="PB" xml:space="preserve">
-    <value>PB's</value>
+    <value>PB</value>
   </data>
   <data name="Hits" xml:space="preserve">
     <value>Hits</value>
@@ -214,7 +214,7 @@
     <value>Score</value>
   </data>
   <data name="Back" xml:space="preserve">
-    <value>&lt;-</value>
+    <value>&lt;--</value>
   </data>
   <data name="Golds" xml:space="preserve">
     <value>Golds</value>

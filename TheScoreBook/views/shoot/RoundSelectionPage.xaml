@@ -4,7 +4,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
                     xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
-                    xmlns:androidSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
                     x:Class="TheScoreBook.views.shoot.RoundSelectionPage">
     <base:AnimationPage.PageAnimation>
         <base:PageAnimation Duration="Short" Subtype="FromBottom" />
@@ -18,8 +17,13 @@
                 x:Name="BottomBar"
                 VerticalOptions="Start"
                 Margin="0"
-                Padding="0"
                 BackgroundColor="DarkGray">
+                <Grid.Padding>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="Android, UWP" Value="0"/>
+                        <On Platform="iOS" Value="0, 40, 0, 0"/>
+                    </OnPlatform>
+                </Grid.Padding>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="75" />
                 </Grid.RowDefinitions>
@@ -29,11 +33,13 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Text="{localisation:Translate Scores}" Clicked="OnScoresButtonOnClicked"
-                        BackgroundColor="Transparent" />
+                        BackgroundColor="Transparent"
+                        TextColor="Black"/>
                 <ImageButton Grid.Column="1" Source="Icon" Clicked="OnStartButtonOnClicked"
-                             BackgroundColor="Transparent" Margin="0, 4" />
+                             BackgroundColor="Transparent" Margin="0, 4"/>
                 <Button Grid.Column="2" Text="{localisation:Translate Profile}" Clicked="OnProfileButtonOnClicked"
-                        BackgroundColor="Transparent" />
+                        BackgroundColor="Transparent"
+                        TextColor="Black"/>
             </Grid>
             <StackLayout
                 Padding="0"

@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using TheScoreBook.acessors;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace TheScoreBook.views.pastRounds
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PastRoundsPage : Frame
     {
         private bool showingAll;
@@ -31,6 +34,8 @@ namespace TheScoreBook.views.pastRounds
             GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Right, () => ShowPBs_OnClicked(null, null)));
             scoreView.GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Left, () => ShowAllPast_OnClicked(null, null)));
             scoreView.GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Right, () => ShowPBs_OnClicked(null, null)));
+            
+            ShowAllPast_OnClicked(null, null);
         }
 
         private SwipeGestureRecognizer SwipeRightLeft(SwipeDirection direction, Action function)
@@ -48,7 +53,7 @@ namespace TheScoreBook.views.pastRounds
 
             foreach (var r in UserData.Instance.GetPB().OrderByDescending(r => r.Date))
             {
-                pbStack.Children.Add(new RoundCard(r));
+                pbStack.Children.Add(new RoundCard(r) { HasShadow = false });
                 pbStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Left, () => ShowAllPast_OnClicked(null, null)));
                 pbStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Right, () => ShowPBs_OnClicked(null, null)));
             }
@@ -71,13 +76,13 @@ namespace TheScoreBook.views.pastRounds
 
             foreach (var gRound in rounds)
             {
-                roundStack.Children.Add(new RoundCardMonthHeader(gRound.First().Date));
+                roundStack.Children.Add(new RoundCardMonthHeader(gRound.First().Date) { HasShadow = true});
                 roundStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Left, () => ShowAllPast_OnClicked(null, null)));
                 roundStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Right, () => ShowPBs_OnClicked(null, null)));
                 
                 foreach(var r in gRound)
                 {
-                    roundStack.Children.Add(new RoundCard(r));
+                    roundStack.Children.Add(new RoundCard(r) { HasShadow = false });
                     roundStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Left, () => ShowAllPast_OnClicked(null, null)));
                     roundStack.Children.Last().GestureRecognizers.Add(SwipeRightLeft(SwipeDirection.Right, () => ShowPBs_OnClicked(null, null)));
                 }

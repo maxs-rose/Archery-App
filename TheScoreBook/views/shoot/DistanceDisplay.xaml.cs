@@ -60,7 +60,7 @@ namespace TheScoreBook.views.shoot
         private string GetDistanceSightMark()
         {
             var mark = UserData.SightMarks.FirstOrDefault(m => m.Distance == Distance.DistanceLength && m.DistanceUnit == Distance.DistanceUnit);
-            return mark != default ? $"\t\t{LocalisationManager.Instance["SightMark"]}: {mark.ToScoringString()}" : "";
+            return mark != default ? $" | {LocalisationManager.Instance["SightMark"]}: {mark.ToScoringString()}" : "";
         }
 
         private void CreateEndDisplay()

@@ -2,42 +2,72 @@
 
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
              x:Class="TheScoreBook.views.shoot.ScoreInputButton">
     <StackLayout
         Padding="0"
         Margin="0"
         VerticalOptions="Center"
         HorizontalOptions="Center">
+
         <Frame
             x:Name="ColourFrame"
-            CornerRadius="100"
-            Padding="20"
             Margin="0"
             BackgroundColor="Gray"
             WidthRequest="30"
             HeightRequest="30"
             HorizontalOptions="CenterAndExpand"
             VerticalOptions="CenterAndExpand"
-            BorderColor="Black">
+            BorderColor="Black"
+            HasShadow="False">
+            <Frame.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="Android, UWP" Value="20"/>
+                    <On Platform="iOS" Value="30"/>
+                </OnPlatform>
+            </Frame.Padding>
+            <Frame.CornerRadius>
+                <OnPlatform x:TypeArguments="system:Single">
+                    <On Platform="Android, UWP" Value="100"/>
+                    <On Platform="iOS" Value="43"/>
+                </OnPlatform>
+            </Frame.CornerRadius>
             <Frame
-                CornerRadius="100"
                 BackgroundColor="White"
-                Padding="0"
                 Margin="0"
                 WidthRequest="30"
                 HeightRequest="30"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
-                BorderColor="Black">
+                BorderColor="Black"
+                HasShadow="True">
+                <Frame.Padding>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="Android, UWP" Value="0"/>
+                        <On Platform="iOS" Value="0"/>
+                    </OnPlatform>
+                </Frame.Padding>
+                <Frame.CornerRadius>
+                    <OnPlatform x:TypeArguments="system:Single">
+                        <On Platform="Android, UWP" Value="100"/>
+                        <On Platform="iOS" Value="12"/>
+                    </OnPlatform>
+                </Frame.CornerRadius>
                 <Label
                     x:Name="ButtonText"
-                    Padding="0"
                     Margin="0"
                     TextColor="Black"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"/>
+                    VerticalTextAlignment="Center">
+                    <Label.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android, UWP" Value="0"/>
+                            <On Platform="iOS" Value="0"/>
+                        </OnPlatform>
+                    </Label.Padding>
+                </Label>
             </Frame>
         </Frame>
     </StackLayout>

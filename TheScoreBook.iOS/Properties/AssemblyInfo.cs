@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TheScoreBook.iOS")]
+[assembly: AssemblyTitle("The Score Book")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Max Rose")]
-[assembly: AssemblyProduct("TheScoreBook.iOS")]
+[assembly: AssemblyProduct("The Score Book iOS")]
 [assembly: AssemblyCopyright("Copyright © Max Rose 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

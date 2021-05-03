@@ -23,6 +23,7 @@ namespace TheScoreBook.views.shoot
         public RoundSelectionPage()
         {
             InitializeComponent();
+
             NavigationPage.SetHasNavigationBar(this, false);
 
             BindingContext = this;

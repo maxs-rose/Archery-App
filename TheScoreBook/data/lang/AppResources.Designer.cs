@@ -70,7 +70,7 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;-.
+        ///   Looks up a localized string similar to &lt;--.
         /// </summary>
         public static string Back {
             get {
@@ -205,7 +205,7 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PB&apos;s.
+        ///   Looks up a localized string similar to PB.
         /// </summary>
         public static string PB {
             get {

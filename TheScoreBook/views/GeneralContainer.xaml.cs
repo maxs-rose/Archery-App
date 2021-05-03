@@ -15,7 +15,7 @@ namespace TheScoreBook.views
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            Layout.Children.Add(new PastRoundsPage());
+            Layout.Children.Add(new PastRoundsPage() { HasShadow = false });
             // Layout.Children.Add(new UserPage());
             
             BottomBar.GestureRecognizers.Add(new SwipeGestureRecognizer

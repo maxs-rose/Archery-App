@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FormsControls.Base;
-using TheScoreBook.acessors;
+﻿using TheScoreBook.acessors;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using Xamarin.Forms;
@@ -12,6 +6,7 @@ using Xamarin.Forms.Xaml;
 
 namespace TheScoreBook.views.shoot
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FinishedRound : Frame
     {
         public FinishedRound()
