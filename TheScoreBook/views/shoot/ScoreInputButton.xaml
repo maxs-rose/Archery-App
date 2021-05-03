@@ -40,13 +40,8 @@
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
                 BorderColor="Black"
-                HasShadow="True">
-                <Frame.Padding>
-                    <OnPlatform x:TypeArguments="Thickness">
-                        <On Platform="Android, UWP" Value="0"/>
-                        <On Platform="iOS" Value="0"/>
-                    </OnPlatform>
-                </Frame.Padding>
+                HasShadow="True"
+                Padding="0">
                 <Frame.CornerRadius>
                     <OnPlatform x:TypeArguments="system:Single">
                         <On Platform="Android, UWP" Value="100"/>
@@ -60,13 +55,8 @@
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center">
-                    <Label.Padding>
-                        <OnPlatform x:TypeArguments="Thickness">
-                            <On Platform="Android, UWP" Value="0"/>
-                            <On Platform="iOS" Value="0"/>
-                        </OnPlatform>
-                    </Label.Padding>
+                    VerticalTextAlignment="Center"
+                    Padding="0">
                 </Label>
             </Frame>
         </Frame>
