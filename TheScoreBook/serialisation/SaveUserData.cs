@@ -14,10 +14,15 @@ namespace TheScoreBook.serialisation
             try
             {
                 var path = System.Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-                using (var sw = new StreamWriter(Path.Combine(path, "user.json"), false))
+#if DEBUG
+                var fileName = "user.debug.json";
+#else
+                var fileName = "user.json";
+#endif
+                using (var sw = new StreamWriter(Path.Combine(path, fileName), false))
                 {
                     // remove the newline characters to save a small amount of disk space
-                    sw.WriteLine(data.ToString().Replace("\n" , ""));
+                    sw.WriteLine(data.ToString().Replace("\n", ""));
                 }
             }
             catch (SerializationException e)

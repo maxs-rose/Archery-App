@@ -18,8 +18,14 @@ namespace TheScoreBook.acessors
         private Rounds()
         {
             var assembly = typeof(Rounds).GetTypeInfo().Assembly;
-            using (var fStream =
-                new StreamReader(assembly.GetManifestResourceStream($"{assembly.GetName().Name}.data.static.rounds.json")))
+
+#if DEBUG
+            var filePath = $"{assembly.GetName().Name}.data.static.rounds.debug.json";
+#else
+            var filePath = $"{assembly.GetName().Name}.data.static.rounds.json";
+#endif
+            
+            using (var fStream = new StreamReader(assembly.GetManifestResourceStream(filePath)))
             {
                 roundData = JObject.Parse(fStream.ReadToEnd());
             }

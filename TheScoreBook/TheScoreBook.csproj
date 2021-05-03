@@ -22,8 +22,10 @@
     <ItemGroup>
       <EmbeddedResource Remove="accessors\**" />
       <None Remove="data\static\rounds.json" />
+      <EmbeddedResource Include="data\static\rounds.debug.json" />
       <EmbeddedResource Include="data\static\rounds.json" />
       <None Remove="data\user\user.json" />
+      <EmbeddedResource Include="data\user\user.debug.json" />
       <EmbeddedResource Include="data\user\user.json" />
     </ItemGroup>
 

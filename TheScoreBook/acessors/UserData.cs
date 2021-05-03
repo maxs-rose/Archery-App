@@ -43,14 +43,17 @@ namespace TheScoreBook.acessors
             
             // this needs to be done synchronously unlike saving as we need to the data to continue
             // another good reason for this to be a singelton
-            var dataFile = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal),
-                "user.json");
+#if DEBUG
+            var fileName = "user.debug.json";
+#else
+            var fileName = $"user.json";
+#endif
+            var dataFile = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal), fileName);
 
             if (!File.Exists(dataFile))
             {
                 var assembly = typeof(UserData).GetTypeInfo().Assembly;
-                using (var fStream =
-                    new StreamReader(assembly.GetManifestResourceStream($"{assembly.GetName().Name}.data.user.user.json")))
+                using (var fStream = new StreamReader(assembly.GetManifestResourceStream($"{assembly.GetName().Name}.data.user.{fileName}")))
                 {
                     userData = JObject.Parse(fStream.ReadToEnd());
                 }
