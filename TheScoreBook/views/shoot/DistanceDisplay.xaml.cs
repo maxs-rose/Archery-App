@@ -28,6 +28,8 @@ namespace TheScoreBook.views.shoot
         private int DistanceIndex { get; }
         private Distance Distance { get; }
 
+        private bool ButtonsWork { get; }
+        
         private int arrowsPerEnd;
         private int endCount = 0;
         private Label[] endLabels;
@@ -48,14 +50,43 @@ namespace TheScoreBook.views.shoot
             endLabels = new Label[arrowsPerEnd * Distance.MaxEnds];
             endTotals = new Label[3 * Distance.MaxEnds];
             inputButtons = new Button[Distance.MaxEnds];
+
+            ButtonsWork = true;
             
             CreateEndDisplay();
             UpdateEndTotalsUI();
         }
+
+        public DistanceDisplay(Distance distance)
+        {
+            InitializeComponent();
+
+            ButtonsWork = false;
+            
+            Distance = distance;
+
+            arrowsPerEnd = Distance.Ends[0].ArrowsPerEnd;
+            
+            endLabels = new Label[arrowsPerEnd * Distance.MaxEnds];
+            endTotals = new Label[3 * Distance.MaxEnds];
+            
+            CreateEndDisplay();
+            UpdateEndTotalsUI();
+
+            DistanceIndex = 0;
+            
+            for(var i = 1; i < distance.MaxEnds; i++)
+            {
+                AddEnd();
+            }
+            UpdateUI(0, 0);
+            UpdateDistanceTotalsUI();
+        }
         
         ~DistanceDisplay()
         {
-            Scoring.UpdateScoringUiEvent -= UpdateUI;
+            if(ButtonsWork)
+                Scoring.UpdateScoringUiEvent -= UpdateUI;
             
             if(distanceLabel != null)
                 UserData.SightMarksUpdatedEvent -= UpdateDistanceText;
@@ -71,6 +102,9 @@ namespace TheScoreBook.views.shoot
         
         private void AddDistanceSightMark(Label l)
         {
+            if (!ButtonsWork)
+                return;
+            
             var mark = GetDistanceSightMark();
 
             if (mark.Length > 0)
@@ -112,7 +146,6 @@ namespace TheScoreBook.views.shoot
             
             distanceLabel.Text = $"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}";
             AddDistanceSightMark(distanceLabel);
-
         }
 
         private void CreateEndDisplay()
@@ -164,6 +197,9 @@ namespace TheScoreBook.views.shoot
 
         private void EndSelectionBox(int row)
         {
+            if (!ButtonsWork)
+                return;
+            
             var selectionButton = new Button()
             {
                 Margin = 0,
@@ -229,11 +265,14 @@ namespace TheScoreBook.views.shoot
         {
             for (var i = 0; i < endCount; i++)
             {
-                if (i == GameManager.NextEndIndex(DistanceIndex)
-                    && GameManager.NextDistanceIndex() == DistanceIndex)
-                    inputButtons[i].BorderColor = Color.Black;
-                else
-                    inputButtons[i].BorderColor = Color.Transparent;
+                if(ButtonsWork)
+                {
+                    if (i == GameManager.NextEndIndex(DistanceIndex)
+                        && GameManager.NextDistanceIndex() == DistanceIndex)
+                        inputButtons[i].BorderColor = Color.Black;
+                    else
+                        inputButtons[i].BorderColor = Color.Transparent;
+                }
 
                 var ends = Distance.Ends; // local var for shorter lines of code
                 

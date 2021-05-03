@@ -19,8 +19,42 @@
             HasBackgroundAnimation="True" />
     </pages:PopupPage.Animation>
     <Frame>
-        <Button
-            Text="{localisation:Translate DeleteRound}"
-            Clicked="DeleteButtonClicked"/>
+        <StackLayout>
+            <Grid
+                HorizontalOptions="End"
+                MinimumHeightRequest="100"
+                Margin="0, 0, 20, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Column="0"
+                    x:Name="HitsDisplay"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Hits}"/>
+                <Label
+                    Grid.Column="1"
+                    x:Name="GoldDisplay"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Golds}"/>
+                <Label
+                    Grid.Column="2"
+                    x:Name="TotalDisplay"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Score}"/>
+            </Grid>
+            <ScrollView
+                VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+                <StackLayout x:Name="DistanceDisplay" BackgroundColor="Transparent"/>
+            </ScrollView>
+            <Button
+                Text="{localisation:Translate DeleteRound}"
+                Clicked="DeleteButtonClicked"/>
+        </StackLayout>
     </Frame>
 </pages:PopupPage>

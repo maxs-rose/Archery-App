@@ -63,9 +63,9 @@ namespace TheScoreBook.views.shoot
 
         private void UpdateUI(int distance, int end)
         {
-            HitsDisplay.Text = $"{LocalisationManager.Instance["Hits"]}: {Hits.ToString()}";
-            GoldDisplay.Text = $"{LocalisationManager.Instance["Golds"]}: {Golds.ToString()}";
-            TotalDisplay.Text = $"{LocalisationManager.Instance["Score"]}: {Score.ToString()}";;
+            HitsDisplay.Text = $"{LocalisationManager.Instance["Hits"]}: {Hits}";
+            GoldDisplay.Text = $"{LocalisationManager.Instance["Golds"]}: {Golds}";
+            TotalDisplay.Text = $"{LocalisationManager.Instance["Score"]}: {Score}";;
         }
 
         private int previousDistance = 0;
