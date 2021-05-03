@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.SymbolStore;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using TheScoreBook.acessors;
+using TheScoreBook.behaviours;
 using TheScoreBook.localisation;
+using TheScoreBook.models;
 using TheScoreBook.models.enums;
 using Xamarin.Forms;
 using Xamarin.Forms.Markup;
@@ -60,15 +65,34 @@ namespace TheScoreBook.views.user
             {
                 var label = new Label
                 {
-                    Text  = $"{mark.Position} - {mark.Notch} | {mark.Distance}{mark.DistanceUnit.ToString()}",
-                    Margin= 0,
-                    Padding= 0,
+                    Text = $"{mark.Position} - {mark.Notch} | {mark.Distance}{mark.DistanceUnit.ToString()}",
+                    Margin = 0,
+                    Padding = 0,
                     HorizontalTextAlignment = TextAlignment.Start,
-                    VerticalTextAlignment = TextAlignment.Center
+                    VerticalTextAlignment = TextAlignment.Center,
+                    GestureRecognizers =
+                    {
+                        new TapGestureRecognizer
+                        {
+                            Command = new Command(() =>
+                            {
+                                if (PopupNavigation.Instance.PopupStack.Count < 1)
+                                    DeleteSightMark(mark);
+                            })
+                        }
+                    }
                 };
-                
+
                 SightMarks.Children.Add(label);
             }
+        }
+
+        private async void DeleteSightMark(SightMark mark)
+        {
+            var delete = await Application.Current.MainPage
+                .DisplayAlert(LocalisationManager.Instance["DeleteMark"], mark.ToString(), LocalisationManager.Instance["Ok"], LocalisationManager.Instance["Cancel"]);
+            if (delete)
+                UserData.Instance.DeleteSightMark(mark);
         }
 
         private void GeneratePreferedRounds()

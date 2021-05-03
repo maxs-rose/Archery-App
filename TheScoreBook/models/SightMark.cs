@@ -39,5 +39,10 @@ namespace TheScoreBook.models
                 {"notch", Notch}
             };
         }
+
+        public override string ToString()
+        {
+            return $"{Position} - {Notch} @ {Distance}{DistanceUnit}";
+        }
     }
 }

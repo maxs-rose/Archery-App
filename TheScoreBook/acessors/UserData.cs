@@ -129,6 +129,25 @@ namespace TheScoreBook.acessors
             Task.Run(() => SaveData(userData));
         }
 
+        public void DeleteSightMark(SightMark mark)
+        {
+            if (!sightMarks.Value.Contains(mark))
+                return; // dont try and remove things that dont exist
+
+            sightMarks.Value.Remove(mark);
+            mut.WaitOne();
+            
+            userData["sightMarks"]!.Value<JArray>()!.Clear();
+            
+            foreach(var m in sightMarks.Value)
+                userData["sightMarks"]!.Value<JArray>()!.Add(m.ToJson());
+            
+            mut.ReleaseMutex();
+            
+            Device.BeginInvokeOnMainThread(() => SightMarksUpdatedEvent?.Invoke());
+            Task.Run(() => SaveData(userData));
+        }
+
         public async void SaveRound(Round round)
         {
             rounds.Value.Add(round);

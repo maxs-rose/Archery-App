@@ -222,4 +222,13 @@
   <data name="SightMark" xml:space="preserve">
     <value>Sight Mark</value>
   </data>
+  <data name="DeleteMark" xml:space="preserve">
+    <value>Remove sight mark?</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
 </root>

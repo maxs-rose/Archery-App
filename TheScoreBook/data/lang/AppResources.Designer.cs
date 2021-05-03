@@ -97,6 +97,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Date.
         /// </summary>
         public static string Date {
@@ -111,6 +120,15 @@ namespace TheScoreBook.data.lang {
         public static string Delete {
             get {
                 return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove sight mark?.
+        /// </summary>
+        public static string DeleteMark {
+            get {
+                return ResourceManager.GetString("DeleteMark", resourceCulture);
             }
         }
         
@@ -192,6 +210,15 @@ namespace TheScoreBook.data.lang {
         public static string Notch {
             get {
                 return ResourceManager.GetString("Notch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ok.
+        /// </summary>
+        public static string Ok {
+            get {
+                return ResourceManager.GetString("Ok", resourceCulture);
             }
         }
         

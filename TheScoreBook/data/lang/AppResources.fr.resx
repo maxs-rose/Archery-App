@@ -196,4 +196,13 @@
     <value>
 Votre profil</value>
   </data>
+  <data name="DeleteMark" xml:space="preserve">
+    <value>Supprimer la marque de visée?</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>d'accord</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
 </root>

@@ -180,7 +180,7 @@ namespace TheScoreBook.views.shoot
                     OpenScoreUI(row);
             };
 
-            selectionButton.Behaviors.Add(new LongButtonPressBehaviour()
+            selectionButton.Behaviors.Add(new LongButtonPressBehaviour
             {
                 Command = new Command(() =>
                 {
