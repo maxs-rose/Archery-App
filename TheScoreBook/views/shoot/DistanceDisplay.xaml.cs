@@ -14,6 +14,7 @@ using TheScoreBook.game;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
+using TheScoreBook.views.user;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
 using Xamarin.Forms.Xaml;
@@ -55,12 +56,63 @@ namespace TheScoreBook.views.shoot
         ~DistanceDisplay()
         {
             Scoring.UpdateScoringUiEvent -= UpdateUI;
+            
+            if(distanceLabel != null)
+                UserData.SightMarksUpdatedEvent -= UpdateDistanceText;
         }
 
         private string GetDistanceSightMark()
         {
             var mark = UserData.SightMarks.FirstOrDefault(m => m.Distance == Distance.DistanceLength && m.DistanceUnit == Distance.DistanceUnit);
-            return mark != default ? $" | {LocalisationManager.Instance["SightMark"]}: {mark.ToScoringString()}" : "";
+            return mark != default ? $"{LocalisationManager.Instance["SightMark"]}: {mark.ToScoringString()}" : "";
+        }
+
+        private Label distanceLabel = null;
+        
+        private void AddDistanceSightMark(Label l)
+        {
+            var mark = GetDistanceSightMark();
+
+            if (mark.Length > 0)
+            {
+                l.Text += $" | {mark}";
+
+                if (distanceLabel == null)
+                    return;
+
+                UserData.SightMarksUpdatedEvent -= UpdateDistanceText;
+                distanceLabel = null;
+                l.InputTransparent = false;
+                l.InputTransparent = true;
+                l.GestureRecognizers.Clear();
+            }
+            else
+            {
+                distanceLabel = l;
+                
+                // only subscribe to the event if we need to to help with performance
+                UserData.SightMarksUpdatedEvent += UpdateDistanceText;
+                l.InputTransparent = false;
+                l.Text += " | +";
+                l.GestureRecognizers.Add(new TapGestureRecognizer
+                {
+                    Command = new Command(() =>
+                    {
+                        if(PopupNavigation.Instance.PopupStack.Count < 1)
+                            PopupNavigation.Instance.PushAsync(new CreateSightMarkPopup(Distance.DistanceLength, Distance.DistanceUnit));
+                    })
+                });
+            }
+        }
+        
+        private void UpdateDistanceText()
+        {
+            if (distanceLabel == null)
+                return;
+            
+            distanceLabel.Text = $"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}";
+            AddDistanceSightMark(distanceLabel);
+
         }
 
         private void CreateEndDisplay()
@@ -70,12 +122,13 @@ namespace TheScoreBook.views.shoot
                 Height = GridLength.Star
             });
 
-            EndDisplay.ColumnDefinitions.Add(new ColumnDefinition()
+            EndDisplay.ColumnDefinitions.Add(new ColumnDefinition
             {
                 Width = GridLength.Star
             });
 
-            AddLabel($"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}" + GetDistanceSightMark(), 0, 0, horizonatal: TextAlignment.Start);
+            AddLabel($"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}", 0, 0, horizonatal: TextAlignment.Start);
+            AddDistanceSightMark((Label)EndDisplay.Children[^1]);
             Grid.SetColumnSpan(EndDisplay.Children[^1], arrowsPerEnd);
             
             AddLabel("ET", arrowsPerEnd, 0);
@@ -214,7 +267,7 @@ namespace TheScoreBook.views.shoot
 
         private void OpenScoreUI(int row)
         {
-            if (PopupNavigation.Instance.PopupStack.Any(p => p is ScoreInputKeyboard))
+            if (PopupNavigation.Instance.PopupStack.Count >= 1)
                 return;
             
             PopupNavigation.Instance.PushAsync(new ScoreInputKeyboard(DistanceIndex, row, arrowsPerEnd));

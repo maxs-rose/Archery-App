@@ -51,6 +51,7 @@
                 Placeholder="{localisation:Translate Distance}"/>
             <Picker
                 Grid.Column="3"
+                x:Name="DistanceUnitPicker"
                 ItemsSource="{Binding Distances}"
                 SelectedIndex="{Binding SelectedDistance, Mode=TwoWay}"/>
         </Grid>
