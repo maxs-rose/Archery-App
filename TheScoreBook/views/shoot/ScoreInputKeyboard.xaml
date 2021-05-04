@@ -20,6 +20,7 @@
             HasBackgroundAnimation="True" />
     </pages:PopupPage.Animation>
     <Frame
+        x:Name="Container"
         BackgroundColor="Transparent"
         Padding="10"
         Margin="30">

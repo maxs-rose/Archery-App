@@ -29,6 +29,11 @@ namespace TheScoreBook.views.shoot
             End = end;
             ArrowsPerEnd = arrowsPerEnd;
             
+            Container.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(ClosePopup)
+            });
+            
             GenerateDisplayButtons();
             SetButtonBindings();
         }
@@ -118,8 +123,13 @@ namespace TheScoreBook.views.shoot
                 GameManager.AddScore(Distance, End, s);
 
             GameManager.Finish(Distance, End);
-            PopupNavigation.Instance.PopAsync(true);
             Scoring.UpdateScoringUiEvent?.Invoke(Distance, End);
+            ClosePopup();
+        }
+
+        private void ClosePopup()
+        {
+            PopupNavigation.Instance.PopAsync(true);
         }
     }
 }
