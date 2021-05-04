@@ -83,7 +83,7 @@ namespace TheScoreBook.views.shoot
         
         private void AddNewDistance()
         {
-            DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex) { HasShadow = false} );
+            DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex, ScoreInputScroll) { HasShadow = false} );
         }
     }
 }

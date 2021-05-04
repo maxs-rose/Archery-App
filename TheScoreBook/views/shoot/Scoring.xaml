@@ -115,8 +115,10 @@
                     Text="{Binding Score}"/>
             </Grid>
             <ScrollView
-                VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
-                <StackLayout x:Name="DistanceDisplay" BackgroundColor="Transparent"/>
+                x:Name="ScoreInputScroll"
+                VerticalOptions="FillAndExpand" BackgroundColor="Transparent"
+                Margin="0, 0, 0, 10">
+                <StackLayout x:Name="DistanceDisplay" VerticalOptions="FillAndExpand" BackgroundColor="Transparent"/>
             </ScrollView>
         </StackLayout>
     </ContentPage.Content>

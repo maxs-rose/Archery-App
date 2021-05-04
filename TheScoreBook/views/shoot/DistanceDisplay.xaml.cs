@@ -15,6 +15,7 @@ using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
 using TheScoreBook.views.user;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
 using Xamarin.Forms.Xaml;
@@ -30,13 +31,15 @@ namespace TheScoreBook.views.shoot
 
         private bool ButtonsWork { get; }
         
+        private ScrollView Scroll { get; }
+        
         private int arrowsPerEnd;
         private int endCount = 0;
         private Label[] endLabels;
         private Label[] endTotals;
         private Button[] inputButtons;
         
-        public DistanceDisplay(int distanceIndex)
+        public DistanceDisplay(int distanceIndex, ScrollView scroll)
         {
             InitializeComponent();
             
@@ -52,6 +55,8 @@ namespace TheScoreBook.views.shoot
             inputButtons = new Button[Distance.MaxEnds];
 
             ButtonsWork = true;
+
+            Scroll = scroll;
             
             CreateEndDisplay();
             UpdateEndTotalsUI();
@@ -184,7 +189,7 @@ namespace TheScoreBook.views.shoot
         
         Label AddLabel(string text, int col, int row, TextAlignment vertical = TextAlignment.Center, TextAlignment horizonatal = TextAlignment.Center)
         {
-            EndDisplay.Children.Add(new Label()
+            EndDisplay.Children.Add(new Label
             {
                 Text = text,
                 InputTransparent = true,
@@ -200,7 +205,7 @@ namespace TheScoreBook.views.shoot
             if (!ButtonsWork)
                 return;
             
-            var selectionButton = new Button()
+            var selectionButton = new Button
             {
                 Margin = 0,
                 Padding = 0,
@@ -236,7 +241,7 @@ namespace TheScoreBook.views.shoot
                 endTotals[3 * end + j] = AddLabel("", arrowsPerEnd + j, end + 1);
         }
 
-        private void UpdateUI(int distance, int end)
+        private async void UpdateUI(int distance, int end)
         {
             if (distance != DistanceIndex) // dont update the ui if we have been called from another distance
                 return;
@@ -245,6 +250,19 @@ namespace TheScoreBook.views.shoot
             AddNewEnd(end);
             UpdateEndTotalsUI();
             UpdateDistanceTotalsUI();
+
+            if (ButtonsWork)
+            {
+                await Scroll.ScrollToAsync(Scroll.Children.First(), ScrollToPosition.End, false);
+                
+                if(Device.RuntimePlatform == Device.iOS && Scroll.ContentSize.Height > Scroll.Height)
+                {
+                    // iOS is a pain in the ass so it needs some more movement for some reason
+                    // Without this the scroll stops half way up the highlighted box
+                    var scrollAmount = Scroll.ScrollY + inputButtons[0].Height;
+                    await Scroll.ScrollToAsync(Scroll.ScrollX, scrollAmount, false);
+                }
+            }
         }
         
         private void UpdateEndArrowsUI()
