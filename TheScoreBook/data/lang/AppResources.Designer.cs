@@ -70,6 +70,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Arrows per End.
+        /// </summary>
+        public static string ArrowsPerEnd {
+            get {
+                return ResourceManager.GetString("ArrowsPerEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;--.
         /// </summary>
         public static string Back {

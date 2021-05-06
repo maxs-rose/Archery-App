@@ -249,4 +249,7 @@
   <data name="Location" xml:space="preserve">
     <value>Location</value>
   </data>
+  <data name="ArrowsPerEnd" xml:space="preserve">
+    <value>Arrows per End</value>
+  </data>
 </root>

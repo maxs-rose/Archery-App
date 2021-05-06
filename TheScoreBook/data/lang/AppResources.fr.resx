@@ -217,4 +217,7 @@ Votre profil</value>
   <data name="TotalArrows" xml:space="preserve">
     <value>Flèches Totales</value>
   </data>
+  <data name="ArrowsPerEnd" xml:space="preserve">
+    <value>Flèches par Extrémité</value>
+  </data>
 </root>

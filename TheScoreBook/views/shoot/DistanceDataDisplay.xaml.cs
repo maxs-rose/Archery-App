@@ -20,6 +20,7 @@ namespace TheScoreBook.views.shoot
         public string TotalArrows { get; }
         public string MaxScore { get; }
         public string MaxEnds { get; }
+        public string ArrowsPerEnd { get; }
         
         public DistanceDataDisplay(Distance distance, int index)
         {
@@ -28,8 +29,9 @@ namespace TheScoreBook.views.shoot
             TargetDistance = $"{distance.DistanceLength}{distance.DistanceUnit}";
             TargetSize = $"{distance.TargetSize}";
             TotalArrows = $"{distance.MaxShots}";
-            MaxScore = $"{distance.MaxEnds}";
-            MaxEnds = $"{distance.MaxScore}";
+            MaxScore = $"{distance.MaxScore}";
+            MaxEnds = $"{distance.MaxEnds}";
+            ArrowsPerEnd = $"{distance.Ends[0].ArrowsPerEnd}";
             
             InitializeComponent();
             BindingContext = this;

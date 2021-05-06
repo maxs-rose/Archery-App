@@ -3,6 +3,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
              x:Class="TheScoreBook.views.GeneralContainer"
              Padding="0">
     <ContentPage.Content>
@@ -40,13 +41,25 @@
                     </Grid.ColumnDefinitions>
                     <Button Grid.Column="0" x:Name="ScoreButton" Text="{localisation:Translate Scores}" Clicked="ScoreButtonOnClicked" BackgroundColor="Transparent" TextColor="White" 
                             BorderWidth="2"
-                            CornerRadius="100"
-                            Margin="20, 10"/>
+                            Margin="20, 10">
+                        <Button.CornerRadius>
+                            <OnPlatform x:TypeArguments="system:Int32">
+                                <On Platform="Android, UWP" Value="100"/>
+                                <On Platform="iOS" Value="10"/>
+                            </OnPlatform>
+                        </Button.CornerRadius>
+                    </Button>
                     <ImageButton Grid.Column="1" Source="Icon" Clicked="ShootButtonOnClicked" BackgroundColor="Transparent" Margin="0, 4"/>
                     <Button Grid.Column="2" x:Name="ProfileButton" Text="{localisation:Translate Profile}" Clicked="ProfileButtonOnClicked" BackgroundColor="Transparent"  TextColor="White" 
                             BorderWidth="2"
-                            CornerRadius="100"
-                            Margin="20, 10"/>
+                            Margin="20, 10">
+                        <Button.CornerRadius>
+                            <OnPlatform x:TypeArguments="system:Int32">
+                                <On Platform="Android, UWP" Value="100"/>
+                                <On Platform="iOS" Value="10"/>
+                            </OnPlatform>
+                        </Button.CornerRadius>
+                    </Button>
                 </Grid>
             </StackLayout>
         </StackLayout>

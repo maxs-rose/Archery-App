@@ -21,6 +21,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                    HasShadow="False"
@@ -32,14 +33,21 @@
             </Frame>
             <Label Grid.Row="1" Grid.Column="0" Text="{localisation:Translate Distance}" VerticalTextAlignment="Center"/>
             <Label Grid.Row="1" Grid.Column="1" Text="{Binding TargetDistance, Mode=OneWay}" VerticalTextAlignment="Center"/>
+            
             <Label Grid.Row="2" Grid.Column="0" Text="{localisation:Translate TargetSize}" VerticalTextAlignment="Center"/>
             <Label Grid.Row="2" Grid.Column="1" Text="{Binding TargetSize, Mode=OneWay}" VerticalTextAlignment="Center"/>
-            <Label Grid.Row="3" Grid.Column="0" Text="{localisation:Translate TotalArrows}" VerticalTextAlignment="Center"/>
-            <Label Grid.Row="3" Grid.Column="1" Text="{Binding TotalArrows, Mode=OneWay}" VerticalTextAlignment="Center"/>
+            
+            <Label Grid.Row="3" Grid.Column="0" Text="{localisation:Translate ArrowsPerEnd}" VerticalTextAlignment="Center"/>
+            <Label Grid.Row="3" Grid.Column="1" Text="{Binding ArrowsPerEnd, Mode=OneWay}" VerticalTextAlignment="Center"/>
+            
             <Label Grid.Row="4" Grid.Column="0" Text="{localisation:Translate MaxEnds}" VerticalTextAlignment="Center"/>
             <Label Grid.Row="4" Grid.Column="1" Text="{Binding MaxEnds, Mode=OneWay}" VerticalTextAlignment="Center"/>
-            <Label Grid.Row="5" Grid.Column="0" Text="{localisation:Translate MaxScore}" VerticalTextAlignment="Center"/>
-            <Label Grid.Row="5" Grid.Column="1" Text="{Binding MaxScore, Mode=OneWay}" VerticalTextAlignment="Center"/>
+            
+            <Label Grid.Row="5" Grid.Column="0" Text="{localisation:Translate TotalArrows}" VerticalTextAlignment="Center"/>
+            <Label Grid.Row="5" Grid.Column="1" Text="{Binding TotalArrows, Mode=OneWay}" VerticalTextAlignment="Center"/>
+            
+            <Label Grid.Row="6" Grid.Column="0" Text="{localisation:Translate MaxScore}" VerticalTextAlignment="Center"/>
+            <Label Grid.Row="6" Grid.Column="1" Text="{Binding MaxScore, Mode=OneWay}" VerticalTextAlignment="Center"/>
         </Grid>
     </StackLayout>
 </Frame>

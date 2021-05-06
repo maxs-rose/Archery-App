@@ -4,6 +4,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
                     xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+                    xmlns:system="clr-namespace:System;assembly=netstandard"
                     x:Class="TheScoreBook.views.shoot.RoundSelectionPage">
     <base:AnimationPage.PageAnimation>
         <base:PageAnimation Duration="Short" Subtype="FromBottom" />
@@ -21,7 +22,7 @@
                 <Grid.Padding>
                     <OnPlatform x:TypeArguments="Thickness">
                         <On Platform="Android, UWP" Value="0"/>
-                        <On Platform="iOS" Value="0, 40, 0, 0"/>
+                        <On Platform="iOS" Value="0, 40, 0, 2"/>
                     </OnPlatform>
                 </Grid.Padding>
                 <Grid.RowDefinitions>
@@ -36,7 +37,26 @@
                         BackgroundColor="Transparent"
                         TextColor="White"/>
                 <ImageButton x:Name="StartButton" Grid.Column="1" Source="Icon" Clicked="OnStartButtonOnClicked"
-                             BackgroundColor="Transparent" Margin="0, 4" CornerRadius="100" BorderWidth="2"/>
+                             BackgroundColor="Transparent" BorderWidth="2">
+                    <ImageButton.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android, UWP" Value="0, 4"/>
+                            <On Platform="iOS" Value="0"/>
+                        </OnPlatform>
+                    </ImageButton.Margin>
+                    <ImageButton.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android, UWP" Value="0"/>
+                            <On Platform="iOS" Value="10"/>
+                        </OnPlatform>
+                    </ImageButton.Padding>
+                    <ImageButton.CornerRadius>
+                        <OnPlatform x:TypeArguments="system:Int32">
+                            <On Platform="Android, UWP" Value="100"/>
+                            <On Platform="iOS" Value="10"/>
+                        </OnPlatform>
+                    </ImageButton.CornerRadius>
+                </ImageButton>
                 <Button Grid.Column="2" Text="{localisation:Translate Profile}" Clicked="OnProfileButtonOnClicked"
                         BackgroundColor="Transparent"
                         TextColor="White"/>

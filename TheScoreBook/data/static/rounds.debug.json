@@ -117,5 +117,29 @@
         "targetUnit": "cm"
       }
     ]
+  },
+  "test4": {
+    "maxScore": 120,
+    "totalArrows": 12,
+    "distances": [
+      {
+        "location": "out",
+        "distance": 18,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 1,
+        "targetSize": 40,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 18,
+        "unit": "m",
+        "arrowsPerEnd": 2,
+        "ends": 1,
+        "targetSize": 40,
+        "targetUnit": "cm"
+      }
+    ]
   }
 }
