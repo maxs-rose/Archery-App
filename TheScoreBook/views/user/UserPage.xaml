@@ -35,14 +35,14 @@
                     BackgroundColor="Transparent"
                     Text="&#x2699;"/>
             </Grid>
-            <Ellipse
-                HorizontalOptions="Center"
-                Margin="0, 25"
-                WidthRequest="100"
-                HeightRequest="100"
-                Stroke="Gray"
-                StrokeThickness="4"
-                Fill="LightGray"/>
+            <!-- <Ellipse -->
+            <!--     HorizontalOptions="Center" -->
+            <!--     Margin="0, 25" -->
+            <!--     WidthRequest="100" -->
+            <!--     HeightRequest="100" -->
+            <!--     Stroke="Gray" -->
+            <!--     StrokeThickness="4" -->
+            <!--     Fill="LightGray"/> -->
             <Grid
                 BackgroundColor="Black"
                 Margin="0">

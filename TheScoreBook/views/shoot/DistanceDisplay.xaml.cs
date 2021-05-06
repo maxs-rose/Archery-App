@@ -63,6 +63,11 @@ namespace TheScoreBook.views.shoot
 
             CreateEndDisplay();
             UpdateUI(DistanceIndex, -1);
+            
+            for (var i = 0; i < Distance.MaxEnds && Distance.Ends[i].EndComplete(); i++)
+                UpdateUI(DistanceIndex, i);
+            
+            UpdateDistanceTotalsUI();
         }
 
         public DistanceDisplay(Distance distance)
@@ -79,7 +84,6 @@ namespace TheScoreBook.views.shoot
             endTotals = new Label[3 * Distance.MaxEnds];
 
             CreateEndDisplay();
-            // UpdateEndTotalsUI();
 
             DistanceIndex = 0;
 

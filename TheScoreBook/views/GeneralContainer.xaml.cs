@@ -94,7 +94,7 @@ namespace TheScoreBook.views
 
         protected override bool OnBackButtonPressed()
         {
-            if(currentPage == 1)
+            if(currentPage != 0)
                 ScoreButtonOnClicked(null, null);
             else
                 return base.OnBackButtonPressed();

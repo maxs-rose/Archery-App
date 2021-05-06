@@ -22,6 +22,8 @@ namespace TheScoreBook.views.shoot
 
         public static UpdateScoringUI UpdateScoringUiEvent;
         
+        private int previousDistance = 0;
+        
         public Scoring()
         {
             InitializeComponent();
@@ -34,12 +36,16 @@ namespace TheScoreBook.views.shoot
             UpdateScoringUiEvent += OnDistanceFinished;
             
             UpdateUI(-1, -1);
+
+            for (var i = 0; i < NextDistanceIndex && GameManager.GetDistance(i).AllEndsComplete(); i++)
+                AddNewDistance(i);
             
             AddNewDistance();
         }
 
         ~Scoring()
         {
+            GameManager.SavePartlyFinishedRound();
             UpdateScoringUiEvent -= UpdateUI;
             UpdateScoringUiEvent -= OnDistanceFinished;
         }
@@ -47,7 +53,6 @@ namespace TheScoreBook.views.shoot
         private void OnFinishButtonClicked(object sender, EventArgs e)
         {
             GameManager.FinishRound();
-            Navigation.RemovePage(Navigation.NavigationStack[^2]);
             ((GeneralContainer) Navigation.NavigationStack[^2]).AddFinishedPage();
             Navigation.PopAsync(true);
         }
@@ -55,15 +60,20 @@ namespace TheScoreBook.views.shoot
         protected override bool OnBackButtonPressed()
         {
             // os nav back button
-            GameManager.FinishRound(false);
+            if(GameManager.GameInProgress && !GameManager.AllDistancesComplete)
+                GameManager.SavePartlyFinishedRound();
+
+            GameManager.ClearPartialRound();
             Navigation.PopAsync(true);
+            
             return true;
         }
 
         private void OnBackButtonClicked(object sender, EventArgs e)
         {
+            GameManager.FinishRound(false);
+            Navigation.PopAsync(true);
             // back button in app
-            OnBackButtonPressed();
         }
 
         private void UpdateUI(int distance, int end)
@@ -75,14 +85,13 @@ namespace TheScoreBook.views.shoot
             if(GameManager.AllDistancesComplete)
                 FinishedButton.BorderColor = FinishedButton.TextColor = Color.DarkGreen;
         }
-
-        private int previousDistance = 0;
+        
         private void OnDistanceFinished(int distance, int end)
         {
             if (GameManager.AllDistancesComplete)
                 return;
 
-            if (NextDistanceIndex <= previousDistance)
+            if (NextDistanceIndex != previousDistance)
                 return;
             
             previousDistance = NextDistanceIndex;
@@ -91,7 +100,13 @@ namespace TheScoreBook.views.shoot
         
         private void AddNewDistance()
         {
-            DistanceDisplay.Children.Add(new DistanceDisplay(NextDistanceIndex, ScoreInputScroll) { HasShadow = false} );
+            AddNewDistance(NextDistanceIndex);
+        }
+        
+        private void AddNewDistance(int distanceIndex)
+        {
+            previousDistance++;
+            DistanceDisplay.Children.Add(new DistanceDisplay(distanceIndex, ScoreInputScroll) { HasShadow = false} );
         }
     }
 }

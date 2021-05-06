@@ -27,10 +27,30 @@ namespace TheScoreBook.views.shoot
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, false);
+            GameManager.LoadPartlyFinishedRound();
             
             BindingContext = this;
+            
+            
+            if (GameManager.PreviousRoundNotFinished)
+            {
+                LoadUnfinishedRound();
+            }
         }
 
+        private async void LoadUnfinishedRound()
+        {
+            var cont = await Application.Current.MainPage.DisplayAlert("Previous game not finished!", "Continue?",
+                "Yes", "No");
+
+            if (cont)
+            {
+                GameManager.ContinuePreviousGame();
+                await Navigation.PushAsync(new Scoring());
+                Navigation.RemovePage(this);
+            }
+        }
+        
         private void OnScoresButtonOnClicked(object sender, EventArgs e)
         {
             // we need to do this before the pop since its async
@@ -47,13 +67,14 @@ namespace TheScoreBook.views.shoot
             Navigation.PopAsync(true);
         }
 
-        private void OnStartButtonOnClicked(object sender, EventArgs e)
+        private async void OnStartButtonOnClicked(object sender, EventArgs e)
         {
             if (!CanStartRound())
                 return;
             
             GameManager.StartRound(SelectedRound.ToLower(), PossibleStyles[SelectedStyle].ToEStyle(), SelectedDate);
-            Navigation.PushAsync(new Scoring());
+            await Navigation.PushAsync(new Scoring());
+            Navigation.RemovePage(this);
         }
 
         private bool CanStartRound()

@@ -1,4 +1,5 @@
 ﻿using FormsControls.Base;
+using TheScoreBook.game;
 using TheScoreBook.views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,13 +16,6 @@ namespace TheScoreBook
             // ExperimentalFeatures.Enable("Shapes_Experimental");
             Device.SetFlags(new[] {"Shapes_Experimental"});
 
-            // var r = new Round("test");
-            // r.AddScore(0, 0, EScore.SIX);
-            // r.AddScore(0, 0, EScore.TEN);
-            // r.AddScore(0, 0, EScore.X);
-            //
-            // UserData.Instance.SaveRound(r);
-
             MainPage = new AnimationNavigationPage(new GeneralContainer());
         }
 
@@ -32,7 +26,7 @@ namespace TheScoreBook
 
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
+            GameManager.SavePartlyFinishedRound();
         }
 
         protected override void OnResume()

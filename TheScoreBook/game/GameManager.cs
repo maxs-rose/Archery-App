@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using Newtonsoft.Json.Linq;
 using TheScoreBook.acessors;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
@@ -10,13 +12,24 @@ namespace TheScoreBook.game
     {
         public static bool GameInProgress { private set; get; } = false;
         private static Round CurrentGame { set; get; }
+        private static Round PreviousGame { set; get; }
+        public static bool PreviousRoundNotFinished { get; private set; } = false;
         
         public static bool AllDistancesComplete => GameInProgress ? CurrentGame.AllDistancesComplete() : false;
 
         public static void StartRound(string roundName, EStyle style, DateTime date)
         {
+            PreviousRoundNotFinished = false;
+            PreviousGame = null;
             GameInProgress = true;
             CurrentGame = new Round(roundName, style, date);
+        }
+
+        public static void ContinuePreviousGame()
+        {
+            CurrentGame = PreviousGame;
+            GameInProgress = true;
+            PreviousRoundNotFinished = false;
         }
 
         public static string RoundName()
@@ -24,6 +37,8 @@ namespace TheScoreBook.game
 
         public static void FinishRound(bool saveResult = true)
         {
+            ClearPartialRound();
+            PreviousRoundNotFinished = false;
             GameInProgress = false;
             if(CurrentGame != null)
             {
@@ -99,6 +114,35 @@ namespace TheScoreBook.game
         {
             if(GameInProgress)
                 CurrentGame.Finish(distance, end);
+        }
+
+        public static void SavePartlyFinishedRound()
+        {
+            if (!GameInProgress && !CurrentGame.AllDistancesComplete())
+                return;
+
+            var p = CurrentGame.ToJson();
+            UserData.Instance.SavePartlyFinishedRound(p);
+        }
+
+        public static void LoadPartlyFinishedRound()
+        {
+            if (PreviousRoundNotFinished)
+                return;
+            
+            var p = (JObject)UserData.Instance.GetPartlyFinishedRound();
+
+            if (p == null || !p.Properties().Any())
+                return;
+            
+            PreviousRoundNotFinished = true;
+            PreviousGame = new Round(p);
+        }
+
+        public static void ClearPartialRound()
+        {
+            GameInProgress = false;
+            CurrentGame = null;
         }
     }
 }

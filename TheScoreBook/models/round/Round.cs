@@ -165,7 +165,7 @@ namespace TheScoreBook.models.round
         
         public JObject ToJson()
         {
-            var json = new JObject()
+            var json = new JObject
             {
                 {"distances", new JArray(Distances.Select(d => d.ToJson()))},
                 {"nDistances", DistanceCount},

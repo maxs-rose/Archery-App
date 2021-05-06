@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models;
 using TheScoreBook.models.round;
+using TheScoreBook.views.shoot;
 using Xamarin.Forms;
 using static TheScoreBook.serialisation.SaveUserData;
 
@@ -190,6 +191,26 @@ namespace TheScoreBook.acessors
             mut.ReleaseMutex();
             
             Device.BeginInvokeOnMainThread(() => RoundsUpdatedEvent?.Invoke());
+            Task.Run(() => SaveData(userData));
+        }
+
+        public JToken GetPartlyFinishedRound()
+        {
+            var data = userData["currentRound"]!;
+            ClearPartlyFinishedRound();
+
+            return data;
+        }
+        
+        private void ClearPartlyFinishedRound()
+        {            
+            userData["currentRound"] = new JObject();
+            Task.Run(() => SaveData(userData));
+        }
+
+        public void SavePartlyFinishedRound(JObject round)
+        {
+            userData["currentRound"] = round;
             Task.Run(() => SaveData(userData));
         }
     }
