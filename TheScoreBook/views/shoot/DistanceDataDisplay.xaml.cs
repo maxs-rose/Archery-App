@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using FormsControls.Base;
+using TheScoreBook.models.round;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace TheScoreBook.views.shoot
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DistanceDataDisplay : Frame
+    {
+        private Distance Distance { get; }
+        public string RoundIndex { get; }
+        public string TargetDistance { get; }
+        public string TargetSize { get; }
+        public string TotalArrows { get; }
+        public string MaxScore { get; }
+        public string MaxEnds { get; }
+        
+        public DistanceDataDisplay(Distance distance, int index)
+        {
+            Distance = distance;
+            RoundIndex = $"Target {index + 1}";
+            TargetDistance = $"{distance.DistanceLength}{distance.DistanceUnit}";
+            TargetSize = $"{distance.TargetSize}";
+            TotalArrows = $"{distance.MaxShots}";
+            MaxScore = $"{distance.MaxEnds}";
+            MaxEnds = $"{distance.MaxScore}";
+            
+            InitializeComponent();
+            BindingContext = this;
+        }
+    }
+}

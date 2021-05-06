@@ -4,7 +4,7 @@ namespace TheScoreBook.models.enums
 {
     public enum EDistanceUnit
     {
-        yd, m
+        yd, m, cm
     }
 
     public static class EDistanceUnitHelpers
@@ -14,6 +14,7 @@ namespace TheScoreBook.models.enums
             {
                 "m" => EDistanceUnit.m,
                 "yd" => EDistanceUnit.yd,
+                "cm" => EDistanceUnit.cm,
                 _ => throw new InvalidCastException()
             };
     }

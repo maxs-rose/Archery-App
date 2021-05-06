@@ -7,6 +7,7 @@ using TheScoreBook.acessors;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
+using TheScoreBook.models.round;
 using Xamarin.Forms;
 
 namespace TheScoreBook.views.shoot
@@ -74,7 +75,23 @@ namespace TheScoreBook.views.shoot
         private void OnRoundSelected(object sender, EventArgs e)
         {
             if(CanStartRound())
+            {
                 AddBorderToStart();
+                DisplayRoundData();
+            }
+        }
+
+        private void DisplayRoundData()
+        {
+            var round = new Round(SelectedRound.ToLower());
+            TotalArrows.Text = $"{LocalisationManager.Instance["TotalArrows"]}: {round.MaxShots}";
+            TotalScore.Text = $"{LocalisationManager.Instance["MaxScore"]}: {round.MaxScore}";
+            Location.Text = $"{LocalisationManager.Instance["Location"]}: {LocalisationManager.Instance[round.Location.ToString()[0] + round.Location.ToString().ToLower()[1..]]}";
+            
+            RoundInformation.Children.Clear();
+
+            for (var i = 0; i < round.Distances.Length; i++)
+                RoundInformation.Children.Add(new DistanceDataDisplay(round.Distances[i], i));
         }
     }
 }

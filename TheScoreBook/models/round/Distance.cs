@@ -12,13 +12,22 @@ namespace TheScoreBook.models.round
         public EDistanceUnit DistanceUnit { get; }
         public End[] Ends { get; }
         public int MaxEnds { get; }
+        public int MaxScore { get; }
+        public int MaxShots { get; }
 
-        public Distance(int distanceLength, EDistanceUnit distanceUnit, int ends, int arrowsPerEnd)
+        public string TargetSize { get; }
+        
+        public Distance(int distanceLength, EDistanceUnit distanceUnit, int ends, int arrowsPerEnd, int targetSize, EDistanceUnit targetUnit)
         {
             DistanceLength = distanceLength;
             DistanceUnit = distanceUnit;
             Ends = new End[ends];
             MaxEnds = ends;
+
+            MaxShots = MaxEnds * arrowsPerEnd;
+            MaxScore = MaxShots * 10;
+
+            TargetSize = $"{targetSize}{targetUnit}";
 
             for (var i = 0; i < ends; i++)
                 Ends[i] = new End(arrowsPerEnd);

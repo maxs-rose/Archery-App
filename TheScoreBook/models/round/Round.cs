@@ -15,6 +15,9 @@ namespace TheScoreBook.models.round
         public string RoundName { get; }
         public ELocation Location { get; }
         public EStyle Style { get; }
+        
+        public int MaxScore { get; }
+        public int MaxShots { get; }
 
         public Round(string round, EStyle style, DateTime date)
         {
@@ -22,20 +25,25 @@ namespace TheScoreBook.models.round
                 throw new InvalidRoundException($"{round} is not a valid round");
 
             var roundConstructor = Rounds.Instance.data[round.ToLower()];
-            DistanceCount = roundConstructor.Count;
+            var distances = roundConstructor["distances"]!.Value<JArray>();
+            DistanceCount = distances!.Count;
             Distances = new Distance[DistanceCount];
 
             for (var i = 0; i < DistanceCount; i++)
             {
-                var dist = roundConstructor[i]!.Value<JObject>();
-                Distances[i] = new Distance(dist!["distance"]!.Value<int>(), dist["unit"]!.Value<string>().ToEDistanceUnit(), dist["ends"]!.Value<int>(), dist["arrowsPerEnd"]!.Value<int>());
+                var dist = distances[i]!.Value<JObject>();
+                Distances[i] = new Distance(dist!["distance"]!.Value<int>(), dist["unit"]!.Value<string>().ToEDistanceUnit(), dist["ends"]!.Value<int>(), dist["arrowsPerEnd"]!.Value<int>(), dist["targetSize"]!.Value<int>(), dist["targetUnit"]!.Value<string>().ToEDistanceUnit());
             }
 
             Style = style;
             Date = date;
             RoundName = round;
             Location = Rounds.Instance.roundLocation(round);
+            MaxScore = roundConstructor["maxScore"]!.Value<int>();
+            MaxShots = roundConstructor["totalArrows"]!.Value<int>();
         }
+
+        public Round(string round) : this(round, EStyle.RECURVE, DateTime.Now) { }
 
         public Round(JObject roundData)
         {

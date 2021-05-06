@@ -1,43 +1,67 @@
 ﻿{
-  "portsmouth": [
-    {
-      "location": "in",
-      "distance": 18,
-      "unit": "m",
-      "arrowsPerEnd": 3,
-      "ends": 20
-    }
-  ],
-  "bray 1": [
-    {
-      "location": "in",
-      "distance": 18,
-      "unit": "m",
-      "arrowsPerEnd": 3,
-      "ends": 10
-    }
-  ],
-  "fita 900": [
-    {
-      "location": "out",
-      "distance": 60,
-      "unit": "m",
-      "arrowsPerEnd": 6,
-      "ends": 5
-    },
-    {
-      "location": "out",
-      "distance": 50,
-      "unit": "m",
-      "arrowsPerEnd": 6,
-      "ends": 5
-    },
-    {
-      "location": "out",
-      "distance": 40,
-      "unit": "m",
-      "arrowsPerEnd": 6,
-      "ends": 5
-    }
-  ]
+  "bray 1":
+  {
+    "maxScore": 300,
+    "totalArrows": 30,
+    "distances":
+    [
+      {
+        "location": "in",
+        "distance": 18,
+        "unit": "m",
+        "arrowsPerEnd": 3,
+        "ends": 10,
+        "targetSize": 40,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "fita 900": {
+    "maxScore": 900,
+    "totalArrows": 90,
+    "distances": [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 5,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 5,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 5,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "portsmouth": {
+    "maxScore": 600,
+    "totalArrows": 60,
+    "distances": [
+      {
+        "location": "in",
+        "distance": 18,
+        "unit": "m",
+        "arrowsPerEnd": 3,
+        "ends": 20,
+        "targetSize": 60,
+        "targetUnit": "cm"
+      }
+    ]
+  }
 }

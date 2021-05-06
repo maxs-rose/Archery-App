@@ -214,6 +214,33 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Location.
+        /// </summary>
+        public static string Location {
+            get {
+                return ResourceManager.GetString("Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Ends.
+        /// </summary>
+        public static string MaxEnds {
+            get {
+                return ResourceManager.GetString("MaxEnds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max Score.
+        /// </summary>
+        public static string MaxScore {
+            get {
+                return ResourceManager.GetString("MaxScore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notch.
         /// </summary>
         public static string Notch {
@@ -367,6 +394,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Target Size.
+        /// </summary>
+        public static string TargetSize {
+            get {
+                return ResourceManager.GetString("TargetSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 10&apos;s.
         /// </summary>
         public static string Tens {
@@ -390,6 +426,15 @@ namespace TheScoreBook.data.lang {
         public static string Total {
             get {
                 return ResourceManager.GetString("Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Arrows.
+        /// </summary>
+        public static string TotalArrows {
+            get {
+                return ResourceManager.GetString("TotalArrows", resourceCulture);
             }
         }
         

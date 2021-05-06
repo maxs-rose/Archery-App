@@ -11,9 +11,9 @@ namespace TheScoreBook.acessors
     public sealed class Rounds
     {
         private readonly JObject roundData;
-        public readonly Dictionary<string, JArray> data;
+        public readonly Dictionary<string, JObject> data;
         public string[] Keys => data.Keys.ToArray();
-        public JArray[] values => data.Values.ToArray();
+        public JObject[] values => data.Values.ToArray();
 
         private Rounds()
         {
@@ -30,12 +30,12 @@ namespace TheScoreBook.acessors
                 roundData = JObject.Parse(fStream.ReadToEnd());
             }
 
-            data = roundData.Properties().ToDictionary(x => x.Name, x => roundData[x.Name]!.Value<JArray>());
+            data = roundData.Properties().ToDictionary(x => x.Name, x => x.Value.Value<JObject>());
         }
 
         public ELocation roundLocation(string roundName)
         {
-            return data[roundName]![0]!["location"]!.Value<string>() == "in" ? ELocation.INDOOR : ELocation.OUTDOOR;
+            return data[roundName]!["distances"]![0]!["location"]!.Value<string>() == "in" ? ELocation.INDOOR : ELocation.OUTDOOR;
         }
 
         private static readonly Lazy<Rounds> instance = new(() => new Rounds());

@@ -60,6 +60,24 @@
                     Date="{Binding SelectedDate, Mode=TwoWay}"
                     Format="dd/MM/yyyy" />
             </StackLayout>
+            <ScrollView Margin="0, 5, 0 ,0">
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" x:Name="TotalArrows" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="1" x:Name="TotalScore" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="2" x:Name="Location" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Grid>
+                    <StackLayout x:Name="RoundInformation"/>
+                </StackLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </base:AnimationPage>

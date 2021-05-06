@@ -205,4 +205,16 @@ Votre profil</value>
   <data name="Cancel" xml:space="preserve">
     <value>Annuler</value>
   </data>
+  <data name="Location" xml:space="preserve">
+    <value>Emplacement</value>
+  </data>
+  <data name="MaxScore" xml:space="preserve">
+    <value>Score Max</value>
+  </data>
+  <data name="TargetSize" xml:space="preserve">
+    <value>Taille Cible</value>
+  </data>
+  <data name="TotalArrows" xml:space="preserve">
+    <value>Flèches Totales</value>
+  </data>
 </root>

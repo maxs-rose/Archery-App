@@ -234,4 +234,19 @@
   <data name="DeleteRound" xml:space="preserve">
     <value>Delete Round</value>
   </data>
+  <data name="TargetSize" xml:space="preserve">
+    <value>Target Size</value>
+  </data>
+  <data name="TotalArrows" xml:space="preserve">
+    <value>Total Arrows</value>
+  </data>
+  <data name="MaxEnds" xml:space="preserve">
+    <value>Total Ends</value>
+  </data>
+  <data name="MaxScore" xml:space="preserve">
+    <value>Max Score</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
 </root>
