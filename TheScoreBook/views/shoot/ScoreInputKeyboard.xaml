@@ -11,10 +11,10 @@
         <animations:ScaleAnimation
             PositionIn="Center"
             PositionOut="Center"
-            ScaleIn="1.2"
+            ScaleIn="0.8"
             ScaleOut="0.8"
-            DurationIn="400"
-            DurationOut="300"
+            DurationIn="200"
+            DurationOut="200"
             EasingIn="SinOut"
             EasingOut="SinIn"
             HasBackgroundAnimation="True" />
