@@ -40,8 +40,8 @@ namespace TheScoreBook.views.shoot
 
         private async void LoadUnfinishedRound()
         {
-            var cont = await Application.Current.MainPage.DisplayAlert("Previous game not finished!", "Continue?",
-                "Yes", "No");
+            var cont = await Application.Current.MainPage.DisplayAlert(LocalisationManager.Instance["PrevGameNotFin"], LocalisationManager.Instance["Continue"],
+                LocalisationManager.Instance["Yes"], LocalisationManager.Instance["No"]);
 
             if (cont)
             {

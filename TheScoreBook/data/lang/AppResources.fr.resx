@@ -220,4 +220,16 @@ Votre profil</value>
   <data name="ArrowsPerEnd" xml:space="preserve">
     <value>Flèches par Extrémité</value>
   </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continuer?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="PrevGameNotFin" xml:space="preserve">
+    <value>Le jeu précédent n'est pas terminé!</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
 </root>

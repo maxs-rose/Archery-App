@@ -252,4 +252,16 @@
   <data name="ArrowsPerEnd" xml:space="preserve">
     <value>Arrows per End</value>
   </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue?</value>
+  </data>
+  <data name="PrevGameNotFin" xml:space="preserve">
+    <value>Previous game not finished!</value>
+  </data>
 </root>

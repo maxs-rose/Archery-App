@@ -115,6 +115,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Continue?.
+        /// </summary>
+        public static string Continue {
+            get {
+                return ResourceManager.GetString("Continue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Date.
         /// </summary>
         public static string Date {
@@ -250,6 +259,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        public static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notch.
         /// </summary>
         public static string Notch {
@@ -300,6 +318,15 @@ namespace TheScoreBook.data.lang {
         public static string PreferedRounds {
             get {
                 return ResourceManager.GetString("PreferedRounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previous game not finished!.
+        /// </summary>
+        public static string PrevGameNotFin {
+            get {
+                return ResourceManager.GetString("PrevGameNotFin", resourceCulture);
             }
         }
         
@@ -453,6 +480,15 @@ namespace TheScoreBook.data.lang {
         public static string WelcomeMessage {
             get {
                 return ResourceManager.GetString("WelcomeMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        public static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
         
