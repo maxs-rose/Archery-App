@@ -6,6 +6,7 @@ using System.Net.Mime;
 using System.Net.NetworkInformation;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Newtonsoft.Json.Bson;
 using Rg.Plugins.Popup.Services;
 using TheScoreBook.acessors;
 using TheScoreBook.Annotations;
@@ -30,26 +31,28 @@ namespace TheScoreBook.views.shoot
         private Distance Distance { get; }
 
         private bool ButtonsWork { get; }
-        
+
         private ScrollView Scroll { get; }
-        
+
         private int arrowsPerEnd;
         private int endCount = 0;
         private Label[] endLabels;
         private Label[] endTotals;
         private Button[] inputButtons;
-        
+
+        private Label distanceLabel = null;
+
         public DistanceDisplay(int distanceIndex, ScrollView scroll)
         {
             InitializeComponent();
-            
+
             Scoring.UpdateScoringUiEvent += UpdateUI;
-            
+
             DistanceIndex = distanceIndex;
             Distance = GameManager.GetDistance(distanceIndex);
 
             arrowsPerEnd = Distance.Ends[0].ArrowsPerEnd;
-            
+
             endLabels = new Label[arrowsPerEnd * Distance.MaxEnds];
             endTotals = new Label[3 * Distance.MaxEnds];
             inputButtons = new Button[Distance.MaxEnds];
@@ -57,9 +60,9 @@ namespace TheScoreBook.views.shoot
             ButtonsWork = true;
 
             Scroll = scroll;
-            
+
             CreateEndDisplay();
-            UpdateEndTotalsUI();
+            UpdateUI(DistanceIndex, -1);
         }
 
         public DistanceDisplay(Distance distance)
@@ -67,92 +70,48 @@ namespace TheScoreBook.views.shoot
             InitializeComponent();
 
             ButtonsWork = false;
-            
+
             Distance = distance;
 
             arrowsPerEnd = Distance.Ends[0].ArrowsPerEnd;
-            
+
             endLabels = new Label[arrowsPerEnd * Distance.MaxEnds];
             endTotals = new Label[3 * Distance.MaxEnds];
-            
+
             CreateEndDisplay();
             UpdateEndTotalsUI();
 
             DistanceIndex = 0;
-            
-            for(var i = 1; i < distance.MaxEnds; i++)
-            {
+
+            for (var i = 1; i < distance.MaxEnds; i++)
                 AddEnd();
-            }
+
             UpdateUI(0, 0);
             UpdateDistanceTotalsUI();
         }
-        
+
         ~DistanceDisplay()
         {
-            if(ButtonsWork)
+            if (!ButtonsWork)
                 Scoring.UpdateScoringUiEvent -= UpdateUI;
             
-            if(distanceLabel != null)
-                UserData.SightMarksUpdatedEvent -= UpdateDistanceText;
+            UserData.SightMarksUpdatedEvent -= UpdateDistanceText;
         }
 
-        private string GetDistanceSightMark()
+        Label AddLabel(string text, int col, int row, TextAlignment vertical = TextAlignment.Center,
+            TextAlignment horizonatal = TextAlignment.Center)
         {
-            var mark = UserData.SightMarks.FirstOrDefault(m => m.Distance == Distance.DistanceLength && m.DistanceUnit == Distance.DistanceUnit);
-            return mark != default ? $"{LocalisationManager.Instance["SightMark"]}: {mark.ToScoringString()}" : "";
-        }
-
-        private Label distanceLabel = null;
-        
-        private void AddDistanceSightMark(Label l)
-        {
-            if (!ButtonsWork)
-                return;
-            
-            var mark = GetDistanceSightMark();
-
-            if (mark.Length > 0)
+            EndDisplay.Children.Add(new Label
             {
-                l.Text += $" | {mark}";
+                Text = text,
+                InputTransparent = true,
+                VerticalTextAlignment = vertical,
+                HorizontalTextAlignment = horizonatal
+            }, col, row);
 
-                if (distanceLabel == null)
-                    return;
-
-                UserData.SightMarksUpdatedEvent -= UpdateDistanceText;
-                distanceLabel = null;
-                l.InputTransparent = false;
-                l.InputTransparent = true;
-                l.GestureRecognizers.Clear();
-            }
-            else
-            {
-                distanceLabel = l;
-                
-                // only subscribe to the event if we need to to help with performance
-                UserData.SightMarksUpdatedEvent += UpdateDistanceText;
-                l.InputTransparent = false;
-                l.Text += " | +";
-                l.GestureRecognizers.Add(new TapGestureRecognizer
-                {
-                    Command = new Command(() =>
-                    {
-                        if(PopupNavigation.Instance.PopupStack.Count < 1)
-                            PopupNavigation.Instance.PushAsync(new CreateSightMarkPopup(Distance.DistanceLength, Distance.DistanceUnit));
-                    })
-                });
-            }
+            return EndDisplay.Children[^1] as Label;
         }
         
-        private void UpdateDistanceText()
-        {
-            if (distanceLabel == null)
-                return;
-            
-            distanceLabel.Text = $"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}";
-            AddDistanceSightMark(distanceLabel);
-        }
-
         private void CreateEndDisplay()
         {
             EndDisplay.RowDefinitions.Add(new RowDefinition
@@ -165,149 +124,197 @@ namespace TheScoreBook.views.shoot
                 Width = GridLength.Star
             });
 
-            AddLabel($"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}", 0, 0, horizonatal: TextAlignment.Start);
-            AddDistanceSightMark((Label)EndDisplay.Children[^1]);
-            Grid.SetColumnSpan(EndDisplay.Children[^1], arrowsPerEnd);
-            
+            AddDistanceLabel();
+
             AddLabel("ET", arrowsPerEnd, 0);
             AddLabel("G", arrowsPerEnd + 1, 0);
             AddLabel("RT", arrowsPerEnd + 2, 0);
-
-            AddEnd();
         }
 
-        private void AddEnd()
+        #region Distance & Sight Marks
+        
+        private void AddDistanceLabel()
         {
-            EndSelectionBox(endCount);
-            for (var j = 0; j < arrowsPerEnd; j++)
-                endLabels[arrowsPerEnd * endCount + j] = AddLabel("", j, endCount + 1);
+            distanceLabel = AddLabel($"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}", 0, 0,
+                horizonatal: TextAlignment.Start);
             
-            AddEndTotals(endCount);
-
-            endCount++;
+            UpdateDistanceText();
+            Grid.SetColumnSpan(EndDisplay.Children[^1], arrowsPerEnd);
         }
         
-        Label AddLabel(string text, int col, int row, TextAlignment vertical = TextAlignment.Center, TextAlignment horizonatal = TextAlignment.Center)
+        private void UpdateDistanceText()
         {
-            EndDisplay.Children.Add(new Label
-            {
-                Text = text,
-                InputTransparent = true,
-                VerticalTextAlignment = vertical,
-                HorizontalTextAlignment = horizonatal
-            }, col, row);
-            
-            return EndDisplay.Children[^1] as Label; 
+            distanceLabel.Text = $"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}";
+            AddSightMarkToDistance(distanceLabel);
         }
-
-        private void EndSelectionBox(int row)
+        
+        private void AddSightMarkToDistance(Label l)
         {
             if (!ButtonsWork)
                 return;
+
+            var mark = GetDistanceSightMark();
+
+            if (mark != default)
+            {
+                AppendSightMarkToLabel(l, mark);
+                ClearLabelGestures(l);
+            }
+            else
+                AddCreateSightMarkToLabel(l);
+        }
+        
+        private string GetDistanceSightMark()
+        {
+            var mark = UserData.SightMarks.FirstOrDefault(m =>
+                m.Distance == Distance.DistanceLength && m.DistanceUnit == Distance.DistanceUnit);
+            return mark != default ? $"{LocalisationManager.Instance["SightMark"]}: {mark.ToScoringString()}" : default;
+        }
+        
+        private void AppendSightMarkToLabel(Label l, string mark)
+        {
+            l.Text += $" | {mark}";
+            l.InputTransparent = true;
+        }
+        
+        private void ClearLabelGestures(Label l)
+        {
+            UserData.SightMarksUpdatedEvent -= UpdateDistanceText;
+            l.GestureRecognizers.Clear();
+        }
+        
+        private void AddCreateSightMarkToLabel(Label l)
+        {
+            // only subscribe to the event if we need to to help with performance
+            UserData.SightMarksUpdatedEvent += UpdateDistanceText;
             
+            l.InputTransparent = false;
+            l.Text += " | +";
+            l.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(() =>
+                {
+                    if (ShouldOpenPopup())
+                        PopupNavigation.Instance.PushAsync(new CreateSightMarkPopup(Distance.DistanceLength, Distance.DistanceUnit));
+                })
+            });
+        }
+
+        #endregion
+
+        #region End & Totals UI
+
+        private async void UpdateUI(int distance, int end)
+        {
+            if (distance != DistanceIndex) // dont update the ui if we have been called from another distance
+                return;
+
+            UpdateEndArrowsUI(end);
+            if (ShouldAddNewEnd(end))
+                AddEnd();
+            UpdateEndTotalsUI();
+            UpdateDistanceTotalsUI();
+
+            await ScrollToBottom();
+        }
+        
+        private void UpdateEndArrowsUI(int endIndex)
+        {
+            if (endIndex < 0 && endIndex >= endCount)
+                return;
+            
+            for (var i = 0; i < arrowsPerEnd; i++)
+                endLabels[arrowsPerEnd * endIndex + i].Text = Distance.Ends[endIndex].GetScore(i)?.ToUserString();
+        }
+        
+        private void AddEnd()
+        {
+            AddEndSelectionBox(endCount);
+            AddEndScoreLabels();
+            AddEndTotalLabels(endCount);
+
+            endCount++;
+        }
+
+        private void AddEndSelectionBox(int row)
+        {
+            if (!ButtonsWork)
+                return;
+
             var selectionButton = new Button
             {
                 Margin = 0,
                 Padding = 0,
                 BackgroundColor = Color.Transparent,
                 BorderWidth = 3,
-                HeightRequest = 50
+                HeightRequest = 50,
+                Behaviors =
+                {
+                    new LongButtonPressBehaviour
+                    {
+                        Command = new Command(() =>
+                        {
+                            if (
+                                Distance.AllEndsComplete() || // if the entire distance is complete we can long press this
+                                Distance.EndComplete(row) // if the distance is not complete then this end should be completed
+                            )
+                                OpenScoreUI(row);
+                        })
+                    }
+                }
             };
-            
+
+            // not sure why this cant be added whilst the object is being constructed
             selectionButton.Clicked += delegate
             {
-                if(GameManager.NextDistanceIndex() == DistanceIndex 
-                   && GameManager.NextEndIndex(DistanceIndex) == row)
+                if (ShouldOpenScoreUI(row))
                     OpenScoreUI(row);
             };
 
-            selectionButton.Behaviors.Add(new LongButtonPressBehaviour
-            {
-                Command = new Command(() =>
-                {
-                    if (Distance.AllEndsComplete() || // if the entire distance is complete we can long press this
-                        GameManager.EndComplete(DistanceIndex, row)) // if the distance is not complete then this end should be completed
-                        OpenScoreUI(row);
-                })
-            });
-
             inputButtons[row] = selectionButton;
-            EndDisplay.Children.Add(selectionButton, 0, arrowsPerEnd+3, row+1, row+2);
+            EndDisplay.Children.Add(selectionButton, 0, arrowsPerEnd + 3, row + 1, row + 2);
         }
 
-        private void AddEndTotals(int end)
+        private void AddEndScoreLabels()
+        {
+            for (var i = 0; i < arrowsPerEnd; i++)
+                endLabels[arrowsPerEnd * endCount + i] = AddLabel("", i, endCount + 1);
+        }
+        
+        private void AddEndTotalLabels(int end)
         {
             for (var j = 0; j < 3; j++)
                 endTotals[3 * end + j] = AddLabel("", arrowsPerEnd + j, end + 1);
-        }
-
-        private async void UpdateUI(int distance, int end)
-        {
-            if (distance != DistanceIndex) // dont update the ui if we have been called from another distance
-                return;
-            
-            UpdateEndArrowsUI();
-            AddNewEnd(end);
-            UpdateEndTotalsUI();
-            UpdateDistanceTotalsUI();
-
-            if (ButtonsWork)
-            {
-                await Scroll.ScrollToAsync(Scroll.Children.First(), ScrollToPosition.End, false);
-                
-                if(Device.RuntimePlatform == Device.iOS && Scroll.ContentSize.Height > Scroll.Height)
-                {
-                    // iOS is a pain in the ass so it needs some more movement for some reason
-                    // Without this the scroll stops half way up the highlighted box
-                    var scrollAmount = Scroll.ScrollY + inputButtons[0].Height;
-                    await Scroll.ScrollToAsync(Scroll.ScrollX, scrollAmount, false);
-                }
-            }
-        }
-        
-        private void UpdateEndArrowsUI()
-        {
-            for (var i = 0; i < endCount; i++)
-                for (var j = 0; j < arrowsPerEnd; j++)
-                   endLabels[arrowsPerEnd * i + j].Text = Distance.Ends[i].GetScore(j)?.ToUserString();
-        }
-
-        private void AddNewEnd(int end)
-        {
-            // add a new end if we need to
-            if(!Distance.AllEndsComplete() && endCount < Distance.MaxEnds && endCount == end + 1)
-                AddEnd();
         }
 
         private void UpdateEndTotalsUI()
         {
             for (var i = 0; i < endCount; i++)
             {
-                if(ButtonsWork)
-                {
-                    if (i == GameManager.NextEndIndex(DistanceIndex)
-                        && GameManager.NextDistanceIndex() == DistanceIndex)
-                        inputButtons[i].BorderColor = Color.Black;
-                    else
-                        inputButtons[i].BorderColor = Color.Transparent;
-                }
+                HighlightNextEnd(i);
 
-                var ends = Distance.Ends; // local var for shorter lines of code
-                
-                if (ends[i]?.GetScore(0) == null)
+                if (!EndHasScores(i))
                     continue;
 
-                endTotals[3 * i + 0].Text = ends[i].Score().ToString();
-                endTotals[3 * i + 1].Text = ends[i].Golds().ToString();
+                endTotals[3 * i + 0].Text = Distance.Ends[i].Score().ToString();
+                endTotals[3 * i + 1].Text = Distance.Ends[i].Golds().ToString();
                 endTotals[3 * i + 2].Text = Distance.RunningTotal(i).ToString();
             }
         }
 
-        private bool alreadyAdded = false;
+        private void HighlightNextEnd(int endIndex)
+        {
+            if (!ButtonsWork)
+                return;
 
+            inputButtons[endIndex].BorderColor = IsNextEnd(endIndex) ? Color.Black : Color.Transparent;
+        }
+        
+        private bool alreadyAdded = false;
         private void UpdateDistanceTotalsUI()
         {
             // only adds the distance totals at the very end
+            // since this could be called multiple times before the round is finished
             if (!Distance.AllEndsComplete())
                 return;
 
@@ -321,13 +328,53 @@ namespace TheScoreBook.views.shoot
             ((Label) EndDisplay.Children[^2]).Text = Distance.Golds().ToString();
             ((Label) EndDisplay.Children[^3]).Text = $"{LocalisationManager.Instance["Hits"]}: {Distance.Hits()}";
         }
+        
+        private async Task ScrollToBottom()
+        {
+            if (!ButtonsWork)
+                return;
+            
+            await Scroll.ScrollToAsync(Scroll.Children.First(), ScrollToPosition.End, false);
+
+            if (Device.RuntimePlatform == Device.iOS && Scroll.ContentSize.Height > Scroll.Height)
+            {
+                // iOS is a pain in the ass so it needs some more movement for some reason
+                // Without this the scroll stops half way up the highlighted box
+                var scrollAmount = Scroll.ScrollY + inputButtons[0].Height;
+                await Scroll.ScrollToAsync(Scroll.ScrollX, scrollAmount, false);
+            }
+        }
+
+        private bool ShouldAddNewEnd(int end)
+        {
+            return !Distance.AllEndsComplete() && endCount < Distance.MaxEnds && endCount == end + 1;
+        }
+        
+        private bool EndHasScores(int endIndex)
+            => Distance.Ends[endIndex]?.GetScore(0) != null;
+
+        private bool IsNextEnd(int endIndex)
+            => endIndex == Distance.NextEndIndex() && GameManager.NextDistanceIndex() == DistanceIndex;
+
+        #endregion
+
+        #region Popup
+
+        private bool ShouldOpenScoreUI(int row)
+        {
+            return GameManager.NextDistanceIndex() == DistanceIndex
+                   && Distance.NextEndIndex() == row
+                   && ShouldOpenPopup();
+        }
+
+        private bool ShouldOpenPopup()
+            => PopupNavigation.Instance.PopupStack.Count < 1;
 
         private void OpenScoreUI(int row)
         {
-            if (PopupNavigation.Instance.PopupStack.Count >= 1)
-                return;
-            
             PopupNavigation.Instance.PushAsync(new ScoreInputKeyboard(DistanceIndex, row, arrowsPerEnd));
         }
+
+        #endregion
     }
 }
