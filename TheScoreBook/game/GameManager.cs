@@ -142,7 +142,7 @@ namespace TheScoreBook.game
         public static void ClearPartialRound()
         {
             GameInProgress = false;
-            CurrentGame = null;
+            PreviousGame = null;
         }
     }
 }
