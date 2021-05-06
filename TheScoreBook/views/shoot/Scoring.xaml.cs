@@ -54,14 +54,16 @@ namespace TheScoreBook.views.shoot
 
         protected override bool OnBackButtonPressed()
         {
+            // os nav back button
             GameManager.FinishRound(false);
-            return base.OnBackButtonPressed();
+            Navigation.PopAsync(true);
+            return true;
         }
 
         private void OnBackButtonClicked(object sender, EventArgs e)
         {
-            GameManager.FinishRound(false);
-            Navigation.PopAsync(true);
+            // back button in app
+            OnBackButtonPressed();
         }
 
         private void UpdateUI(int distance, int end)

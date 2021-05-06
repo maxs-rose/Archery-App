@@ -49,16 +49,9 @@ namespace TheScoreBook.views.shoot
             for (var i = 0; i < ArrowsPerEnd; i++)
             {
                 if (i % 3 == 0 && i != 0)
-                {
-                    ScoreDisplay.RowDefinitions.Add(new RowDefinition
-                    {
-                        Height = GridLength.Star
-                    });
-                    col = 0;
-                    row++;
-                }
+                    CreateBreak(ref row, ref col);
                 
-                if(col < 1)
+                if(col < 1 && row < 1)
                     ScoreDisplay.ColumnDefinitions.Add(new ColumnDefinition
                     {
                         Width = GridLength.Star
@@ -75,6 +68,16 @@ namespace TheScoreBook.views.shoot
                 
                 ScoreDisplay.Children.Add(displayButtons[^1], col++, row);
             }
+        }
+
+        private void CreateBreak(ref int row, ref int col)
+        {
+            ScoreDisplay.RowDefinitions.Add(new RowDefinition
+            {
+                Height = GridLength.Star
+            });
+            col = 0;
+            row++;
         }
 
         private void SetButtonBindings()
