@@ -2,6 +2,7 @@
 using FormsControls.Base;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using NavigationPage = Xamarin.Forms.NavigationPage;
 
@@ -27,6 +28,8 @@ namespace TheScoreBook.views.shoot
             NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = this;
 
+            RoundTitle.Text = GameManager.RoundName();
+            
             UpdateScoringUiEvent += UpdateUI;
             UpdateScoringUiEvent += OnDistanceFinished;
             
@@ -66,6 +69,9 @@ namespace TheScoreBook.views.shoot
             HitsDisplay.Text = $"{LocalisationManager.Instance["Hits"]}: {Hits}";
             GoldDisplay.Text = $"{LocalisationManager.Instance["Golds"]}: {Golds}";
             TotalDisplay.Text = $"{LocalisationManager.Instance["Score"]}: {Score}";;
+            
+            if(GameManager.AllDistancesComplete)
+                FinishedButton.BorderColor = FinishedButton.TextColor = Color.DarkGreen;
         }
 
         private int previousDistance = 0;

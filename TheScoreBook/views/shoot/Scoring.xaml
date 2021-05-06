@@ -55,11 +55,13 @@
                 </Button>
                 <Label
                     Grid.Column="1"
+                    x:Name="RoundTitle"
+                    FontSize="30"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    Text="{localisation:Translate Round}"/>
+                    HorizontalOptions="Center"/>
                 <Button
                     Grid.Column="2"
+                    x:Name="FinishedButton"
                     BackgroundColor="Transparent"
                     BorderColor="Black"
                     BorderWidth="2"

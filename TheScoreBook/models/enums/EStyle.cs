@@ -5,9 +5,11 @@ namespace TheScoreBook.models.enums
     public enum EStyle
     {
         RECURVE,
+        BAREBOW,
         COMPOUND,
         LONGBOW,
-        AFB
+        AFB,
+        OTHER
     }
 
     public static class EStyleHelpers
@@ -16,9 +18,11 @@ namespace TheScoreBook.models.enums
             => s.ToUpper() switch
             {
                 "RECURVE" => EStyle.RECURVE,
+                "BAREBOW" => EStyle.BAREBOW,
                 "COMPOUND" => EStyle.COMPOUND,
                 "LONGBOW" => EStyle.LONGBOW,
-                "AFB" => EStyle.AFB
+                "AFB" => EStyle.AFB,
+                "OTHER" => EStyle.OTHER
             };
 
         public static string ToDisplayString(this EStyle s)

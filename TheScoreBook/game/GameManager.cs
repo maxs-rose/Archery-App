@@ -1,5 +1,6 @@
 ﻿using System;
 using TheScoreBook.acessors;
+using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
 
@@ -17,7 +18,10 @@ namespace TheScoreBook.game
             GameInProgress = true;
             CurrentGame = new Round(roundName, style, date);
         }
-        
+
+        public static string RoundName()
+            => GameInProgress ? LocalisationManager.ToTitleCase(CurrentGame.RoundName) : default;
+
         public static void FinishRound(bool saveResult = true)
         {
             GameInProgress = false;

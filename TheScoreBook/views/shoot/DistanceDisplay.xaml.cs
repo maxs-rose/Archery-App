@@ -79,22 +79,21 @@ namespace TheScoreBook.views.shoot
             endTotals = new Label[3 * Distance.MaxEnds];
 
             CreateEndDisplay();
-            UpdateEndTotalsUI();
+            // UpdateEndTotalsUI();
 
             DistanceIndex = 0;
 
-            for (var i = 1; i < distance.MaxEnds; i++)
-                AddEnd();
-
-            UpdateUI(0, 0);
+            UpdateUI(DistanceIndex, -1);
+            
+            for (var i = 0; i < distance.MaxEnds; i++)
+                UpdateUI(DistanceIndex, i);
+            
             UpdateDistanceTotalsUI();
         }
 
         ~DistanceDisplay()
         {
-            if (!ButtonsWork)
-                Scoring.UpdateScoringUiEvent -= UpdateUI;
-            
+            Scoring.UpdateScoringUiEvent -= UpdateUI;   
             UserData.SightMarksUpdatedEvent -= UpdateDistanceText;
         }
 
@@ -220,7 +219,7 @@ namespace TheScoreBook.views.shoot
         
         private void UpdateEndArrowsUI(int endIndex)
         {
-            if (endIndex < 0 && endIndex >= endCount)
+            if (endIndex < 0 || endIndex >= endCount)
                 return;
             
             for (var i = 0; i < arrowsPerEnd; i++)
@@ -313,9 +312,8 @@ namespace TheScoreBook.views.shoot
         private bool alreadyAdded = false;
         private void UpdateDistanceTotalsUI()
         {
-            // only adds the distance totals at the very end
             // since this could be called multiple times before the round is finished
-            if (!Distance.AllEndsComplete())
+            if (!Distance.AllEndsComplete() || endCount < Distance.MaxEnds)
                 return;
 
             if (!alreadyAdded)
@@ -347,7 +345,7 @@ namespace TheScoreBook.views.shoot
 
         private bool ShouldAddNewEnd(int end)
         {
-            return !Distance.AllEndsComplete() && endCount < Distance.MaxEnds && endCount == end + 1;
+            return endCount < Distance.MaxEnds && endCount == end + 1;
         }
         
         private bool EndHasScores(int endIndex)
