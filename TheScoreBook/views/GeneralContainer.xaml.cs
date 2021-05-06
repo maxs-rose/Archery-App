@@ -15,8 +15,9 @@ namespace TheScoreBook.views
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            Layout.Children.Add(new PastRoundsPage() { HasShadow = false });
-            // Layout.Children.Add(new UserPage());
+            Layout.Children.Add(new PastRoundsPage { HasShadow = false });
+
+            ScoreButton.BorderColor = Color.White;
             
             BottomBar.GestureRecognizers.Add(new SwipeGestureRecognizer
             {
@@ -42,6 +43,7 @@ namespace TheScoreBook.views
             if (currentPage == 0)
                 return;
 
+            SetBorderColour(ScoreButton, ProfileButton);
             Layout.Children.Insert(0, new PastRoundsPage());
             await TransitionInOut(Layout.Children[1], Width, Layout.Children[0], -Width, 0);
             Layout.Children.RemoveAt(1);
@@ -53,6 +55,7 @@ namespace TheScoreBook.views
             if (currentPage == 1)
                 return;
 
+            SetBorderColour(ProfileButton, ScoreButton);
             Layout.Children.Insert(0, new UserPage());
             await TransitionInOut(Layout.Children[1], -Width, Layout.Children[0], Width, 0);
             Layout.Children.RemoveAt(1);
@@ -77,6 +80,9 @@ namespace TheScoreBook.views
             Layout.Children.RemoveAt(0);
             Layout.Children.Add(new FinishedRound());
             currentPage = 2;
+            
+            ScoreButton.BackgroundColor = Color.Transparent;
+            ProfileButton.BackgroundColor = Color.Transparent;
         }
 
         private async void ShootButtonOnClicked(object sender, EventArgs e)
@@ -94,6 +100,12 @@ namespace TheScoreBook.views
                 return base.OnBackButtonPressed();
 
             return true;
+        }
+
+        private void SetBorderColour(Button a, Button b)
+        {
+            a.BorderColor = Color.White;
+            b.BorderColor = Color.Transparent;
         }
     }
 }

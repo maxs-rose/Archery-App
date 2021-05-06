@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FormsControls.Base;
+using Newtonsoft.Json.Bson;
 using TheScoreBook.acessors;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
@@ -25,7 +26,7 @@ namespace TheScoreBook.views.shoot
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, false);
-
+            
             BindingContext = this;
         }
 
@@ -47,18 +48,33 @@ namespace TheScoreBook.views.shoot
 
         private void OnStartButtonOnClicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(SelectedRound) || GameManager.GameInProgress)
+            if (!CanStartRound())
                 return;
             
             GameManager.StartRound(SelectedRound.ToLower(), PossibleStyles[SelectedStyle].ToEStyle(), SelectedDate);
             Navigation.PushAsync(new Scoring());
         }
 
+        private bool CanStartRound()
+            => RoundPicker.SelectedIndex != -1 && !GameManager.GameInProgress;
+        
         protected override bool OnBackButtonPressed()
         {
             GameManager.FinishRound(false);
             Navigation.PopAsync(true);
             return true;
+        }
+
+        private void AddBorderToStart()
+        {
+            StartButton.Padding = new Thickness(10);
+            StartButton.BorderColor = Color.Goldenrod;
+        }
+
+        private void OnRoundSelected(object sender, EventArgs e)
+        {
+            if(CanStartRound())
+                AddBorderToStart();
         }
     }
 }

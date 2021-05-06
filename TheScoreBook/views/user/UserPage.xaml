@@ -44,7 +44,7 @@
                 StrokeThickness="4"
                 Fill="LightGray"/>
             <Grid
-                BackgroundColor="Gray"
+                BackgroundColor="Black"
                 Margin="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -81,7 +81,7 @@
                 HorizontalTextAlignment="Start"
                 VerticalTextAlignment="Center"
                 FontSize="Title"
-                BackgroundColor="Gray"
+                BackgroundColor="Black"
                 TextColor="White"/>
             <StackLayout Margin="0"
                          Padding="20, 0, 0, 0">
@@ -103,7 +103,7 @@
                 HorizontalTextAlignment="Start"
                 VerticalTextAlignment="Center"
                 FontSize="Title"
-                BackgroundColor="Gray"
+                BackgroundColor="Black"
                 TextColor="White"/>
             <StackLayout Margin="0"
                          Padding="20, 0, 0, 0">

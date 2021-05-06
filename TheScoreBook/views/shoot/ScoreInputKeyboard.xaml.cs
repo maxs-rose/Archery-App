@@ -82,29 +82,35 @@ namespace TheScoreBook.views.shoot
 
         private void SetButtonBindings()
         {
-            foreach (ScoreInputButton b in ScoreInput.Children)
+            foreach (var b in ScoreInput.Children)
             {
-                ICommand com = b.WordString switch
-                {
-                    "" => new Command(() => InputScore((EScore) b.Score!)),
-                    "🗑" => new Command(RemoveScore),
-                    "✔" => new Command(AcceptScores),
-                    _ => throw new NotImplementedException($"{b.WordString} is not a know button!")
-                };
-
+                if(b is not ScoreInputButton)
+                    continue;
+                
                 b.GestureRecognizers.Add(new TapGestureRecognizer
                 {
-                    Command = com
+                    Command = GenerateButtonCommand((ScoreInputButton) b)
                 });
             }
         }
 
-        private void InputScore(EScore score)
+        private ICommand GenerateButtonCommand(ScoreInputButton b)
         {
-            if (inputScores.Count >= ArrowsPerEnd)
+            return b.WordString switch
+            {
+                "" => new Command(() => InputScore(b.Score)),
+                "🗑" => new Command(RemoveScore), // not sure if using emoji to match against is the best idea but no problem yet ☺
+                "✔" => new Command(AcceptScores),
+                _ => throw new NotImplementedException($"{b.WordString} is not a know button!")
+            };
+        }
+
+        private void InputScore(EScore? score)
+        {
+            if (inputScores.Count >= ArrowsPerEnd || score == null)
                 return;
             
-            inputScores.Add(score);
+            inputScores.Add((EScore) score);
             displayButtons[inputScores.Count - 1].Score = inputScores[^1];
         }
 

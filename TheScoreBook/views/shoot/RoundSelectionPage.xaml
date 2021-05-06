@@ -17,7 +17,7 @@
                 x:Name="BottomBar"
                 VerticalOptions="Start"
                 Margin="0"
-                BackgroundColor="DarkGray">
+                BackgroundColor="Black">
                 <Grid.Padding>
                     <OnPlatform x:TypeArguments="Thickness">
                         <On Platform="Android, UWP" Value="0"/>
@@ -34,20 +34,23 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Text="{localisation:Translate Scores}" Clicked="OnScoresButtonOnClicked"
                         BackgroundColor="Transparent"
-                        TextColor="Black"/>
-                <ImageButton Grid.Column="1" Source="Icon" Clicked="OnStartButtonOnClicked"
-                             BackgroundColor="Transparent" Margin="0, 4"/>
+                        TextColor="White"/>
+                <ImageButton x:Name="StartButton" Grid.Column="1" Source="Icon" Clicked="OnStartButtonOnClicked"
+                             BackgroundColor="Transparent" Margin="0, 4" CornerRadius="100" BorderWidth="2"/>
                 <Button Grid.Column="2" Text="{localisation:Translate Profile}" Clicked="OnProfileButtonOnClicked"
                         BackgroundColor="Transparent"
-                        TextColor="Black"/>
+                        TextColor="White"/>
             </Grid>
             <StackLayout
                 Padding="0"
                 Margin="10, 0">
                 <Label Text="{localisation:Translate Round}" />
                 <Picker
+                    x:Name="RoundPicker"
+                    SelectedIndex="-1"
                     ItemsSource="{Binding PossibleRounds}"
-                    SelectedItem="{Binding SelectedRound, Mode=TwoWay}" />
+                    SelectedItem="{Binding SelectedRound, Mode=TwoWay}"
+                    SelectedIndexChanged="OnRoundSelected" />
                 <Label Text="{localisation:Translate Style}" />
                 <Picker
                     ItemsSource="{Binding PossibleStyles}"
