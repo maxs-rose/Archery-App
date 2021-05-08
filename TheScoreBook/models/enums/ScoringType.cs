@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using Xamarin.Forms;
 
 namespace TheScoreBook.models.enums
 {
@@ -19,7 +17,7 @@ namespace TheScoreBook.models.enums
                 _ => throw new ArgumentOutOfRangeException()
             };
 
-        public EScore MaxScore() => Id == 0 ? EScore.X : EScore.NINE;
+        public Score MaxScore() => Id == 0 ? Score.X : Score.NINE;
 
         public static explicit operator ScoringType(string obj)
             => obj switch

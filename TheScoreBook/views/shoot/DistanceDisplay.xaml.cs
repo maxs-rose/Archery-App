@@ -227,7 +227,7 @@ namespace TheScoreBook.views.shoot
                 return;
             
             for (var i = 0; i < arrowsPerEnd; i++)
-                endLabels[arrowsPerEnd * endIndex + i].Text = Distance.Ends[endIndex].GetScore(i)?.ToUserString();
+                endLabels[arrowsPerEnd * endIndex + i].Text = Distance.Ends[endIndex].GetScore(i)?.ToString();
         }
         
         private void AddEnd()

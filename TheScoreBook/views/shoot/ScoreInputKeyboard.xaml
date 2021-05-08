@@ -5,7 +5,7 @@
                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
                  xmlns:pages="http://rotorgames.com"
                  xmlns:shoot="clr-namespace:TheScoreBook.views.shoot;assembly=TheScoreBook"
-                 xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+                 xmlns:score="clr-namespace:TheScoreBook.models.enums;assembly=TheScoreBook"
                  x:Class="TheScoreBook.views.shoot.ScoreInputKeyboard">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation
@@ -65,90 +65,90 @@
                         x:Name="Button1"
                         Grid.Row="0"
                         Grid.Column="0"
-                        Score="X"
+                        Score="{x:Static score:Score.X}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent"/>
                     <shoot:ScoreInputButton
                         Grid.Row="0"
                         Grid.Column="1"
+                        Score="{x:Static score:Score.TEN}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"
-                        Score="TEN" />
+                        BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="0"
                         Grid.Column="2"
+                        Score="{x:Static score:Score.NINE}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"
-                        Score="NINE" />
+                        BackgroundColor="Transparent"/>
 
                     <shoot:ScoreInputButton
                         Grid.Row="1"
                         Grid.Column="0"
+                        Score="{x:Static score:Score.EIGHT}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"
-                        Score="EIGHT" />
+                        BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="1"
                         Grid.Column="1"
+                        Score="{x:Static score:Score.SEVEN}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"
-                        Score="SEVEN" />
+                        BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="1"
                         Grid.Column="2"
+                        Score="{x:Static score:Score.SIX}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"
-                        Score="SIX" />
+                        BackgroundColor="Transparent" />
 
                     <shoot:ScoreInputButton
                         Grid.Row="2"
                         Grid.Column="0"
+                        Score="{x:Static score:Score.FIVE}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"
-                        Score="FIVE" />
+                        BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="2"
                         Grid.Column="1"
+                        Score="{x:Static score:Score.FOUR}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"
-                        Score="FOUR" />
+                        BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="2"
                         Grid.Column="2"
+                        Score="{x:Static score:Score.THREE}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"
-                        Score="THREE" />
+                        BackgroundColor="Transparent"/>
 
                     <shoot:ScoreInputButton
                         Grid.Row="3"
                         Grid.Column="0"
+                        Score="{x:Static score:Score.TWO}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"
-                        Score="TWO" />
+                        BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="3"
                         Grid.Column="1"
+                        Score="{x:Static score:Score.ONE}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"
-                        Score="ONE" />
+                        BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="3"
                         Grid.Column="2"
+                        Score="{x:Static score:Score.MISS}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"
-                        Score="M" />
+                        BackgroundColor="Transparent"/>
 
                     <shoot:ScoreInputButton
                         Grid.Row="4"

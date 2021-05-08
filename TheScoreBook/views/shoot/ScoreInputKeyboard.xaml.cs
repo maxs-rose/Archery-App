@@ -18,7 +18,7 @@ namespace TheScoreBook.views.shoot
         private readonly int End;
         private readonly int ArrowsPerEnd;
 
-        private List<EScore> inputScores = new ();
+        private List<Score> inputScores = new ();
         private List<ScoreInputButton> displayButtons = new();
         
         public ScoreInputKeyboard(int distance, int end, int arrowsPerEnd)
@@ -43,7 +43,7 @@ namespace TheScoreBook.views.shoot
         {
             if(GameManager.EndComplete(Distance, End))
                 for(var i = 0; i < ArrowsPerEnd; i++)
-                    inputScores.Add((EScore) GameManager.GetScore(Distance, End, i));
+                    inputScores.Add(GameManager.GetScore(Distance, End, i));
 
             var col = 0;
             var row = 0;
@@ -138,12 +138,12 @@ namespace TheScoreBook.views.shoot
             };
         }
 
-        private void InputScore(EScore? score)
+        private void InputScore(Score score)
         {
             if (inputScores.Count >= ArrowsPerEnd || score == null)
                 return;
             
-            inputScores.Add((EScore) score);
+            inputScores.Add(score);
             displayButtons[inputScores.Count - 1].Score = inputScores[^1];
         }
 

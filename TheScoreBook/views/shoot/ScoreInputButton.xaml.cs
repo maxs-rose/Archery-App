@@ -1,15 +1,17 @@
-﻿using TheScoreBook.localisation;
+﻿using System.ComponentModel.Design;
+using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using static TheScoreBook.models.enums.Score;
 
 namespace TheScoreBook.views.shoot
 {
     public partial class ScoreInputButton : Frame
     {
-        private EScore? score = null;
+        private Score score = null;
 
-        public EScore? Score
+        public Score Score
         {
             get => score;
             set
@@ -41,62 +43,50 @@ namespace TheScoreBook.views.shoot
 
         private void UpdateRingColour()
         {
-            switch (Score)
+            if (Score != null)
             {
-                case EScore.X:
-                case EScore.TEN:
-                case EScore.NINE:
+                if (Score == Score.X || Score == Score.TEN || Score == Score.NINE)
                     ColourFrame.BackgroundColor = Color.Yellow;
-                    break;
-                case EScore.EIGHT:
-                case EScore.SEVEN:
+                else if (Score == Score.EIGHT || Score == Score.SEVEN)
                     ColourFrame.BackgroundColor = Color.Red;
-                    break;
-                case EScore.SIX:
-                case EScore.FIVE:
+                else if (Score == Score.SIX || Score == Score.FIVE)
                     ColourFrame.BackgroundColor = Color.Blue;
-                    break;
-                case EScore.TWO:
-                case EScore.ONE:
+                else if (Score == Score.FOUR || Score == Score.THREE || Score == Score.MISS)
                     ColourFrame.BackgroundColor = Color.White;
-                    break;
-                case EScore.M:
-                case EScore.FOUR:
-                case EScore.THREE:
+                else if (Score == Score.TWO || Score == Score.ONE)
                     ColourFrame.BackgroundColor = Color.Black;
-                    break;
-                default:
+                else
                     ColourFrame.BackgroundColor = Color.Gray;
-                    break;
             }
+            else
+                ColourFrame.BackgroundColor = Color.Gray;
 
-            if (WordString == "X")
+            switch (WordString)
             {
-                WordString = LocalisationManager.Instance["Delete"];
-                ColourFrame.BackgroundColor = Color.DarkRed;
-            }
-            else if (WordString == "^")
-            {
-                WordString = LocalisationManager.Instance["Tick"];
-                ColourFrame.BackgroundColor = Color.DarkGreen;
-                ButtonText.TextColor = Color.DarkGreen;
+                case "X":
+                    WordString = LocalisationManager.Instance["Delete"];
+                    ColourFrame.BackgroundColor = Color.DarkRed;
+                    break;
+                case "^":
+                    WordString = LocalisationManager.Instance["Tick"];
+                    ColourFrame.BackgroundColor = Color.DarkGreen;
+                    ButtonText.TextColor = Color.DarkGreen;
+                    break;
             }
         }
 
         private void UpdateLabelText()
         {
-            if (WordString == "")
-                ButtonText.Text = score?.ToUserString();
-            else
-                ButtonText.Text = WordString;
+            ButtonText.Text = WordString == "" ? score?.ToString() : WordString;
         }
 
         public bool IsFiveZoneScore()
-            => Score switch
-            {
-                null => true,
-                EScore.X => false,
-                _ => (int) Score % 2 != 0
-            };
+        {
+            if (Score == null)
+                return true;
+            if (Score == Score.X)
+                return false;
+            return Score.Value % 2 != 0;
+        }
     }
 }

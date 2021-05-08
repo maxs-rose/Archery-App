@@ -51,10 +51,10 @@ namespace TheScoreBook.game
             CurrentGame = null;
         }
 
-        public static bool AddScore(int distanceIndex, int endIndex, EScore score)
+        public static bool AddScore(int distanceIndex, int endIndex, Score score)
             => GameInProgress && CurrentGame.AddScore(distanceIndex, endIndex, score);
 
-        public static EScore? GetScore(int distanceIndex, int endIndex, int scoreIndex)
+        public static Score GetScore(int distanceIndex, int endIndex, int scoreIndex)
             => GameInProgress ? CurrentGame.Distances[distanceIndex].Ends[endIndex].GetScore(scoreIndex) : null;
 
         public static void ClearEnd(int distanceIndex, int endIndex)

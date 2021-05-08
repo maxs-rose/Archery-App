@@ -7,7 +7,7 @@ namespace TheScoreBook.models.round
 {
     public class End : IToJson
     {
-        private List<EScore> scores = new();
+        private List<Score> scores = new();
         public int ArrowsPerEnd { get; }
 
         public End(int arrowsPerEnd)
@@ -17,11 +17,11 @@ namespace TheScoreBook.models.round
 
         public End(JObject json)
         {
-            scores = json["scores"].Value<JArray>()!.Select(s => (EScore)s.Value<int>()).ToList();
+            scores = json["scores"].Value<JArray>()!.Select(s => (Score)s.Value<int>()).ToList();
             ArrowsPerEnd = json["scoresPerEnd"].Value<int>();
         }
 
-        public EScore? GetScore(int scoreIndex)
+        public Score GetScore(int scoreIndex)
         {
             if (scores.Count > scoreIndex && scoreIndex >= 0)
                 return scores[scoreIndex];
@@ -29,7 +29,7 @@ namespace TheScoreBook.models.round
             return null;
         }
 
-        public bool AddScore(EScore score)
+        public bool AddScore(Score score)
         {
             if (scores.Count >= ArrowsPerEnd) return false;
             
@@ -47,7 +47,7 @@ namespace TheScoreBook.models.round
             return true;
         }
 
-        public bool ChangeScore(int index, EScore score)
+        public bool ChangeScore(int index, Score score)
         {
             if (index < 0 || index >= scores.Count) return false;
 
@@ -65,16 +65,16 @@ namespace TheScoreBook.models.round
             => scores.Count() == ArrowsPerEnd;
         
         public int Hits()
-            => scores.Count(s => s != EScore.M);
+            => scores.Count(s => s != enums.Score.MISS);
 
-        public int CountScore(EScore score)
+        public int CountScore(Score score)
             => scores.Count(s => s == score);
 
         public int Golds()
-            => CountScore(EScore.X) + CountScore(EScore.TEN) + CountScore(EScore.NINE);
+            => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
         
         public int Score()
-            => scores.Sum(e => e.GetRealValue());
+            => scores.Sum(e => e.Value);
 
         public string EndString()
             => $"[{string.Join(",", scores)}]";
@@ -85,20 +85,20 @@ namespace TheScoreBook.models.round
         public void Finish()
         {
             while(scores.Count != ArrowsPerEnd)
-                scores.Add(EScore.M);
+                scores.Add(enums.Score.MISS);
         }
         
         public JObject ToJson()
         {
             var json = new JObject
             {
-                {"scores", new JArray(scores)},
+                {"scores", new JArray(scores.Select(s => s.Id))},
                 {"score", Score()},
                 {"hits", Hits()},
                 {"golds", Golds()},
-                {"x's", CountScore(EScore.X)},
-                {"10's", CountScore(EScore.TEN)},
-                {"9's", CountScore(EScore.NINE)},
+                {"x's", CountScore(enums.Score.X)},
+                {"10's", CountScore(enums.Score.TEN)},
+                {"9's", CountScore(enums.Score.NINE)},
                 {"scoresPerEnd", ArrowsPerEnd},
                 {"endComplete", EndComplete()}
             };

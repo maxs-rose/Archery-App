@@ -64,7 +64,7 @@ namespace TheScoreBook.models.round
             Location = Rounds.Instance.roundLocation(RoundName);
         }
 
-        public bool AddScore(int distanceIndex, int endIndex, EScore score)
+        public bool AddScore(int distanceIndex, int endIndex, Score score)
         {
             if (distanceIndex < 0 || distanceIndex >= DistanceCount) return false;
             if (distanceIndex > 0 && !Distances[distanceIndex - 1].AllEndsComplete()) return false;
@@ -79,7 +79,7 @@ namespace TheScoreBook.models.round
             return Distances[distanceIndex].RemoveScore(endIndex, scoreIndex);
         }
 
-        public bool ChangeScore(int distanceIndex, int endIndex, int scoreIndex, EScore score)
+        public bool ChangeScore(int distanceIndex, int endIndex, int scoreIndex, Score score)
         {
             if (distanceIndex < 0 || distanceIndex >= DistanceCount) return false;
 
@@ -123,13 +123,13 @@ namespace TheScoreBook.models.round
         public int Hits(int distanceIndex, int endIndex)
             => Distances[distanceIndex].Hits(endIndex);
 
-        public int CountScore(EScore score)
+        public int CountScore(Score score)
             => Distances.Sum(d => d.CountScore(score));
 
-        public int CountScore(int distanceIndex, EScore score)
+        public int CountScore(int distanceIndex, Score score)
             => Distances[distanceIndex].CountScore(score);
 
-        public int CountScore(int distanceIndex, int endIndex, EScore score)
+        public int CountScore(int distanceIndex, int endIndex, Score score)
             => Distances[distanceIndex].CountScore(endIndex, score);
 
         public int Score()
@@ -142,7 +142,7 @@ namespace TheScoreBook.models.round
             => Distances[distanceIndex].Score(endIndex);
         
         public int Golds()
-            => CountScore(EScore.X) + CountScore(EScore.TEN) + CountScore(EScore.NINE);
+            => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
 
         public int Golds(int distanceIndex)
             => Distances[distanceIndex].Golds();

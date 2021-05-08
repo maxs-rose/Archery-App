@@ -28,7 +28,7 @@ namespace TheScoreBook.models.round
             ScoringType = scoringType;
 
             MaxShots = MaxEnds * arrowsPerEnd;
-            MaxScore = MaxShots * scoringType.MaxScore().GetRealValue();
+            MaxScore = MaxShots * scoringType.MaxScore().Value;
 
             TargetSize = $"{targetSize}{targetUnit}";
 
@@ -48,7 +48,7 @@ namespace TheScoreBook.models.round
                 Ends[i] = new End(ends[i].Value<JObject>());
         }
     
-        public bool AddScore(int endIndex, EScore score)
+        public bool AddScore(int endIndex, Score score)
         {
             if (endIndex < 0 || endIndex >= MaxEnds) return false;
             if (endIndex > 0 && !Ends[endIndex - 1].EndComplete()) return false;
@@ -62,7 +62,7 @@ namespace TheScoreBook.models.round
             return Ends[endIndex].RemoveScore(scoreIndex);
         }
 
-        public bool ChangeScore(int endIndex, int scoreIndex, EScore score)
+        public bool ChangeScore(int endIndex, int scoreIndex, Score score)
         {
             if (endIndex < 0 || endIndex >= MaxEnds) return false;
             return Ends[endIndex].ChangeScore(scoreIndex, score);
@@ -89,17 +89,17 @@ namespace TheScoreBook.models.round
         public int Hits(int endIndex)
             => Ends[endIndex].Hits();
 
-        public int CountScore(EScore score)
+        public int CountScore(Score score)
             => Ends.Sum(e => e.CountScore(score));
 
-        public int CountScore(int index, EScore score)
+        public int CountScore(int index, Score score)
             => Ends[index].CountScore(score);
 
         public int Golds()
-            => CountScore(EScore.X) + CountScore(EScore.TEN) + CountScore(EScore.NINE);
+            => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
         
         public int Golds(int endIndex)
-            => CountScore(endIndex, EScore.X) + CountScore(endIndex, EScore.TEN) + CountScore(endIndex, EScore.NINE);
+            => CountScore(endIndex, enums.Score.X) + CountScore(endIndex, enums.Score.TEN) + CountScore(endIndex, enums.Score.NINE);
 
         public int Score()
             => Ends.Sum(e => e.Score());
@@ -142,9 +142,9 @@ namespace TheScoreBook.models.round
                 {"score", Score()},
                 {"hits", Hits()},
                 {"golds", Golds()},
-                {"x's", CountScore(EScore.X)},
-                {"10's", CountScore(EScore.TEN)},
-                {"9's", CountScore(EScore.NINE)},
+                {"x's", CountScore(enums.Score.X)},
+                {"10's", CountScore(enums.Score.TEN)},
+                {"9's", CountScore(enums.Score.NINE)},
                 {"maxEnds", MaxEnds},
                 {"endComplete", AllEndsComplete()},
                 {"distance", DistanceLength},
