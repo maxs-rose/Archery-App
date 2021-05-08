@@ -17,15 +17,18 @@ namespace TheScoreBook.models.round
 
         public string TargetSize { get; }
         
-        public Distance(int distanceLength, EDistanceUnit distanceUnit, int ends, int arrowsPerEnd, int targetSize, EDistanceUnit targetUnit)
+        public ScoringType ScoringType { get; }
+        
+        public Distance(int distanceLength, EDistanceUnit distanceUnit, int ends, int arrowsPerEnd, int targetSize, EDistanceUnit targetUnit, ScoringType scoringType)
         {
             DistanceLength = distanceLength;
             DistanceUnit = distanceUnit;
             Ends = new End[ends];
             MaxEnds = ends;
+            ScoringType = scoringType;
 
             MaxShots = MaxEnds * arrowsPerEnd;
-            MaxScore = MaxShots * 10;
+            MaxScore = MaxShots * scoringType.MaxScore().GetRealValue();
 
             TargetSize = $"{targetSize}{targetUnit}";
 

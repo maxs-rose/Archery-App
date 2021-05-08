@@ -85,15 +85,16 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" x:Name="TotalArrows" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                        <Label Grid.Column="1" x:Name="TotalScore" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                        <Label Grid.Column="2" x:Name="Location" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="0" Grid.Row="0" x:Name="TotalArrows" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="1" Grid.Row="0" x:Name="TotalScore" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="0" Grid.Row="1" x:Name="Location" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="1" Grid.Row="1" x:Name="ScoringType" Text="" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                     </Grid>
                     <StackLayout x:Name="RoundInformation"/>
                 </StackLayout>

@@ -8,6 +8,7 @@ using TheScoreBook.game;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using Xamarin.Forms;
+using Xamarin.Forms.Markup;
 
 namespace TheScoreBook.views.shoot
 {
@@ -84,14 +85,46 @@ namespace TheScoreBook.views.shoot
         {
             foreach (var b in ScoreInput.Children)
             {
-                if(b is not ScoreInputButton)
+                if (b is not ScoreInputButton)
                     continue;
-                
+
                 b.GestureRecognizers.Add(new TapGestureRecognizer
                 {
                     Command = GenerateButtonCommand((ScoreInputButton) b)
                 });
             }
+
+            ReorderForScoring();
+        }
+
+        private void ReorderForScoring()
+        {
+            if (!GameManager.IsFiveZone())
+                return;
+            
+            var removeList = new Stack<View>();
+            
+            foreach (var b in ScoreInput.Children)
+                if (GameManager.IsFiveZone() && !((ScoreInputButton) b).IsFiveZoneScore())
+                    removeList.Push(b);
+
+            while (removeList.Any())
+                ScoreInput.Children.Remove(removeList.Pop());
+
+            // 9
+            Grid.SetColumn(ScoreInput.Children[0], 0);
+            // 7
+            Grid.SetColumn(ScoreInput.Children[1], 2);
+            Grid.SetRow(ScoreInput.Children[1], 0);
+            // 5
+            Grid.SetColumn(ScoreInput.Children[2], 1);
+            Grid.SetRow(ScoreInput.Children[2], 1);
+            // 3
+            Grid.SetColumn(ScoreInput.Children[3], 0);
+            Grid.SetRow(ScoreInput.Children[3], 2);
+            // 1
+            Grid.SetColumn(ScoreInput.Children[4], 2);
+            Grid.SetRow(ScoreInput.Children[4], 2);
         }
 
         private ICommand GenerateButtonCommand(ScoreInputButton b)

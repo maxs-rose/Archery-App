@@ -1,8 +1,7 @@
 ﻿{
   "bray 1":
   {
-    "maxScore": 300,
-    "totalArrows": 30,
+    "scoringType": "TenZone",
     "distances":
     [
       {
@@ -17,8 +16,7 @@
     ]
   },
   "fita 900": {
-    "maxScore": 900,
-    "totalArrows": 90,
+    "scoringType": "TenZone",
     "distances": [
       {
         "location": "out",
@@ -50,8 +48,7 @@
     ]
   },
   "portsmouth": {
-    "maxScore": 600,
-    "totalArrows": 60,
+    "scoringType": "TenZone",
     "distances": [
       {
         "location": "in",

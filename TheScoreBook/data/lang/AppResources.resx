@@ -264,4 +264,7 @@
   <data name="PrevGameNotFin" xml:space="preserve">
     <value>Previous game not finished!</value>
   </data>
+  <data name="ScoringType" xml:space="preserve">
+    <value>Scoring Type</value>
+  </data>
 </root>

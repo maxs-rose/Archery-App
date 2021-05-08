@@ -1,8 +1,7 @@
 ﻿{
   "bray 1": 
   {
-    "maxScore": 300,
-    "totalArrows": 30,
+    "scoringType": "TenZone",
     "distances":
     [
       {
@@ -17,8 +16,7 @@
     ]
   },
   "fita 900": {
-    "maxScore": 900,
-    "totalArrows": 90,
+    "scoringType": "TenZone",
     "distances": [
       {
         "location": "out",
@@ -50,8 +48,7 @@
     ]
   },
   "portsmouth": {
-    "maxScore": 600,
-    "totalArrows": 60,
+    "scoringType": "TenZone",
     "distances": [
       {
         "location": "in",
@@ -65,8 +62,7 @@
     ]
   },
   "test": {
-    "maxScore": 180,
-    "totalArrows": 18,
+    "scoringType": "TenZone",
     "distances":[
       {
         "location": "out",
@@ -80,8 +76,7 @@
     ]
   },
   "test2": {
-    "maxScore": 120,
-    "totalArrows": 12,
+    "scoringType": "FiveZone",
     "distances": [
       {
         "location": "out",
@@ -104,8 +99,7 @@
     ]
   },
   "test3": {
-    "maxScore": 120,
-    "totalArrows": 12,
+    "scoringType": "TenZone",
     "distances": [
       {
         "location": "out",
@@ -119,8 +113,7 @@
     ]
   },
   "test4": {
-    "maxScore": 120,
-    "totalArrows": 12,
+    "scoringType": "TenZone",
     "distances": [
       {
         "location": "out",

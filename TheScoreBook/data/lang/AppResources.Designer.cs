@@ -376,6 +376,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Scoring Type.
+        /// </summary>
+        public static string ScoringType {
+            get {
+                return ResourceManager.GetString("ScoringType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Language.
         /// </summary>
         public static string SelectLanguage {

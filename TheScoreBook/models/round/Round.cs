@@ -18,6 +18,8 @@ namespace TheScoreBook.models.round
         
         public int MaxScore { get; }
         public int MaxShots { get; }
+        
+        public ScoringType ScoringType { get; }
 
         public Round(string round, EStyle style, DateTime date)
         {
@@ -28,19 +30,20 @@ namespace TheScoreBook.models.round
             var distances = roundConstructor["distances"]!.Value<JArray>();
             DistanceCount = distances!.Count;
             Distances = new Distance[DistanceCount];
+            ScoringType = (ScoringType)roundConstructor["scoringType"]!.Value<string>();
 
             for (var i = 0; i < DistanceCount; i++)
             {
                 var dist = distances[i]!.Value<JObject>();
-                Distances[i] = new Distance(dist!["distance"]!.Value<int>(), dist["unit"]!.Value<string>().ToEDistanceUnit(), dist["ends"]!.Value<int>(), dist["arrowsPerEnd"]!.Value<int>(), dist["targetSize"]!.Value<int>(), dist["targetUnit"]!.Value<string>().ToEDistanceUnit());
+                Distances[i] = new Distance(dist!["distance"]!.Value<int>(), dist["unit"]!.Value<string>().ToEDistanceUnit(), dist["ends"]!.Value<int>(), dist["arrowsPerEnd"]!.Value<int>(), dist["targetSize"]!.Value<int>(), dist["targetUnit"]!.Value<string>().ToEDistanceUnit(), ScoringType);
             }
 
             Style = style;
             Date = date;
             RoundName = round;
             Location = Rounds.Instance.roundLocation(round);
-            MaxScore = roundConstructor["maxScore"]!.Value<int>();
-            MaxShots = roundConstructor["totalArrows"]!.Value<int>();
+            MaxScore = Distances.Sum(d => d.MaxScore);
+            MaxShots = Distances.Sum(d => d.MaxShots);
         }
 
         public Round(string round) : this(round, EStyle.RECURVE, DateTime.Now) { }

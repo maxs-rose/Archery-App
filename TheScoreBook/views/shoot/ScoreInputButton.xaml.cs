@@ -1,5 +1,6 @@
 ﻿using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace TheScoreBook.views.shoot
@@ -7,6 +8,7 @@ namespace TheScoreBook.views.shoot
     public partial class ScoreInputButton : Frame
     {
         private EScore? score = null;
+
         public EScore? Score
         {
             get => score;
@@ -19,6 +21,7 @@ namespace TheScoreBook.views.shoot
         }
 
         private string wordString = "";
+
         public string WordString
         {
             get => wordString;
@@ -27,7 +30,7 @@ namespace TheScoreBook.views.shoot
                 wordString = value;
                 UpdateRingColour();
                 UpdateLabelText();
-            }   
+            }
         }
 
         public ScoreInputButton()
@@ -82,10 +85,18 @@ namespace TheScoreBook.views.shoot
 
         private void UpdateLabelText()
         {
-            if(WordString == "")
+            if (WordString == "")
                 ButtonText.Text = score?.ToUserString();
             else
                 ButtonText.Text = WordString;
         }
+
+        public bool IsFiveZoneScore()
+            => Score switch
+            {
+                null => true,
+                EScore.X => false,
+                _ => (int) Score % 2 != 0
+            };
     }
 }

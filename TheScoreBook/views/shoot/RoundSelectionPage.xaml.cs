@@ -95,11 +95,11 @@ namespace TheScoreBook.views.shoot
 
         private void OnRoundSelected(object sender, EventArgs e)
         {
-            if(CanStartRound())
-            {
-                AddBorderToStart();
-                DisplayRoundData();
-            }
+            if (!CanStartRound())
+                return;
+            
+            AddBorderToStart();
+            DisplayRoundData();
         }
 
         private void DisplayRoundData()
@@ -108,6 +108,7 @@ namespace TheScoreBook.views.shoot
             TotalArrows.Text = $"{LocalisationManager.Instance["TotalArrows"]}: {round.MaxShots}";
             TotalScore.Text = $"{LocalisationManager.Instance["MaxScore"]}: {round.MaxScore}";
             Location.Text = $"{LocalisationManager.Instance["Location"]}: {LocalisationManager.Instance[round.Location.ToString()[0] + round.Location.ToString().ToLower()[1..]]}";
+            ScoringType.Text = $"{LocalisationManager.Instance["ScoringType"]}: {round.ScoringType}";
             
             RoundInformation.Children.Clear();
 

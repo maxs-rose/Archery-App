@@ -65,8 +65,10 @@ namespace TheScoreBook.game
 
         public static Distance GetDistance(int distanceIndex)
             => GameInProgress ? CurrentGame.Distances[distanceIndex] : null;
-        
 
+
+        public static bool IsFiveZone() => GameInProgress && CurrentGame.ScoringType == ScoringType.FiveZone;
+        
         public static int Hits()
         {
             if (GameInProgress)
