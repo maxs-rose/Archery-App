@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Reflection;
 using System.Resources;
 using System.Threading;
-using TheScoreBook.Annotations;
 using TheScoreBook.data.lang;
 using Xamarin.Essentials;
 
@@ -13,15 +12,15 @@ namespace TheScoreBook.localisation
     public class LocalisationManager : INotifyPropertyChanged
     {
         private const string LanguageKey = nameof(LanguageKey);
-        
+
         public event PropertyChangedEventHandler PropertyChanged;
         public int LanguageChangedNotification => 0;
 
-        private static readonly Lazy<LocalisationManager> instance = new (() => new LocalisationManager());
+        private static readonly Lazy<LocalisationManager> instance = new(() => new LocalisationManager());
         public static LocalisationManager Instance => instance.Value;
 
         public CultureInfo CurrentCulture => AppResources.Culture ?? Thread.CurrentThread.CurrentUICulture;
-        
+
         private LocalisationManager()
         {
             SetCulture(new CultureInfo(Preferences.Get(LanguageKey, CurrentCulture.TwoLetterISOLanguageName)));
@@ -32,7 +31,7 @@ namespace TheScoreBook.localisation
             Thread.CurrentThread.CurrentUICulture = language;
             AppResources.Culture = language;
             Preferences.Set(LanguageKey, language.TwoLetterISOLanguageName);
-            
+
             Invalidate();
         }
 

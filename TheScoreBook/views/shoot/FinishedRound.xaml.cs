@@ -13,16 +13,16 @@ namespace TheScoreBook.views.shoot
         public string Date { get; }
         public string Bow { get; }
         public int Score { get; }
-        
+
         public FinishedRound()
-        { 
+        {
             InitializeComponent();
-            
+
             RoundName = LocalisationManager.ToTitleCase(UserData.LatestRound.RoundName);
             Date = LocalisationManager.LocalisedShortDate(UserData.LatestRound.Date);
             Bow = UserData.LatestRound.Style.ToDisplayString();
             Score = UserData.LatestRound.Score();
-            
+
             BindingContext = this;
         }
     }

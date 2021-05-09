@@ -21,9 +21,9 @@ namespace TheScoreBook.iOS
         {
             Popup.Init();
             FormsControls.Touch.Main.Init();
-            
+
             global::Xamarin.Forms.Forms.Init();
-            
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

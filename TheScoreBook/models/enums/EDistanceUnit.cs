@@ -4,7 +4,9 @@ namespace TheScoreBook.models.enums
 {
     public enum EDistanceUnit
     {
-        yd, m, cm
+        yd,
+        m,
+        cm
     }
 
     public static class EDistanceUnitHelpers

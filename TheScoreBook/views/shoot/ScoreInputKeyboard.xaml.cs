@@ -8,7 +8,6 @@ using TheScoreBook.game;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using Xamarin.Forms;
-using Xamarin.Forms.Markup;
 
 namespace TheScoreBook.views.shoot
 {
@@ -18,9 +17,9 @@ namespace TheScoreBook.views.shoot
         private readonly int End;
         private readonly int ArrowsPerEnd;
 
-        private List<Score> inputScores = new ();
+        private List<Score> inputScores = new();
         private List<ScoreInputButton> displayButtons = new();
-        
+
         public ScoreInputKeyboard(int distance, int end, int arrowsPerEnd)
         {
             InitializeComponent();
@@ -29,20 +28,20 @@ namespace TheScoreBook.views.shoot
             Distance = distance;
             End = end;
             ArrowsPerEnd = arrowsPerEnd;
-            
+
             Container.GestureRecognizers.Add(new TapGestureRecognizer
             {
                 Command = new Command(ClosePopup)
             });
-            
+
             GenerateDisplayButtons();
             SetButtonBindings();
         }
 
         private void GenerateDisplayButtons()
         {
-            if(GameManager.EndComplete(Distance, End))
-                for(var i = 0; i < ArrowsPerEnd; i++)
+            if (GameManager.EndComplete(Distance, End))
+                for (var i = 0; i < ArrowsPerEnd; i++)
                     inputScores.Add(GameManager.GetScore(Distance, End, i));
 
             var col = 0;
@@ -51,22 +50,22 @@ namespace TheScoreBook.views.shoot
             {
                 if (i % 3 == 0 && i != 0)
                     CreateBreak(ref row, ref col);
-                
-                if(col < 1 && row < 1)
+
+                if (col < 1 && row < 1)
                     ScoreDisplay.ColumnDefinitions.Add(new ColumnDefinition
                     {
                         Width = GridLength.Star
                     });
-                
+
                 displayButtons.Add(new ScoreInputButton
                 {
                     BackgroundColor = Color.Transparent,
                     Margin = 0,
                     Padding = 0,
                 });
-                
+
                 displayButtons[^1].Score = inputScores.Any() ? inputScores[i] : null;
-                
+
                 ScoreDisplay.Children.Add(displayButtons[^1], col++, row);
             }
         }
@@ -101,12 +100,13 @@ namespace TheScoreBook.views.shoot
         {
             if (!GameManager.IsFiveZone())
                 return;
-            
+
             var removeList = new Stack<View>();
-            
+
             foreach (ScoreInputButton b in ScoreInput.Children)
-                if (b.WordString != LocalisationManager.Instance["Delete"] && b.WordString != LocalisationManager.Instance["Tick"])
-                    if(GameManager.IsFiveZone() && !b.Score.IsFiveZoneScore())
+                if (b.WordString != LocalisationManager.Instance["Delete"] &&
+                    b.WordString != LocalisationManager.Instance["Tick"])
+                    if (GameManager.IsFiveZone() && !b.Score.IsFiveZoneScore())
                         removeList.Push(b);
 
             while (removeList.Any())
@@ -133,7 +133,8 @@ namespace TheScoreBook.views.shoot
             return b.WordString switch
             {
                 "" => new Command(() => InputScore(b.Score)),
-                "🗑" => new Command(RemoveScore), // not sure if using emoji to match against is the best idea but no problem yet ☺
+                "🗑" => new Command(
+                    RemoveScore), // not sure if using emoji to match against is the best idea but no problem yet ☺
                 "✔" => new Command(AcceptScores),
                 _ => throw new NotImplementedException($"{b.WordString} is not a know button!")
             };
@@ -143,7 +144,7 @@ namespace TheScoreBook.views.shoot
         {
             if (inputScores.Count >= ArrowsPerEnd || score == null)
                 return;
-            
+
             inputScores.Add(score);
             displayButtons[inputScores.Count - 1].Score = inputScores[^1];
         }
@@ -152,7 +153,7 @@ namespace TheScoreBook.views.shoot
         {
             if (inputScores.Count <= 0)
                 return;
-            
+
             inputScores.RemoveAt(inputScores.Count - 1);
             displayButtons[inputScores.Count].Score = null;
         }
@@ -161,7 +162,7 @@ namespace TheScoreBook.views.shoot
         {
             if (GameManager.EndComplete(Distance, End))
                 GameManager.ClearEnd(Distance, End);
-            
+
             foreach (var s in inputScores)
                 GameManager.AddScore(Distance, End, s);
 

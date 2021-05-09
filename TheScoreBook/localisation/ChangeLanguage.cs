@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Input;
-using TheScoreBook.data.lang;
 using Xamarin.Forms;
 
 namespace TheScoreBook.localisation
@@ -33,10 +32,11 @@ namespace TheScoreBook.localisation
         {
             Languages = new ObservableCollection<Language>()
             {
-                {new Language("English", "en") },
-                {new Language("French", "fr") }
+                {new Language("English", "en")},
+                {new Language("French", "fr")}
             };
-            SelectedLanguage = Languages.FirstOrDefault(pro => pro.CI == LocalisationManager.Instance.CurrentCulture.TwoLetterISOLanguageName) ??
+            SelectedLanguage = Languages.FirstOrDefault(pro =>
+                                   pro.CI == LocalisationManager.Instance.CurrentCulture.TwoLetterISOLanguageName) ??
                                Languages.First();
         }
     }

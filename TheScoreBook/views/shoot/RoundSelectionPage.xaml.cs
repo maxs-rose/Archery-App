@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using FormsControls.Base;
-using Newtonsoft.Json.Bson;
 using TheScoreBook.acessors;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
@@ -17,21 +15,23 @@ namespace TheScoreBook.views.shoot
         public string[] PossibleRounds => Rounds.Instance.Keys.Select(LocalisationManager.ToTitleCase).ToArray();
         public string SelectedRound { get; set; }
 
-        public string[] PossibleStyles => Enum.GetValues(typeof(EStyle)).Cast<EStyle>().Select(s => s.ToDisplayString()).ToArray();
+        public string[] PossibleStyles =>
+            Enum.GetValues(typeof(EStyle)).Cast<EStyle>().Select(s => s.ToDisplayString()).ToArray();
+
         public int SelectedStyle { get; set; }
-        
+
         public DateTime SelectedDate { get; set; } = DateTime.Now;
-        
+
         public RoundSelectionPage()
         {
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, false);
             GameManager.LoadPartlyFinishedRound();
-            
+
             BindingContext = this;
-            
-            
+
+
             if (GameManager.PreviousRoundNotFinished)
             {
                 LoadUnfinishedRound();
@@ -40,7 +40,8 @@ namespace TheScoreBook.views.shoot
 
         private async void LoadUnfinishedRound()
         {
-            var cont = await Application.Current.MainPage.DisplayAlert(LocalisationManager.Instance["PrevGameNotFin"], LocalisationManager.Instance["Continue"],
+            var cont = await Application.Current.MainPage.DisplayAlert(LocalisationManager.Instance["PrevGameNotFin"],
+                LocalisationManager.Instance["Continue"],
                 LocalisationManager.Instance["Yes"], LocalisationManager.Instance["No"]);
 
             if (cont)
@@ -50,12 +51,12 @@ namespace TheScoreBook.views.shoot
                 Navigation.RemovePage(this);
             }
         }
-        
+
         private void OnScoresButtonOnClicked(object sender, EventArgs e)
         {
             // we need to do this before the pop since its async
             // if we did it after the pop their is no way of guaranteeing if the previous page is ^1 or ^2 without awaiting 
-            ((GeneralContainer)Navigation.NavigationStack[^2]).ScoreButtonOnClicked(null, null);
+            ((GeneralContainer) Navigation.NavigationStack[^2]).ScoreButtonOnClicked(null, null);
             Navigation.PopAsync(true);
         }
 
@@ -63,7 +64,7 @@ namespace TheScoreBook.views.shoot
         {
             // we need to do this before the pop since its async
             // if we did it after the pop their is no way of guaranteeing if the previous page is ^1 or ^2 without awaiting
-            ((GeneralContainer)Navigation.NavigationStack[^2]).ProfileButtonOnClicked(null, null);
+            ((GeneralContainer) Navigation.NavigationStack[^2]).ProfileButtonOnClicked(null, null);
             Navigation.PopAsync(true);
         }
 
@@ -71,7 +72,7 @@ namespace TheScoreBook.views.shoot
         {
             if (!CanStartRound())
                 return;
-            
+
             GameManager.StartRound(SelectedRound.ToLower(), PossibleStyles[SelectedStyle].ToEStyle(), SelectedDate);
             await Navigation.PushAsync(new Scoring());
             Navigation.RemovePage(this);
@@ -79,7 +80,7 @@ namespace TheScoreBook.views.shoot
 
         private bool CanStartRound()
             => RoundPicker.SelectedIndex != -1 && !GameManager.GameInProgress;
-        
+
         protected override bool OnBackButtonPressed()
         {
             GameManager.FinishRound(false);
@@ -97,7 +98,7 @@ namespace TheScoreBook.views.shoot
         {
             if (!CanStartRound())
                 return;
-            
+
             AddBorderToStart();
             DisplayRoundData();
         }
@@ -107,9 +108,10 @@ namespace TheScoreBook.views.shoot
             var round = new Round(SelectedRound.ToLower());
             TotalArrows.Text = $"{LocalisationManager.Instance["TotalArrows"]}: {round.MaxShots}";
             TotalScore.Text = $"{LocalisationManager.Instance["MaxScore"]}: {round.MaxScore}";
-            Location.Text = $"{LocalisationManager.Instance["Location"]}: {LocalisationManager.Instance[round.Location.ToString()[0] + round.Location.ToString().ToLower()[1..]]}";
+            Location.Text =
+                $"{LocalisationManager.Instance["Location"]}: {LocalisationManager.Instance[round.Location.ToString()[0] + round.Location.ToString().ToLower()[1..]]}";
             ScoringType.Text = $"{LocalisationManager.Instance["ScoringType"]}: {round.ScoringType}";
-            
+
             RoundInformation.Children.Clear();
 
             for (var i = 0; i < round.Distances.Length; i++)

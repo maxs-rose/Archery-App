@@ -68,7 +68,7 @@
                         Score="{x:Static score:Score.X}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"/>
+                        BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="0"
                         Grid.Column="1"
@@ -82,7 +82,7 @@
                         Score="{x:Static score:Score.NINE}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"/>
+                        BackgroundColor="Transparent" />
 
                     <shoot:ScoreInputButton
                         Grid.Row="1"
@@ -126,7 +126,7 @@
                         Score="{x:Static score:Score.THREE}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"/>
+                        BackgroundColor="Transparent" />
 
                     <shoot:ScoreInputButton
                         Grid.Row="3"
@@ -148,7 +148,7 @@
                         Score="{x:Static score:Score.MISS}"
                         Margin="0"
                         Padding="0"
-                        BackgroundColor="Transparent"/>
+                        BackgroundColor="Transparent" />
 
                     <shoot:ScoreInputButton
                         Grid.Row="4"

@@ -1,6 +1,5 @@
 ﻿using Rg.Plugins.Popup.Services;
 using TheScoreBook.localisation;
-using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
 using Xamarin.Forms;
 
@@ -9,7 +8,7 @@ namespace TheScoreBook.views.pastRounds
     public partial class RoundCard : Frame
     {
         private readonly Round round;
-        
+
         public RoundCard(Round round)
         {
             InitializeComponent();
@@ -17,7 +16,7 @@ namespace TheScoreBook.views.pastRounds
             this.round = round;
 
             BindingContext = this;
-            
+
             GestureRecognizers.Add(new TapGestureRecognizer
             {
                 Command = new Command(() =>

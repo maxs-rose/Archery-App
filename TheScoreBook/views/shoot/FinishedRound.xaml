@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
-             xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
-             xmlns:system="clr-namespace:System;assembly=netstandard"
-             x:Class="TheScoreBook.views.shoot.FinishedRound"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+       xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+       xmlns:system="clr-namespace:System;assembly=netstandard"
+       x:Class="TheScoreBook.views.shoot.FinishedRound"
        HasShadow="False">
     <StackLayout>
         <StackLayout
@@ -13,56 +13,56 @@
             <Label Text="{localisation:Translate Results}"
                    HorizontalOptions="Center"
                    VerticalOptions="Start"
-                   FontSize="90"/>
+                   FontSize="90" />
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Label
                     Grid.Row="0"
                     Grid.Column="0"
-                    Text="{localisation:Translate Round}"/>
+                    Text="{localisation:Translate Round}" />
                 <Label
                     Grid.Row="0"
                     Grid.Column="1"
-                    Text="{Binding RoundName}"/>
-                
+                    Text="{Binding RoundName}" />
+
                 <Label
                     Grid.Row="1"
                     Grid.Column="0"
-                    Text="{localisation:Translate Date}"/>
+                    Text="{localisation:Translate Date}" />
                 <Label
                     Grid.Row="1"
                     Grid.Column="1"
-                    Text="{Binding Date}"/>
-                
+                    Text="{Binding Date}" />
+
                 <Label
                     Grid.Row="2"
                     Grid.Column="0"
-                    Text="{localisation:Translate Style}"/>
+                    Text="{localisation:Translate Style}" />
                 <Label
                     Grid.Row="2"
                     Grid.Column="1"
-                    Text="{Binding Bow}"/>
-                
+                    Text="{Binding Bow}" />
+
                 <Label
                     Grid.Row="3"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
-                    Text="{localisation:Translate Score}"/>
+                    Text="{localisation:Translate Score}" />
             </Grid>
             <Label
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 FontSize="90"
-                Text="{Binding Score}"/>
+                Text="{Binding Score}" />
         </StackLayout>
     </StackLayout>
 </Frame>

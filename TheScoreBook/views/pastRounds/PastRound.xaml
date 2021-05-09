@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:pages="http://rotorgames.com"
-             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-             xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
-             xmlns:system="clr-namespace:System;assembly=netstandard"
-             x:Class="TheScoreBook.views.pastRounds.PastRound">
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:pages="http://rotorgames.com"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+                 xmlns:system="clr-namespace:System;assembly=netstandard"
+                 x:Class="TheScoreBook.views.pastRounds.PastRound">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation
             PositionIn="Center"
@@ -26,41 +26,41 @@
                 MinimumHeightRequest="100"
                 Margin="0, 0, 20, 0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Label
                     Grid.Column="0"
                     HorizontalTextAlignment="Center"
-                    Text="{Binding Hits}"/>
+                    Text="{Binding Hits}" />
                 <Label
                     Grid.Column="1"
                     HorizontalTextAlignment="Center"
-                    Text="{Binding Golds}"/>
+                    Text="{Binding Golds}" />
                 <Label
                     Grid.Column="2"
                     HorizontalTextAlignment="Center"
-                    Text="{Binding Total}"/>
+                    Text="{Binding Total}" />
             </Grid>
             <ScrollView
                 VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
-                <StackLayout x:Name="DistanceDisplay" BackgroundColor="Transparent"/>
+                <StackLayout x:Name="DistanceDisplay" BackgroundColor="Transparent" />
             </ScrollView>
-            
+
             <Grid
                 HorizontalOptions="End"
                 MinimumHeightRequest="100"
                 Margin="0, 0, 20, 0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Button
                     Grid.Column="1"
@@ -72,14 +72,14 @@
                     Clicked="DeleteButtonClicked">
                     <Button.Padding>
                         <OnPlatform x:TypeArguments="Thickness">
-                            <On Platform="Android, UWP" Value="0"/>
-                            <On Platform="iOS" Value="20"/>
+                            <On Platform="Android, UWP" Value="0" />
+                            <On Platform="iOS" Value="20" />
                         </OnPlatform>
                     </Button.Padding>
                     <Button.CornerRadius>
                         <OnPlatform x:TypeArguments="system:Int32">
-                            <On Platform="Android, UWP" Value="100"/>
-                            <On Platform="iOS" Value="10"/>
+                            <On Platform="Android, UWP" Value="100" />
+                            <On Platform="iOS" Value="10" />
                         </OnPlatform>
                     </Button.CornerRadius>
                 </Button>
@@ -93,14 +93,14 @@
                     Clicked="BackButtonClicked">
                     <Button.Padding>
                         <OnPlatform x:TypeArguments="Thickness">
-                            <On Platform="Android, UWP" Value="0"/>
-                            <On Platform="iOS" Value="20"/>
+                            <On Platform="Android, UWP" Value="0" />
+                            <On Platform="iOS" Value="20" />
                         </OnPlatform>
                     </Button.Padding>
                     <Button.CornerRadius>
                         <OnPlatform x:TypeArguments="system:Int32">
-                            <On Platform="Android, UWP" Value="100"/>
-                            <On Platform="iOS" Value="10"/>
+                            <On Platform="Android, UWP" Value="100" />
+                            <On Platform="iOS" Value="10" />
                         </OnPlatform>
                     </Button.CornerRadius>
                 </Button>

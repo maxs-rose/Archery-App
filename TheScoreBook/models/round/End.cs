@@ -24,9 +24,9 @@ namespace TheScoreBook.models.round
 
         public End(JObject json)
         {
-            scores = json["scores"].Value<JArray>()!.Select(s => (Score)s.Value<int>()).ToList();
+            scores = json["scores"].Value<JArray>()!.Select(s => (Score) s.Value<int>()).ToList();
             ArrowsPerEnd = json["scoresPerEnd"].Value<int>();
-            
+
             PropertyHasChanged();
         }
 
@@ -41,15 +41,15 @@ namespace TheScoreBook.models.round
         public bool AddScore(Score score)
         {
             if (scores.Count >= ArrowsPerEnd) return false;
-            
+
             scores.Add(score);
             SortList();
-            
+
             PropertyHasChanged();
-            
+
             return true;
         }
-        
+
         private void SortList()
         {
             scores.Sort((v1, v2) => v1.CompareTo(v2) * -1);
@@ -60,21 +60,21 @@ namespace TheScoreBook.models.round
 
         public int CountScore(Score score)
             => scores.Count(s => s == score);
-        
+
         public string EndString()
             => $"[{string.Join(",", scores)}]";
-        
+
         public override string ToString()
             => $"max: {ArrowsPerEnd}, complete: {EndComplete()}, scores: {EndString()}, endScore: {Score}]";
 
         public void Finish()
         {
-            while(scores.Count != ArrowsPerEnd)
+            while (scores.Count != ArrowsPerEnd)
                 scores.Add(enums.Score.MISS);
-            
+
             PropertyHasChanged();
         }
-        
+
         public JObject ToJson()
         {
             var json = new JObject

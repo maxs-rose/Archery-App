@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:system="clr-namespace:System;assembly=netstandard"
-             x:Class="TheScoreBook.views.shoot.ScoreInputButton">
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:system="clr-namespace:System;assembly=netstandard"
+       x:Class="TheScoreBook.views.shoot.ScoreInputButton">
     <StackLayout
         Padding="0"
         Margin="0"
@@ -22,14 +22,14 @@
             HasShadow="False">
             <Frame.Padding>
                 <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="Android, UWP" Value="20"/>
-                    <On Platform="iOS" Value="30"/>
+                    <On Platform="Android, UWP" Value="20" />
+                    <On Platform="iOS" Value="30" />
                 </OnPlatform>
             </Frame.Padding>
             <Frame.CornerRadius>
                 <OnPlatform x:TypeArguments="system:Single">
-                    <On Platform="Android, UWP" Value="100"/>
-                    <On Platform="iOS" Value="43"/>
+                    <On Platform="Android, UWP" Value="100" />
+                    <On Platform="iOS" Value="43" />
                 </OnPlatform>
             </Frame.CornerRadius>
             <Frame
@@ -44,8 +44,8 @@
                 Padding="0">
                 <Frame.CornerRadius>
                     <OnPlatform x:TypeArguments="system:Single">
-                        <On Platform="Android, UWP" Value="100"/>
-                        <On Platform="iOS" Value="12"/>
+                        <On Platform="Android, UWP" Value="100" />
+                        <On Platform="iOS" Value="12" />
                     </OnPlatform>
                 </Frame.CornerRadius>
                 <Label
@@ -56,8 +56,7 @@
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     VerticalTextAlignment="Center"
-                    Padding="0">
-                </Label>
+                    Padding="0" />
             </Frame>
         </Frame>
     </StackLayout>

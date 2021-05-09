@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <base:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms"
-                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                     xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
-                     xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
-                     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-                     xmlns:system="clr-namespace:System;assembly=netstandard"
-                     ios:Page.UseSafeArea="True"
-                     x:Class="TheScoreBook.views.shoot.Scoring">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+                    xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+                    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                    xmlns:system="clr-namespace:System;assembly=netstandard"
+                    ios:Page.UseSafeArea="True"
+                    x:Class="TheScoreBook.views.shoot.Scoring">
     <base:AnimationPage.PageAnimation>
-        <base:PageAnimation Duration="Short" Subtype="FromTop"/>
+        <base:PageAnimation Duration="Short" Subtype="FromTop" />
     </base:AnimationPage.PageAnimation>
     <ContentPage.Content>
         <StackLayout
@@ -20,45 +20,45 @@
                 HorizontalOptions="Fill"
                 MinimumHeightRequest="300">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.25*"/>
-                    <ColumnDefinition Width="0.5*"/>
-                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.25*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Button 
+                <Button
                     Grid.Column="0"
                     BackgroundColor="Transparent"
                     BorderColor="Black"
                     BorderWidth="2"
                     TextColor="Black"
                     Text="{localisation:Translate Back}" Clicked="OnBackButtonClicked">
-                        <Button.Padding>
-                            <OnPlatform x:TypeArguments="Thickness">
-                                <On Platform="Android, UWP" Value="0, 0, 0, 2"/>
-                                <On Platform="iOS" Value="1, 0"/>
-                            </OnPlatform>
-                        </Button.Padding>
-                        <Button.Margin>
-                            <OnPlatform x:TypeArguments="Thickness">
-                                <On Platform="Android, UWP" Value="4, 16"/>
-                                <On Platform="iOS" Value="15, 40"/>
-                            </OnPlatform>
-                        </Button.Margin>
-                        <Button.CornerRadius>
-                            <OnPlatform x:TypeArguments="system:Int32">
-                                <On Platform="Android, UWP" Value="20"/>
-                                <On Platform="iOS" Value="20"/>
-                            </OnPlatform>
-                        </Button.CornerRadius>
+                    <Button.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android, UWP" Value="0, 0, 0, 2" />
+                            <On Platform="iOS" Value="1, 0" />
+                        </OnPlatform>
+                    </Button.Padding>
+                    <Button.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android, UWP" Value="4, 16" />
+                            <On Platform="iOS" Value="15, 40" />
+                        </OnPlatform>
+                    </Button.Margin>
+                    <Button.CornerRadius>
+                        <OnPlatform x:TypeArguments="system:Int32">
+                            <On Platform="Android, UWP" Value="20" />
+                            <On Platform="iOS" Value="20" />
+                        </OnPlatform>
+                    </Button.CornerRadius>
                 </Button>
                 <Label
                     Grid.Column="1"
                     x:Name="RoundTitle"
                     FontSize="30"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="Center" />
                 <Button
                     Grid.Column="2"
                     x:Name="FinishedButton"
@@ -70,20 +70,20 @@
                     Text="{localisation:Translate Finish}" Clicked="OnFinishButtonClicked">
                     <Button.Padding>
                         <OnPlatform x:TypeArguments="Thickness">
-                            <On Platform="Android, UWP" Value="0, 0, 0, 2"/>
-                            <On Platform="iOS" Value="1, 0"/>
+                            <On Platform="Android, UWP" Value="0, 0, 0, 2" />
+                            <On Platform="iOS" Value="1, 0" />
                         </OnPlatform>
                     </Button.Padding>
                     <Button.Margin>
                         <OnPlatform x:TypeArguments="Thickness">
-                            <On Platform="Android, UWP" Value="4, 16"/>
-                            <On Platform="iOS" Value="15, 40"/>
+                            <On Platform="Android, UWP" Value="4, 16" />
+                            <On Platform="iOS" Value="15, 40" />
                         </OnPlatform>
                     </Button.Margin>
                     <Button.CornerRadius>
                         <OnPlatform x:TypeArguments="system:Int32">
-                            <On Platform="Android, UWP" Value="20"/>
-                            <On Platform="iOS" Value="20"/>
+                            <On Platform="Android, UWP" Value="20" />
+                            <On Platform="iOS" Value="20" />
                         </OnPlatform>
                     </Button.CornerRadius>
                 </Button>
@@ -93,34 +93,34 @@
                 MinimumHeightRequest="100"
                 Margin="0, 0, 20, 0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Label
                     Grid.Column="0"
                     x:Name="HitsDisplay"
                     HorizontalTextAlignment="Center"
-                    Text="{Binding Hits}"/>
+                    Text="{Binding Hits}" />
                 <Label
                     Grid.Column="1"
                     x:Name="GoldDisplay"
                     HorizontalTextAlignment="Center"
-                    Text="{Binding Golds}"/>
+                    Text="{Binding Golds}" />
                 <Label
                     Grid.Column="2"
                     x:Name="TotalDisplay"
                     HorizontalTextAlignment="Center"
-                    Text="{Binding Score}"/>
+                    Text="{Binding Score}" />
             </Grid>
             <ScrollView
                 x:Name="ScoreInputScroll"
                 VerticalOptions="FillAndExpand" BackgroundColor="Transparent"
                 Margin="0, 0, 0, 10">
-                <StackLayout x:Name="DistanceDisplay" VerticalOptions="FillAndExpand" BackgroundColor="Transparent"/>
+                <StackLayout x:Name="DistanceDisplay" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" />
             </ScrollView>
         </StackLayout>
     </ContentPage.Content>

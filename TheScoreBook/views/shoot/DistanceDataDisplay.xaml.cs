@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FormsControls.Base;
-using TheScoreBook.models.round;
+﻿using TheScoreBook.models.round;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,7 +15,7 @@ namespace TheScoreBook.views.shoot
         public string MaxScore { get; }
         public string MaxEnds { get; }
         public string ArrowsPerEnd { get; }
-        
+
         public DistanceDataDisplay(Distance distance, int index)
         {
             Distance = distance;
@@ -32,7 +26,7 @@ namespace TheScoreBook.views.shoot
             MaxScore = $"{distance.MaxScore}";
             MaxEnds = $"{distance.MaxEnds}";
             ArrowsPerEnd = $"{distance.Ends[0].ArrowsPerEnd}";
-            
+
             InitializeComponent();
             BindingContext = this;
         }

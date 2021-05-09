@@ -27,8 +27,8 @@ namespace TheScoreBook.models
         }
 
         public string ToScoringString()
-            => $"{Position} - {Notch}"; 
-        
+            => $"{Position} - {Notch}";
+
         public JObject ToJson()
         {
             return new JObject()

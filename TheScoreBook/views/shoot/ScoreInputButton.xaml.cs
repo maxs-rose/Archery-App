@@ -1,9 +1,6 @@
-﻿using System.ComponentModel.Design;
-using TheScoreBook.localisation;
+﻿using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
-using Xamarin.Essentials;
 using Xamarin.Forms;
-using static TheScoreBook.models.enums.Score;
 
 namespace TheScoreBook.views.shoot
 {

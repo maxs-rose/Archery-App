@@ -1,27 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
-using System.Net.Mime;
-using System.Net.NetworkInformation;
 using System.Threading.Tasks;
-using System.Windows.Input;
-using Newtonsoft.Json.Bson;
 using Rg.Plugins.Popup.Services;
 using TheScoreBook.acessors;
-using TheScoreBook.Annotations;
 using TheScoreBook.behaviours;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
-using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
 using TheScoreBook.views.user;
-using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
 using Xamarin.Forms.Xaml;
-using Label = Xamarin.Forms.Label;
 
 namespace TheScoreBook.views.shoot
 {
@@ -64,7 +53,7 @@ namespace TheScoreBook.views.shoot
 
             CreateEndDisplay();
             UpdateUI(DistanceIndex, -1);
-            
+
             for (var i = 0; i < Distance.MaxEnds && Distance.Ends[i].EndComplete(); i++)
                 UpdateUI(DistanceIndex, i);
         }
@@ -87,17 +76,17 @@ namespace TheScoreBook.views.shoot
             DistanceIndex = 0;
 
             UpdateUI(DistanceIndex, -1);
-            
+
             for (var i = 0; i < distance.MaxEnds; i++)
                 UpdateUI(DistanceIndex, i);
-            
-            if(Distance.AllEndsComplete())
+
+            if (Distance.AllEndsComplete())
                 AddDistanceTotalsUI();
         }
 
         ~DistanceDisplay()
         {
-            Scoring.UpdateScoringUiEvent -= UpdateUI;   
+            Scoring.UpdateScoringUiEvent -= UpdateUI;
             UserData.SightMarksUpdatedEvent -= UpdateDistanceText;
         }
 
@@ -114,7 +103,7 @@ namespace TheScoreBook.views.shoot
 
             return EndDisplay.Children[^1] as Label;
         }
-        
+
         private void CreateEndDisplay()
         {
             EndDisplay.RowDefinitions.Add(new RowDefinition
@@ -135,22 +124,22 @@ namespace TheScoreBook.views.shoot
         }
 
         #region Distance & Sight Marks
-        
+
         private void AddDistanceLabel()
         {
             distanceLabel = AddLabel($"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}", 0, 0,
                 horizonatal: TextAlignment.Start);
-            
+
             UpdateDistanceText();
             Grid.SetColumnSpan(EndDisplay.Children[^1], arrowsPerEnd);
         }
-        
+
         private void UpdateDistanceText()
         {
             distanceLabel.Text = $"{Distance.DistanceLength}{Distance.DistanceUnit.ToString()}";
             AddSightMarkToDistance(distanceLabel);
         }
-        
+
         private void AddSightMarkToDistance(Label l)
         {
             if (!ButtonsWork)
@@ -166,31 +155,31 @@ namespace TheScoreBook.views.shoot
             else
                 AddCreateSightMarkToLabel(l);
         }
-        
+
         private string GetDistanceSightMark()
         {
             var mark = UserData.SightMarks.FirstOrDefault(m =>
                 m.Distance == Distance.DistanceLength && m.DistanceUnit == Distance.DistanceUnit);
             return mark != default ? $"{LocalisationManager.Instance["SightMark"]}: {mark.ToScoringString()}" : default;
         }
-        
+
         private void AppendSightMarkToLabel(Label l, string mark)
         {
             l.Text += $" | {mark}";
             l.InputTransparent = true;
         }
-        
+
         private void ClearLabelGestures(Label l)
         {
             UserData.SightMarksUpdatedEvent -= UpdateDistanceText;
             l.GestureRecognizers.Clear();
         }
-        
+
         private void AddCreateSightMarkToLabel(Label l)
         {
             // only subscribe to the event if we need to to help with performance
             UserData.SightMarksUpdatedEvent += UpdateDistanceText;
-            
+
             l.InputTransparent = false;
             l.Text += " | +";
             l.GestureRecognizers.Add(new TapGestureRecognizer
@@ -198,7 +187,8 @@ namespace TheScoreBook.views.shoot
                 Command = new Command(() =>
                 {
                     if (ShouldOpenPopup())
-                        PopupNavigation.Instance.PushAsync(new CreateSightMarkPopup(Distance.DistanceLength, Distance.DistanceUnit));
+                        PopupNavigation.Instance.PushAsync(new CreateSightMarkPopup(Distance.DistanceLength,
+                            Distance.DistanceUnit));
                 })
             });
         }
@@ -246,8 +236,10 @@ namespace TheScoreBook.views.shoot
                         Command = new Command(() =>
                         {
                             if (
-                                Distance.AllEndsComplete() || // if the entire distance is complete we can long press this
-                                Distance.EndComplete(row) // if the distance is not complete then this end should be completed
+                                Distance
+                                    .AllEndsComplete() || // if the entire distance is complete we can long press this
+                                Distance.EndComplete(
+                                    row) // if the distance is not complete then this end should be completed
                             )
                                 OpenScoreUI(row);
                         })
@@ -263,7 +255,8 @@ namespace TheScoreBook.views.shoot
             };
 
             selectionButton.BindingContext = Distance.Ends[row];
-            selectionButton.SetBinding(Button.BorderColorProperty, "IsNextEnd", BindingMode.OneWay, new BoolToColorConvertor());
+            selectionButton.SetBinding(Button.BorderColorProperty, "IsNextEnd", BindingMode.OneWay,
+                new BoolToColorConvertor());
 
             inputButtons[row] = selectionButton;
             EndDisplay.Children.Add(selectionButton, 0, arrowsPerEnd + 3, row + 1, row + 2);
@@ -277,17 +270,18 @@ namespace TheScoreBook.views.shoot
                 endLabels[arrowsPerEnd * endCount + i].BindingContext = Distance.Ends[endCount];
                 // we attach this to score since we cant directly attach to GetScore since it si a function
                 // instead we use the convertor to actually get our value
-                endLabels[arrowsPerEnd * endCount + i].SetBinding(Label.TextProperty, "Score", converter: new EndScoreConvertor() { ScoreIndex = i, End = Distance.Ends[endCount] });
+                endLabels[arrowsPerEnd * endCount + i].SetBinding(Label.TextProperty, "Score",
+                    converter: new EndScoreConvertor() {ScoreIndex = i, End = Distance.Ends[endCount]});
             }
         }
-        
+
         private void AddEndTotalLabels(int end)
         {
             for (var j = 0; j < 3; j++)
             {
                 endTotals[3 * end + j] = AddLabel("", arrowsPerEnd + j, end + 1);
                 endTotals[3 * end + j].BindingContext = Distance.Ends[end];
-                
+
                 endTotals[3 * end + j].SetBinding(Label.TextProperty, j switch
                 {
                     0 => "Score",
@@ -296,11 +290,12 @@ namespace TheScoreBook.views.shoot
                     _ => throw new ArgumentOutOfRangeException()
                 });
             }
-            
+
             Distance.Ends[end].PropertyHasChanged();
         }
-        
+
         private bool alreadyAdded = false;
+
         public void AddDistanceTotalsUI()
         {
             if (!alreadyAdded)
@@ -308,7 +303,7 @@ namespace TheScoreBook.views.shoot
                 {
                     var l = AddLabel("", arrowsPerEnd + i, endCount + 1);
                     l.BindingContext = Distance;
-                
+
                     l.SetBinding(Label.TextProperty, i switch
                     {
                         2 => "Score",
@@ -320,12 +315,12 @@ namespace TheScoreBook.views.shoot
 
             alreadyAdded = true;
         }
-        
+
         private async Task ScrollToBottom()
         {
             if (!ButtonsWork)
                 return;
-            
+
             await Scroll.ScrollToAsync(Scroll.Children.First(), ScrollToPosition.End, false);
 
             if (Device.RuntimePlatform == Device.iOS && Scroll.ContentSize.Height > Scroll.Height)
@@ -364,7 +359,7 @@ namespace TheScoreBook.views.shoot
         #endregion
 
         #region Convertors
-        
+
         private class BoolToColorConvertor : IValueConverter
         {
             public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -374,7 +369,10 @@ namespace TheScoreBook.views.shoot
                     false => Color.Transparent
                 };
 
-            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) { throw new NotImplementedException(); }
+            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                throw new NotImplementedException();
+            }
         }
 
         private class EndScoreConvertor : IValueConverter
@@ -387,7 +385,10 @@ namespace TheScoreBook.views.shoot
                 return $"{End.GetScore(ScoreIndex)}";
             }
 
-            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) { throw new NotImplementedException(); }
+            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                throw new NotImplementedException();
+            }
         }
 
         #endregion

@@ -10,25 +10,25 @@
         <StackLayout Margin="0" Spacing="0">
             <StackLayout.Padding>
                 <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="Android, UWP" Value="0"/>
-                    <On Platform="iOS" Value="0, 40, 0, 0"/>
+                    <On Platform="Android, UWP" Value="0" />
+                    <On Platform="iOS" Value="0, 40, 0, 0" />
                 </OnPlatform>
             </StackLayout.Padding>
-            
-            <Grid x:Name="Layout" VerticalOptions="FillAndExpand"/>
+
+            <Grid x:Name="Layout" VerticalOptions="FillAndExpand" />
             <StackLayout
                 Margin="0"
                 Padding="0"
                 VerticalOptions="End"
                 BackgroundColor="Black">
-                <Grid 
+                <Grid
                     x:Name="BottomBar"
                     VerticalOptions="End"
                     Margin="0">
                     <Grid.Padding>
                         <OnPlatform x:TypeArguments="Thickness">
-                            <On Platform="Android, UWP" Value="0"/>
-                            <On Platform="iOS" Value="0, 0, 0, 25"/>
+                            <On Platform="Android, UWP" Value="0" />
+                            <On Platform="iOS" Value="0, 0, 0, 25" />
                         </OnPlatform>
                     </Grid.Padding>
                     <Grid.RowDefinitions>
@@ -39,24 +39,27 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" x:Name="ScoreButton" Text="{localisation:Translate Scores}" Clicked="ScoreButtonOnClicked" BackgroundColor="Transparent" TextColor="White" 
+                    <Button Grid.Column="0" x:Name="ScoreButton" Text="{localisation:Translate Scores}"
+                            Clicked="ScoreButtonOnClicked" BackgroundColor="Transparent" TextColor="White"
                             BorderWidth="2"
                             Margin="20, 10">
                         <Button.CornerRadius>
                             <OnPlatform x:TypeArguments="system:Int32">
-                                <On Platform="Android, UWP" Value="100"/>
-                                <On Platform="iOS" Value="10"/>
+                                <On Platform="Android, UWP" Value="100" />
+                                <On Platform="iOS" Value="10" />
                             </OnPlatform>
                         </Button.CornerRadius>
                     </Button>
-                    <ImageButton Grid.Column="1" Source="Icon" Clicked="ShootButtonOnClicked" BackgroundColor="Transparent" Margin="0, 4"/>
-                    <Button Grid.Column="2" x:Name="ProfileButton" Text="{localisation:Translate Profile}" Clicked="ProfileButtonOnClicked" BackgroundColor="Transparent"  TextColor="White" 
+                    <ImageButton Grid.Column="1" Source="Icon" Clicked="ShootButtonOnClicked"
+                                 BackgroundColor="Transparent" Margin="0, 4" />
+                    <Button Grid.Column="2" x:Name="ProfileButton" Text="{localisation:Translate Profile}"
+                            Clicked="ProfileButtonOnClicked" BackgroundColor="Transparent" TextColor="White"
                             BorderWidth="2"
                             Margin="20, 10">
                         <Button.CornerRadius>
                             <OnPlatform x:TypeArguments="system:Int32">
-                                <On Platform="Android, UWP" Value="100"/>
-                                <On Platform="iOS" Value="10"/>
+                                <On Platform="Android, UWP" Value="100" />
+                                <On Platform="iOS" Value="10" />
                             </OnPlatform>
                         </Button.CornerRadius>
                     </Button>

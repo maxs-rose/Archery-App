@@ -15,10 +15,10 @@ namespace TheScoreBook.models.round
         public string RoundName { get; }
         public ELocation Location { get; }
         public EStyle Style { get; }
-        
+
         public int MaxScore { get; }
         public int MaxShots { get; }
-        
+
         public ScoringType ScoringType { get; }
 
         public Round(string round, EStyle style, DateTime date)
@@ -30,12 +30,15 @@ namespace TheScoreBook.models.round
             var distances = roundConstructor["distances"]!.Value<JArray>();
             DistanceCount = distances!.Count;
             Distances = new Distance[DistanceCount];
-            ScoringType = (ScoringType)roundConstructor["scoringType"]!.Value<string>();
+            ScoringType = (ScoringType) roundConstructor["scoringType"]!.Value<string>();
 
             for (var i = 0; i < DistanceCount; i++)
             {
                 var dist = distances[i]!.Value<JObject>();
-                Distances[i] = new Distance(dist!["distance"]!.Value<int>(), dist["unit"]!.Value<string>().ToEDistanceUnit(), dist["ends"]!.Value<int>(), dist["arrowsPerEnd"]!.Value<int>(), dist["targetSize"]!.Value<int>(), dist["targetUnit"]!.Value<string>().ToEDistanceUnit(), ScoringType);
+                Distances[i] = new Distance(dist!["distance"]!.Value<int>(),
+                    dist["unit"]!.Value<string>().ToEDistanceUnit(), dist["ends"]!.Value<int>(),
+                    dist["arrowsPerEnd"]!.Value<int>(), dist["targetSize"]!.Value<int>(),
+                    dist["targetUnit"]!.Value<string>().ToEDistanceUnit(), ScoringType);
             }
 
             Style = style;
@@ -46,7 +49,9 @@ namespace TheScoreBook.models.round
             MaxShots = Distances.Sum(d => d.MaxShots);
         }
 
-        public Round(string round) : this(round, EStyle.RECURVE, DateTime.Now) { }
+        public Round(string round) : this(round, EStyle.RECURVE, DateTime.Now)
+        {
+        }
 
         public Round(JObject roundData)
         {
@@ -55,7 +60,7 @@ namespace TheScoreBook.models.round
 
             Date = DateTime.FromBinary(roundData["date"].Value<long>());
             RoundName = roundData["rName"].Value<string>();
-            
+
             var dist = roundData["distances"]!.Value<JArray>();
 
             for (var i = 0; i < DistanceCount; i++)
@@ -79,24 +84,24 @@ namespace TheScoreBook.models.round
         {
             if (distanceIndex < 0 || distanceIndex >= DistanceCount) return false;
             return Distances[distanceIndex].AllEndsComplete();
-        } 
+        }
 
         public int NextDistanceIndex()
         {
             for (var i = 0; i < DistanceCount; i++)
                 if (!DistanceComplete(i))
                     return i;
-            
+
             return -1;
         }
 
         public int NextEndIndex(int distanceIndex)
         {
-            if(Distances.Length > distanceIndex && distanceIndex >= 0)
+            if (Distances.Length > distanceIndex && distanceIndex >= 0)
                 return Distances[distanceIndex].NextEndIndex();
             return -1;
         }
-        
+
         public int Hits()
             => Distances.Sum(d => d.Hits);
 
@@ -105,7 +110,7 @@ namespace TheScoreBook.models.round
 
         public int Score()
             => Distances.Sum(d => d.Score);
-        
+
         public int Golds()
             => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
 
@@ -119,7 +124,7 @@ namespace TheScoreBook.models.round
         {
             Distances[distanceIndex].Finish(endIndex);
         }
-        
+
         public JObject ToJson()
         {
             var json = new JObject
@@ -128,8 +133,8 @@ namespace TheScoreBook.models.round
                 {"nDistances", DistanceCount},
                 {"date", Date.ToBinary()},
                 {"rName", RoundName}
-            };           
-            
+            };
+
             return json;
         }
 

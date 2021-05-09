@@ -4,37 +4,37 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models;
 using TheScoreBook.models.round;
-using TheScoreBook.views.shoot;
 using Xamarin.Forms;
 using static TheScoreBook.serialisation.SaveUserData;
 
 namespace TheScoreBook.acessors
 {
     // using lazy initialised singelton model since we only ever need one of these at a time and we might not need it for some pathways
-    
+
     public sealed class UserData
     {
         private readonly JObject userData;
         private static Mutex mut;
-        
+
         // Object getter
         private static readonly Lazy<UserData> instance = new(() => new UserData());
         public static UserData Instance => instance.Value;
-        
+
         // Sight mark stuff
-        private static readonly Lazy<List<SightMark>> sightMarks = new (() => Instance.GetSightMarks());
+        private static readonly Lazy<List<SightMark>> sightMarks = new(() => Instance.GetSightMarks());
         public static ReadOnlyCollection<SightMark> SightMarks => sightMarks.Value.AsReadOnly();
 
         public delegate void SightMarksUpdated();
+
         public static SightMarksUpdated SightMarksUpdatedEvent;
 
         public delegate void RoundsUpdated();
+
         public static RoundsUpdated RoundsUpdatedEvent;
 
         // Round stuff
@@ -45,7 +45,7 @@ namespace TheScoreBook.acessors
         private UserData()
         {
             mut = new Mutex();
-            
+
             // this needs to be done synchronously unlike saving as we need to the data to continue
             // another good reason for this to be a singelton
 #if DEBUG
@@ -53,12 +53,15 @@ namespace TheScoreBook.acessors
 #else
             var fileName = $"user.json";
 #endif
-            var dataFile = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal), fileName);
+            var dataFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), fileName);
 
             if (!File.Exists(dataFile))
             {
                 var assembly = typeof(UserData).GetTypeInfo().Assembly;
-                using (var fStream = new StreamReader(assembly.GetManifestResourceStream($"{assembly.GetName().Name}.data.user.{fileName}") ?? throw new InvalidOperationException("User Data could not be found!")))
+                using (var fStream =
+                    new StreamReader(
+                        assembly.GetManifestResourceStream($"{assembly.GetName().Name}.data.user.{fileName}") ??
+                        throw new InvalidOperationException("User Data could not be found!")))
                 {
                     userData = JObject.Parse(fStream.ReadToEnd());
                 }
@@ -88,7 +91,7 @@ namespace TheScoreBook.acessors
         private List<SightMark> GetSightMarks()
         {
             var result = new List<SightMark>();
-            
+
             mut.WaitOne();
             result = userData["sightMarks"]!.Value<JArray>()!.Select(sm => new SightMark(sm.Value<JObject>())).ToList();
             mut.ReleaseMutex();
@@ -99,7 +102,7 @@ namespace TheScoreBook.acessors
         private List<Round> GetRounds()
         {
             var result = new List<Round>();
-            
+
             mut.WaitOne();
             result = userData["pastRounds"]!.Value<JArray>()!.Select(r => new Round(r.Value<JObject>())).ToList();
             mut.ReleaseMutex();
@@ -113,7 +116,7 @@ namespace TheScoreBook.acessors
 
             var result = Rounds.GroupBy(r => r.RoundName)
                 .Select(g => g.OrderByDescending(g => g.Score()).First());
-            
+
             mut.ReleaseMutex();
 
             return result.ToList();
@@ -123,13 +126,13 @@ namespace TheScoreBook.acessors
         {
             if (sightMarks.Value.Contains(mark))
                 return; // dont duplicate
-            
+
             sightMarks.Value.Add(mark);
 
             mut.WaitOne();
             userData["sightMarks"]!.Value<JArray>()!.Add(mark.ToJson());
             mut.ReleaseMutex();
-            
+
             Device.BeginInvokeOnMainThread(() => SightMarksUpdatedEvent?.Invoke());
             Task.Run(() => SaveData(userData));
         }
@@ -141,14 +144,14 @@ namespace TheScoreBook.acessors
 
             sightMarks.Value.Remove(mark);
             mut.WaitOne();
-            
+
             userData["sightMarks"]!.Value<JArray>()!.Clear();
-            
-            foreach(var m in sightMarks.Value)
+
+            foreach (var m in sightMarks.Value)
                 userData["sightMarks"]!.Value<JArray>()!.Add(m.ToJson());
-            
+
             mut.ReleaseMutex();
-            
+
             Device.BeginInvokeOnMainThread(() => SightMarksUpdatedEvent?.Invoke());
             Task.Run(() => SaveData(userData));
         }
@@ -156,11 +159,11 @@ namespace TheScoreBook.acessors
         public void SaveRound(Round round)
         {
             rounds.Value.Add(round);
-            
+
             mut.WaitOne();
             userData["pastRounds"]!.Value<JArray>()!.Add(round.ToJson());
             mut.ReleaseMutex();
-            
+
             Device.BeginInvokeOnMainThread(() => RoundsUpdatedEvent?.Invoke());
             // we dont want to await this since we want the app to continue whilst this is saving
             Task.Run(() => SaveData(userData));
@@ -169,13 +172,13 @@ namespace TheScoreBook.acessors
         public void DeleteRound(Round round)
         {
             mut.WaitOne();
-            
+
             var removed = false;
             for (var i = 0; i < rounds.Value.Count; i++)
             {
-                if (!JToken.DeepEquals(rounds.Value[i].ToJson(), round.ToJson())) 
+                if (!JToken.DeepEquals(rounds.Value[i].ToJson(), round.ToJson()))
                     continue;
-                
+
                 rounds.Value.RemoveAt(i);
                 removed = true;
                 break;
@@ -188,9 +191,9 @@ namespace TheScoreBook.acessors
 
             foreach (var r in rounds.Value)
                 userData["pastRounds"]!.Value<JArray>()!.Add(r.ToJson());
-            
+
             mut.ReleaseMutex();
-            
+
             Device.BeginInvokeOnMainThread(() => RoundsUpdatedEvent?.Invoke());
             Task.Run(() => SaveData(userData));
         }
@@ -202,9 +205,9 @@ namespace TheScoreBook.acessors
 
             return data;
         }
-        
+
         private void ClearPartlyFinishedRound()
-        {            
+        {
             userData["currentRound"] = new JObject();
             Task.Run(() => SaveData(userData));
         }

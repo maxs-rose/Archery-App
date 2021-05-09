@@ -1,23 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Diagnostics.SymbolStore;
-using System.Dynamic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using TheScoreBook.acessors;
-using TheScoreBook.behaviours;
 using TheScoreBook.localisation;
 using TheScoreBook.models;
 using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
 using Xamarin.Forms;
-using Xamarin.Forms.Markup;
 
 namespace TheScoreBook.views.user
 {
@@ -53,7 +44,7 @@ namespace TheScoreBook.views.user
         {
             PopupNavigation.Instance.PushAsync(new CreateSightMarkPopup());
         }
-        
+
         private void SettingsButtonClicked(object o, EventArgs e)
         {
             PopupNavigation.Instance.PushAsync(new SettingsPopup());
@@ -92,7 +83,8 @@ namespace TheScoreBook.views.user
         private async void DeleteSightMark(SightMark mark)
         {
             var delete = await Application.Current.MainPage
-                .DisplayAlert(LocalisationManager.Instance["DeleteMark"], mark.ToString(), LocalisationManager.Instance["Ok"], LocalisationManager.Instance["Cancel"]);
+                .DisplayAlert(LocalisationManager.Instance["DeleteMark"], mark.ToString(),
+                    LocalisationManager.Instance["Ok"], LocalisationManager.Instance["Cancel"]);
             if (delete)
                 UserData.Instance.DeleteSightMark(mark);
         }
@@ -111,8 +103,10 @@ namespace TheScoreBook.views.user
             var prefOutdoor = prefR.FirstOrDefault(r => r.Location == ELocation.OUTDOOR);
 
             OutdoorRound.BindingContext = IndoorRound.BindingContext = LocalisationManager.Instance;
-            IndoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification", converter: new RoundConvertor { Location = "Indoor", Pref = prefIndoor });
-            OutdoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification", converter: new RoundConvertor { Location = "Outdoor", Pref = prefOutdoor });
+            IndoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification",
+                converter: new RoundConvertor {Location = "Indoor", Pref = prefIndoor});
+            OutdoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification",
+                converter: new RoundConvertor {Location = "Outdoor", Pref = prefOutdoor});
         }
 
         private void GenerateBestRounds()
@@ -125,17 +119,19 @@ namespace TheScoreBook.views.user
             // Ordered PB's -> take first of correct location
             var bestIndoor = bestRounds.FirstOrDefault(r => r.Location == ELocation.INDOOR);
             var bestOutdoor = bestRounds.FirstOrDefault(r => r.Location == ELocation.OUTDOOR);
-            
+
             BestOutdoorRound.BindingContext = BestIndoorRound.BindingContext = LocalisationManager.Instance;
-            BestIndoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification", converter: new RoundConvertor { Location = "Indoor", Pref = bestIndoor });
-            BestOutdoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification", converter: new RoundConvertor { Location = "Outdoor", Pref = bestOutdoor });
+            BestIndoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification",
+                converter: new RoundConvertor {Location = "Indoor", Pref = bestIndoor});
+            BestOutdoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification",
+                converter: new RoundConvertor {Location = "Outdoor", Pref = bestOutdoor});
         }
-        
+
         private class RoundConvertor : IValueConverter
         {
             public string Location { get; set; }
             public Round Pref { get; set; }
-            
+
             public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
             {
                 return

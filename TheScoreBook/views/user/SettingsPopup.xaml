@@ -30,10 +30,10 @@
         <Picker
             ItemsSource="{Binding Languages}"
             ItemDisplayBinding="{Binding Name}"
-            SelectedItem="{Binding SelectedLanguage, Mode=TwoWay}"/>
-        
+            SelectedItem="{Binding SelectedLanguage, Mode=TwoWay}" />
+
         <Button Text="{localisation:Translate Done}"
                 TextColor="Black"
-                Clicked="CloseSettings"/>
+                Clicked="CloseSettings" />
     </StackLayout>
 </pages:PopupPage>

@@ -81,13 +81,13 @@ namespace TheScoreBook.behaviours
                 timer = new Timer(Timer_Elapsed, null, duration, Timeout.Infinite);
             }
         }
-        
+
         private void Button_Pressed(object sender, EventArgs e)
         {
             isReleased = false;
             CreateTimer();
         }
-        
+
         private void Button_Released(object sender, EventArgs e)
         {
             isReleased = true;
@@ -97,8 +97,8 @@ namespace TheScoreBook.behaviours
         protected virtual void OnLongPressed()
         {
             LongPressEvent?.Invoke(this, EventArgs.Empty);
-            
-            if(Command != null && Command.CanExecute(CommandParameter))
+
+            if (Command != null && Command.CanExecute(CommandParameter))
                 Command.Execute(CommandParameter);
         }
 

@@ -11,26 +11,27 @@ namespace TheScoreBook.views
     public partial class GeneralContainer : ContentPage
     {
         private int currentPage = 0;
+
         public GeneralContainer()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            Layout.Children.Add(new PastRoundsPage { HasShadow = false });
+            Layout.Children.Add(new PastRoundsPage {HasShadow = false});
 
             ScoreButton.BorderColor = Color.White;
-            
+
             BottomBar.GestureRecognizers.Add(new SwipeGestureRecognizer
             {
                 Direction = SwipeDirection.Up,
                 Command = new Command(() => ShootButtonOnClicked(null, null))
             });
-            
+
             BottomBar.GestureRecognizers.Add(new SwipeGestureRecognizer
             {
                 Direction = SwipeDirection.Left,
                 Command = new Command(() => ScoreButtonOnClicked(null, null))
             });
-            
+
             BottomBar.GestureRecognizers.Add(new SwipeGestureRecognizer
             {
                 Direction = SwipeDirection.Right,
@@ -62,7 +63,8 @@ namespace TheScoreBook.views
             currentPage = 1;
         }
 
-        private async Task TransitionInOut(VisualElement leaving, double lTo, VisualElement entering, double eFrom, double eTo, uint animationLength = 375)
+        private async Task TransitionInOut(VisualElement leaving, double lTo, VisualElement entering, double eFrom,
+            double eTo, uint animationLength = 375)
         {
             leaving.IsEnabled = false;
             entering.TranslationX = eFrom;
@@ -72,7 +74,8 @@ namespace TheScoreBook.views
             leaving.TranslateTo(lTo, 0, animationLength, Easing.SinIn);
             leaving.FadeTo(0, animationLength, Easing.SinIn);
             entering.FadeTo(1, animationLength, Easing.SinOut);
-            await entering.TranslateTo(eTo, 0, animationLength + 3, Easing.SinOut); // add a little extra time to the awaited operation to account for any overhead
+            await entering.TranslateTo(eTo, 0, animationLength + 3,
+                Easing.SinOut); // add a little extra time to the awaited operation to account for any overhead
         }
 
         public void AddFinishedPage()
@@ -80,7 +83,7 @@ namespace TheScoreBook.views
             Layout.Children.RemoveAt(0);
             Layout.Children.Add(new FinishedRound());
             currentPage = 2;
-            
+
             ScoreButton.BackgroundColor = Color.Transparent;
             ProfileButton.BackgroundColor = Color.Transparent;
         }
@@ -94,7 +97,7 @@ namespace TheScoreBook.views
 
         protected override bool OnBackButtonPressed()
         {
-            if(currentPage != 0)
+            if (currentPage != 0)
                 ScoreButtonOnClicked(null, null);
             else
                 return base.OnBackButtonPressed();

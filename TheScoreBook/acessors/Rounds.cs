@@ -24,7 +24,7 @@ namespace TheScoreBook.acessors
 #else
             var filePath = $"{assembly.GetName().Name}.data.static.rounds.json";
 #endif
-            
+
             using (var fStream = new StreamReader(assembly.GetManifestResourceStream(filePath)))
             {
                 roundData = JObject.Parse(fStream.ReadToEnd());
@@ -35,7 +35,9 @@ namespace TheScoreBook.acessors
 
         public ELocation roundLocation(string roundName)
         {
-            return data[roundName]!["distances"]![0]!["location"]!.Value<string>() == "in" ? ELocation.INDOOR : ELocation.OUTDOOR;
+            return data[roundName]!["distances"]![0]!["location"]!.Value<string>() == "in"
+                ? ELocation.INDOOR
+                : ELocation.OUTDOOR;
         }
 
         private static readonly Lazy<Rounds> instance = new(() => new Rounds());

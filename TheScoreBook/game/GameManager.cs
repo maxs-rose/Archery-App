@@ -14,7 +14,7 @@ namespace TheScoreBook.game
         private static Round CurrentGame { set; get; }
         private static Round PreviousGame { set; get; }
         public static bool PreviousRoundNotFinished { get; private set; } = false;
-        
+
         public static bool AllDistancesComplete => GameInProgress ? CurrentGame.AllDistancesComplete() : false;
 
         public static void StartRound(string roundName, EStyle style, DateTime date)
@@ -40,13 +40,13 @@ namespace TheScoreBook.game
             ClearPartialRound();
             PreviousRoundNotFinished = false;
             GameInProgress = false;
-            if(CurrentGame != null)
+            if (CurrentGame != null)
             {
                 CurrentGame.Finish();
                 UserData.LatestRound = CurrentGame;
             }
-            
-            if(saveResult)
+
+            if (saveResult)
                 UserData.Instance.SaveRound(CurrentGame);
             CurrentGame = null;
         }
@@ -68,7 +68,7 @@ namespace TheScoreBook.game
 
 
         public static bool IsFiveZone() => GameInProgress && CurrentGame.ScoringType == ScoringType.FiveZone;
-        
+
         public static int Hits()
         {
             if (GameInProgress)
@@ -76,7 +76,7 @@ namespace TheScoreBook.game
 
             return -1;
         }
-        
+
         public static int Golds()
         {
             if (GameInProgress)
@@ -84,7 +84,7 @@ namespace TheScoreBook.game
 
             return -1;
         }
-        
+
         public static int Score()
         {
             if (GameInProgress)
@@ -106,7 +106,7 @@ namespace TheScoreBook.game
             if (GameInProgress)
                 return CurrentGame.NextEndIndex(distIndex);
 
-            return -1;   
+            return -1;
         }
 
         public static bool EndComplete(int distanceIndex, int end)
@@ -114,7 +114,7 @@ namespace TheScoreBook.game
 
         public static void Finish(int distance, int end)
         {
-            if(GameInProgress)
+            if (GameInProgress)
                 CurrentGame.Finish(distance, end);
         }
 
@@ -131,12 +131,12 @@ namespace TheScoreBook.game
         {
             if (PreviousRoundNotFinished)
                 return;
-            
-            var p = (JObject)UserData.Instance.GetPartlyFinishedRound();
+
+            var p = (JObject) UserData.Instance.GetPartlyFinishedRound();
 
             if (p == null || !p.Properties().Any())
                 return;
-            
+
             PreviousRoundNotFinished = true;
             PreviousGame = new Round(p);
         }

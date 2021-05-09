@@ -7,7 +7,9 @@ namespace TheScoreBook.models.enums
         public static ScoringType TenZone => new("TenZone", 0);
         public static ScoringType FiveZone => new("FiveZone", 1);
 
-        private ScoringType(string name, int id) : base(name, id) { }
+        private ScoringType(string name, int id) : base(name, id)
+        {
+        }
 
         public override string ToString()
             => Id switch

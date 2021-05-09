@@ -16,10 +16,10 @@ namespace TheScoreBook.models.enums
         public static Score TWO => new("2", 2, 2);
         public static Score ONE => new("1", 1, 1);
         public static Score MISS => new("M", 0, 0);
-        
+
         public int Value { get; }
         public Score(string name, int id, int value) : base(name, id) => Value = value;
-        
+
         public static explicit operator Score(int id)
             => id switch
             {

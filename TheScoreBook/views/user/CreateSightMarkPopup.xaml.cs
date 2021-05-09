@@ -15,22 +15,22 @@ namespace TheScoreBook.views.user
     {
         public List<string> Distances => Enum.GetNames(typeof(EDistanceUnit)).ToList();
         public int SelectedDistance { get; set; }
-        
+
         public CreateSightMarkPopup()
         {
             InitializeComponent();
             BindingContext = this;
         }
-        
+
         public CreateSightMarkPopup(int distance, EDistanceUnit unit)
         {
             InitializeComponent();
             BindingContext = this;
             Distance.Text = $"{distance}";
-            SelectedDistance = (int)unit;
+            SelectedDistance = (int) unit;
             DistanceUnitPicker.SelectedIndex = SelectedDistance;
         }
-        
+
         private void DoneButtonClicked(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(Position.Text) ||
@@ -43,9 +43,9 @@ namespace TheScoreBook.views.user
 
             var pos = float.Parse(Position.Text);
             var not = float.Parse(Notch.Text);
-            var dst = (int)float.Parse(Distance.Text);
+            var dst = (int) float.Parse(Distance.Text);
             var unt = Distances[SelectedDistance].ToEDistanceUnit();
-            
+
             UserData.Instance.AddSightMark(new SightMark(dst, unt, pos, not));
             PopupNavigation.Instance.PopAsync();
         }
