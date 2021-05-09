@@ -76,6 +76,7 @@
                 </Button.CornerRadius>
             </Button>
         </Grid>
-            <ScrollView x:Name="scoreView" HorizontalOptions="Fill" VerticalOptions="Fill"></ScrollView>
+            <ScrollView x:Name="ScoreView" HorizontalOptions="Fill" VerticalOptions="Fill">
+            </ScrollView>
         </StackLayout>
 </Frame>

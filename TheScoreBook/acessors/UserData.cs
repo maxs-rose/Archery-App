@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
@@ -57,7 +58,7 @@ namespace TheScoreBook.acessors
             if (!File.Exists(dataFile))
             {
                 var assembly = typeof(UserData).GetTypeInfo().Assembly;
-                using (var fStream = new StreamReader(assembly.GetManifestResourceStream($"{assembly.GetName().Name}.data.user.{fileName}")))
+                using (var fStream = new StreamReader(assembly.GetManifestResourceStream($"{assembly.GetName().Name}.data.user.{fileName}") ?? throw new InvalidOperationException("User Data could not be found!")))
                 {
                     userData = JObject.Parse(fStream.ReadToEnd());
                 }
