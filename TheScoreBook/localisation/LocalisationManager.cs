@@ -15,6 +15,7 @@ namespace TheScoreBook.localisation
         private const string LanguageKey = nameof(LanguageKey);
         
         public event PropertyChangedEventHandler PropertyChanged;
+        public int LanguageChangedNotification => 0;
 
         private static readonly Lazy<LocalisationManager> instance = new (() => new LocalisationManager());
         public static LocalisationManager Instance => instance.Value;
@@ -44,6 +45,7 @@ namespace TheScoreBook.localisation
         public void Invalidate()
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("LanguageChangedNotification"));
         }
 
         public static string ToTitleCase(string input)

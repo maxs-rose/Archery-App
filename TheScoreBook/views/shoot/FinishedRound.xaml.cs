@@ -9,13 +9,21 @@ namespace TheScoreBook.views.shoot
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FinishedRound : Frame
     {
+        public string RoundName { get; }
+        public string Date { get; }
+        public string Bow { get; }
+        public int Score { get; }
+        
         public FinishedRound()
-        {
+        { 
             InitializeComponent();
-            RoundName.Text = UserData.LatestRound.RoundName;
-            Date.Text = LocalisationManager.LocalisedShortDate(UserData.LatestRound.Date);
-            Bow.Text = UserData.LatestRound.Style.ToDisplayString();
-            Score.Text = UserData.LatestRound.Score().ToString();
+            
+            RoundName = LocalisationManager.ToTitleCase(UserData.LatestRound.RoundName);
+            Date = LocalisationManager.LocalisedShortDate(UserData.LatestRound.Date);
+            Bow = UserData.LatestRound.Style.ToDisplayString();
+            Score = UserData.LatestRound.Score();
+            
+            BindingContext = this;
         }
     }
 }

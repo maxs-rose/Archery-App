@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.SymbolStore;
 using System.Dynamic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -14,6 +15,7 @@ using TheScoreBook.behaviours;
 using TheScoreBook.localisation;
 using TheScoreBook.models;
 using TheScoreBook.models.enums;
+using TheScoreBook.models.round;
 using Xamarin.Forms;
 using Xamarin.Forms.Markup;
 
@@ -107,9 +109,10 @@ namespace TheScoreBook.views.user
             // ordered rounds -> take first round of correct location
             var prefIndoor = prefR.FirstOrDefault(r => r.Location == ELocation.INDOOR);
             var prefOutdoor = prefR.FirstOrDefault(r => r.Location == ELocation.OUTDOOR);
-            
-            IndoorRound.Text = $"{LocalisationManager.ToTitleCase(prefIndoor?.RoundName ?? "N/A")} - {LocalisationManager.ToTitleCase(LocalisationManager.Instance["Indoor"])}";
-            OutdoorRound.Text = $"{LocalisationManager.ToTitleCase(prefOutdoor?.RoundName ?? "N/A")} - {LocalisationManager.ToTitleCase(LocalisationManager.Instance["Outdoor"])}";
+
+            OutdoorRound.BindingContext = IndoorRound.BindingContext = LocalisationManager.Instance;
+            IndoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification", converter: new RoundConvertor { Location = "Indoor", Pref = prefIndoor });
+            OutdoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification", converter: new RoundConvertor { Location = "Outdoor", Pref = prefOutdoor });
         }
 
         private void GenerateBestRounds()
@@ -123,8 +126,26 @@ namespace TheScoreBook.views.user
             var bestIndoor = bestRounds.FirstOrDefault(r => r.Location == ELocation.INDOOR);
             var bestOutdoor = bestRounds.FirstOrDefault(r => r.Location == ELocation.OUTDOOR);
             
-            BestIndoorRound.Text = $"{LocalisationManager.ToTitleCase(bestIndoor?.RoundName ?? "N/A")} - {LocalisationManager.ToTitleCase(LocalisationManager.Instance["Indoor"])}";
-            BestOutdoorRound.Text = $"{LocalisationManager.ToTitleCase(bestOutdoor?.RoundName ?? "N/A")} - {LocalisationManager.ToTitleCase(LocalisationManager.Instance["Outdoor"])}";
+            BestOutdoorRound.BindingContext = BestIndoorRound.BindingContext = LocalisationManager.Instance;
+            BestIndoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification", converter: new RoundConvertor { Location = "Indoor", Pref = bestIndoor });
+            BestOutdoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification", converter: new RoundConvertor { Location = "Outdoor", Pref = bestOutdoor });
+        }
+        
+        private class RoundConvertor : IValueConverter
+        {
+            public string Location { get; set; }
+            public Round Pref { get; set; }
+            
+            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                return
+                    $"{LocalisationManager.ToTitleCase(Pref?.RoundName ?? "N/A")} - {LocalisationManager.ToTitleCase(LocalisationManager.Instance[Location])}";
+            }
+
+            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }

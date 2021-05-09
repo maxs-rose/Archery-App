@@ -104,9 +104,10 @@ namespace TheScoreBook.views.shoot
             
             var removeList = new Stack<View>();
             
-            foreach (var b in ScoreInput.Children)
-                if (GameManager.IsFiveZone() && !((ScoreInputButton) b).IsFiveZoneScore())
-                    removeList.Push(b);
+            foreach (ScoreInputButton b in ScoreInput.Children)
+                if (b.WordString != LocalisationManager.Instance["Delete"] && b.WordString != LocalisationManager.Instance["Tick"])
+                    if(GameManager.IsFiveZone() && !b.Score.IsFiveZoneScore())
+                        removeList.Push(b);
 
             while (removeList.Any())
                 ScoreInput.Children.Remove(removeList.Pop());

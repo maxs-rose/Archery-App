@@ -6,14 +6,13 @@ namespace TheScoreBook.views.pastRounds
 {
     public partial class RoundCardMonthHeader : Frame
     {
-        private string month;
-        public string Month => month;
+        public string Month { get; }
         
         public RoundCardMonthHeader(DateTime date)
         {
             InitializeComponent();
             
-            month = date.ToString("MMMM yyyy", Thread.CurrentThread.CurrentUICulture);
+            Month = date.ToString("MMMM yyyy", Thread.CurrentThread.CurrentUICulture);
             
             BindingContext = this;
         }

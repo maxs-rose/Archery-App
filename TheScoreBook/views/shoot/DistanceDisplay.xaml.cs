@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Net.Mime;
 using System.Net.NetworkInformation;
@@ -66,8 +67,6 @@ namespace TheScoreBook.views.shoot
             
             for (var i = 0; i < Distance.MaxEnds && Distance.Ends[i].EndComplete(); i++)
                 UpdateUI(DistanceIndex, i);
-            
-            UpdateDistanceTotalsUI();
         }
 
         public DistanceDisplay(Distance distance)
@@ -92,7 +91,8 @@ namespace TheScoreBook.views.shoot
             for (var i = 0; i < distance.MaxEnds; i++)
                 UpdateUI(DistanceIndex, i);
             
-            UpdateDistanceTotalsUI();
+            if(Distance.AllEndsComplete())
+                AddDistanceTotalsUI();
         }
 
         ~DistanceDisplay()
@@ -212,24 +212,12 @@ namespace TheScoreBook.views.shoot
             if (distance != DistanceIndex) // dont update the ui if we have been called from another distance
                 return;
 
-            UpdateEndArrowsUI(end);
             if (ShouldAddNewEnd(end))
                 AddEnd();
-            UpdateEndTotalsUI();
-            UpdateDistanceTotalsUI();
 
             await ScrollToBottom();
         }
-        
-        private void UpdateEndArrowsUI(int endIndex)
-        {
-            if (endIndex < 0 || endIndex >= endCount)
-                return;
-            
-            for (var i = 0; i < arrowsPerEnd; i++)
-                endLabels[arrowsPerEnd * endIndex + i].Text = Distance.Ends[endIndex].GetScore(i)?.ToString();
-        }
-        
+
         private void AddEnd()
         {
             AddEndSelectionBox(endCount);
@@ -248,9 +236,9 @@ namespace TheScoreBook.views.shoot
             {
                 Margin = 0,
                 Padding = 0,
-                BackgroundColor = Color.Transparent,
                 BorderWidth = 3,
                 HeightRequest = 50,
+                BackgroundColor = Color.Transparent,
                 Behaviors =
                 {
                     new LongButtonPressBehaviour
@@ -274,6 +262,9 @@ namespace TheScoreBook.views.shoot
                     OpenScoreUI(row);
             };
 
+            selectionButton.BindingContext = Distance.Ends[row];
+            selectionButton.SetBinding(Button.BorderColorProperty, "IsNextEnd", BindingMode.OneWay, new BoolToColorConvertor());
+
             inputButtons[row] = selectionButton;
             EndDisplay.Children.Add(selectionButton, 0, arrowsPerEnd + 3, row + 1, row + 2);
         }
@@ -281,54 +272,53 @@ namespace TheScoreBook.views.shoot
         private void AddEndScoreLabels()
         {
             for (var i = 0; i < arrowsPerEnd; i++)
+            {
                 endLabels[arrowsPerEnd * endCount + i] = AddLabel("", i, endCount + 1);
+                endLabels[arrowsPerEnd * endCount + i].BindingContext = Distance.Ends[endCount];
+                // we attach this to score since we cant directly attach to GetScore since it si a function
+                // instead we use the convertor to actually get our value
+                endLabels[arrowsPerEnd * endCount + i].SetBinding(Label.TextProperty, "Score", converter: new EndScoreConvertor() { ScoreIndex = i, End = Distance.Ends[endCount] });
+            }
         }
         
         private void AddEndTotalLabels(int end)
         {
             for (var j = 0; j < 3; j++)
-                endTotals[3 * end + j] = AddLabel("", arrowsPerEnd + j, end + 1);
-        }
-
-        private void UpdateEndTotalsUI()
-        {
-            for (var i = 0; i < endCount; i++)
             {
-                HighlightNextEnd(i);
-
-                if (!EndHasScores(i))
-                    continue;
-
-                endTotals[3 * i + 0].Text = Distance.Ends[i].Score().ToString();
-                endTotals[3 * i + 1].Text = Distance.Ends[i].Golds().ToString();
-                endTotals[3 * i + 2].Text = Distance.RunningTotal(i).ToString();
+                endTotals[3 * end + j] = AddLabel("", arrowsPerEnd + j, end + 1);
+                endTotals[3 * end + j].BindingContext = Distance.Ends[end];
+                
+                endTotals[3 * end + j].SetBinding(Label.TextProperty, j switch
+                {
+                    0 => "Score",
+                    1 => "Golds",
+                    2 => "RunningTotal",
+                    _ => throw new ArgumentOutOfRangeException()
+                });
             }
-        }
-
-        private void HighlightNextEnd(int endIndex)
-        {
-            if (!ButtonsWork)
-                return;
-
-            inputButtons[endIndex].BorderColor = IsNextEnd(endIndex) ? Color.Black : Color.Transparent;
+            
+            Distance.Ends[end].PropertyHasChanged();
         }
         
         private bool alreadyAdded = false;
-        private void UpdateDistanceTotalsUI()
+        public void AddDistanceTotalsUI()
         {
-            // since this could be called multiple times before the round is finished
-            if (!Distance.AllEndsComplete() || endCount < Distance.MaxEnds)
-                return;
-
             if (!alreadyAdded)
                 for (var i = 0; i < 3; i++)
-                    AddLabel("-1", arrowsPerEnd + i, endCount + 1);
+                {
+                    var l = AddLabel("", arrowsPerEnd + i, endCount + 1);
+                    l.BindingContext = Distance;
+                
+                    l.SetBinding(Label.TextProperty, i switch
+                    {
+                        2 => "Score",
+                        1 => "Golds",
+                        0 => "Hits",
+                        _ => throw new ArgumentOutOfRangeException()
+                    }, stringFormat: i == 0 ? $"{LocalisationManager.Instance["Hits"]}: " + "{0:D}" : "{0:D}");
+                }
 
             alreadyAdded = true;
-
-            ((Label) EndDisplay.Children[^1]).Text = Distance.Score().ToString();
-            ((Label) EndDisplay.Children[^2]).Text = Distance.Golds().ToString();
-            ((Label) EndDisplay.Children[^3]).Text = $"{LocalisationManager.Instance["Hits"]}: {Distance.Hits()}";
         }
         
         private async Task ScrollToBottom()
@@ -351,12 +341,6 @@ namespace TheScoreBook.views.shoot
         {
             return endCount < Distance.MaxEnds && endCount == end + 1;
         }
-        
-        private bool EndHasScores(int endIndex)
-            => Distance.Ends[endIndex]?.GetScore(0) != null;
-
-        private bool IsNextEnd(int endIndex)
-            => endIndex == Distance.NextEndIndex() && GameManager.NextDistanceIndex() == DistanceIndex;
 
         #endregion
 
@@ -375,6 +359,35 @@ namespace TheScoreBook.views.shoot
         private void OpenScoreUI(int row)
         {
             PopupNavigation.Instance.PushAsync(new ScoreInputKeyboard(DistanceIndex, row, arrowsPerEnd));
+        }
+
+        #endregion
+
+        #region Convertors
+        
+        private class BoolToColorConvertor : IValueConverter
+        {
+            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+                => (bool) value switch
+                {
+                    true => Color.Black,
+                    false => Color.Transparent
+                };
+
+            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) { throw new NotImplementedException(); }
+        }
+
+        private class EndScoreConvertor : IValueConverter
+        {
+            public int ScoreIndex { get; set; }
+            public End End { get; set; }
+
+            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                return $"{End.GetScore(ScoreIndex)}";
+            }
+
+            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) { throw new NotImplementedException(); }
         }
 
         #endregion

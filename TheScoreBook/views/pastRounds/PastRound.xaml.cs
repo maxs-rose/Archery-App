@@ -15,17 +15,23 @@ namespace TheScoreBook.views.pastRounds
     {
         private Round Round { get; }
         
+        public string Hits { get; }
+        public string Golds { get; }
+        public string Total { get; }
+        
         public PastRound(Round round)
         {
             InitializeComponent();
             Round = round;
 
-            HitsDisplay.Text = $"{LocalisationManager.Instance["Hits"]}: {round.Hits()}";
-            GoldDisplay.Text = $"{LocalisationManager.Instance["Golds"]}: {round.Golds()}";
-            TotalDisplay.Text = $"{LocalisationManager.Instance["Score"]}: {round.Score()}";;
+            Hits = $"{LocalisationManager.Instance["Hits"]}: {round.Hits()}";
+            Golds = $"{LocalisationManager.Instance["Golds"]}: {round.Golds()}";
+            Total = $"{LocalisationManager.Instance["Score"]}: {round.Score()}";;
             
             foreach (var distance in round.Distances)
                 DistanceDisplay.Children.Add(new DistanceDisplay(distance) { HasShadow = false} );
+
+            BindingContext = this;
         }
         
         private void DeleteButtonClicked(object sender, EventArgs e)

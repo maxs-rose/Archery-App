@@ -30,27 +30,27 @@
                     Grid.Column="0"
                     Text="{localisation:Translate Round}"/>
                 <Label
-                    x:Name="RoundName"
                     Grid.Row="0"
-                    Grid.Column="1"/>
+                    Grid.Column="1"
+                    Text="{Binding RoundName}"/>
                 
                 <Label
                     Grid.Row="1"
                     Grid.Column="0"
                     Text="{localisation:Translate Date}"/>
                 <Label
-                    x:Name="Date"
                     Grid.Row="1"
-                    Grid.Column="1"/>
+                    Grid.Column="1"
+                    Text="{Binding Date}"/>
                 
                 <Label
                     Grid.Row="2"
                     Grid.Column="0"
                     Text="{localisation:Translate Style}"/>
                 <Label
-                    x:Name="Bow"
                     Grid.Row="2"
-                    Grid.Column="1"/>
+                    Grid.Column="1"
+                    Text="{Binding Bow}"/>
                 
                 <Label
                     Grid.Row="3"
@@ -59,10 +59,10 @@
                     Text="{localisation:Translate Score}"/>
             </Grid>
             <Label
-                x:Name="Score"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                FontSize="90"/>
+                FontSize="90"
+                Text="{Binding Score}"/>
         </StackLayout>
     </StackLayout>
 </Frame>

@@ -35,19 +35,16 @@
                 </Grid.RowDefinitions>
                 <Label
                     Grid.Column="0"
-                    x:Name="HitsDisplay"
                     HorizontalTextAlignment="Center"
                     Text="{Binding Hits}"/>
                 <Label
                     Grid.Column="1"
-                    x:Name="GoldDisplay"
                     HorizontalTextAlignment="Center"
                     Text="{Binding Golds}"/>
                 <Label
                     Grid.Column="2"
-                    x:Name="TotalDisplay"
                     HorizontalTextAlignment="Center"
-                    Text="{Binding Score}"/>
+                    Text="{Binding Total}"/>
             </Grid>
             <ScrollView
                 VerticalOptions="FillAndExpand" BackgroundColor="Transparent">

@@ -37,5 +37,8 @@ namespace TheScoreBook.models.enums
                 0 => MISS,
                 _ => throw new InvalidCastException($"{id} is not a valid score id")
             };
+
+        public bool IsFiveZoneScore()
+            => Value % 2 != 0;
     }
 }

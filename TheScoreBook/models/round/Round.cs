@@ -72,20 +72,6 @@ namespace TheScoreBook.models.round
             return Distances[distanceIndex].AddScore(endIndex, score);
         }
 
-        public bool RemoveScore(int distanceIndex, int endIndex, int scoreIndex)
-        {
-            if (distanceIndex < 0 || distanceIndex >= DistanceCount) return false;
-
-            return Distances[distanceIndex].RemoveScore(endIndex, scoreIndex);
-        }
-
-        public bool ChangeScore(int distanceIndex, int endIndex, int scoreIndex, Score score)
-        {
-            if (distanceIndex < 0 || distanceIndex >= DistanceCount) return false;
-
-            return Distances[distanceIndex].ChangeScore(endIndex, scoreIndex, score);
-        }
-
         public bool AllDistancesComplete()
             => Distances.All(d => d.AllEndsComplete());
 
@@ -94,9 +80,6 @@ namespace TheScoreBook.models.round
             if (distanceIndex < 0 || distanceIndex >= DistanceCount) return false;
             return Distances[distanceIndex].AllEndsComplete();
         } 
-
-        public bool DistanceEndComplete(int distanceIndex, int endIndex)
-            => Distances[distanceIndex].EndComplete(endIndex);
 
         public int NextDistanceIndex()
         {
@@ -115,50 +98,21 @@ namespace TheScoreBook.models.round
         }
         
         public int Hits()
-            => Distances.Sum(d => d.Hits());
-
-        public int Hits(int distanceIndex)
-            => Distances[distanceIndex].Hits();
-
-        public int Hits(int distanceIndex, int endIndex)
-            => Distances[distanceIndex].Hits(endIndex);
+            => Distances.Sum(d => d.Hits);
 
         public int CountScore(Score score)
             => Distances.Sum(d => d.CountScore(score));
 
-        public int CountScore(int distanceIndex, Score score)
-            => Distances[distanceIndex].CountScore(score);
-
-        public int CountScore(int distanceIndex, int endIndex, Score score)
-            => Distances[distanceIndex].CountScore(endIndex, score);
-
         public int Score()
-            => Distances.Sum(d => d.Score());
-
-        public int Score(int distanceIndex)
-            => Distances[distanceIndex].Score();
-
-        public int Score(int distanceIndex, int endIndex)
-            => Distances[distanceIndex].Score(endIndex);
+            => Distances.Sum(d => d.Score);
         
         public int Golds()
             => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
-
-        public int Golds(int distanceIndex)
-            => Distances[distanceIndex].Golds();
-
-        public int Golds(int distanceIndex, int endIndex)
-            => Distances[distanceIndex].Golds(endIndex);
 
         public void Finish()
         {
             foreach (var dist in Distances)
                 dist.Finish();
-        }
-
-        public void Finish(int distanceIndex)
-        {
-            Distances[distanceIndex].Finish();
         }
 
         public void Finish(int distanceIndex, int endIndex)

@@ -33,7 +33,7 @@ namespace TheScoreBook.models.enums
         public int CompareTo(object obj) => Id.CompareTo(((EnumClass) obj).Id);
 
         public static bool operator ==(EnumClass a, EnumClass b)
-            => a is not null && b is not null && a.Id == b.Id && a.Name.Equals(b.Name);
+            => a is not null && b is not null && a.Id == b.Id && a.Name == b.Name;
 
         public static bool operator !=(EnumClass a, EnumClass b)
             => !(a == b);

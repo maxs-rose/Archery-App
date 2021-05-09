@@ -26,7 +26,6 @@ namespace TheScoreBook.views.pastRounds
                         PopupNavigation.Instance.PushAsync(new PastRound(round));
                 })
             });
-            
         }
 
         public string RoundName => LocalisationManager.ToTitleCase(round.RoundName);

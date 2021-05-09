@@ -1,12 +1,15 @@
-﻿using System.Linq;
+﻿using System.ComponentModel;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using Newtonsoft.Json.Linq;
+using TheScoreBook.Annotations;
 using TheScoreBook.models.enums;
 
 namespace TheScoreBook.models.round
 {
-    public class Distance : IToJson
+    public class Distance : IToJson, INotifyPropertyChanged
     {
         public int DistanceLength { get; }
         public EDistanceUnit DistanceUnit { get; }
@@ -18,6 +21,10 @@ namespace TheScoreBook.models.round
         public string TargetSize { get; }
         
         public ScoringType ScoringType { get; }
+
+        public int Hits => Ends.Sum(e => e.Hits);
+        public int Golds => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
+        public int Score => Ends.Sum(e => e.Score);
         
         public Distance(int distanceLength, EDistanceUnit distanceUnit, int ends, int arrowsPerEnd, int targetSize, EDistanceUnit targetUnit, ScoringType scoringType)
         {
@@ -46,6 +53,9 @@ namespace TheScoreBook.models.round
             var ends = json["scores"].AsJEnumerable();
             for (var i = 0; i < MaxEnds; i++)
                 Ends[i] = new End(ends[i].Value<JObject>());
+
+            RunningTotal();
+            PropertyHasChanged();
         }
     
         public bool AddScore(int endIndex, Score score)
@@ -53,19 +63,10 @@ namespace TheScoreBook.models.round
             if (endIndex < 0 || endIndex >= MaxEnds) return false;
             if (endIndex > 0 && !Ends[endIndex - 1].EndComplete()) return false;
             
-            return Ends[endIndex].AddScore(score);
-        }
-        
-        public bool RemoveScore(int endIndex, int scoreIndex)
-        {
-            if (endIndex < 0 || endIndex >= MaxEnds) return false;
-            return Ends[endIndex].RemoveScore(scoreIndex);
-        }
-
-        public bool ChangeScore(int endIndex, int scoreIndex, Score score)
-        {
-            if (endIndex < 0 || endIndex >= MaxEnds) return false;
-            return Ends[endIndex].ChangeScore(scoreIndex, score);
+            var res = Ends[endIndex].AddScore(score);
+            RunningTotal();
+            PropertyHasChanged();
+            return res;
         }
 
         public int NextEndIndex()
@@ -83,55 +84,43 @@ namespace TheScoreBook.models.round
         public bool EndComplete(int endIndex)
             => endIndex >= 0 && endIndex < MaxEnds && Ends[endIndex].EndComplete();
 
-        public int Hits()
-            => Ends.Sum(e => e.Hits());
-
-        public int Hits(int endIndex)
-            => Ends[endIndex].Hits();
-
         public int CountScore(Score score)
             => Ends.Sum(e => e.CountScore(score));
 
-        public int CountScore(int index, Score score)
-            => Ends[index].CountScore(score);
-
-        public int Golds()
-            => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
-        
-        public int Golds(int endIndex)
-            => CountScore(endIndex, enums.Score.X) + CountScore(endIndex, enums.Score.TEN) + CountScore(endIndex, enums.Score.NINE);
-
-        public int Score()
-            => Ends.Sum(e => e.Score());
-
-        public int Score(int index)
-            => Ends[index].Score();
-
-        public int RunningTotal(int toIndex)
+        public void RunningTotal()
         {
             var sum = 0;
 
-            for (var i = 0; i <= toIndex && i < MaxEnds; i++)
-                sum += Ends[i].Score();
+            for (var i = 0; i < Ends.Length && Ends[i].EndHasScores(); i++)
+            {
+                sum += Ends[i].Score;
+                Ends[i].RunningTotal = sum;
+                Ends[i].IsNextEnd = false;
+                Ends[i].PropertyHasChanged();
+            }
             
-            return sum;
+            PropertyHasChanged();
         }
 
         public string DistanceEndString()
             => $"[{string.Join(",", Ends.Select(e => e.EndString()))}]";
         
         public override string ToString()
-            => $"ends: {MaxEnds}, scores: {DistanceEndString()}, endScore: {Score()}]";
+            => $"ends: {MaxEnds}, scores: {DistanceEndString()}, endScore: {Score}]";
 
         public void Finish()
         {
             foreach (var end in Ends)
                 end.Finish();
+            
+            PropertyHasChanged();
         }
 
         public void Finish(int endIndex)
         {
             Ends[endIndex].Finish();
+            RunningTotal();
+            PropertyHasChanged();
         }
         
         public JObject ToJson()
@@ -139,9 +128,9 @@ namespace TheScoreBook.models.round
             var json = new JObject
             {
                 {"scores", new JArray(Ends.Select(e => e.ToJson()))},
-                {"score", Score()},
-                {"hits", Hits()},
-                {"golds", Golds()},
+                {"score", Score},
+                {"hits", Hits},
+                {"golds", Golds},
                 {"x's", CountScore(enums.Score.X)},
                 {"10's", CountScore(enums.Score.TEN)},
                 {"9's", CountScore(enums.Score.NINE)},
@@ -157,6 +146,16 @@ namespace TheScoreBook.models.round
         public void ClearEnd(int endIndex)
         {
             Ends[endIndex].ClearEnd();
+            PropertyHasChanged();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void PropertyHasChanged()
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Score"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Golds"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Hits"));
         }
     }
 }

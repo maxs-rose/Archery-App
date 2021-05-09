@@ -1,14 +1,21 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models.enums;
 
 namespace TheScoreBook.models.round
 {
-    public class End : IToJson
+    public class End : IToJson, INotifyPropertyChanged
     {
         private List<Score> scores = new();
         public int ArrowsPerEnd { get; }
+        public int Score => scores.Sum(s => s.Value);
+        public int Golds => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
+        public int Hits => scores.Count(s => s != enums.Score.MISS);
+        public int RunningTotal { get; set; }
+
+        public bool IsNextEnd { get; set; } = true;
 
         public End(int arrowsPerEnd)
         {
@@ -19,6 +26,8 @@ namespace TheScoreBook.models.round
         {
             scores = json["scores"].Value<JArray>()!.Select(s => (Score)s.Value<int>()).ToList();
             ArrowsPerEnd = json["scoresPerEnd"].Value<int>();
+            
+            PropertyHasChanged();
         }
 
         public Score GetScore(int scoreIndex)
@@ -35,24 +44,9 @@ namespace TheScoreBook.models.round
             
             scores.Add(score);
             SortList();
-            return true;
-        }
-        
-        public bool RemoveScore(int index)
-        {
-            if (index < 0 || index >= scores.Count) return false;
             
-            scores.RemoveAt(index);
-            SortList();
-            return true;
-        }
-
-        public bool ChangeScore(int index, Score score)
-        {
-            if (index < 0 || index >= scores.Count) return false;
-
-            scores[index] = score;
-            SortList();
+            PropertyHasChanged();
+            
             return true;
         }
         
@@ -63,29 +57,22 @@ namespace TheScoreBook.models.round
 
         public bool EndComplete()
             => scores.Count() == ArrowsPerEnd;
-        
-        public int Hits()
-            => scores.Count(s => s != enums.Score.MISS);
 
         public int CountScore(Score score)
             => scores.Count(s => s == score);
-
-        public int Golds()
-            => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
         
-        public int Score()
-            => scores.Sum(e => e.Value);
-
         public string EndString()
             => $"[{string.Join(",", scores)}]";
         
         public override string ToString()
-            => $"max: {ArrowsPerEnd}, complete: {EndComplete()}, scores: {EndString()}, endScore: {Score()}]";
+            => $"max: {ArrowsPerEnd}, complete: {EndComplete()}, scores: {EndString()}, endScore: {Score}]";
 
         public void Finish()
         {
             while(scores.Count != ArrowsPerEnd)
                 scores.Add(enums.Score.MISS);
+            
+            PropertyHasChanged();
         }
         
         public JObject ToJson()
@@ -93,9 +80,9 @@ namespace TheScoreBook.models.round
             var json = new JObject
             {
                 {"scores", new JArray(scores.Select(s => s.Id))},
-                {"score", Score()},
-                {"hits", Hits()},
-                {"golds", Golds()},
+                {"score", Score},
+                {"hits", Hits},
+                {"golds", Golds},
                 {"x's", CountScore(enums.Score.X)},
                 {"10's", CountScore(enums.Score.TEN)},
                 {"9's", CountScore(enums.Score.NINE)},
@@ -109,6 +96,21 @@ namespace TheScoreBook.models.round
         public void ClearEnd()
         {
             scores.Clear();
+        }
+
+        public bool EndHasScores()
+            => scores.Count > 0;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void PropertyHasChanged()
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RunningTotal"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Score"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Golds"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Hits"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsNextEnd"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GetScore"));
         }
     }
 }

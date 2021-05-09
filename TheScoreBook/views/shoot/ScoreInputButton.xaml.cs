@@ -79,14 +79,5 @@ namespace TheScoreBook.views.shoot
         {
             ButtonText.Text = WordString == "" ? score?.ToString() : WordString;
         }
-
-        public bool IsFiveZoneScore()
-        {
-            if (Score == null)
-                return true;
-            if (Score == Score.X)
-                return false;
-            return Score.Value % 2 != 0;
-        }
     }
 }

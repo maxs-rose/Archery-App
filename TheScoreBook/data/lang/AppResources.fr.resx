@@ -193,8 +193,7 @@
     <value>Démarrer</value>
   </data>
   <data name="YourProfile" xml:space="preserve">
-    <value>
-Votre profil</value>
+    <value>Votre profil</value>
   </data>
   <data name="DeleteMark" xml:space="preserve">
     <value>Supprimer la marque de visée?</value>
