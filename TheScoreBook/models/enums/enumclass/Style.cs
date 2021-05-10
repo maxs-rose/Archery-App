@@ -1,4 +1,5 @@
-﻿using TheScoreBook.localisation;
+﻿using System;
+using TheScoreBook.localisation;
 
 namespace TheScoreBook.models.enums.enumclass
 {
@@ -15,5 +16,17 @@ namespace TheScoreBook.models.enums.enumclass
 
         public override string ToString()
             => LocalisationManager.Instance[Name] ?? Name;
+
+        public static explicit operator Style(int id)
+            => id switch
+            {
+                0 => RECURVE,
+                1 => BAREBOW,
+                2 => COMPOUND,
+                3 => LONGBOW,
+                4 => AFB,
+                5 => OTHER,
+                _ => throw new InvalidCastException($"{id} is not a valid style")
+            };
     }
 }

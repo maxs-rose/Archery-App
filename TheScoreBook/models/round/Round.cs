@@ -59,6 +59,7 @@ namespace TheScoreBook.models.round
 
             Date = DateTime.FromBinary(roundData["date"].Value<long>());
             RoundName = roundData["rName"].Value<string>();
+            Style = (Style)roundData["rStyle"]?.Value<int>() ?? Style.RECURVE;
 
             var dist = roundData["distances"]!.Value<JArray>();
 
@@ -131,7 +132,8 @@ namespace TheScoreBook.models.round
                 {"distances", new JArray(Distances.Select(d => d.ToJson()))},
                 {"nDistances", DistanceCount},
                 {"date", Date.ToBinary()},
-                {"rName", RoundName}
+                {"rName", RoundName},
+                {"rStyle", Style.Id}
             };
 
             return json;

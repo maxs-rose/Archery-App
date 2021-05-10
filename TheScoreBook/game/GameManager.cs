@@ -121,7 +121,7 @@ namespace TheScoreBook.game
 
         public static void SavePartlyFinishedRound()
         {
-            if (!GameInProgress && !CurrentGame.AllDistancesComplete())
+            if (CurrentGame == null || (!GameInProgress && !CurrentGame.AllDistancesComplete()))
                 return;
 
             var p = CurrentGame.ToJson();
