@@ -26,7 +26,7 @@ namespace TheScoreBook.views.shoot
 
         private int arrowsPerEnd;
         private int endCount = 0;
-        private Label[] endLabels;
+        private EndScoreDisplay[] endLabels;
         private Label[] endTotals;
         private Button[] inputButtons;
 
@@ -43,7 +43,7 @@ namespace TheScoreBook.views.shoot
 
             arrowsPerEnd = Distance.Ends[0].ArrowsPerEnd;
 
-            endLabels = new Label[arrowsPerEnd * Distance.MaxEnds];
+            endLabels = new EndScoreDisplay[arrowsPerEnd * Distance.MaxEnds];
             endTotals = new Label[3 * Distance.MaxEnds];
             inputButtons = new Button[Distance.MaxEnds];
 
@@ -68,7 +68,7 @@ namespace TheScoreBook.views.shoot
 
             arrowsPerEnd = Distance.Ends[0].ArrowsPerEnd;
 
-            endLabels = new Label[arrowsPerEnd * Distance.MaxEnds];
+            endLabels = new EndScoreDisplay[arrowsPerEnd * Distance.MaxEnds];
             endTotals = new Label[3 * Distance.MaxEnds];
 
             CreateEndDisplay();
@@ -102,6 +102,17 @@ namespace TheScoreBook.views.shoot
             }, col, row);
 
             return EndDisplay.Children[^1] as Label;
+        }
+        
+        EndScoreDisplay AddScoreDisplay(string text, int col, int row, TextAlignment vertical = TextAlignment.Center,
+            TextAlignment horizonatal = TextAlignment.Center)
+        {
+            EndDisplay.Children.Add(new EndScoreDisplay
+            {
+                InputTransparent = true
+            }, col, row);
+
+            return EndDisplay.Children[^1] as EndScoreDisplay;
         }
 
         private void CreateEndDisplay()
@@ -266,11 +277,11 @@ namespace TheScoreBook.views.shoot
         {
             for (var i = 0; i < arrowsPerEnd; i++)
             {
-                endLabels[arrowsPerEnd * endCount + i] = AddLabel("", i, endCount + 1);
+                endLabels[arrowsPerEnd * endCount + i] = AddScoreDisplay("", i, endCount + 1);
                 endLabels[arrowsPerEnd * endCount + i].BindingContext = Distance.Ends[endCount];
                 // we attach this to score since we cant directly attach to GetScore since it si a function
                 // instead we use the convertor to actually get our value
-                endLabels[arrowsPerEnd * endCount + i].SetBinding(Label.TextProperty, "Score",
+                endLabels[arrowsPerEnd * endCount + i].SetBinding(EndScoreDisplay.ScoreTextProperty, "Score",
                     converter: new EndScoreConvertor() {ScoreIndex = i, End = Distance.Ends[endCount]});
             }
         }

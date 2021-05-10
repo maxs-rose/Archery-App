@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:system="clr-namespace:System;assembly=netstandard"
+       x:Class="TheScoreBook.views.shoot.EndScoreDisplay"
+       HasShadow="False"
+       Padding="0"
+       Margin="5"
+       BackgroundColor="Transparent"
+       BorderColor="Black">
+    <Frame.CornerRadius>
+        <OnPlatform x:TypeArguments="system:Single">
+            <On Platform="Android, UWP" Value="50" />
+            <On Platform="iOS" Value="10" />
+        </OnPlatform>
+    </Frame.CornerRadius>
+    <Label
+        x:Name="ScoreLabel"
+        Margin="0"
+        Text=""
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="CenterAndExpand"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center" />
+</Frame>

@@ -41,23 +41,7 @@ namespace TheScoreBook.views.shoot
 
         private void UpdateRingColour()
         {
-            if (Score != null)
-            {
-                if (Score == Score.X || Score == Score.TEN || Score == Score.NINE)
-                    ColourFrame.BackgroundColor = Color.Yellow;
-                else if (Score == Score.EIGHT || Score == Score.SEVEN)
-                    ColourFrame.BackgroundColor = Color.Red;
-                else if (Score == Score.SIX || Score == Score.FIVE)
-                    ColourFrame.BackgroundColor = Color.Blue;
-                else if (Score == Score.FOUR || Score == Score.THREE || Score == Score.MISS)
-                    ColourFrame.BackgroundColor = Color.White;
-                else if (Score == Score.TWO || Score == Score.ONE)
-                    ColourFrame.BackgroundColor = Color.Black;
-                else
-                    ColourFrame.BackgroundColor = Color.Gray;
-            }
-            else
-                ColourFrame.BackgroundColor = Color.Gray;
+            ColourFrame.BackgroundColor = (Color)Score;
 
             switch (WordString)
             {
