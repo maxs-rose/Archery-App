@@ -6,6 +6,7 @@
                  xmlns:pages="http://rotorgames.com"
                  xmlns:shoot="clr-namespace:TheScoreBook.views.shoot;assembly=TheScoreBook"
                  xmlns:score="clr-namespace:TheScoreBook.models.enums;assembly=TheScoreBook"
+                 xmlns:enumclass="clr-namespace:TheScoreBook.models.enums.enumclass;assembly=TheScoreBook"
                  x:Class="TheScoreBook.views.shoot.ScoreInputKeyboard">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation
@@ -65,21 +66,21 @@
                         x:Name="Button1"
                         Grid.Row="0"
                         Grid.Column="0"
-                        Score="{x:Static score:Score.X}"
+                        Score="{x:Static enumclass:Score.X}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="0"
                         Grid.Column="1"
-                        Score="{x:Static score:Score.TEN}"
+                        Score="{x:Static enumclass:Score.TEN}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="0"
                         Grid.Column="2"
-                        Score="{x:Static score:Score.NINE}"
+                        Score="{x:Static enumclass:Score.NINE}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />
@@ -87,21 +88,21 @@
                     <shoot:ScoreInputButton
                         Grid.Row="1"
                         Grid.Column="0"
-                        Score="{x:Static score:Score.EIGHT}"
+                        Score="{x:Static enumclass:Score.EIGHT}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="1"
                         Grid.Column="1"
-                        Score="{x:Static score:Score.SEVEN}"
+                        Score="{x:Static enumclass:Score.SEVEN}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="1"
                         Grid.Column="2"
-                        Score="{x:Static score:Score.SIX}"
+                        Score="{x:Static enumclass:Score.SIX}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />
@@ -109,21 +110,21 @@
                     <shoot:ScoreInputButton
                         Grid.Row="2"
                         Grid.Column="0"
-                        Score="{x:Static score:Score.FIVE}"
+                        Score="{x:Static enumclass:Score.FIVE}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="2"
                         Grid.Column="1"
-                        Score="{x:Static score:Score.FOUR}"
+                        Score="{x:Static enumclass:Score.FOUR}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="2"
                         Grid.Column="2"
-                        Score="{x:Static score:Score.THREE}"
+                        Score="{x:Static enumclass:Score.THREE}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />
@@ -131,21 +132,21 @@
                     <shoot:ScoreInputButton
                         Grid.Row="3"
                         Grid.Column="0"
-                        Score="{x:Static score:Score.TWO}"
+                        Score="{x:Static enumclass:Score.TWO}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="3"
                         Grid.Column="1"
-                        Score="{x:Static score:Score.ONE}"
+                        Score="{x:Static enumclass:Score.ONE}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />
                     <shoot:ScoreInputButton
                         Grid.Row="3"
                         Grid.Column="2"
-                        Score="{x:Static score:Score.MISS}"
+                        Score="{x:Static enumclass:Score.MISS}"
                         Margin="0"
                         Padding="0"
                         BackgroundColor="Transparent" />

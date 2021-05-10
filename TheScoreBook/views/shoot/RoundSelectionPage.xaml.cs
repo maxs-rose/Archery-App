@@ -4,9 +4,9 @@ using FormsControls.Base;
 using TheScoreBook.acessors;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
-using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
 using Xamarin.Forms;
+using Style = TheScoreBook.models.enums.enumclass.Style;
 
 namespace TheScoreBook.views.shoot
 {
@@ -15,8 +15,7 @@ namespace TheScoreBook.views.shoot
         public string[] PossibleRounds => Rounds.Instance.Keys.Select(LocalisationManager.ToTitleCase).ToArray();
         public string SelectedRound { get; set; }
 
-        public string[] PossibleStyles =>
-            Enum.GetValues(typeof(EStyle)).Cast<EStyle>().Select(s => s.ToDisplayString()).ToArray();
+        public Style[] PossibleStyles => models.enums.enumclass.Style.GetAll<Style>().ToArray();
 
         public int SelectedStyle { get; set; }
 
@@ -73,7 +72,7 @@ namespace TheScoreBook.views.shoot
             if (!CanStartRound())
                 return;
 
-            GameManager.StartRound(SelectedRound.ToLower(), PossibleStyles[SelectedStyle].ToEStyle(), SelectedDate);
+            GameManager.StartRound(SelectedRound.ToLower(), PossibleStyles[SelectedStyle], SelectedDate);
             await Navigation.PushAsync(new Scoring());
             Navigation.RemovePage(this);
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace TheScoreBook.models.enums
+namespace TheScoreBook.models.enums.enumclass
 {
     public abstract class EnumClass : IComparable
     {
@@ -15,9 +15,11 @@ namespace TheScoreBook.models.enums
         public override string ToString() => Name;
 
         public static IEnumerable<T> GetAll<T>() where T : EnumClass =>
-            typeof(T).GetFields(BindingFlags.Public |
+            typeof(T).GetProperties(BindingFlags.Public |
                                 BindingFlags.Static |
-                                BindingFlags.DeclaredOnly).Select(f => f.GetValue(null)).Cast<T>();
+                                BindingFlags.DeclaredOnly)
+                .Select(f => f.GetValue(null))
+                .Cast<T>();
 
         public override bool Equals(object obj)
         {

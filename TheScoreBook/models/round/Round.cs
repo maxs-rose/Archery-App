@@ -4,6 +4,7 @@ using Newtonsoft.Json.Linq;
 using TheScoreBook.acessors;
 using TheScoreBook.exceptions;
 using TheScoreBook.models.enums;
+using TheScoreBook.models.enums.enumclass;
 
 namespace TheScoreBook.models.round
 {
@@ -14,14 +15,14 @@ namespace TheScoreBook.models.round
         public DateTime Date { get; }
         public string RoundName { get; }
         public ELocation Location { get; }
-        public EStyle Style { get; }
+        public Style Style { get; }
 
         public int MaxScore { get; }
         public int MaxShots { get; }
 
         public ScoringType ScoringType { get; }
 
-        public Round(string round, EStyle style, DateTime date)
+        public Round(string round, Style style, DateTime date)
         {
             if (!Rounds.Instance.Keys.Contains(round.ToLower()))
                 throw new InvalidRoundException($"{round} is not a valid round");
@@ -49,9 +50,7 @@ namespace TheScoreBook.models.round
             MaxShots = Distances.Sum(d => d.MaxShots);
         }
 
-        public Round(string round) : this(round, EStyle.RECURVE, DateTime.Now)
-        {
-        }
+        public Round(string round) : this(round, Style.RECURVE, DateTime.Now) { }
 
         public Round(JObject roundData)
         {
@@ -112,7 +111,7 @@ namespace TheScoreBook.models.round
             => Distances.Sum(d => d.Score);
 
         public int Golds()
-            => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
+            => CountScore(enums.enumclass.Score.X) + CountScore(enums.enumclass.Score.TEN) + CountScore(enums.enumclass.Score.NINE);
 
         public void Finish()
         {

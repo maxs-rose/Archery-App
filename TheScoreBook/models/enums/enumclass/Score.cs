@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TheScoreBook.models.enums
+namespace TheScoreBook.models.enums.enumclass
 {
     public class Score : EnumClass
     {
@@ -40,5 +40,17 @@ namespace TheScoreBook.models.enums
 
         public bool IsFiveZoneScore()
             => Value % 2 != 0;
+
+        public static bool operator >(Score a, Score b)
+            => a.Value > b.Value;
+
+        public static bool operator <(Score a, Score b)
+            => a.Value < b.Value;
+
+        public static bool operator <=(Score a, Score b)
+            => a.Value <= b.Value;
+
+        public static bool operator >=(Score a, Score b)
+            => a.Value >= b.Value;
     }
 }

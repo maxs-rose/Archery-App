@@ -2,6 +2,7 @@
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models.enums;
+using TheScoreBook.models.enums.enumclass;
 
 namespace TheScoreBook.models.round
 {
@@ -19,7 +20,7 @@ namespace TheScoreBook.models.round
         public ScoringType ScoringType { get; }
 
         public int Hits => Ends.Sum(e => e.Hits);
-        public int Golds => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
+        public int Golds => CountScore(enums.enumclass.Score.X) + CountScore(enums.enumclass.Score.TEN) + CountScore(enums.enumclass.Score.NINE);
         public int Score => Ends.Sum(e => e.Score);
 
         public Distance(int distanceLength, EDistanceUnit distanceUnit, int ends, int arrowsPerEnd, int targetSize,
@@ -128,9 +129,9 @@ namespace TheScoreBook.models.round
                 {"score", Score},
                 {"hits", Hits},
                 {"golds", Golds},
-                {"x's", CountScore(enums.Score.X)},
-                {"10's", CountScore(enums.Score.TEN)},
-                {"9's", CountScore(enums.Score.NINE)},
+                {"x's", CountScore(enums.enumclass.Score.X)},
+                {"10's", CountScore(enums.enumclass.Score.TEN)},
+                {"9's", CountScore(enums.enumclass.Score.NINE)},
                 {"maxEnds", MaxEnds},
                 {"endComplete", AllEndsComplete()},
                 {"distance", DistanceLength},

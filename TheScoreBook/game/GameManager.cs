@@ -4,6 +4,7 @@ using Newtonsoft.Json.Linq;
 using TheScoreBook.acessors;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
+using TheScoreBook.models.enums.enumclass;
 using TheScoreBook.models.round;
 
 namespace TheScoreBook.game
@@ -17,7 +18,7 @@ namespace TheScoreBook.game
 
         public static bool AllDistancesComplete => GameInProgress ? CurrentGame.AllDistancesComplete() : false;
 
-        public static void StartRound(string roundName, EStyle style, DateTime date)
+        public static void StartRound(string roundName, Style style, DateTime date)
         {
             PreviousRoundNotFinished = false;
             PreviousGame = null;

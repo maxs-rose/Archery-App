@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Data.Common;
 
-namespace TheScoreBook.models.enums
+namespace TheScoreBook.models.enums.enumclass
 {
     public class ScoringType : EnumClass
     {
