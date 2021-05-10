@@ -267,4 +267,10 @@
   <data name="ScoringType" xml:space="preserve">
     <value>Scoring Type</value>
   </data>
+  <data name="ColorfulChanged" xml:space="preserve">
+    <value>Colourful End Labels</value>
+  </data>
+  <data name="DarkMode" xml:space="preserve">
+    <value>Dark Mode</value>
+  </data>
 </root>

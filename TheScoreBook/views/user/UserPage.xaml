@@ -3,9 +3,11 @@
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+       xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
        x:Class="TheScoreBook.views.user.UserPage"
        Padding="0"
-       HasShadow="False">
+       HasShadow="False"
+       BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
     <ScrollView
         Padding="0"
         Margin="0">

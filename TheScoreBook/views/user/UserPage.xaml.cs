@@ -47,7 +47,7 @@ namespace TheScoreBook.views.user
 
         private void SettingsButtonClicked(object o, EventArgs e)
         {
-            PopupNavigation.Instance.PushAsync(new SettingsPopup());
+            PopupNavigation.Instance.PushAsync(new SettingsPopup(this));
         }
 
         private void GenerateSightMarks()

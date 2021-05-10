@@ -5,10 +5,12 @@
        xmlns:local="clr-namespace:TheScoreBook"
        xmlns:helpers="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
        xmlns:system="clr-namespace:System;assembly=netstandard"
+       xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
        x:Class="TheScoreBook.views.pastRounds.PastRoundsPage"
        Padding="0"
        Margin="0"
-       HasShadow="False">
+       HasShadow="False"
+       BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
     <StackLayout
         Padding="0"
         Margin="0"

@@ -5,7 +5,9 @@
                     xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
                     xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
                     xmlns:system="clr-namespace:System;assembly=netstandard"
-                    x:Class="TheScoreBook.views.shoot.RoundSelectionPage">
+                    xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
+                    x:Class="TheScoreBook.views.shoot.RoundSelectionPage"
+                    BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
     <base:AnimationPage.PageAnimation>
         <base:PageAnimation Duration="Short" Subtype="FromBottom" />
     </base:AnimationPage.PageAnimation>
@@ -13,7 +15,8 @@
         <StackLayout
             Margin="0"
             Padding="0"
-            VerticalOptions="Start">
+            VerticalOptions="Start"
+            BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
             <Grid
                 x:Name="BottomBar"
                 VerticalOptions="Start"
@@ -80,7 +83,7 @@
                     Date="{Binding SelectedDate, Mode=TwoWay}"
                     Format="dd/MM/yyyy" />
             </StackLayout>
-            <ScrollView Margin="0, 5, 0 ,0">
+            <ScrollView Margin="0, 5, 0 ,0" >
                 <StackLayout>
                     <Grid>
                         <Grid.RowDefinitions>
@@ -100,7 +103,7 @@
                         <Label Grid.Column="1" Grid.Row="1" x:Name="ScoringType" Text=""
                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
                     </Grid>
-                    <StackLayout x:Name="RoundInformation" />
+                    <StackLayout x:Name="RoundInformation" BackgroundColor="{x:Static settings:Settings.BackgroundColor}" />
                 </StackLayout>
             </ScrollView>
         </StackLayout>

@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Reflection;
 using System.Resources;
 using System.Threading;
+using TheScoreBook.acessors;
 using TheScoreBook.data.lang;
 using Xamarin.Essentials;
 
@@ -11,8 +12,6 @@ namespace TheScoreBook.localisation
 {
     public class LocalisationManager : INotifyPropertyChanged
     {
-        private const string LanguageKey = nameof(LanguageKey);
-
         public event PropertyChangedEventHandler PropertyChanged;
         public int LanguageChangedNotification => 0;
 
@@ -23,14 +22,14 @@ namespace TheScoreBook.localisation
 
         private LocalisationManager()
         {
-            SetCulture(new CultureInfo(Preferences.Get(LanguageKey, CurrentCulture.TwoLetterISOLanguageName)));
+            SetCulture(new CultureInfo(Settings.Language));
         }
 
         public void SetCulture(CultureInfo language)
         {
             Thread.CurrentThread.CurrentUICulture = language;
             AppResources.Culture = language;
-            Preferences.Set(LanguageKey, language.TwoLetterISOLanguageName);
+            Settings.Language = language.TwoLetterISOLanguageName;
 
             Invalidate();
         }
@@ -43,8 +42,13 @@ namespace TheScoreBook.localisation
 
         public void Invalidate()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null));
+            ForceUIReload();
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("LanguageChangedNotification"));
+        }
+
+        public void ForceUIReload()
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null));
         }
 
         public static string ToTitleCase(string input)

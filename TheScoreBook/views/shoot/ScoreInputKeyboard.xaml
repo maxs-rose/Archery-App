@@ -7,6 +7,7 @@
                  xmlns:shoot="clr-namespace:TheScoreBook.views.shoot;assembly=TheScoreBook"
                  xmlns:score="clr-namespace:TheScoreBook.models.enums;assembly=TheScoreBook"
                  xmlns:enumclass="clr-namespace:TheScoreBook.models.enums.enumclass;assembly=TheScoreBook"
+                 xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
                  x:Class="TheScoreBook.views.shoot.ScoreInputKeyboard">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation
@@ -34,7 +35,7 @@
             <Frame
                 BorderColor="Black"
                 CornerRadius="10"
-                BackgroundColor="GhostWhite"
+                BackgroundColor="{x:Static settings:Settings.BackgroundColor}"
                 Margin="0, 0, 0, 10">
                 <Grid x:Name="ScoreDisplay" Padding="0" Margin="0">
                     <Grid.RowDefinitions>
@@ -45,7 +46,7 @@
             <Frame
                 BorderColor="Black"
                 CornerRadius="10"
-                BackgroundColor="GhostWhite"
+                BackgroundColor="{x:Static settings:Settings.BackgroundColor}"
                 Margin="0, 10, 0, 0">
                 <Grid x:Name="ScoreInput"
                       Padding="0"

@@ -1,4 +1,5 @@
-﻿using TheScoreBook.models.enums.enumclass;
+﻿using TheScoreBook.acessors;
+using TheScoreBook.models.enums.enumclass;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -38,10 +39,16 @@ namespace TheScoreBook.views.shoot
         {
             InitializeComponent();
             BindingContext = this;
+            
+            if(!Settings.ColorfulArrows)
+                BorderColor = Color.Transparent;
         }
 
         private void SetBackgroundColor()
         {
+            if (!Settings.ColorfulArrows)
+                return;
+            
             BackgroundColor = (Color) Score;
             if (BackgroundColor == Color.Black || BackgroundColor == Color.Blue)
                 ScoreLabel.TextColor = Color.White;

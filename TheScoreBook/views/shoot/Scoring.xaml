@@ -6,8 +6,10 @@
                     xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
                     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
                     xmlns:system="clr-namespace:System;assembly=netstandard"
+                    xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
                     ios:Page.UseSafeArea="True"
-                    x:Class="TheScoreBook.views.shoot.Scoring">
+                    x:Class="TheScoreBook.views.shoot.Scoring"
+                    BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
     <base:AnimationPage.PageAnimation>
         <base:PageAnimation Duration="Short" Subtype="FromTop" />
     </base:AnimationPage.PageAnimation>

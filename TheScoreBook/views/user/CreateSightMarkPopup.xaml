@@ -5,6 +5,7 @@
                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
                  xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
+                 xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
                  x:Class="TheScoreBook.views.user.CreateSightMarkPopup">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation
@@ -18,12 +19,11 @@
             EasingOut="SinIn"
             HasBackgroundAnimation="True" />
     </pages:PopupPage.Animation>
-    <StackLayout
+    <Frame
         VerticalOptions="Center"
         HorizontalOptions="Center"
-        Padding="20"
-        BackgroundColor="LightGray">
-        <Label Text="{localisation:Translate InputNewMark}" />
+        BorderColor="Black"
+        BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -33,31 +33,54 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                FontSize="20"
+                Text="{localisation:Translate InputNewMark}" />
+
             <Entry
+                Grid.Row="1"
                 Grid.Column="0"
                 x:Name="Position"
                 Keyboard="Numeric"
                 Placeholder="{localisation:Translate Position}" />
             <Entry
+                Grid.Row="1"
                 Grid.Column="1"
                 x:Name="Notch"
                 Keyboard="Numeric"
                 Placeholder="{localisation:Translate Notch}" />
             <Entry
+                Grid.Row="1"
                 Grid.Column="2"
                 x:Name="Distance"
                 Keyboard="Numeric"
                 Placeholder="{localisation:Translate Distance}" />
             <Picker
+                Grid.Row="1"
                 Grid.Column="3"
                 x:Name="DistanceUnitPicker"
                 ItemsSource="{Binding Distances}"
                 SelectedIndex="{Binding SelectedDistance, Mode=TwoWay}" />
+            
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                BorderColor="Black"
+                BorderWidth="2"
+                BackgroundColor="Transparent"
+                CornerRadius="30"
+                Text="{localisation:Translate Done}"
+                TextColor="Black"
+                Clicked="DoneButtonClicked" />
         </Grid>
-        <Button
-            Text="{localisation:Translate Done}"
-            TextColor="Black"
-            Clicked="DoneButtonClicked" />
-    </StackLayout>
+    </Frame>
 </pages:PopupPage>
