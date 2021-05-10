@@ -17,10 +17,8 @@ namespace TheScoreBook.views.user
         private Frame parent;
         
         private ChangeLanguage languageChanger = new();
-        private bool colorChanged = false;
-        private bool colorSetting = Settings.ColorfulArrows;
         
-        private bool darkChanged = false;
+        private bool colorSetting = Settings.ColorfulArrows;
         private bool darkSetting = Settings.DarkMode;
         
         public ObservableCollection<Language> Languages => languageChanger.Languages;
@@ -44,10 +42,9 @@ namespace TheScoreBook.views.user
                 languageChanger.SelectedLanguage.CI)
                 languageChanger.ChangeLanguageCommand.Execute(this);
 
-            if (colorChanged)
-                Settings.ColorfulArrows = colorSetting;
+            Settings.ColorfulArrows = colorSetting;
             
-            if (darkChanged)
+            if (Settings.DarkMode != darkSetting)
             {
                 Settings.DarkMode = darkSetting;
                 parent.BackgroundColor = Settings.BackgroundColor;
@@ -58,13 +55,11 @@ namespace TheScoreBook.views.user
 
         private void ColorfulChanged(object sender, CheckedChangedEventArgs e)
         {
-            colorChanged = true;
             colorSetting = e.Value;
         }
 
         private void DarkMode(object sender, CheckedChangedEventArgs e)
         {
-            darkChanged = true;
             darkSetting = e.Value;
         }
     }
