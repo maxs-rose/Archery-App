@@ -6,10 +6,104 @@
     [
       {
         "location": "in",
+        "distance": 20,
+        "unit": "yd",
+        "arrowsPerEnd": 3,
+        "ends": 10,
+        "targetSize": 40,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "bray 2":
+  {
+  "scoringType": "TenZone",
+  "distances":
+  [
+    {
+      "location": "in",
+      "distance": 25,
+      "unit": "yd",
+      "arrowsPerEnd": 3,
+      "ends": 10,
+      "targetSize": 60,
+      "targetUnit": "cm"
+    }
+  ]
+  },
+  "portsmouth": {
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "in",
         "distance": 18,
         "unit": "m",
         "arrowsPerEnd": 3,
-        "ends": 10,
+        "ends": 20,
+        "targetSize": 60,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "worcester":
+  {
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "in",
+        "distance": 20,
+        "unit": "yd",
+        "arrowsPerEnd": 5,
+        "ends": 12,
+        "targetSize": 60,
+        "targetUnit": "in"
+      }
+    ]
+  },
+  "stafford":
+  {
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "in",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 3,
+        "ends": 24,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "vegas":
+  {
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "in",
+        "distance": 18,
+        "unit": "m",
+        "arrowsPerEnd": 3,
+        "ends": 20,
+        "targetSize": 40,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "fita 18":
+  {
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "in",
+        "distance": 18,
+        "unit": "m",
+        "arrowsPerEnd": 3,
+        "ends": 20,
         "targetSize": 40,
         "targetUnit": "cm"
       }
@@ -43,20 +137,6 @@
         "arrowsPerEnd": 6,
         "ends": 5,
         "targetSize": 122,
-        "targetUnit": "cm"
-      }
-    ]
-  },
-  "portsmouth": {
-    "scoringType": "TenZone",
-    "distances": [
-      {
-        "location": "in",
-        "distance": 18,
-        "unit": "m",
-        "arrowsPerEnd": 3,
-        "ends": 20,
-        "targetSize": 60,
         "targetUnit": "cm"
       }
     ]
