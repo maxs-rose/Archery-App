@@ -19,7 +19,7 @@ namespace TheScoreBook.views.user
         private ChangeLanguage languageChanger = new();
         
         private bool colorSetting = Settings.ColorfulArrows;
-        private bool darkSetting = Settings.DarkMode;
+        private OSAppTheme darkSetting = Settings.AppTheme;
         
         public ObservableCollection<Language> Languages => languageChanger.Languages;
         
@@ -44,10 +44,10 @@ namespace TheScoreBook.views.user
 
             Settings.ColorfulArrows = colorSetting;
             
-            if (Settings.DarkMode != darkSetting)
+            if (Settings.AppTheme != darkSetting)
             {
-                Settings.DarkMode = darkSetting;
-                parent.BackgroundColor = Settings.BackgroundColor;
+                Settings.AppTheme = darkSetting;
+                // parent.BackgroundColor = Settings.BackgroundColor;
             }
             
             PopupNavigation.Instance.PopAsync();
@@ -60,7 +60,7 @@ namespace TheScoreBook.views.user
 
         private void DarkMode(object sender, CheckedChangedEventArgs e)
         {
-            darkSetting = e.Value;
+            darkSetting = e.Value ? OSAppTheme.Dark : OSAppTheme.Light;
         }
     }
 }

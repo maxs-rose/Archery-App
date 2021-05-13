@@ -4,8 +4,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TheScoreBook.App">
     <Application.Resources>
+        
+        <!-- Colours -->
+        <Color x:Key="LightText">Black</Color>
+        <Color x:Key="DarkText">White</Color>
+        
+        <Color x:Key="LightBackground">White</Color>
+        <Color x:Key="DarkBackground">Gray</Color>
+        
+        <Color x:Key="LightButtonBorder">Black</Color>
+        <Color x:Key="DarkButtonBorder">White</Color>
+        
         <Style TargetType="Label">
-            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightText}, Dark={StaticResource DarkText}}" />
+        </Style>
+        
+        <Style TargetType="Picker">
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightText}, Dark={StaticResource DarkText}}" />
+        </Style>
+        
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightText}, Dark={StaticResource DarkText}}"/>
+            <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource LightButtonBorder}, Dark={StaticResource DarkButtonBorder}}"/>
+            <Setter Property="BorderWidth" Value="2"/>
         </Style>
     </Application.Resources>
 </Application>

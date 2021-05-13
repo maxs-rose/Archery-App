@@ -108,7 +108,7 @@ namespace TheScoreBook.views.pastRounds
         private void ShowAllPast_OnClicked(object sender, EventArgs e)
         {
             ShowPBs.BorderColor = Color.Transparent;
-            ShowAllPast.BorderColor = Color.Black;
+            ShowAllPast.BorderColor = Settings.GetStaticResource<Color>(Settings.IsDarkMode ? "DarkButtonBorder" : "LightButtonBorder");
 
             if (!showingAll)
                 Device.BeginInvokeOnMainThread(async () => ScoreView.Content = await LoadRounds());
@@ -116,7 +116,7 @@ namespace TheScoreBook.views.pastRounds
 
         private void ShowPBs_OnClicked(object sender, EventArgs e)
         {
-            ShowPBs.BorderColor = Color.Black;
+            ShowPBs.BorderColor = Settings.GetStaticResource<Color>(Settings.IsDarkMode ? "DarkButtonBorder" : "LightButtonBorder");;
             ShowAllPast.BorderColor = Color.Transparent;
 
             if (showingAll)

@@ -376,7 +376,7 @@ namespace TheScoreBook.views.shoot
             public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
                 => (bool) value switch
                 {
-                    true => Color.Black,
+                    true => Settings.GetStaticResource<Color>(Settings.IsDarkMode ? "DarkButtonBorder" : "LightButtonBorder"),
                     false => Color.Transparent
                 };
 

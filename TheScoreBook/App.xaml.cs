@@ -1,4 +1,5 @@
 ﻿using FormsControls.Base;
+using TheScoreBook.acessors;
 using TheScoreBook.game;
 using TheScoreBook.views;
 using Xamarin.Forms;
@@ -15,6 +16,7 @@ namespace TheScoreBook
             InitializeComponent();
             // ExperimentalFeatures.Enable("Shapes_Experimental");
             Device.SetFlags(new[] {"Shapes_Experimental"});
+            Application.Current.UserAppTheme = Settings.AppTheme;
 
             MainPage = new AnimationNavigationPage(new GeneralContainer());
         }

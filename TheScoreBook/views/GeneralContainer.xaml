@@ -55,7 +55,8 @@
                     <Button Grid.Column="2" x:Name="ProfileButton" Text="{localisation:Translate Profile}"
                             Clicked="ProfileButtonOnClicked" BackgroundColor="Transparent" TextColor="White"
                             BorderWidth="2"
-                            Margin="20, 10">
+                            Margin="20, 10"
+                            BorderColor="Transparent">
                         <Button.CornerRadius>
                             <OnPlatform x:TypeArguments="system:Int32">
                                 <On Platform="Android, UWP" Value="100" />

@@ -6,10 +6,9 @@
                     xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
                     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
                     xmlns:system="clr-namespace:System;assembly=netstandard"
-                    xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
                     ios:Page.UseSafeArea="True"
                     x:Class="TheScoreBook.views.shoot.Scoring"
-                    BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
+                    BackgroundColor="{AppThemeBinding Light=White, Dark=Gray}">
     <base:AnimationPage.PageAnimation>
         <base:PageAnimation Duration="Short" Subtype="FromTop" />
     </base:AnimationPage.PageAnimation>
@@ -31,10 +30,6 @@
                 </Grid.RowDefinitions>
                 <Button
                     Grid.Column="0"
-                    BackgroundColor="Transparent"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    TextColor="Black"
                     Text="{localisation:Translate Back}" Clicked="OnBackButtonClicked">
                     <Button.Padding>
                         <OnPlatform x:TypeArguments="Thickness">
@@ -64,11 +59,7 @@
                 <Button
                     Grid.Column="2"
                     x:Name="FinishedButton"
-                    BackgroundColor="Transparent"
-                    BorderColor="Black"
-                    BorderWidth="2"
                     TextTransform="None"
-                    TextColor="Black"
                     Text="{localisation:Translate Finish}" Clicked="OnFinishButtonClicked">
                     <Button.Padding>
                         <OnPlatform x:TypeArguments="Thickness">

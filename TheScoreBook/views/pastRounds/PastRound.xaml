@@ -6,7 +6,6 @@
                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
                  xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
                  xmlns:system="clr-namespace:System;assembly=netstandard"
-                 xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
                  x:Class="TheScoreBook.views.pastRounds.PastRound">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation
@@ -21,7 +20,7 @@
             HasBackgroundAnimation="True" />
     </pages:PopupPage.Animation>
     <Frame
-        BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
+        BackgroundColor="{AppThemeBinding Light=White, Dark=Gray}">
         <StackLayout>
             <Grid
                 HorizontalOptions="End"
@@ -67,10 +66,6 @@
                 <Button
                     Grid.Column="1"
                     Text="{localisation:Translate DeleteRound}"
-                    TextColor="Black"
-                    BackgroundColor="Transparent"
-                    BorderWidth="2"
-                    BorderColor="Black"
                     Clicked="DeleteButtonClicked">
                     <Button.Padding>
                         <OnPlatform x:TypeArguments="Thickness">
@@ -88,10 +83,6 @@
                 <Button
                     Grid.Column="0"
                     Text="{localisation:Translate Back}"
-                    TextColor="Black"
-                    BackgroundColor="Transparent"
-                    BorderColor="Black"
-                    BorderWidth="2"
                     Clicked="BackButtonClicked">
                     <Button.Padding>
                         <OnPlatform x:TypeArguments="Thickness">

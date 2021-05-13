@@ -20,8 +20,8 @@
             HasBackgroundAnimation="True" />
     </pages:PopupPage.Animation>
     <Frame
-        BackgroundColor="{x:Static settings:Settings.BackgroundColor}"
-        BorderColor="Black"
+        BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+        BorderColor="{AppThemeBinding Light={StaticResource LightButtonBorder}, Dark={StaticResource DarkButtonBorder}}"
         VerticalOptions="Center"
         HorizontalOptions="Center">
         <Grid
@@ -72,17 +72,13 @@
                 Grid.Row="2"
                 Grid.Column="1"
                 CheckedChanged="DarkMode"
-                IsChecked="{x:Static settings:Settings.DarkMode}" />
+                IsChecked="{x:Static settings:Settings.IsDarkMode}" />
 
             <Button
                 Grid.Row="3"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
                 Text="{localisation:Translate Done}"
-                TextColor="Black"
-                BackgroundColor="Transparent"
-                BorderColor="Black"
-                BorderWidth="2"
                 CornerRadius="30"
                 Clicked="CloseSettings" />
         </Grid>

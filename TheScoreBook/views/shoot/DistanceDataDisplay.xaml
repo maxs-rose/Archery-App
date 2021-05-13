@@ -3,13 +3,12 @@
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
-       xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
        x:Class="TheScoreBook.views.shoot.DistanceDataDisplay"
        HasShadow="True"
        Margin="3"
        CornerRadius="10"
-       BorderColor="Black"
-       BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
+       BorderColor="{AppThemeBinding Light={StaticResource LightButtonBorder}, Dark={StaticResource DarkButtonBorder}}"
+       BackgroundColor="Transparent">
     <StackLayout>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -27,11 +26,11 @@
             </Grid.RowDefinitions>
             <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                    HasShadow="False"
-                   BackgroundColor="Black"
+                   BackgroundColor="{AppThemeBinding Light={StaticResource LightButtonBorder}, Dark={StaticResource DarkButtonBorder}}"
                    Margin="0"
                    Padding="2"
                    CornerRadius="10">
-                <Label Text="{Binding RoundIndex, Mode=OneWay}" TextColor="White" HorizontalTextAlignment="Center"
+                <Label Text="{Binding RoundIndex, Mode=OneWay}" TextColor="{AppThemeBinding Light={StaticResource DarkText}, Dark={StaticResource LightText}}" HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center" />
             </Frame>
             <Label Grid.Row="1" Grid.Column="0" Text="{localisation:Translate Distance}" VerticalTextAlignment="Center" />

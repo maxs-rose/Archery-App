@@ -2,15 +2,13 @@
 
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TheScoreBook"
        xmlns:helpers="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
        xmlns:system="clr-namespace:System;assembly=netstandard"
-       xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
        x:Class="TheScoreBook.views.pastRounds.PastRoundsPage"
        Padding="0"
        Margin="0"
        HasShadow="False"
-       BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
+       BackgroundColor="{AppThemeBinding Light=White, Dark=Gray}">
     <StackLayout
         Padding="0"
         Margin="0"
@@ -36,15 +34,15 @@
                     Margin="0"
                     Padding="0"
                     IsEnabled="False"
-                    BackgroundColor="Transparent" />
-            <Button x:Name="ShowAllPast" Clicked="ShowAllPast_OnClicked" BackgroundColor="Transparent" Grid.Column="0"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent" />
+            <Button x:Name="ShowAllPast" Clicked="ShowAllPast_OnClicked"
+                    Grid.Column="0"
                     Text="{helpers:Translate All}"
                     HorizontalOptions="Center"
                     VerticalOptions="Start"
                     FontSize="Subtitle"
-                    Margin="0, 2"
-                    BorderWidth="2"
-                    TextColor="Black">
+                    Margin="0, 2">
                 <Button.Padding>
                     <OnPlatform x:TypeArguments="Thickness">
                         <On Platform="Android, UWP" Value="0" />
@@ -58,14 +56,14 @@
                     </OnPlatform>
                 </Button.CornerRadius>
             </Button>
-            <Button x:Name="ShowPBs" Clicked="ShowPBs_OnClicked" BackgroundColor="Transparent" Grid.Column="1"
+            <Button x:Name="ShowPBs" Clicked="ShowPBs_OnClicked"
+                    BackgroundColor="Transparent"
+                    Grid.Column="1"
                     Text="{helpers:Translate PB}"
                     HorizontalOptions="Center"
                     VerticalOptions="Start"
                     FontSize="Subtitle"
-                    Margin="0, 2"
-                    BorderWidth="2"
-                    TextColor="Black">
+                    Margin="0, 2">
                 <Button.Padding>
                     <OnPlatform x:TypeArguments="Thickness">
                         <On Platform="Android, UWP" Value="0" />

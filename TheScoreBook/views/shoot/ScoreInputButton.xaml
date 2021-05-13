@@ -9,7 +9,6 @@
         Margin="0"
         VerticalOptions="Center"
         HorizontalOptions="Center">
-
         <Frame
             x:Name="ColourFrame"
             Margin="0"
@@ -18,7 +17,7 @@
             HeightRequest="30"
             HorizontalOptions="CenterAndExpand"
             VerticalOptions="CenterAndExpand"
-            BorderColor="Black"
+            BorderColor="{AppThemeBinding Light={StaticResource LightButtonBorder}, Dark={StaticResource DarkButtonBorder}}"
             HasShadow="False">
             <Frame.Padding>
                 <OnPlatform x:TypeArguments="Thickness">

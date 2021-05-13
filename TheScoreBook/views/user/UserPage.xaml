@@ -3,11 +3,10 @@
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
-       xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
        x:Class="TheScoreBook.views.user.UserPage"
        Padding="0"
        HasShadow="False"
-       BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
+       BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
     <ScrollView
         Padding="0"
         Margin="0">
@@ -34,7 +33,7 @@
                     x:Name="settingsButton" Clicked="SettingsButtonClicked"
                     Margin="0"
                     Padding="0"
-                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
                     Text="&#x2699;" />
             </Grid>
             <!-- <Ellipse -->

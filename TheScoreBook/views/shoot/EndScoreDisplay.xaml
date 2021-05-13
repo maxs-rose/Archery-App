@@ -8,7 +8,7 @@
        Padding="0"
        Margin="5"
        BackgroundColor="Transparent"
-       BorderColor="Black">
+       BorderColor="{AppThemeBinding Light={StaticResource LightButtonBorder}, Dark={StaticResource DarkButtonBorder}}">
     <Frame.CornerRadius>
         <OnPlatform x:TypeArguments="system:Single">
             <On Platform="Android, UWP" Value="50" />

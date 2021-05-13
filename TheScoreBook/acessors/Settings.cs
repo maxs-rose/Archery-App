@@ -1,4 +1,6 @@
-﻿using System.Threading;
+﻿using System.Net.Http.Headers;
+using System.Runtime.InteropServices;
+using System.Threading;
 using TheScoreBook.data.lang;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -23,14 +25,20 @@ namespace TheScoreBook.acessors
             set => Preferences.Set(ColorfulArrowsKey, value);
         }
 
-        // Dark Mode
-        private const string DarkModeKey = nameof(DarkModeKey);
-        public static bool DarkMode
+        // Theme
+        private const string AppThemeKey = nameof(AppThemeKey);
+
+        public static OSAppTheme AppTheme
         {
-            get => Preferences.Get(DarkModeKey, false);
-            set => Preferences.Set(DarkModeKey, value);
+            get => (OSAppTheme)Preferences.Get(AppThemeKey, (int)Application.Current.RequestedTheme);
+            set
+            {
+                Preferences.Set(AppThemeKey, (int) value);
+                Application.Current.UserAppTheme = value;
+            }
         }
 
-        public static Color BackgroundColor => DarkMode ? Color.DimGray : Color.White;
+        public static bool IsDarkMode => AppTheme == OSAppTheme.Dark;
+        public static T GetStaticResource<T>(string key) => (T) Application.Current.Resources[key];
     }
 }

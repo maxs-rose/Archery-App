@@ -2,13 +2,10 @@
 
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
        xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
-       xmlns:system="clr-namespace:System;assembly=netstandard"
-       xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
        x:Class="TheScoreBook.views.shoot.FinishedRound"
        HasShadow="False"
-       BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
+       BackgroundColor="{AppThemeBinding Light=White, Dark=Gray}">
     <StackLayout
         VerticalOptions="Start">
         <Label Text="{localisation:Translate Results}"

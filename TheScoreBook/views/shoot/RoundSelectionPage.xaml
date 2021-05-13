@@ -5,9 +5,8 @@
                     xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
                     xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook"
                     xmlns:system="clr-namespace:System;assembly=netstandard"
-                    xmlns:settings="clr-namespace:TheScoreBook.acessors;assembly=TheScoreBook"
                     x:Class="TheScoreBook.views.shoot.RoundSelectionPage"
-                    BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
+                    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
     <base:AnimationPage.PageAnimation>
         <base:PageAnimation Duration="Short" Subtype="FromBottom" />
     </base:AnimationPage.PageAnimation>
@@ -15,8 +14,7 @@
         <StackLayout
             Margin="0"
             Padding="0"
-            VerticalOptions="Start"
-            BackgroundColor="{x:Static settings:Settings.BackgroundColor}">
+            VerticalOptions="Start">
             <Grid
                 x:Name="BottomBar"
                 VerticalOptions="Start"
@@ -38,6 +36,7 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Text="{localisation:Translate Scores}" Clicked="OnScoresButtonOnClicked"
                         BackgroundColor="Transparent"
+                        BorderColor="Transparent"
                         TextColor="White" />
                 <ImageButton x:Name="StartButton" Grid.Column="1" Source="Icon" Clicked="OnStartButtonOnClicked"
                              BackgroundColor="Transparent" BorderWidth="2">
@@ -62,6 +61,7 @@
                 </ImageButton>
                 <Button Grid.Column="2" Text="{localisation:Translate Profile}" Clicked="OnProfileButtonOnClicked"
                         BackgroundColor="Transparent"
+                        BorderColor="Transparent"
                         TextColor="White" />
             </Grid>
             <StackLayout
@@ -81,7 +81,8 @@
                 <Label Text="{localisation:Translate Date}" />
                 <DatePicker
                     Date="{Binding SelectedDate, Mode=TwoWay}"
-                    Format="dd/MM/yyyy" />
+                    Format="dd/MM/yyyy"
+                    TextColor="{AppThemeBinding Light={StaticResource LightText}, Dark={StaticResource DarkText}}"/>
             </StackLayout>
             <ScrollView Margin="0, 5, 0 ,0" >
                 <StackLayout>
@@ -103,7 +104,7 @@
                         <Label Grid.Column="1" Grid.Row="1" x:Name="ScoringType" Text=""
                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
                     </Grid>
-                    <StackLayout x:Name="RoundInformation" BackgroundColor="{x:Static settings:Settings.BackgroundColor}" />
+                    <StackLayout x:Name="RoundInformation" />
                 </StackLayout>
             </ScrollView>
         </StackLayout>
