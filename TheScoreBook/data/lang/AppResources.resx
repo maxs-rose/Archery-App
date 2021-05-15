@@ -273,4 +273,13 @@
   <data name="DarkMode" xml:space="preserve">
     <value>Dark Mode</value>
   </data>
+  <data name="RescoreType" xml:space="preserve">
+    <value>Rescore Type</value>
+  </data>
+  <data name="LongPress" xml:space="preserve">
+    <value>Long Press</value>
+  </data>
+  <data name="DoubleTap" xml:space="preserve">
+    <value>Double Tap</value>
+  </data>
 </root>

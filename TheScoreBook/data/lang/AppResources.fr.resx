@@ -231,4 +231,16 @@
   <data name="Yes" xml:space="preserve">
     <value>Oui</value>
   </data>
+  <data name="LongPress" xml:space="preserve">
+    <value>Appui long</value>
+  </data>
+  <data name="DoubleTap" xml:space="preserve">
+    <value>Tapez deux fois</value>
+  </data>
+  <data name="ColorfulChanged" xml:space="preserve">
+    <value>Étiquettes d'extrémité colorées</value>
+  </data>
+  <data name="RescoreType" xml:space="preserve">
+    <value>Type de rescore</value>
+  </data>
 </root>

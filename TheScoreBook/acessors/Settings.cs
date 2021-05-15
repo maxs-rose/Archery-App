@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Threading;
 using TheScoreBook.data.lang;
+using TheScoreBook.models.enums.enumclass;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -40,5 +41,14 @@ namespace TheScoreBook.acessors
 
         public static bool IsDarkMode => AppTheme == OSAppTheme.Dark;
         public static T GetStaticResource<T>(string key) => (T) Application.Current.Resources[key];
+        
+        // Rescore Button Type
+        private const string RescoreTypeKey = nameof(RescoreTypeKey);
+
+        public static RescoreType RescoreType
+        {
+            get => (RescoreType) Preferences.Get(RescoreTypeKey, (int)RescoreType.LONG);
+            set => Preferences.Set(RescoreTypeKey, (int) value);
+        }
     }
 }

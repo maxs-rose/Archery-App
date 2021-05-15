@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using TheScoreBook.acessors;
 using TheScoreBook.localisation;
-using Xamarin.Essentials;
+using TheScoreBook.models.enums.enumclass;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -29,6 +28,15 @@ namespace TheScoreBook.views.user
             set => languageChanger.SelectedLanguage = value;
         }
 
+        public ObservableCollection<RescoreType> RescoreTypes => new (EnumClass.GetAll<RescoreType>());
+
+        private RescoreType selectedType = Settings.RescoreType;
+        public RescoreType SelectedType
+        {
+            get => selectedType;
+            set => selectedType = value;
+        }
+
         public SettingsPopup(Frame parent)
         {
             this.parent = parent;
@@ -49,6 +57,8 @@ namespace TheScoreBook.views.user
                 Settings.AppTheme = darkSetting;
                 // parent.BackgroundColor = Settings.BackgroundColor;
             }
+
+            Settings.RescoreType = selectedType;
             
             PopupNavigation.Instance.PopAsync();
         }

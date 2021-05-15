@@ -33,6 +33,7 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -73,9 +74,21 @@
                 Grid.Column="1"
                 CheckedChanged="DarkMode"
                 IsChecked="{x:Static settings:Settings.IsDarkMode}" />
-
-            <Button
+            
+            <Label
                 Grid.Row="3"
+                Grid.Column="0"
+                Text="{localisation:Translate RescoreType}"
+                VerticalTextAlignment="Center" />
+            <Picker
+                Grid.Row="3"
+                Grid.Column="1"
+                ItemsSource="{Binding RescoreTypes}"
+                SelectedItem="{Binding SelectedType, Mode=TwoWay}"
+                HorizontalTextAlignment="Center"/>
+            
+            <Button
+                Grid.Row="4"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"
                 Text="{localisation:Translate Done}"

@@ -7,6 +7,7 @@ using TheScoreBook.acessors;
 using TheScoreBook.behaviours;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
+using TheScoreBook.models.enums.enumclass;
 using TheScoreBook.models.round;
 using TheScoreBook.views.user;
 using Xamarin.Forms;
@@ -103,9 +104,8 @@ namespace TheScoreBook.views.shoot
 
             return EndDisplay.Children[^1] as Label;
         }
-        
-        EndScoreDisplay AddScoreDisplay(string text, int col, int row, TextAlignment vertical = TextAlignment.Center,
-            TextAlignment horizonatal = TextAlignment.Center)
+
+        EndScoreDisplay AddScoreDisplay(int col, int row)
         {
             EndDisplay.Children.Add(new EndScoreDisplay
             {
@@ -242,19 +242,15 @@ namespace TheScoreBook.views.shoot
                 BackgroundColor = Color.Transparent,
                 Behaviors =
                 {
-                    new LongButtonPressBehaviour
-                    {
-                        Command = new Command(() =>
+                    RescoreType.GetCurrentSetting(new Command(() =>
                         {
                             if (
-                                Distance
-                                    .AllEndsComplete() || // if the entire distance is complete we can long press this
-                                Distance.EndComplete(
-                                    row) // if the distance is not complete then this end should be completed
+                                Distance.AllEndsComplete() || // if the entire distance is complete we can long press this
+                                Distance.EndComplete(row) // if the distance is not complete then this end should be completed
                             )
                                 OpenScoreUI(row);
-                        })
-                    }
+                        }
+                    ))
                 }
             };
 
@@ -277,7 +273,7 @@ namespace TheScoreBook.views.shoot
         {
             for (var i = 0; i < arrowsPerEnd; i++)
             {
-                endLabels[arrowsPerEnd * endCount + i] = AddScoreDisplay("", i, endCount + 1);
+                endLabels[arrowsPerEnd * endCount + i] = AddScoreDisplay(i, endCount + 1);
                 endLabels[arrowsPerEnd * endCount + i].BindingContext = Distance.Ends[endCount];
                 // we attach this to score since we cant directly attach to GetScore since it si a function
                 // instead we use the convertor to actually get our value
@@ -376,7 +372,9 @@ namespace TheScoreBook.views.shoot
             public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
                 => (bool) value switch
                 {
-                    true => Settings.GetStaticResource<Color>(Settings.IsDarkMode ? "DarkButtonBorder" : "LightButtonBorder"),
+                    true => Settings.GetStaticResource<Color>(Settings.IsDarkMode
+                        ? "DarkButtonBorder"
+                        : "LightButtonBorder"),
                     false => Color.Transparent
                 };
 

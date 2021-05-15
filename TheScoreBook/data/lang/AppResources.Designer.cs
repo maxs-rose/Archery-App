@@ -196,6 +196,15 @@ namespace TheScoreBook.data.lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Double Tap.
+        /// </summary>
+        public static string DoubleTap {
+            get {
+                return ResourceManager.GetString("DoubleTap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Finish.
         /// </summary>
         public static string Finish {
@@ -255,6 +264,15 @@ namespace TheScoreBook.data.lang {
         public static string Location {
             get {
                 return ResourceManager.GetString("Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Long Press.
+        /// </summary>
+        public static string LongPress {
+            get {
+                return ResourceManager.GetString("LongPress", resourceCulture);
             }
         }
         
@@ -354,6 +372,15 @@ namespace TheScoreBook.data.lang {
         public static string Profile {
             get {
                 return ResourceManager.GetString("Profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rescore Type.
+        /// </summary>
+        public static string RescoreType {
+            get {
+                return ResourceManager.GetString("RescoreType", resourceCulture);
             }
         }
         
