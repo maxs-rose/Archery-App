@@ -11,9 +11,7 @@ namespace TheScoreBook.models.enums.enumclass
         public static RescoreType LONG => new("LongPress", 0);
         public static RescoreType DOUBLE => new("DoubleTap", 1);
 
-        public RescoreType(string name, int id) : base(name, id)
-        {
-        }
+        private RescoreType(string name, int id) : base(name, id) { }
 
         public static Behavior<Button> GetCurrentSetting(Command command)
             => Settings.RescoreType.Id switch
@@ -22,7 +20,7 @@ namespace TheScoreBook.models.enums.enumclass
                 1 => new DoubleTapButtonBehaviour() {Command = command},
                 _ => throw new IndexOutOfRangeException($"Unknown id")
             };
-
+        
         public static explicit operator RescoreType(int id)
             => id switch
             {
