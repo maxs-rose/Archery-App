@@ -1,25 +1,37 @@
 ﻿using System;
+using System.Collections.Generic;
+using TheScoreBook.exceptions;
 using Xamarin.Forms;
 
 namespace TheScoreBook.models.enums.enumclass
 {
     public class Score : EnumClass
     {
-        public static Score X => new("X", 11, 10);
-        public static Score TEN => new("10", 10, 10);
-        public static Score NINE => new("9", 9, 9);
-        public static Score EIGHT => new("8", 8, 8);
-        public static Score SEVEN => new("7", 7, 7);
-        public static Score SIX => new("6", 6, 6);
-        public static Score FIVE => new("5", 5, 5);
-        public static Score FOUR => new("4", 4, 4);
-        public static Score THREE => new("3", 3, 3);
-        public static Score TWO => new("2", 2, 2);
-        public static Score ONE => new("1", 1, 1);
-        public static Score MISS => new("M", 0, 0);
+        public static readonly Score X = new("X", 11, 10);
+        public static readonly Score TEN = new("10", 10, 10);
+        public static readonly Score NINE = new("9", 9, 9);
+        public static readonly Score EIGHT = new("8", 8, 8);
+        public static readonly Score SEVEN = new("7", 7, 7);
+        public static readonly Score SIX = new("6", 6, 6);
+        public static readonly Score FIVE = new("5", 5, 5);
+        public static readonly Score FOUR = new("4", 4, 4);
+        public static readonly Score THREE = new("3", 3, 3);
+        public static readonly Score TWO = new("2", 2, 2);
+        public static readonly Score ONE = new("1", 1, 1);
+        public static readonly Score MISS = new("M", 0, 0);
 
         public int Value { get; }
-        public Score(string name, int id, int value) : base(name, id) => Value = value;
+        private Score(string name, int id, int value) : base(name, id) => Value = value;
+
+
+        private static HashSet<int> usedIds;
+        protected override void AddUsedIDToSet(int id)
+        {
+            usedIds ??= new();
+            
+            if (!usedIds.Add(id))
+                throw new IDAlreadyInUseException($"ID {id} already in use for enum type {GetType()}");
+        }
 
         public static explicit operator Color(Score s)
         {

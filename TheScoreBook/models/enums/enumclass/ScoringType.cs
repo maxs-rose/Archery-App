@@ -1,15 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Common;
+using TheScoreBook.exceptions;
 
 namespace TheScoreBook.models.enums.enumclass
 {
     public class ScoringType : EnumClass
     {
-        public static ScoringType TenZone => new("TenZone", 0);
-        public static ScoringType FiveZone => new("FiveZone", 1);
+        public static readonly ScoringType TenZone = new("TenZone", 0);
+        public static readonly ScoringType FiveZone = new("FiveZone", 1);
 
-        private ScoringType(string name, int id) : base(name, id)
+        private ScoringType(string name, int id) : base(name, id) { }
+        
+        private static HashSet<int> usedIds;
+        protected override void AddUsedIDToSet(int id)
         {
+            usedIds ??= new();
+            
+            if (!usedIds.Add(id))
+                throw new IDAlreadyInUseException($"ID {id} already in use for enum type {GetType()}");
         }
 
         public override string ToString()
