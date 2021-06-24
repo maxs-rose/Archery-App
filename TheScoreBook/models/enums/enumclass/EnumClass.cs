@@ -10,12 +10,18 @@ namespace TheScoreBook.models.enums.enumclass
         public string Name { get; }
         public int Id { get; }
 
-        protected EnumClass(string name, int id) => (Name, Id) = (name, id);
+        protected EnumClass(string name, int id)
+        {
+            (Name, Id) = (name, id);
+            AddUsedIDToSet(id); 
+        }
 
+        protected abstract void AddUsedIDToSet(int id);
+        
         public override string ToString() => Name;
 
         public static IEnumerable<T> GetAll<T>() where T : EnumClass =>
-            typeof(T).GetProperties(BindingFlags.Public |
+            typeof(T).GetFields(BindingFlags.Public |
                                 BindingFlags.Static |
                                 BindingFlags.DeclaredOnly)
                 .Select(f => f.GetValue(null))
