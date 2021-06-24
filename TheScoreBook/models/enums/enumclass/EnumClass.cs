@@ -39,5 +39,15 @@ namespace TheScoreBook.models.enums.enumclass
 
         public static bool operator !=(EnumClass a, EnumClass b)
             => !(a == b);
+        
+        protected bool Equals(EnumClass other)
+        {
+            return Name == other.Name && Id == other.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Name, Id);
+        }
     }
 }
