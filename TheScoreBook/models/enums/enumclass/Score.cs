@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using TheScoreBook.exceptions;
 using Xamarin.Forms;
 
 namespace TheScoreBook.models.enums.enumclass
@@ -22,16 +20,6 @@ namespace TheScoreBook.models.enums.enumclass
 
         public int Value { get; }
         private Score(string name, int id, int value) : base(name, id) => Value = value;
-
-
-        private static HashSet<int> usedIds;
-        protected override void AddUsedIDToSet(int id)
-        {
-            usedIds ??= new();
-            
-            if (!usedIds.Add(id))
-                throw new IDAlreadyInUseException($"ID {id} already in use for enum type {GetType()}");
-        }
 
         public static explicit operator Color(Score s)
         {

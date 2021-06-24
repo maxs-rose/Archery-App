@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using TheScoreBook.exceptions;
 
 namespace TheScoreBook.models.enums.enumclass
 {
@@ -10,13 +11,20 @@ namespace TheScoreBook.models.enums.enumclass
         public string Name { get; }
         public int Id { get; }
 
+        private static HashSet<int> usedIds = new ();
+        
         protected EnumClass(string name, int id)
         {
             (Name, Id) = (name, id);
-            AddUsedIDToSet(id); 
+            AddUsedIDToSet(); 
         }
 
-        protected abstract void AddUsedIDToSet(int id);
+        private void AddUsedIDToSet()
+        {
+            // prevents two enums having the same id
+            if(!usedIds.Add(GetEnumHash()))
+                throw new IDAlreadyInUseException($"ID {Id} already in use for enum type {GetType()}");
+        }
         
         public override string ToString() => Name;
 
@@ -51,6 +59,11 @@ namespace TheScoreBook.models.enums.enumclass
             return Name == other.Name && Id == other.Id;
         }
 
+        private int GetEnumHash()
+        {
+            return HashCode.Combine(GetType().Name, Id);
+        }
+        
         public override int GetHashCode()
         {
             return HashCode.Combine(Name, Id);

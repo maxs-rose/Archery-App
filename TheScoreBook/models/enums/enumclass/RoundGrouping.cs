@@ -5,17 +5,16 @@ namespace TheScoreBook.models.enums.enumclass
 {
     public class RoundGrouping : EnumClass
     {
-        public static RoundGrouping FITAIndoor => new RoundGrouping(nameof(FITAIndoor), 0);
-        public static RoundGrouping FITAOutdoor => new RoundGrouping(nameof(FITAOutdoor), 1);
-        public static RoundGrouping GNASMetricOutdoor => new RoundGrouping(nameof(GNASMetricOutdoor), 2, "GNAS Metric Outdoor");
-        public static RoundGrouping GNASImperialOutdoor => new RoundGrouping(nameof(GNASImperialOutdoor), 3, "GNAS Imperial Outdoor");
-        public static RoundGrouping GNASIndoor => new RoundGrouping(nameof(GNASIndoor), 4);
-        public static RoundGrouping Other => new RoundGrouping(nameof(Other), 5, "Other");
+        public static readonly RoundGrouping FITAIndoor = new RoundGrouping(nameof(FITAIndoor), 0);
+        public static readonly RoundGrouping FITAOutdoor = new RoundGrouping(nameof(FITAOutdoor), 1);
+        public static readonly RoundGrouping GNASMetricOutdoor = new RoundGrouping(nameof(GNASMetricOutdoor), 2, "GNAS Metric Outdoor");
+        public static readonly RoundGrouping GNASImperialOutdoor = new RoundGrouping(nameof(GNASImperialOutdoor), 3, "GNAS Imperial Outdoor");
+        public static readonly RoundGrouping GNASIndoor = new RoundGrouping(nameof(GNASIndoor), 4);
+        public static readonly RoundGrouping Other = new RoundGrouping(nameof(Other), 5, "Other");
         
         public string DisplayName { get; }
         
         private RoundGrouping(string name, int id) : this(name, id, $"{name[..4]} {name[4..]}" ) { }
-
         private RoundGrouping(string name, int id, string displayName) : base(name, id)
         {
             DisplayName = displayName;

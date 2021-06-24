@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using TheScoreBook.exceptions;
 using TheScoreBook.localisation;
 
 namespace TheScoreBook.models.enums.enumclass
@@ -15,15 +13,6 @@ namespace TheScoreBook.models.enums.enumclass
         public static readonly Style OTHER = new("Other", 5);
 
         private Style(string name, int id) : base(name, id) { }
-
-        private static HashSet<int> usedIds;
-        protected override void AddUsedIDToSet(int id)
-        {
-            usedIds ??= new();
-
-            if (!usedIds.Add(id))
-                throw new IDAlreadyInUseException($"ID {id} already in use for enum type {GetType()}");
-        }
 
         public override string ToString()
             => LocalisationManager.Instance[Name] ?? Name;
