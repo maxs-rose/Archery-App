@@ -40,8 +40,7 @@ namespace TheScoreBook.models.enums.enumclass
                     return Color.Blue;
                 case 4:
                 case 3:
-                case 0:
-                    return Color.White;
+                    return Color.Black;
                 default:
                     return Color.Black;
             }

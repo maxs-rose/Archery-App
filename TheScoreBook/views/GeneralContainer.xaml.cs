@@ -63,8 +63,7 @@ namespace TheScoreBook.views
             currentPage = 1;
         }
 
-        private async Task TransitionInOut(VisualElement leaving, double lTo, VisualElement entering, double eFrom,
-            double eTo, uint animationLength = 375)
+        private async Task TransitionInOut(VisualElement leaving, double lTo, VisualElement entering, double eFrom, double eTo, uint animationLength = 375)
         {
             leaving.IsEnabled = false;
             entering.TranslationX = eFrom;
@@ -74,8 +73,7 @@ namespace TheScoreBook.views
             leaving.TranslateTo(lTo, 0, animationLength, Easing.SinIn);
             leaving.FadeTo(0, animationLength, Easing.SinIn);
             entering.FadeTo(1, animationLength, Easing.SinOut);
-            await entering.TranslateTo(eTo, 0, animationLength + 3,
-                Easing.SinOut); // add a little extra time to the awaited operation to account for any overhead
+            await entering.TranslateTo(eTo, 0, animationLength + 3, Easing.SinOut); // add a little extra time to the awaited operation to account for any overhead
         }
 
         public void AddFinishedPage()
