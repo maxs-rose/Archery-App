@@ -12,7 +12,7 @@ namespace TheScoreBook.views.shoot
 {
     public partial class RoundSelectionPage : AnimationPage
     {
-        public string[] PossibleRounds => Rounds.Instance.Keys.Select(LocalisationManager.ToTitleCase).ToArray();
+        public string[] PossibleRounds => Rounds.Instance.Keys.Select(LocalisationManager.ToRoundTitleCase).ToArray();
         public string SelectedRound { get; set; }
 
         public Style[] PossibleStyles => models.enums.enumclass.Style.GetAll<Style>().ToArray();

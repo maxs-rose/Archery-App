@@ -1,6 +1,7 @@
 ﻿{
   "bray 1":
   {
+    "sorting": "GNASIndoor",
     "scoringType": "TenZone",
     "distances":
     [
@@ -17,21 +18,24 @@
   },
   "bray 2":
   {
-  "scoringType": "TenZone",
-  "distances":
-  [
-    {
-      "location": "in",
-      "distance": 25,
-      "unit": "yd",
-      "arrowsPerEnd": 3,
-      "ends": 10,
-      "targetSize": 60,
-      "targetUnit": "cm"
-    }
-  ]
+    "sorting": "GNASIndoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "in",
+        "distance": 25,
+        "unit": "yd",
+        "arrowsPerEnd": 3,
+        "ends": 10,
+        "targetSize": 60,
+        "targetUnit": "cm"
+      }
+    ]
   },
-  "portsmouth": {
+  "portsmouth":
+  {
+    "sorting": "GNASIndoor",
     "scoringType": "TenZone",
     "distances": [
       {
@@ -47,6 +51,7 @@
   },
   "worcester":
   {
+    "sorting": "GNASIndoor",
     "scoringType": "FiveZone",
     "distances":
     [
@@ -63,6 +68,7 @@
   },
   "stafford":
   {
+    "sorting": "GNASIndoor",
     "scoringType": "TenZone",
     "distances":
     [
@@ -79,6 +85,7 @@
   },
   "vegas":
   {
+    "sorting": "GNASIndoor",
     "scoringType": "TenZone",
     "distances":
     [
@@ -95,6 +102,7 @@
   },
   "fita 18":
   {
+    "sorting": "FITAIndoor",
     "scoringType": "TenZone",
     "distances":
     [
@@ -109,7 +117,69 @@
       }
     ]
   },
-  "fita 900": {
+  "fita 25":
+  {
+    "sorting": "FITAIndoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "in",
+        "distance": 25,
+        "unit": "m",
+        "arrowsPerEnd": 3,
+        "ends": 20,
+        "targetSize": 60,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "combined fita":
+  {
+    "sorting": "FITAIndoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "in",
+        "distance": 25,
+        "unit": "m",
+        "arrowsPerEnd": 3,
+        "ends": 20,
+        "targetSize": 60,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "in",
+        "distance": 18,
+        "unit": "m",
+        "arrowsPerEnd": 3,
+        "ends": 20,
+        "targetSize": 40,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "match round":
+  {
+    "sorting": "FITAIndoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "in",
+        "distance": 18,
+        "unit": "m",
+        "arrowsPerEnd": 3,
+        "ends": 4,
+        "targetSize": 40,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "fita 900":
+  {
+    "sorting": "FITAOutdoor",
     "scoringType": "TenZone",
     "distances": [
       {

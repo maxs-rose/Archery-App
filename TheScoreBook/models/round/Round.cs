@@ -3,70 +3,53 @@ using System.Linq;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.acessors;
 using TheScoreBook.exceptions;
+using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using TheScoreBook.models.enums.enumclass;
+using TheScoreBook.models.round.structs;
 
 namespace TheScoreBook.models.round
 {
     public class Round : IToJson
     {
+        private RoundData roundData;
         public Distance[] Distances { get; }
-        public int DistanceCount { get; }
+        public int DistanceCount => roundData.DistanceCount;
         public DateTime Date { get; }
-        public string RoundName { get; }
-        public ELocation Location { get; }
+        public string RoundName => LocalisationManager.ToRoundTitleCase(roundData.Name);
+        public ELocation Location => roundData.Location;
         public Style Style { get; }
 
-        public int MaxScore { get; }
-        public int MaxShots { get; }
+        public int MaxScore => roundData.MaxScore;
+        public int MaxShots => roundData.MaxShots;
 
-        public ScoringType ScoringType { get; }
+        public ScoringType ScoringType => roundData.ScoringType;
 
-        public Round(string round, Style style, DateTime date)
+        public Round(string round, Style style, DateTime date) : this(Rounds.Instance.GetRound(round))
         {
-            if (!Rounds.Instance.Keys.Contains(round.ToLower()))
-                throw new InvalidRoundException($"{round} is not a valid round");
-
-            var roundConstructor = Rounds.Instance.data[round.ToLower()];
-            var distances = roundConstructor["distances"]!.Value<JArray>();
-            DistanceCount = distances!.Count;
-            Distances = new Distance[DistanceCount];
-            ScoringType = (ScoringType) roundConstructor["scoringType"]!.Value<string>();
-
-            for (var i = 0; i < DistanceCount; i++)
-            {
-                var dist = distances[i]!.Value<JObject>();
-                Distances[i] = new Distance(dist!["distance"]!.Value<int>(),
-                    dist["unit"]!.Value<string>().ToEDistanceUnit(), dist["ends"]!.Value<int>(),
-                    dist["arrowsPerEnd"]!.Value<int>(), dist["targetSize"]!.Value<int>(),
-                    dist["targetUnit"]!.Value<string>().ToEDistanceUnit(), ScoringType);
-            }
+            Distances = roundData.Distances.Select(d => new Distance(d)).ToArray();
 
             Style = style;
             Date = date;
-            RoundName = round;
-            Location = Rounds.Instance.roundLocation(round);
-            MaxScore = Distances.Sum(d => d.MaxScore);
-            MaxShots = Distances.Sum(d => d.MaxShots);
         }
 
         public Round(string round) : this(round, Style.RECURVE, DateTime.Now) { }
 
-        public Round(JObject roundData)
+        public Round(JObject roundData) : this(Rounds.Instance.GetRound(roundData["rName"].Value<string>()))
         {
-            DistanceCount = roundData["nDistances"].Value<int>();
-            Distances = new Distance[DistanceCount];
-
             Date = DateTime.FromBinary(roundData["date"].Value<long>());
-            RoundName = roundData["rName"].Value<string>();
             Style = (Style)roundData["rStyle"]?.Value<int>() ?? Style.RECURVE;
 
             var dist = roundData["distances"]!.Value<JArray>();
 
-            for (var i = 0; i < DistanceCount; i++)
-                Distances[i] = new Distance(dist[i].Value<JObject>());
+            Distances = this.roundData.Distances.Select(
+                (d, i) => new Distance(d, dist[i].Value<JObject>()))
+                .ToArray();
+        }
 
-            Location = Rounds.Instance.roundLocation(RoundName);
+        private Round(RoundData data)
+        {
+            roundData = data;
         }
 
         public bool AddScore(int distanceIndex, int endIndex, Score score)
@@ -132,7 +115,7 @@ namespace TheScoreBook.models.round
                 {"distances", new JArray(Distances.Select(d => d.ToJson()))},
                 {"nDistances", DistanceCount},
                 {"date", Date.ToBinary()},
-                {"rName", RoundName},
+                {"rName", roundData.Name},
                 {"rStyle", Style.Id}
             };
 

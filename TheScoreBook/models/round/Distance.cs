@@ -3,17 +3,19 @@ using System.Linq;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models.enums;
 using TheScoreBook.models.enums.enumclass;
+using TheScoreBook.models.round.structs;
 
 namespace TheScoreBook.models.round
 {
     public class Distance : IToJson, INotifyPropertyChanged
     {
-        public int DistanceLength { get; }
-        public EDistanceUnit DistanceUnit { get; }
+        private DistanceData DistanceData { get; }
+        public int DistanceLength => DistanceData.DistanceLength;
+        public EDistanceUnit DistanceUnit => DistanceData.DistanceUnit;
         public End[] Ends { get; }
-        public int MaxEnds { get; }
-        public int MaxScore { get; }
-        public int MaxShots { get; }
+        public int MaxEnds => DistanceData.MaxEnds;
+        public int MaxScore => DistanceData.MaxScore;
+        public int MaxShots => DistanceData.MaxShots;
 
         public string TargetSize { get; }
 
@@ -23,34 +25,20 @@ namespace TheScoreBook.models.round
         public int Golds => CountScore(enums.enumclass.Score.X) + CountScore(enums.enumclass.Score.TEN) + CountScore(enums.enumclass.Score.NINE);
         public int Score => Ends.Sum(e => e.Score);
 
-        public Distance(int distanceLength, EDistanceUnit distanceUnit, int ends, int arrowsPerEnd, int targetSize,
-            EDistanceUnit targetUnit, ScoringType scoringType)
+        public Distance(DistanceData distanceData)
         {
-            DistanceLength = distanceLength;
-            DistanceUnit = distanceUnit;
-            Ends = new End[ends];
-            MaxEnds = ends;
-            ScoringType = scoringType;
+            DistanceData = distanceData;
 
-            MaxShots = MaxEnds * arrowsPerEnd;
-            MaxScore = MaxShots * scoringType.MaxScore().Value;
+            TargetSize = $"{distanceData.TargetSize}{distanceData.TargetUnit}";
 
-            TargetSize = $"{targetSize}{targetUnit}";
-
-            for (var i = 0; i < ends; i++)
-                Ends[i] = new End(arrowsPerEnd);
+            Ends = new End[distanceData.MaxEnds];
+            for (var i = 0; i < distanceData.MaxEnds; i++)
+                Ends[i] = new End(distanceData.ArrowsPerEnd);
         }
 
-        public Distance(JObject json)
+        public Distance(DistanceData distanceData, JObject json) : this(distanceData)
         {
-            DistanceLength = json["distance"].Value<int>();
-            DistanceUnit = (EDistanceUnit) json["unit"].Value<int>();
-            MaxEnds = json["maxEnds"].Value<int>();
-            Ends = new End[MaxEnds];
-
-            var ends = json["scores"].AsJEnumerable();
-            for (var i = 0; i < MaxEnds; i++)
-                Ends[i] = new End(ends[i].Value<JObject>());
+            Ends = json["scores"].AsJEnumerable().Select(e => new End(e.Value<JObject>())).ToArray();
 
             RunningTotal();
             PropertyHasChanged();

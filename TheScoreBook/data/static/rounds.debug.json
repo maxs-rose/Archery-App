@@ -1,6 +1,7 @@
 ﻿{
   "bray 1": 
   {
+    "sorting": "FITAIndoor",
     "scoringType": "TenZone",
     "distances":
     [
@@ -16,6 +17,7 @@
     ]
   },
   "fita 900": {
+    "sorting": "FITAOutdoor",
     "scoringType": "TenZone",
     "distances": [
       {
@@ -48,6 +50,7 @@
     ]
   },
   "portsmouth": {
+    "sorting": "FITAIndoor",
     "scoringType": "TenZone",
     "distances": [
       {

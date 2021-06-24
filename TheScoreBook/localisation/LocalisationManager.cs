@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
 using System.Resources;
+using System.Text.RegularExpressions;
 using System.Threading;
 using TheScoreBook.acessors;
 using TheScoreBook.data.lang;
@@ -53,6 +54,16 @@ namespace TheScoreBook.localisation
 
         public static string ToTitleCase(string input)
             => Instance.CurrentCulture.TextInfo.ToTitleCase(input);
+
+        public static string ToRoundTitleCase(string input)
+        {
+            var result = ToTitleCase(input);
+
+            result = Regex.Replace(result, @"((F|f)ita)|((G|g)nas)",
+                Regex.Match(result, @"((F|f)ita)|((G|g)nas)").Value.ToUpper());
+
+            return result;
+        }
 
         public static string LocalisedShortDate(DateTime date)
             => date.ToString("dd/MM/yyyy");

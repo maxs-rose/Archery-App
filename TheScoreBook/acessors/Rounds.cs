@@ -4,16 +4,19 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
+using TheScoreBook.exceptions;
 using TheScoreBook.models.enums;
+using TheScoreBook.models.enums.enumclass;
+using TheScoreBook.models.round;
+using TheScoreBook.models.round.structs;
 
 namespace TheScoreBook.acessors
 {
     public sealed class Rounds
     {
         private readonly JObject roundData;
-        public readonly Dictionary<string, JObject> data;
-        public string[] Keys => data.Keys.ToArray();
-        public JObject[] values => data.Values.ToArray();
+        private readonly Dictionary<string, RoundData> rounds;
+        public string[] Keys { get; }
 
         private Rounds()
         {
@@ -30,17 +33,24 @@ namespace TheScoreBook.acessors
                 roundData = JObject.Parse(fStream.ReadToEnd());
             }
 
-            data = roundData.Properties().ToDictionary(x => x.Name, x => x.Value.Value<JObject>());
-        }
-
-        public ELocation roundLocation(string roundName)
-        {
-            return data[roundName]!["distances"]![0]!["location"]!.Value<string>() == "in"
-                ? ELocation.INDOOR
-                : ELocation.OUTDOOR;
+            rounds = roundData.Properties().ToDictionary(x => x.Name, x => new RoundData(x));
+            Keys = rounds.Keys.ToArray();
         }
 
         private static readonly Lazy<Rounds> instance = new(() => new Rounds());
         public static Rounds Instance => instance.Value;
+
+        public RoundData GetRound(string roundName)
+        {
+            if (!Keys.Contains(roundName.ToLower()))
+                throw new InvalidRoundException($"{roundName} is not a valid round");
+
+            return rounds[roundName.ToLower()];
+        }
+
+        public IEnumerable<(RoundGrouping group, IEnumerable<string> roundNames)> GetGroupedRounds()
+        {
+            return default;
+        }
     }
 }
