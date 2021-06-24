@@ -12,22 +12,22 @@ namespace TheScoreBook.models.round
 {
     public class Round : IToJson
     {
-        private RoundData roundData;
+        private RoundData RoundData { get; }
         public Distance[] Distances { get; }
-        public int DistanceCount => roundData.DistanceCount;
+        public int DistanceCount => RoundData.DistanceCount;
         public DateTime Date { get; }
-        public string RoundName => LocalisationManager.ToRoundTitleCase(roundData.Name);
-        public ELocation Location => roundData.Location;
+        public string RoundName => LocalisationManager.ToRoundTitleCase(RoundData.Name);
+        public ELocation Location => RoundData.Location;
         public Style Style { get; }
 
-        public int MaxScore => roundData.MaxScore;
-        public int MaxShots => roundData.MaxShots;
+        public int MaxScore => RoundData.MaxScore;
+        public int MaxShots => RoundData.MaxShots;
 
-        public ScoringType ScoringType => roundData.ScoringType;
+        public ScoringType ScoringType => RoundData.ScoringType;
 
         public Round(string round, Style style, DateTime date) : this(Rounds.Instance.GetRound(round))
         {
-            Distances = roundData.Distances.Select(d => new Distance(d)).ToArray();
+            Distances = RoundData.Distances.Select(d => new Distance(d)).ToArray();
 
             Style = style;
             Date = date;
@@ -42,14 +42,14 @@ namespace TheScoreBook.models.round
 
             var dist = roundData["distances"]!.Value<JArray>();
 
-            Distances = this.roundData.Distances.Select(
+            Distances = this.RoundData.Distances.Select(
                 (d, i) => new Distance(d, dist[i].Value<JObject>()))
                 .ToArray();
         }
 
         private Round(RoundData data)
         {
-            roundData = data;
+            RoundData = data;
         }
 
         public bool AddScore(int distanceIndex, int endIndex, Score score)
@@ -115,7 +115,7 @@ namespace TheScoreBook.models.round
                 {"distances", new JArray(Distances.Select(d => d.ToJson()))},
                 {"nDistances", DistanceCount},
                 {"date", Date.ToBinary()},
-                {"rName", roundData.Name},
+                {"rName", RoundData.Name},
                 {"rStyle", Style.Id}
             };
 
