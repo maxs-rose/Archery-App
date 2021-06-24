@@ -274,7 +274,7 @@ namespace TheScoreBook.views.shoot
             {
                 endLabels[arrowsPerEnd * endCount + i] = AddScoreDisplay(i, endCount + 1);
                 endLabels[arrowsPerEnd * endCount + i].BindingContext = Distance.Ends[endCount];
-                // we attach this to score since we cant directly attach to GetScore since it si a function
+                // we attach this to score since we cant directly attach to GetScore since it is a function
                 // instead we use the convertor to actually get our value
                 endLabels[arrowsPerEnd * endCount + i].SetBinding(EndScoreDisplay.ScoreTextProperty, "Score",
                     converter: new EndScoreConvertor() {ScoreIndex = i, End = Distance.Ends[endCount]});

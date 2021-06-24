@@ -21,6 +21,8 @@ namespace TheScoreBook.models.enums
         public int Value { get; }
         private Score(string name, int id, int value) : base(name, id) => Value = value;
 
+        public int StyleScore(Style style) => style == Style.COMPOUND && Id == 11 ? Value : Value; // TODO: Check if prop 12/13 go through  
+
         public static explicit operator Color(Score s)
         {
             if (s is null)

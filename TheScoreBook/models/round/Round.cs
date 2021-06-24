@@ -2,7 +2,6 @@
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.acessors;
-using TheScoreBook.exceptions;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
 using TheScoreBook.models.round.structs;
@@ -19,20 +18,20 @@ namespace TheScoreBook.models.round
         public Location Location => RoundData.Location;
         public Style Style { get; }
 
-        public int MaxScore => RoundData.MaxScore;
+        public int MaxScore => Distances.Sum(d => d.MaxScore);
         public int MaxShots => RoundData.MaxShots;
 
         public ScoringType ScoringType => RoundData.ScoringType;
 
+        public Round(string round) : this(round, Style.RECURVE, DateTime.Now) { }
+        public Round(string round, Style style) : this(round, style, DateTime.Now) { }
         public Round(string round, Style style, DateTime date) : this(Rounds.Instance.GetRound(round))
         {
-            Distances = RoundData.Distances.Select(d => new Distance(d)).ToArray();
+            Distances = RoundData.Distances.Select(d => new Distance(d, style) ).ToArray();
 
             Style = style;
             Date = date;
         }
-
-        public Round(string round) : this(round, Style.RECURVE, DateTime.Now) { }
 
         public Round(JObject roundData) : this(Rounds.Instance.GetRound(roundData["rName"].Value<string>()))
         {

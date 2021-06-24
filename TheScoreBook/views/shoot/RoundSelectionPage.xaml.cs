@@ -113,10 +113,15 @@ namespace TheScoreBook.views.shoot
             AddBorderToStart();
             DisplayRoundData();
         }
+        private void OnBowStyleChanged(object sender, EventArgs e)
+        {
+            if(CanStartRound())
+                DisplayRoundData();
+        }
 
         private void DisplayRoundData()
         {
-            var round = new Round(SelectedRound.ToLower());
+            var round = new Round(SelectedRound.ToLower(), PossibleStyles[SelectedStyle]);
             TotalArrows.Text = $"{LocalisationManager.Instance["TotalArrows"]}: {round.MaxShots}";
             TotalScore.Text = $"{LocalisationManager.Instance["MaxScore"]}: {round.MaxScore}";
             Location.Text =

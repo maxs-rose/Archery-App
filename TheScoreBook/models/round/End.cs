@@ -9,18 +9,19 @@ namespace TheScoreBook.models.round
     public class End : IToJson, INotifyPropertyChanged
     {
         private List<Score> scores = new();
+        private Style Style { get; }
         public int ArrowsPerEnd { get; }
-        public int Score => scores.Sum(s => s.Value);
+        public int Score => scores.Sum(s => s.StyleScore(Style));
+
         public int Golds => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
         public int Hits => scores.Count(s => s != enums.Score.MISS);
         public int RunningTotal { get; set; }
 
         public bool IsNextEnd { get; set; } = true;
 
-        public End(int arrowsPerEnd)
-        {
-            ArrowsPerEnd = arrowsPerEnd;
-        }
+        public End(int arrowsPerEnd) : this(arrowsPerEnd, Style.RECURVE) {}
+
+        public End(int arrowsPerEnd, Style style) => (ArrowsPerEnd, Style) = (arrowsPerEnd, style);
 
         public End(JObject json)
         {

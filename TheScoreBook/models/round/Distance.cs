@@ -9,16 +9,15 @@ namespace TheScoreBook.models.round
     public class Distance : IToJson, INotifyPropertyChanged
     {
         private DistanceData DistanceData { get; }
+        public Style Style { get; } = Style.RECURVE;
         public int DistanceLength => DistanceData.DistanceLength;
         public MeasurementUnit DistanceUnit => DistanceData.DistanceUnit;
         public End[] Ends { get; }
         public int MaxEnds => DistanceData.MaxEnds;
-        public int MaxScore => DistanceData.MaxScore;
+        public int MaxScore => MaxShots * DistanceData.ScoringType.MaxScore().StyleScore(Style);
         public int MaxShots => DistanceData.MaxShots;
 
         public string TargetSize { get; }
-
-        public ScoringType ScoringType { get; }
 
         public int Hits => Ends.Sum(e => e.Hits);
         public int Golds => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
@@ -33,6 +32,14 @@ namespace TheScoreBook.models.round
             Ends = new End[distanceData.MaxEnds];
             for (var i = 0; i < distanceData.MaxEnds; i++)
                 Ends[i] = new End(distanceData.ArrowsPerEnd);
+        }
+
+        public Distance(DistanceData distanceData, Style style) : this(distanceData)
+        {
+            Style = style;
+            
+            for (var i = 0; i < distanceData.MaxEnds; i++)
+                Ends[i] = new End(distanceData.ArrowsPerEnd, Style);
         }
 
         public Distance(DistanceData distanceData, JObject json) : this(distanceData)
