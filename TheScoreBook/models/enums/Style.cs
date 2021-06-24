@@ -1,7 +1,7 @@
 ﻿using System;
 using TheScoreBook.localisation;
 
-namespace TheScoreBook.models.enums.enumclass
+namespace TheScoreBook.models.enums
 {
     public class Style : EnumClass
     {

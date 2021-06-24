@@ -1,19 +1,18 @@
 ﻿using Newtonsoft.Json.Linq;
 using TheScoreBook.models.enums;
-using TheScoreBook.models.enums.enumclass;
 
 namespace TheScoreBook.models.round.structs
 {
     public readonly struct DistanceData
     {
         public int DistanceLength { get; }
-        public EDistanceUnit DistanceUnit { get; }
+        public MeasurementUnit DistanceUnit { get; }
         
         public int MaxScore { get; }
         public int MaxShots { get; }
         
         public int TargetSize { get; }
-        public EDistanceUnit TargetUnit { get; }
+        public MeasurementUnit TargetUnit { get; }
         
         public ScoringType ScoringType { get; }
 
@@ -23,10 +22,10 @@ namespace TheScoreBook.models.round.structs
         public DistanceData(JObject distanceJObject)
         {
             DistanceLength = distanceJObject["distance"]!.Value<int>();
-            DistanceUnit = distanceJObject["unit"]!.Value<string>().ToEDistanceUnit();
+            DistanceUnit = (MeasurementUnit)distanceJObject["unit"]!.Value<string>();
 
             TargetSize = distanceJObject["targetSize"]!.Value<int>();
-            TargetUnit = distanceJObject["targetUnit"]!.Value<string>().ToEDistanceUnit();
+            TargetUnit = (MeasurementUnit)distanceJObject["targetUnit"]!.Value<string>();
 
             ScoringType = (ScoringType) distanceJObject["scoringType"]?.Value<string>() ?? ScoringType.TenZone;
             

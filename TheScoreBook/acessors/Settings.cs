@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Threading;
 using TheScoreBook.data.lang;
-using TheScoreBook.models.enums.enumclass;
+using TheScoreBook.models.enums;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 

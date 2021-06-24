@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.exceptions;
-using TheScoreBook.models.enums.enumclass;
+using TheScoreBook.models.enums;
 using TheScoreBook.models.round.structs;
 
 namespace TheScoreBook.acessors

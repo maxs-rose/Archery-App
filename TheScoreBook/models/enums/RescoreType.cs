@@ -4,7 +4,7 @@ using TheScoreBook.behaviours;
 using TheScoreBook.localisation;
 using Xamarin.Forms;
 
-namespace TheScoreBook.models.enums.enumclass
+namespace TheScoreBook.models.enums
 {
     public class RescoreType : EnumClass
     {

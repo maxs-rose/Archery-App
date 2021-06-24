@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace TheScoreBook.models.enums.enumclass
+namespace TheScoreBook.models.enums
 {
     public class RoundGrouping : EnumClass
     {

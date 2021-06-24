@@ -4,7 +4,6 @@ using Newtonsoft.Json.Linq;
 using TheScoreBook.acessors;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
-using TheScoreBook.models.enums.enumclass;
 using TheScoreBook.models.round;
 
 namespace TheScoreBook.game

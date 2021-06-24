@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace TheScoreBook.models.enums.enumclass
+namespace TheScoreBook.models.enums
 {
     public class Score : EnumClass
     {

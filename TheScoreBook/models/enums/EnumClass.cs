@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using TheScoreBook.exceptions;
 
-namespace TheScoreBook.models.enums.enumclass
+namespace TheScoreBook.models.enums
 {
     public abstract class EnumClass : IComparable
     {

@@ -99,8 +99,8 @@ namespace TheScoreBook.views.user
                 .Select(rt => rt.round);
 
             // ordered rounds -> take first round of correct location
-            var prefIndoor = prefR.FirstOrDefault(r => r.Location == ELocation.INDOOR);
-            var prefOutdoor = prefR.FirstOrDefault(r => r.Location == ELocation.OUTDOOR);
+            var prefIndoor = prefR.FirstOrDefault(r => r.Location == Location.INDOOR);
+            var prefOutdoor = prefR.FirstOrDefault(r => r.Location == Location.OUTDOOR);
 
             OutdoorRound.BindingContext = IndoorRound.BindingContext = LocalisationManager.Instance;
             IndoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification",
@@ -117,8 +117,8 @@ namespace TheScoreBook.views.user
                 .OrderByDescending(r => r.Score());
 
             // Ordered PB's -> take first of correct location
-            var bestIndoor = bestRounds.FirstOrDefault(r => r.Location == ELocation.INDOOR);
-            var bestOutdoor = bestRounds.FirstOrDefault(r => r.Location == ELocation.OUTDOOR);
+            var bestIndoor = bestRounds.FirstOrDefault(r => r.Location == Location.INDOOR);
+            var bestOutdoor = bestRounds.FirstOrDefault(r => r.Location == Location.OUTDOOR);
 
             BestOutdoorRound.BindingContext = BestIndoorRound.BindingContext = LocalisationManager.Instance;
             BestIndoorRound.SetBinding(Label.TextProperty, "LanguageChangedNotification",

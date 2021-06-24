@@ -13,7 +13,7 @@ namespace TheScoreBook.views.user
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreateSightMarkPopup : PopupPage
     {
-        public List<string> Distances => Enum.GetNames(typeof(EDistanceUnit)).ToList();
+        public List<string> Distances => MeasurementUnit.DistanceUnits().Select(d => d.ToString()).ToList();
         public int SelectedDistance { get; set; }
 
         public CreateSightMarkPopup()
@@ -22,12 +22,12 @@ namespace TheScoreBook.views.user
             BindingContext = this;
         }
 
-        public CreateSightMarkPopup(int distance, EDistanceUnit unit)
+        public CreateSightMarkPopup(int distance, MeasurementUnit unit)
         {
             InitializeComponent();
             BindingContext = this;
             Distance.Text = $"{distance}";
-            SelectedDistance = (int) unit;
+            SelectedDistance = unit.Id;
             DistanceUnitPicker.SelectedIndex = SelectedDistance;
         }
 
@@ -44,7 +44,7 @@ namespace TheScoreBook.views.user
             var pos = float.Parse(Position.Text);
             var not = float.Parse(Notch.Text);
             var dst = (int) float.Parse(Distance.Text);
-            var unt = Distances[SelectedDistance].ToEDistanceUnit();
+            var unt = (MeasurementUnit) Distances[SelectedDistance];
 
             UserData.Instance.AddSightMark(new SightMark(dst, unt, pos, not));
             PopupNavigation.Instance.PopAsync();

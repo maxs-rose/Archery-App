@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models.enums;
-using TheScoreBook.models.enums.enumclass;
 
 namespace TheScoreBook.models.round
 {
@@ -12,8 +11,8 @@ namespace TheScoreBook.models.round
         private List<Score> scores = new();
         public int ArrowsPerEnd { get; }
         public int Score => scores.Sum(s => s.Value);
-        public int Golds => CountScore(enums.enumclass.Score.X) + CountScore(enums.enumclass.Score.TEN) + CountScore(enums.enumclass.Score.NINE);
-        public int Hits => scores.Count(s => s != enums.enumclass.Score.MISS);
+        public int Golds => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
+        public int Hits => scores.Count(s => s != enums.Score.MISS);
         public int RunningTotal { get; set; }
 
         public bool IsNextEnd { get; set; } = true;
@@ -71,7 +70,7 @@ namespace TheScoreBook.models.round
         public void Finish()
         {
             while (scores.Count != ArrowsPerEnd)
-                scores.Add(enums.enumclass.Score.MISS);
+                scores.Add(enums.Score.MISS);
 
             PropertyHasChanged();
         }
@@ -84,9 +83,9 @@ namespace TheScoreBook.models.round
                 {"score", Score},
                 {"hits", Hits},
                 {"golds", Golds},
-                {"x's", CountScore(enums.enumclass.Score.X)},
-                {"10's", CountScore(enums.enumclass.Score.TEN)},
-                {"9's", CountScore(enums.enumclass.Score.NINE)},
+                {"x's", CountScore(enums.Score.X)},
+                {"10's", CountScore(enums.Score.TEN)},
+                {"9's", CountScore(enums.Score.NINE)},
                 {"scoresPerEnd", ArrowsPerEnd},
                 {"endComplete", EndComplete()}
             };

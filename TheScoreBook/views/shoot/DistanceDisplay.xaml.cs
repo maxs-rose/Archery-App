@@ -7,7 +7,7 @@ using TheScoreBook.acessors;
 using TheScoreBook.behaviours;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
-using TheScoreBook.models.enums.enumclass;
+using TheScoreBook.models.enums;
 using TheScoreBook.models.round;
 using TheScoreBook.views.user;
 using Xamarin.Forms;
@@ -198,8 +198,7 @@ namespace TheScoreBook.views.shoot
                 Command = new Command(() =>
                 {
                     if (ShouldOpenPopup())
-                        PopupNavigation.Instance.PushAsync(new CreateSightMarkPopup(Distance.DistanceLength,
-                            Distance.DistanceUnit));
+                        PopupNavigation.Instance.PushAsync(new CreateSightMarkPopup(Distance.DistanceLength, Distance.DistanceUnit));
                 })
             });
         }

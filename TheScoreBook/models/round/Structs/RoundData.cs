@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models.enums;
-using TheScoreBook.models.enums.enumclass;
 
 namespace TheScoreBook.models.round.structs
 {
@@ -10,7 +9,7 @@ namespace TheScoreBook.models.round.structs
         public string Name { get; }
         public RoundGrouping group { get; }
         public ScoringType ScoringType { get; }
-        public ELocation Location { get; }
+        public Location Location { get; }
         
         public int DistanceCount { get; }
         public DistanceData[] Distances { get; }
@@ -22,7 +21,7 @@ namespace TheScoreBook.models.round.structs
         {
             Name = roundJson.Name;
             var roundJObject = roundJson.Value.Value<JObject>()!;
-            Location = roundJObject["distances"]![0]!["location"]!.Value<string>() == "in" ? ELocation.INDOOR : ELocation.OUTDOOR;
+            Location = roundJObject["distances"]![0]!["location"]!.Value<string>() == "in" ? Location.INDOOR : Location.OUTDOOR;
 
             if (roundJObject!.TryGetValue("sorting", out var groupName))
                 group = (RoundGrouping) groupName.Value<string>();

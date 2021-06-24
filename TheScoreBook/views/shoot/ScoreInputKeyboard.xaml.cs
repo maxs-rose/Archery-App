@@ -7,7 +7,6 @@ using Rg.Plugins.Popup.Services;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
-using TheScoreBook.models.enums.enumclass;
 using Xamarin.Forms;
 
 namespace TheScoreBook.views.shoot

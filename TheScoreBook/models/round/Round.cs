@@ -5,7 +5,6 @@ using TheScoreBook.acessors;
 using TheScoreBook.exceptions;
 using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
-using TheScoreBook.models.enums.enumclass;
 using TheScoreBook.models.round.structs;
 
 namespace TheScoreBook.models.round
@@ -17,7 +16,7 @@ namespace TheScoreBook.models.round
         public int DistanceCount => RoundData.DistanceCount;
         public DateTime Date { get; }
         public string RoundName => LocalisationManager.ToRoundTitleCase(RoundData.Name);
-        public ELocation Location => RoundData.Location;
+        public Location Location => RoundData.Location;
         public Style Style { get; }
 
         public int MaxScore => RoundData.MaxScore;
@@ -95,7 +94,7 @@ namespace TheScoreBook.models.round
             => Distances.Sum(d => d.Score);
 
         public int Golds()
-            => CountScore(enums.enumclass.Score.X) + CountScore(enums.enumclass.Score.TEN) + CountScore(enums.enumclass.Score.NINE);
+            => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
 
         public void Finish()
         {

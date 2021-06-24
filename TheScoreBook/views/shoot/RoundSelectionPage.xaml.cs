@@ -6,7 +6,7 @@ using TheScoreBook.game;
 using TheScoreBook.localisation;
 using TheScoreBook.models.round;
 using Xamarin.Forms;
-using Style = TheScoreBook.models.enums.enumclass.Style;
+using Style = TheScoreBook.models.enums.Style;
 
 namespace TheScoreBook.views.shoot
 {
@@ -25,7 +25,7 @@ namespace TheScoreBook.views.shoot
 
         private bool hasPickedRound = false;
 
-        public Style[] PossibleStyles => models.enums.enumclass.Style.GetAll<Style>().ToArray();
+        public Style[] PossibleStyles => models.enums.Style.GetAll<Style>().ToArray();
 
         public int SelectedStyle { get; set; }
 

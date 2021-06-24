@@ -1,5 +1,5 @@
 ﻿using TheScoreBook.acessors;
-using TheScoreBook.models.enums.enumclass;
+using TheScoreBook.models.enums;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

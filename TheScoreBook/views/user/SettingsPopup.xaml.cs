@@ -4,7 +4,7 @@ using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using TheScoreBook.acessors;
 using TheScoreBook.localisation;
-using TheScoreBook.models.enums.enumclass;
+using TheScoreBook.models.enums;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

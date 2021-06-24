@@ -1,6 +1,5 @@
 ﻿using TheScoreBook.acessors;
 using TheScoreBook.localisation;
-using TheScoreBook.models.enums;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
