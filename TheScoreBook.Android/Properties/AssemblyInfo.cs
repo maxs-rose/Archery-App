@@ -1,7 +1,5 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Android.App;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -9,10 +7,10 @@ using Android.App;
 [assembly: AssemblyTitle("TheScoreBook.Android")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("CompanyName")]
+[assembly: AssemblyCompany("Toothless")]
 [assembly: AssemblyProduct("TheScoreBook.Android")]
-[assembly: AssemblyCopyright("Copyright © CompanyName Year")]
-[assembly: AssemblyTrademark("CompanyTrademark")]
+[assembly: AssemblyCopyright("Max Rose © Toothless 2021")]
+[assembly: AssemblyTrademark("Toothless")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 
