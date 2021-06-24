@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="http://rotorgames.com"
+             x:Class="TheScoreBook.views.shoot.RoundSelectionPopup"
+             Padding="10">
+    <pages:PopupPage.Animation>
+        <pages:ScaleAnimation
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="0.8"
+            ScaleOut="0.8"
+            DurationIn="200"
+            DurationOut="200"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True" />
+    </pages:PopupPage.Animation>
+    <Frame
+        Margin="0"
+        Padding="0"
+        BorderColor="{AppThemeBinding Light={StaticResource LightButtonBorder}, Dark={StaticResource DarkButtonBorder}}"
+        CornerRadius="10"
+        BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+        <ScrollView>
+            <StackLayout x:Name="RoundScroll"/>
+        </ScrollView>
+    </Frame>
+</pages:PopupPage>

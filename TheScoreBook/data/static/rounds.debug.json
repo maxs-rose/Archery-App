@@ -137,5 +137,30 @@
         "targetUnit": "cm"
       }
     ]
+  },
+  "long metric i":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
   }
 }

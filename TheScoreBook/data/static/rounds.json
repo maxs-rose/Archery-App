@@ -181,7 +181,8 @@
   {
     "sorting": "FITAOutdoor",
     "scoringType": "TenZone",
-    "distances": [
+    "distances":
+    [
       {
         "location": "out",
         "distance": 60,
@@ -208,6 +209,2037 @@
         "ends": 5,
         "targetSize": 122,
         "targetUnit": "cm"
+      }
+    ]
+  },
+  "fita 70":
+  {
+    "sorting": "FITAOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 12,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "fita 60":
+  {
+    "sorting": "FITAOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 12,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "fita 50":
+  {
+    "sorting": "FITAOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 12,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "fita (gents)":
+  {
+    "sorting": "FITAOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 90,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "fita (ladies)":
+  {
+    "sorting": "FITAOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "fita (cadet ladies)":
+  {
+    "sorting": "FITAOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "half fita (gents)":
+  {
+    "sorting": "FITAOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 90,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "helf fita (ladies)":
+  {
+    "sorting": "FITAOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "fita (cadet ladies)":
+  {
+    "sorting": "FITAOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "fita standard":
+  {
+    "sorting": "FITAOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "olympic round":
+  {
+    "sorting": "FITAOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 3,
+        "ends": 4,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "metric i":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "metric ii":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "metric iii":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "metric iv":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 10,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "metric v":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 15,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 10,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "long metric (gents)":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 90,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "long metric (ladies)":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "long metric i":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "long metric ii":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "long metric iii":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "long metric iv":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "long metric v":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "short metric i":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "short metric ii":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "short metric iii":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "short metric iv":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 10,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "short metric v":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances": [
+      {
+        "location": "out",
+        "distance": 15,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 10,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "half metric i":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "half metric ii":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "half metric iii":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "half metric iv":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 10,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "half metric v":
+  {
+    "sorting": "GNASMetricOutdoor",
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 15,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      },
+      {
+        "location": "out",
+        "distance": 10,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 3,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "york": 
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances": 
+    [
+      {
+        "location": "out",
+        "distance": 100,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 12
+      },
+      {
+        "location": "out",
+        "distance": 80,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "hereford":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 80,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 12
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "bristol i":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 80,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 12
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "bristol ii":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 12
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "bristol iii":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 12
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "bristol iv":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 12
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "bristol v":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 12
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 10,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "st. george":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 100,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 80,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      }
+    ]
+  },
+  "albion":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 80,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      }
+    ]
+  },
+  "windsor":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      }
+    ]
+  },
+  "short windsor":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      }
+    ]
+  },
+  "junior windsor":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      }
+    ]
+  },
+  "short junior windsor":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      },
+      {
+        "location": "out",
+        "distance": 10,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      }
+    ]
+  },
+  "western":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      }
+    ]
+  },
+  "short western":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      }
+    ]
+  },
+  "junior western":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      }
+    ]
+  },
+  "short junior western":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      }
+    ]
+  },
+  "american":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 5
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 5
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 5
+      }
+
+    ]
+  },
+  "st. nicholas":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 6
+      }
+    ]
+  },
+  "new national":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 100,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 80,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "long national":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 80,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "national":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "short national":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "junior national":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "short junior national":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 8
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 4
+      }
+    ]
+  },
+  "new warwick":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 100,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
+      },
+      {
+        "location": "out",
+        "distance": 80,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
+      }
+    ]
+  },
+  "long warwick":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 80,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
+      },
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
+      }
+    ]
+  },
+  "warwick":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 60,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
+      },
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
+      }
+    ]
+  },
+  "short warwick":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 50,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
+      },
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
+      }
+    ]
+  },
+  "junior warwick":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 40,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
+      },
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
+      }
+    ]
+  },
+  "short junior warwick":
+  {
+    "sorting": "GNASImperialOutdoor",
+    "scoringType": "FiveZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 30,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
+      },
+      {
+        "location": "out",
+        "distance": 20,
+        "unit": "yd",
+        "targetSize": 122,
+        "targetUnit": "cm",
+        "arrowsPerEnd": 6,
+        "ends": 7
       }
     ]
   }

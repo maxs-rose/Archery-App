@@ -5,9 +5,7 @@ using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.exceptions;
-using TheScoreBook.models.enums;
 using TheScoreBook.models.enums.enumclass;
-using TheScoreBook.models.round;
 using TheScoreBook.models.round.structs;
 
 namespace TheScoreBook.acessors
@@ -50,7 +48,11 @@ namespace TheScoreBook.acessors
 
         public IEnumerable<(RoundGrouping group, IEnumerable<string> roundNames)> GetGroupedRounds()
         {
-            return default;
+            return rounds.Values
+                .OrderBy(r => r.Name)
+                .ThenBy(r => r.group.DisplayName)
+                .GroupBy(r => r.group)
+                .Select(g => (g.Key, g.Select(r => r.Name)));
         }
     }
 }

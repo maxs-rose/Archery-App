@@ -59,8 +59,14 @@ namespace TheScoreBook.localisation
         {
             var result = ToTitleCase(input);
 
+            // capitalise FITA and GNAS
             result = Regex.Replace(result, @"((F|f)ita)|((G|g)nas)",
                 Regex.Match(result, @"((F|f)ita)|((G|g)nas)").Value.ToUpper());
+            
+            // capitalise roman numerals (we only need to go up to V)
+            var pattern = @"(?i) (IV|V?I{0,3})$(?-i)";
+            result = Regex.Replace(result, pattern,
+                Regex.Match(result, pattern).Value.ToUpper());
 
             return result;
         }

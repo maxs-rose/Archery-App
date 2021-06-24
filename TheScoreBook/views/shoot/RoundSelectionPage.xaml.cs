@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using FormsControls.Base;
-using TheScoreBook.acessors;
+using Rg.Plugins.Popup.Services;
 using TheScoreBook.game;
 using TheScoreBook.localisation;
 using TheScoreBook.models.round;
@@ -12,8 +12,18 @@ namespace TheScoreBook.views.shoot
 {
     public partial class RoundSelectionPage : AnimationPage
     {
-        public string[] PossibleRounds => Rounds.Instance.Keys.Select(LocalisationManager.ToRoundTitleCase).ToArray();
-        public string SelectedRound { get; set; }
+        private string selectedRound;
+        public string SelectedRound
+        {
+            get => selectedRound;
+            set
+            {
+                selectedRound = value;
+                OnRoundSelected();
+            }
+        }
+
+        private bool hasPickedRound = false;
 
         public Style[] PossibleStyles => models.enums.enumclass.Style.GetAll<Style>().ToArray();
 
@@ -27,14 +37,13 @@ namespace TheScoreBook.views.shoot
 
             NavigationPage.SetHasNavigationBar(this, false);
             GameManager.LoadPartlyFinishedRound();
+            
+            RoundPicker.GestureRecognizers.Add(new TapGestureRecognizer() { Command = new Command(() => OpenPicker())});
 
             BindingContext = this;
 
-
             if (GameManager.PreviousRoundNotFinished)
-            {
                 LoadUnfinishedRound();
-            }
         }
 
         private async void LoadUnfinishedRound()
@@ -78,7 +87,7 @@ namespace TheScoreBook.views.shoot
         }
 
         private bool CanStartRound()
-            => RoundPicker.SelectedIndex != -1 && !GameManager.GameInProgress;
+            => hasPickedRound && !GameManager.GameInProgress;
 
         protected override bool OnBackButtonPressed()
         {
@@ -93,11 +102,14 @@ namespace TheScoreBook.views.shoot
             StartButton.BorderColor = Color.Goldenrod;
         }
 
-        private void OnRoundSelected(object sender, EventArgs e)
+        private void OnRoundSelected()
         {
+            hasPickedRound = true;
+            RoundPicker.Text = SelectedRound;
+            
             if (!CanStartRound())
                 return;
-
+            
             AddBorderToStart();
             DisplayRoundData();
         }
@@ -115,6 +127,14 @@ namespace TheScoreBook.views.shoot
 
             for (var i = 0; i < round.Distances.Length; i++)
                 RoundInformation.Children.Add(new DistanceDataDisplay(round.Distances[i], i));
+        }
+
+        private void OpenPicker()
+        {
+            if(PopupNavigation.Instance.PopupStack.Any(p => p.GetType() == typeof(RoundSelectionPopup)))
+                return;
+
+            PopupNavigation.Instance.PushAsync(new RoundSelectionPopup(this));
         }
     }
 }
