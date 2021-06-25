@@ -20,7 +20,7 @@ namespace TheScoreBook.views.shoot
             RoundName = LocalisationManager.ToTitleCase(UserData.LatestRound.RoundName);
             Date = LocalisationManager.LocalisedShortDate(UserData.LatestRound.Date);
             Bow = UserData.LatestRound.Style.ToString();
-            Score = UserData.LatestRound.Score();
+            Score = UserData.LatestRound.Score;
 
             BindingContext = this;
         }

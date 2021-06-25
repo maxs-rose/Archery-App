@@ -55,7 +55,7 @@ namespace TheScoreBook.views.shoot
             CreateEndDisplay();
             UpdateUI(DistanceIndex, -1);
 
-            for (var i = 0; i < Distance.MaxEnds && Distance.Ends[i].EndComplete(); i++)
+            for (var i = 0; i < Distance.MaxEnds && Distance.Ends[i].EndComplete; i++)
                 UpdateUI(DistanceIndex, i);
         }
 
@@ -81,7 +81,7 @@ namespace TheScoreBook.views.shoot
             for (var i = 0; i < distance.MaxEnds; i++)
                 UpdateUI(DistanceIndex, i);
 
-            if (Distance.AllEndsComplete())
+            if (Distance.AllEndsComplete)
                 AddDistanceTotalsUI();
         }
 
@@ -244,7 +244,7 @@ namespace TheScoreBook.views.shoot
                     RescoreType.GetCurrentSetting(new Command(() =>
                         {
                             if (
-                                Distance.AllEndsComplete() || // if the entire distance is complete we can long press this
+                                Distance.AllEndsComplete || // if the entire distance is complete we can long press this
                                 Distance.EndComplete(row) // if the distance is not complete then this end should be completed
                             )
                                 OpenScoreUI(row);

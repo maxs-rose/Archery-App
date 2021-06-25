@@ -10,22 +10,27 @@ namespace TheScoreBook.models.round
     {
         private DistanceData DistanceData { get; }
         public Style Style { get; } = Style.RECURVE;
-        public int DistanceLength => DistanceData.DistanceLength;
-        public MeasurementUnit DistanceUnit => DistanceData.DistanceUnit;
+        public int DistanceLength { get; }
+        public MeasurementUnit DistanceUnit { get; }
         public End[] Ends { get; }
-        public int MaxEnds => DistanceData.MaxEnds;
+        public int MaxEnds {get; }
         public int MaxScore => MaxShots * DistanceData.ScoringType.MaxScore().StyleScore(Style);
-        public int MaxShots => DistanceData.MaxShots;
-
+        public int MaxShots { get; }
         public string TargetSize { get; }
 
         public int Hits => Ends.Sum(e => e.Hits);
         public int Golds => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
         public int Score => Ends.Sum(e => e.Score);
+        
+        public bool AllEndsComplete => Ends.All(e => e.EndComplete);
 
         public Distance(DistanceData distanceData)
         {
             DistanceData = distanceData;
+            MaxEnds = DistanceData.MaxEnds;
+            MaxShots = DistanceData.MaxShots;
+            DistanceLength = DistanceData.DistanceLength;
+            DistanceUnit = DistanceData.DistanceUnit;
 
             TargetSize = $"{distanceData.TargetSize}{distanceData.TargetUnit}";
 
@@ -54,7 +59,7 @@ namespace TheScoreBook.models.round
         public bool AddScore(int endIndex, Score score)
         {
             if (endIndex < 0 || endIndex >= MaxEnds) return false;
-            if (endIndex > 0 && !Ends[endIndex - 1].EndComplete()) return false;
+            if (endIndex > 0 && !Ends[endIndex - 1].EndComplete) return false;
 
             var res = Ends[endIndex].AddScore(score);
             RunningTotal();
@@ -71,11 +76,8 @@ namespace TheScoreBook.models.round
             return -1;
         }
 
-        public bool AllEndsComplete()
-            => Ends.All(e => e.EndComplete());
-
         public bool EndComplete(int endIndex)
-            => endIndex >= 0 && endIndex < MaxEnds && Ends[endIndex].EndComplete();
+            => endIndex >= 0 && endIndex < MaxEnds && Ends[endIndex].EndComplete;
 
         public int CountScore(Score score)
             => Ends.Sum(e => e.CountScore(score));
@@ -84,7 +86,7 @@ namespace TheScoreBook.models.round
         {
             var sum = 0;
 
-            for (var i = 0; i < Ends.Length && Ends[i].EndHasScores(); i++)
+            for (var i = 0; i < Ends.Length && Ends[i].EndHasScores; i++)
             {
                 sum += Ends[i].Score;
                 Ends[i].RunningTotal = sum;
@@ -128,7 +130,7 @@ namespace TheScoreBook.models.round
                 {"10's", CountScore(enums.Score.TEN)},
                 {"9's", CountScore(enums.Score.NINE)},
                 {"maxEnds", MaxEnds},
-                {"endComplete", AllEndsComplete()},
+                {"endComplete", AllEndsComplete},
                 {"distance", DistanceLength},
                 {"unit", DistanceUnit.Id}
             };

@@ -114,7 +114,7 @@ namespace TheScoreBook.views.user
             // PB -> Order by score -> round
             var bestRounds = UserData.Instance
                 .GetPB()
-                .OrderByDescending(r => r.Score());
+                .OrderByDescending(r => r.Score);
 
             // Ordered PB's -> take first of correct location
             var bestIndoor = bestRounds.FirstOrDefault(r => r.Location == Location.INDOOR);

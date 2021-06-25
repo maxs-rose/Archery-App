@@ -30,8 +30,8 @@ namespace TheScoreBook.views.pastRounds
         public string RoundName => LocalisationManager.ToTitleCase(round.RoundName);
         public string Date => LocalisationManager.LocalisedShortDate(round.Date);
 
-        public int Hits => round.Hits();
+        public int Hits => round.Hits;
         public int Tens => round.CountScore(models.enums.Score.TEN) + round.CountScore(models.enums.Score.X);
-        public int Score => round.Score();
+        public int Score => round.Score;
     }
 }

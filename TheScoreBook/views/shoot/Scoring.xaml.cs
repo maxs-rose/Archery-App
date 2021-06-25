@@ -36,7 +36,7 @@ namespace TheScoreBook.views.shoot
 
             UpdateUI(-1, -1);
 
-            for (var i = 0; i < NextDistanceIndex && GameManager.GetDistance(i).AllEndsComplete(); i++)
+            for (var i = 0; i < NextDistanceIndex && GameManager.GetDistance(i).AllEndsComplete; i++)
             {
                 AddNewDistance(i);
                 ((DistanceDisplay) DistanceDisplay.Children[i]).AddDistanceTotalsUI();
@@ -91,7 +91,7 @@ namespace TheScoreBook.views.shoot
 
         private void OnDistanceFinished(int distance, int end)
         {
-            if (distance >= 0 && distance <= previousDistance && GameManager.GetDistance(distance).AllEndsComplete())
+            if (distance >= 0 && distance <= previousDistance && GameManager.GetDistance(distance).AllEndsComplete)
                 ((DistanceDisplay) DistanceDisplay.Children[distance]).AddDistanceTotalsUI();
 
             if (GameManager.AllDistancesComplete)

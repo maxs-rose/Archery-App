@@ -23,9 +23,9 @@ namespace TheScoreBook.views.pastRounds
             InitializeComponent();
             Round = round;
 
-            Hits = $"{LocalisationManager.Instance["Hits"]}: {round.Hits()}";
-            Golds = $"{LocalisationManager.Instance["Golds"]}: {round.Golds()}";
-            Total = $"{LocalisationManager.Instance["Score"]}: {round.Score()}";
+            Hits = $"{LocalisationManager.Instance["Hits"]}: {round.Hits}";
+            Golds = $"{LocalisationManager.Instance["Golds"]}: {round.Golds}";
+            Total = $"{LocalisationManager.Instance["Score"]}: {round.Score}";
             ;
 
             foreach (var distance in round.Distances)

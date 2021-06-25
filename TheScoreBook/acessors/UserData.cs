@@ -149,7 +149,7 @@ namespace TheScoreBook.acessors
             mut.WaitOne();
 
             var result = Rounds.GroupBy(r => r.RoundName)
-                .Select(g => g.OrderByDescending(g => g.Score()).First());
+                .Select(g => g.OrderByDescending(g => g.Score).First());
 
             mut.ReleaseMutex();
 

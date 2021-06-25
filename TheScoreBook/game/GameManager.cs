@@ -15,7 +15,7 @@ namespace TheScoreBook.game
         private static Round PreviousGame { set; get; }
         public static bool PreviousRoundNotFinished { get; private set; } = false;
 
-        public static bool AllDistancesComplete => GameInProgress ? CurrentGame.AllDistancesComplete() : false;
+        public static bool AllDistancesComplete => GameInProgress ? CurrentGame.AllDistancesComplete : false;
 
         public static void StartRound(string roundName, Style style, DateTime date)
         {
@@ -72,7 +72,7 @@ namespace TheScoreBook.game
         public static int Hits()
         {
             if (GameInProgress)
-                return CurrentGame.Hits();
+                return CurrentGame.Hits;
 
             return -1;
         }
@@ -80,7 +80,7 @@ namespace TheScoreBook.game
         public static int Golds()
         {
             if (GameInProgress)
-                return CurrentGame.Golds();
+                return CurrentGame.Golds;
 
             return -1;
         }
@@ -88,7 +88,7 @@ namespace TheScoreBook.game
         public static int Score()
         {
             if (GameInProgress)
-                return CurrentGame.Score();
+                return CurrentGame.Score;
 
             return -1;
         }
@@ -120,7 +120,7 @@ namespace TheScoreBook.game
 
         public static void SavePartlyFinishedRound()
         {
-            if (CurrentGame == null || (!GameInProgress && !CurrentGame.AllDistancesComplete()))
+            if (CurrentGame == null || (!GameInProgress && !CurrentGame.AllDistancesComplete))
                 return;
 
             var p = CurrentGame.ToJson();

@@ -18,6 +18,8 @@ namespace TheScoreBook.models.round
         public int RunningTotal { get; set; }
 
         public bool IsNextEnd { get; set; } = true;
+        public bool EndHasScores => scores.Count > 0;
+        public bool EndComplete => scores.Count == ArrowsPerEnd;
 
         public End(int arrowsPerEnd) : this(arrowsPerEnd, Style.RECURVE) {}
 
@@ -57,9 +59,6 @@ namespace TheScoreBook.models.round
             scores.Sort((v1, v2) => v1.CompareTo(v2) * -1);
         }
 
-        public bool EndComplete()
-            => scores.Count() == ArrowsPerEnd;
-
         public int CountScore(Score score)
             => scores.Count(s => s == score);
 
@@ -67,7 +66,7 @@ namespace TheScoreBook.models.round
             => $"[{string.Join(",", scores)}]";
 
         public override string ToString()
-            => $"max: {ArrowsPerEnd}, complete: {EndComplete()}, scores: {EndString()}, endScore: {Score}]";
+            => $"max: {ArrowsPerEnd}, complete: {EndComplete}, scores: {EndString()}, endScore: {Score}]";
 
         public void Finish()
         {
@@ -89,7 +88,7 @@ namespace TheScoreBook.models.round
                 {"10's", CountScore(enums.Score.TEN)},
                 {"9's", CountScore(enums.Score.NINE)},
                 {"scoresPerEnd", ArrowsPerEnd},
-                {"endComplete", EndComplete()}
+                {"endComplete", EndComplete}
             };
 
             return json;
@@ -99,9 +98,6 @@ namespace TheScoreBook.models.round
         {
             scores.Clear();
         }
-
-        public bool EndHasScores()
-            => scores.Count > 0;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
