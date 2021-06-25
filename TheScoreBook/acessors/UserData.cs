@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -73,6 +74,8 @@ namespace TheScoreBook.acessors
                     userData = JObject.Parse(sr.ReadToEnd());
                 }
             }
+
+            userData = ConvertOldRounds(userData);
         }
 
         ~UserData()
@@ -80,15 +83,47 @@ namespace TheScoreBook.acessors
             try
             {
                 var saveData = SaveData(userData).Result;
-                Console.WriteLine("INFO - Saved user data");
+                Console.WriteLine($@"INFO - {(saveData ? "Saved" : "Failed to save")} user data");
             }
             catch (Exception e)
             {
-                Console.WriteLine("Serialisation Exception - Failed to save user data in deconstruction");
+                Console.WriteLine(@"Serialisation Exception - Failed to save user data in deconstruction");
             }
         }
 
-        private List<SightMark> GetSightMarks()
+        private static JObject ConvertOldRounds(JObject userdata)
+        {
+            // for when round names/formats change old data can be preserved (current not needed)
+            return userdata;
+            var roundsToConvert = new [] {new {OldRound = "old round", Date = DateTime.Now, NewRound = "new round"}};
+            if (roundsToConvert.Length == 0) // if there are no old rounds that need to change then we can just move on
+                return userdata;
+
+            var rounds = userdata["pastRounds"]!.Value<JArray>()!;
+            if (rounds!.Count == 0) // if there is no rounds to convert then there is no point in moving on
+                return userdata;
+
+            var alteredRounds = new JArray();
+            foreach (var round in rounds)
+            {
+                var rObj = round.Value<JObject>();
+                var matched = roundsToConvert.FirstOrDefault(obj =>
+                    rObj["rName"]!.Value<string>() == obj.OldRound &&
+                    DateTime.FromBinary(rObj["date"].Value<long>()) <= obj.Date);
+
+                if (matched != default)
+                    rObj["rName"] = matched.NewRound;
+                
+                alteredRounds.Add(rObj);
+            }
+
+            userdata["pastRounds"] = alteredRounds;
+            SaveData(userdata);
+
+            return userdata;
+        }
+
+    private List<SightMark> GetSightMarks()
         {
             var result = new List<SightMark>();
 

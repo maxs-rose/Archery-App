@@ -42,9 +42,10 @@ namespace TheScoreBook.models.round
                 Ends[i] = new End(distanceData.ArrowsPerEnd, Style);
         }
 
-        public Distance(DistanceData distanceData, JObject json) : this(distanceData)
+        public Distance(DistanceData distanceData, Style style, JObject json) : this(distanceData)
         {
-            Ends = json["scores"].AsJEnumerable().Select(e => new End(e.Value<JObject>())).ToArray();
+            Style = style;
+            Ends = json["scores"].AsJEnumerable().Select(e => new End(e.Value<JObject>(), style)).ToArray();
 
             RunningTotal();
             PropertyHasChanged();

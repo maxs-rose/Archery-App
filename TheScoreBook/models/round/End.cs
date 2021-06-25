@@ -23,10 +23,11 @@ namespace TheScoreBook.models.round
 
         public End(int arrowsPerEnd, Style style) => (ArrowsPerEnd, Style) = (arrowsPerEnd, style);
 
-        public End(JObject json)
+        public End(JObject json, Style style)
         {
             scores = json["scores"].Value<JArray>()!.Select(s => (Score) s.Value<int>()).ToList();
             ArrowsPerEnd = json["scoresPerEnd"].Value<int>();
+            Style = style;
 
             PropertyHasChanged();
         }

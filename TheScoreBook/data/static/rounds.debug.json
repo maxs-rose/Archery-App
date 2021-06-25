@@ -162,5 +162,37 @@
         "targetUnit": "cm"
       }
     ]
+  },
+  "old round": 
+  {
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 122,
+        "targetUnit": "cm"
+      }
+    ]
+  },
+  "new round":
+  {
+    "scoringType": "TenZone",
+    "distances":
+    [
+      {
+        "location": "out",
+        "distance": 70,
+        "unit": "m",
+        "arrowsPerEnd": 6,
+        "ends": 6,
+        "targetSize": 80,
+        "targetUnit": "cm"
+      }
+    ]
   }
 }

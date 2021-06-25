@@ -121,7 +121,7 @@ namespace TheScoreBook.views.shoot
 
         private void DisplayRoundData()
         {
-            var round = new Round(SelectedRound.ToLower(), PossibleStyles[SelectedStyle]);
+            var round = new Round(SelectedRound.ToLower(), PossibleStyles[SelectedStyle], SelectedDate);
             TotalArrows.Text = $"{LocalisationManager.Instance["TotalArrows"]}: {round.MaxShots}";
             TotalScore.Text = $"{LocalisationManager.Instance["MaxScore"]}: {round.MaxScore}";
             Location.Text =

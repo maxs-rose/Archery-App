@@ -27,7 +27,8 @@ namespace TheScoreBook.models.round
         public Round(string round, Style style) : this(round, style, DateTime.Now) { }
         public Round(string round, Style style, DateTime date) : this(Rounds.Instance.GetRound(round))
         {
-            Distances = RoundData.Distances.Select(d => new Distance(d, style) ).ToArray();
+            Distances = RoundData.Distances.Select(d => new Distance(d, PreCPX11Style(date, style)) ).ToArray();
+            // Distances = RoundData.Distances.Select(d => new Distance(d, style) ).ToArray();
 
             Style = style;
             Date = date;
@@ -40,8 +41,7 @@ namespace TheScoreBook.models.round
 
             var dist = roundData["distances"]!.Value<JArray>();
 
-            Distances = this.RoundData.Distances.Select(
-                (d, i) => new Distance(d, dist[i].Value<JObject>()))
+            Distances = RoundData.Distances.Select( (d, i) => new Distance(d, PreCPX11Style(Date, Style), dist[i].Value<JObject>()))
                 .ToArray();
         }
 
@@ -49,6 +49,8 @@ namespace TheScoreBook.models.round
         {
             RoundData = data;
         }
+
+        private Style PreCPX11Style(DateTime roundDate, Style roundStyle) => roundStyle == Style.COMPOUND && roundDate < DateTime.Today ? roundStyle : roundStyle; // TODO: Check when rules changes as may not be needed
 
         public bool AddScore(int distanceIndex, int endIndex, Score score)
         {
