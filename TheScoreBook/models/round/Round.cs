@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Linq;
 using Newtonsoft.Json.Linq;
-using TheScoreBook.acessors;
-using TheScoreBook.localisation;
 using TheScoreBook.models.enums;
-using TheScoreBook.models.round.structs;
+using TheScoreBook.models.round.Structs;
 
 namespace TheScoreBook.models.round
 {
@@ -14,7 +12,7 @@ namespace TheScoreBook.models.round
         public Distance[] Distances { get; }
         public int DistanceCount { get; }
         public DateTime Date { get; }
-        public string RoundName => LocalisationManager.ToRoundTitleCase(RoundData.Name);
+        public string RoundName => RoundData.Name;
         public Location Location { get; }
         public Style Style { get; }
 
@@ -26,11 +24,13 @@ namespace TheScoreBook.models.round
         public int Score => Distances.Sum(d => d.Score);
         public int Hits => Distances.Sum(d => d.Hits);
         public int Golds => CountScore(enums.Score.X) + CountScore(enums.Score.TEN) + CountScore(enums.Score.NINE);
-
-        public Round(string round) : this(round, Style.RECURVE, DateTime.Now) { }
-        public Round(string round, Style style) : this(round, style, DateTime.Now) { }
-        public Round(string round, Style style, DateTime date) : this(Rounds.Instance.GetRound(round))
+        
+        public Round(RoundData round) : this(round, Style.RECURVE) { }
+        public Round(RoundData round, Style style) : this(round, style, DateTime.Now) { }
+        public Round(RoundData round, Style style, DateTime date)
         {
+            RoundData = round;
+            
             Distances = RoundData.Distances.Select(d => new Distance(d, PreCPX11Style(date, style)) ).ToArray();
             // Distances = RoundData.Distances.Select(d => new Distance(d, style) ).ToArray();
 
@@ -41,7 +41,7 @@ namespace TheScoreBook.models.round
             Date = date;
         }
 
-        public Round(JObject roundData) : this(Rounds.Instance.GetRound(roundData["rName"].Value<string>()))
+        public Round(RoundData staticRoundData, JObject roundData) : this(staticRoundData)
         {
             Date = DateTime.FromBinary(roundData["date"].Value<long>());
             Style = (Style)roundData["rStyle"]?.Value<int>() ?? Style.RECURVE;
@@ -50,11 +50,6 @@ namespace TheScoreBook.models.round
 
             Distances = RoundData.Distances.Select( (d, i) => new Distance(d, PreCPX11Style(Date, Style), dist[i].Value<JObject>()))
                 .ToArray();
-        }
-
-        private Round(RoundData data)
-        {
-            RoundData = data;
         }
 
         private Style PreCPX11Style(DateTime roundDate, Style roundStyle) => roundStyle == Style.COMPOUND && roundDate < DateTime.Today ? roundStyle : roundStyle; // TODO: Check when rules changes as may not be needed
@@ -110,7 +105,6 @@ namespace TheScoreBook.models.round
             var json = new JObject
             {
                 {"distances", new JArray(Distances.Select(d => d.ToJson()))},
-                {"nDistances", DistanceCount},
                 {"date", Date.ToBinary()},
                 {"rName", RoundData.Name},
                 {"rStyle", Style.Id}

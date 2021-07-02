@@ -185,9 +185,13 @@
     <PackageReference Include="Xamarin.Forms.AnimationNavigation" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheScoreBook\TheScoreBook.csproj">
-      <Project>{0BCACC89-79F2-4850-BED6-4C872CB7F25E}</Project>
-      <Name>TheScoreBook</Name>
+    <ProjectReference Include="..\TheScoreBook.Ui\TheScoreBook.Ui.csproj">
+      <Project>{1cbba410-90fd-4ada-856f-35debee4c79a}</Project>
+      <Name>TheScoreBook.Ui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TheScoreBook\TheScoreBook.Ui.csproj">
+      <Project>{A8A48A47-1F76-4C66-9E48-7A48324BA232}</Project>
+      <Name>TheScoreBook.Ui</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

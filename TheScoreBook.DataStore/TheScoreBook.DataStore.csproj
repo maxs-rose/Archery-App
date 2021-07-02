@@ -6,7 +6,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TheScoreBook\TheScoreBook.csproj" />
     </ItemGroup>
 
 </Project>

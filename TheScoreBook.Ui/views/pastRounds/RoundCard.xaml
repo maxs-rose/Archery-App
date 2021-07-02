@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook.Ui"
+       x:Class="TheScoreBook.views.pastRounds.RoundCard"
+       Margin="0"
+       BackgroundColor="{AppThemeBinding Light=White, Dark=Gray}">
+
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Text="{Binding RoundName}" />
+
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            Text="{localisation:Translate Hits}" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="2"
+            Text="{localisation:Translate Tens}" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="3"
+            Text="{localisation:Translate Total}" />
+
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            Text="{Binding Date}" />
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="{Binding Style}" />
+
+        <Label
+            Grid.Row="2"
+            Grid.Column="1"
+            Text="{Binding Hits}" />
+        <Label
+            Grid.Row="2"
+            Grid.Column="2"
+            Text="{Binding Tens}" />
+        <Label
+            Grid.Row="2"
+            Grid.Column="3"
+            Text="{Binding Score}" />
+    </Grid>
+</Frame>

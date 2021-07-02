@@ -1,6 +1,6 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
-using TheScoreBook.Annotations;
 
 namespace TheScoreBook.exceptions
 {

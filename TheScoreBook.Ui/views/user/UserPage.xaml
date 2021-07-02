@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook.Ui"
+       x:Class="TheScoreBook.views.user.UserPage"
+       Padding="0"
+       HasShadow="False"
+       BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+    <ScrollView
+        Padding="0"
+        Margin="0">
+        <StackLayout
+            Padding="0"
+            Margin="0, 10, 0, 0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.50*" />
+                    <ColumnDefinition Width="0.25*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Column="1"
+                    Text="{localisation:Translate YourProfile}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    FontSize="Title" />
+                <Button
+                    Grid.Column="2"
+                    x:Name="settingsButton" Clicked="SettingsButtonClicked"
+                    CornerRadius="50"
+                    Margin="20, 00, 20, 0"
+                    Text="&#x2699;" />
+            </Grid>
+            <!-- <Ellipse -->
+            <!--     HorizontalOptions="Center" -->
+            <!--     Margin="0, 25" -->
+            <!--     WidthRequest="100" -->
+            <!--     HeightRequest="100" -->
+            <!--     Stroke="Gray" -->
+            <!--     StrokeThickness="4" -->
+            <!--     Fill="LightGray"/> -->
+            <Grid
+                BackgroundColor="Black"
+                Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="0.2*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Text="{localisation:Translate SightMarks}"
+                    Padding="10, 2"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Center"
+                    FontSize="Title"
+                    TextColor="White" />
+                <Label
+                    Grid.Column="1"
+                    x:Name="OpenAddNewSightMark"
+                    Text="+"
+                    Padding="10, 2"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Center"
+                    FontSize="Title"
+                    TextColor="White" />
+            </Grid>
+            <StackLayout x:Name="SightMarks"
+                         Margin="0"
+                         Padding="20, 0, 0, 0" />
+            <Label
+                Text="{localisation:Translate PreferedRounds}"
+                Margin="0"
+                Padding="10, 2"
+                HorizontalTextAlignment="Start"
+                VerticalTextAlignment="Center"
+                FontSize="Title"
+                BackgroundColor="Black"
+                TextColor="White" />
+            <StackLayout Margin="0"
+                         Padding="20, 0, 0, 0">
+                <Label x:Name="IndoorRound"
+                       Margin="0"
+                       Padding="0"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center" />
+                <Label x:Name="OutdoorRound"
+                       Margin="0"
+                       Padding="0"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center" />
+            </StackLayout>
+            <Label
+                Text="{localisation:Translate BestRounds}"
+                Margin="0"
+                Padding="10, 2"
+                HorizontalTextAlignment="Start"
+                VerticalTextAlignment="Center"
+                FontSize="Title"
+                BackgroundColor="Black"
+                TextColor="White" />
+            <StackLayout Margin="0"
+                         Padding="20, 0, 0, 0">
+                <Label x:Name="BestIndoorRound"
+                       Margin="0"
+                       Padding="0"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center" />
+                <Label x:Name="BestOutdoorRound"
+                       Margin="0"
+                       Padding="0"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Frame>

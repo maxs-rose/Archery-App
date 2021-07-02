@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="9" android:versionName="1.7" package="com.toothless.TheScoreBook" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="9" android:versionName="1.7" package="com.toothless.TheScoreBook.Ui" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="28" android:targetSdkVersion="30" />
 	<application android:label="The Score Book" android:icon="@drawable/Icon" />
 </manifest>

@@ -96,9 +96,13 @@
     <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheScoreBook\TheScoreBook.csproj">
-      <Project>{0BCACC89-79F2-4850-BED6-4C872CB7F25E}</Project>
-      <Name>TheScoreBook</Name>
+    <ProjectReference Include="..\TheScoreBook.Ui\TheScoreBook.Ui.csproj">
+      <Project>{1cbba410-90fd-4ada-856f-35debee4c79a}</Project>
+      <Name>TheScoreBook.Ui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TheScoreBook\TheScoreBook.Ui.csproj">
+      <Project>{a8a48a47-1f76-4c66-9e48-7a48324ba232}</Project>
+      <Name>TheScoreBook.Ui</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

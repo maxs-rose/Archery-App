@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<base:AnimationPage xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:base="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+                    xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook.Ui"
+                    xmlns:system="clr-namespace:System;assembly=netstandard"
+                    x:Class="TheScoreBook.views.shoot.RoundSelectionPage"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+    <base:AnimationPage.PageAnimation>
+        <base:PageAnimation Duration="Short" Subtype="FromBottom" />
+    </base:AnimationPage.PageAnimation>
+    <ContentPage.Content>
+        <StackLayout
+            Margin="0"
+            Padding="0"
+            VerticalOptions="Start">
+            <Grid
+                x:Name="BottomBar"
+                VerticalOptions="Start"
+                Margin="0"
+                BackgroundColor="Black">
+                <Grid.Padding>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="Android, UWP" Value="0" />
+                        <On Platform="iOS" Value="0, 40, 0, 2" />
+                    </OnPlatform>
+                </Grid.Padding>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="{localisation:Translate Scores}" Clicked="OnScoresButtonOnClicked"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        TextColor="White" />
+                <ImageButton x:Name="StartButton" Grid.Column="1" Source="Icon" Clicked="OnStartButtonOnClicked"
+                             BackgroundColor="Transparent" BorderWidth="2">
+                    <ImageButton.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android, UWP" Value="0, 4" />
+                            <On Platform="iOS" Value="0" />
+                        </OnPlatform>
+                    </ImageButton.Margin>
+                    <ImageButton.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android, UWP" Value="0" />
+                            <On Platform="iOS" Value="10" />
+                        </OnPlatform>
+                    </ImageButton.Padding>
+                    <ImageButton.CornerRadius>
+                        <OnPlatform x:TypeArguments="system:Int32">
+                            <On Platform="Android, UWP" Value="100" />
+                            <On Platform="iOS" Value="10" />
+                        </OnPlatform>
+                    </ImageButton.CornerRadius>
+                </ImageButton>
+                <Button Grid.Column="2" Text="{localisation:Translate Profile}" Clicked="OnProfileButtonOnClicked"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        TextColor="White" />
+            </Grid>
+            <StackLayout
+                Padding="0"
+                Margin="10, 0">
+                <Label Text="{localisation:Translate Round}" />
+                <Label
+                    x:Name="RoundPicker"
+                    Margin="5, 10, 0, 0"
+                    FontSize="Large"/>
+                <Frame HasShadow="False" HeightRequest="0.5" Margin="5, 0, 0, 0" Padding="0" BackgroundColor="Black"/>
+                <Label Text="{localisation:Translate Style}" />
+                <Picker
+                    ItemsSource="{Binding PossibleStyles}"
+                    SelectedIndex="{Binding SelectedStyle, Mode=TwoWay}"
+                    SelectedIndexChanged="OnBowStyleChanged" />
+                <Label Text="{localisation:Translate Date}" />
+                <DatePicker
+                    Date="{Binding SelectedDate, Mode=TwoWay}"
+                    Format="dd/MM/yyyy"
+                    TextColor="{AppThemeBinding Light={StaticResource LightText}, Dark={StaticResource DarkText}}
+                    "
+                    DateSelected="OnBowStyleChanged" />
+            </StackLayout>
+            <ScrollView Margin="0, 5, 0 ,0" >
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" x:Name="TotalArrows" Text=""
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                        <Label Grid.Column="1" Grid.Row="0" x:Name="TotalScore" Text=""
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                        <Label Grid.Column="0" Grid.Row="1" x:Name="Location" Text="" HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center" />
+                        <Label Grid.Column="1" Grid.Row="1" x:Name="ScoringType" Text=""
+                               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    </Grid>
+                    <StackLayout x:Name="RoundInformation" />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</base:AnimationPage>

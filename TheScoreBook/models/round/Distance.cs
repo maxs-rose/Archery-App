@@ -2,7 +2,7 @@
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models.enums;
-using TheScoreBook.models.round.structs;
+using TheScoreBook.models.round.Structs;
 
 namespace TheScoreBook.models.round
 {
@@ -50,7 +50,7 @@ namespace TheScoreBook.models.round
         public Distance(DistanceData distanceData, Style style, JObject json) : this(distanceData)
         {
             Style = style;
-            Ends = json["scores"].AsJEnumerable().Select(e => new End(e.Value<JObject>(), style)).ToArray();
+            Ends = Enumerable.ToArray<End>(json["scores"].AsJEnumerable().Select(e => new End(e.Value<JObject>(), style)));
 
             RunningTotal();
             PropertyHasChanged();

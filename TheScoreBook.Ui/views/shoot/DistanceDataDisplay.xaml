@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:localisation="clr-namespace:TheScoreBook.localisation;assembly=TheScoreBook.Ui"
+       x:Class="TheScoreBook.views.shoot.DistanceDataDisplay"
+       HasShadow="True"
+       Margin="3"
+       CornerRadius="10"
+       BorderColor="{AppThemeBinding Light={StaticResource LightButtonBorder}, Dark={StaticResource DarkButtonBorder}}"
+       BackgroundColor="Transparent">
+    <StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                   HasShadow="False"
+                   BackgroundColor="{AppThemeBinding Light={StaticResource LightButtonBorder}, Dark={StaticResource DarkButtonBorder}}"
+                   Margin="0"
+                   Padding="2"
+                   CornerRadius="10">
+                <Label Text="{Binding RoundIndex, Mode=OneWay}" TextColor="{AppThemeBinding Light={StaticResource DarkText}, Dark={StaticResource LightText}}" HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Frame>
+            <Label Grid.Row="1" Grid.Column="0" Text="{localisation:Translate Distance}" VerticalTextAlignment="Center" />
+            <Label Grid.Row="1" Grid.Column="1" Text="{Binding TargetDistance, Mode=OneWay}"
+                   VerticalTextAlignment="Center" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="{localisation:Translate TargetSize}"
+                   VerticalTextAlignment="Center" />
+            <Label Grid.Row="2" Grid.Column="1" Text="{Binding TargetSize, Mode=OneWay}" VerticalTextAlignment="Center" />
+
+            <Label Grid.Row="3" Grid.Column="0" Text="{localisation:Translate ArrowsPerEnd}"
+                   VerticalTextAlignment="Center" />
+            <Label Grid.Row="3" Grid.Column="1" Text="{Binding ArrowsPerEnd, Mode=OneWay}"
+                   VerticalTextAlignment="Center" />
+
+            <Label Grid.Row="4" Grid.Column="0" Text="{localisation:Translate MaxEnds}" VerticalTextAlignment="Center" />
+            <Label Grid.Row="4" Grid.Column="1" Text="{Binding MaxEnds, Mode=OneWay}" VerticalTextAlignment="Center" />
+
+            <Label Grid.Row="5" Grid.Column="0" Text="{localisation:Translate TotalArrows}"
+                   VerticalTextAlignment="Center" />
+            <Label Grid.Row="5" Grid.Column="1" Text="{Binding TotalArrows, Mode=OneWay}"
+                   VerticalTextAlignment="Center" />
+
+            <Label Grid.Row="6" Grid.Column="0" Text="{localisation:Translate MaxScore}" VerticalTextAlignment="Center" />
+            <Label Grid.Row="6" Grid.Column="1" Text="{Binding MaxScore, Mode=OneWay}" VerticalTextAlignment="Center" />
+        </Grid>
+    </StackLayout>
+</Frame>

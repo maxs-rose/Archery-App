@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Linq;
 using TheScoreBook.models.enums;
 
-namespace TheScoreBook.models.round.structs
+namespace TheScoreBook.models.round.Structs
 {
     public readonly struct RoundData
     {

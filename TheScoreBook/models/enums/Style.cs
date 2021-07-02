@@ -1,5 +1,4 @@
 ﻿using System;
-using TheScoreBook.localisation;
 
 namespace TheScoreBook.models.enums
 {
@@ -13,9 +12,6 @@ namespace TheScoreBook.models.enums
         public static readonly Style OTHER = new("Other", 5);
 
         private Style(string name, int id) : base(name, id) { }
-
-        public override string ToString()
-            => LocalisationManager.Instance[Name] ?? Name;
 
         public static explicit operator Style(int id)
             => id switch
